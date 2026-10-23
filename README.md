@@ -44,10 +44,10 @@ Jedes Kapitel ist gleich aufgebaut:
 
 [Erste Schritte](Kapitel/01-Erste-Schritte.md)                    Projekt anlegen, Text ausgeben, Kommentare, Fehlermeldungen lesen \
 [Variablen und Datentypen](Kapitel/02-Variablen.md)               Werte speichern und ausgeben \
-[Rechnen und Vergleichen](Kapitel/03-Rechnen-und-Vergleichen.md)  Mathe, Vergleiche, `&&`, `\|\|`, `!`  \ 
+[Rechnen und Vergleichen](Kapitel/03-Rechnen-und-Vergleichen.md)  Mathe, Vergleiche, `&&`, `\|\|`, `!`.  \ 
 [Benutzereingaben](Kapitel/04-Eingaben.md)                        Eingaben lesen und in Zahlen umwandeln \
-[Verzweigungen](Kapitel/05-Verzweigungen.md)                      Entscheidungen mit `if`, `else` und `switch`  \ 
-[Schleifen](Kapitel/06-Schleifen.md)                              Code wiederholen mit `for`, `while`, `do-while`  \ 
+[Verzweigungen](Kapitel/05-Verzweigungen.md)                      Entscheidungen mit `if`, `else` und `switch`.  \ 
+[Schleifen](Kapitel/06-Schleifen.md)                              Code wiederholen mit `for`, `while`, `do-while`.  \ 
 [Arrays und Listen](Kapitel/07-Collections.md)                    Viele Werte auf einmal speichern \
 [Methoden](Kapitel/08-Methoden.md)                                Eigenen, wiederverwendbaren Code schreiben \
 [Klassen und Objekte](Kapitel/09-Klassen.md)                      Einstieg in die objektorientierte Programmierung \
