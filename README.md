@@ -48,9 +48,9 @@ Jedes Kapitel ist gleich aufgebaut:
 [Benutzereingaben](Kapitel/04-Eingaben.md)------------------------Eingaben lesen und in Zahlen umwandeln \
 [Verzweigungen](Kapitel/05-Verzweigungen.md)---------------------------Entscheidungen mit `if`, `else` und `switch` \
 [Schleifen](Kapitel/06-Schleifen.md)----------------------------------Code wiederholen mit `for`, `while`, `do-while` \
-[Arrays und Listen](Kapitel/07-Collections.md)------------------------------Viele Werte auf einmal speichern \
-[Methoden](Kapitel/08-Methoden.md)----------------------------------Eigenen, wiederverwendbaren Code schreiben \
-[Klassen und Objekte](Kapitel/09-Klassen.md)----------------------------Einstieg in die objektorientierte Programmierung \
+[Arrays und Listen](Kapitel/07-Collections.md)-------------------------Viele Werte auf einmal speichern \
+[Methoden](Kapitel/08-Methoden.md)--------------------------------Eigenen, wiederverwendbaren Code schreiben \
+[Klassen und Objekte](Kapitel/09-Klassen.md)----------------------Einstieg in die objektorientierte Programmierung \
 [Fehler abfangen](Kapitel/10-Fehler-abfangen.md)--------------------------------Programme absturzsicher machen \
 [Abschlussprojekt](Kapitel/11-Abschlussprojekt.md)-------------------------------Alles zusammen: dein eigenes Spiel 
 
