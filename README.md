@@ -42,8 +42,8 @@ Jedes Kapitel ist gleich aufgebaut:
 
 
 
-[Erste Schritte](Kapitel/01-Erste-Schritte.md) -----------------------------Projekt anlegen, Text ausgeben, Kommentare, Fehlermeldungen lesen \
-[Variablen und Datentypen](Kapitel/02-Variablen.md)               Werte speichern und ausgeben \
+[Erste Schritte](Kapitel/01-Erste-Schritte.md)-----------------------------Projekt anlegen, Text ausgeben, Kommentare, Fehlermeldungen lesen \
+[Variablen und Datentypen](Kapitel/02-Variablen.md)---------------Werte speichern und ausgeben \
 [Rechnen und Vergleichen](Kapitel/03-Rechnen-und-Vergleichen.md)  Mathe, Vergleiche, `&&`, `\|\|`, `!` \
 [Benutzereingaben](Kapitel/04-Eingaben.md)                        Eingaben lesen und in Zahlen umwandeln \
 [Verzweigungen](Kapitel/05-Verzweigungen.md)                      Entscheidungen mit `if`, `else` und `switch` \
