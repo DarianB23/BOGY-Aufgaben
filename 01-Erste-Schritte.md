@@ -1,0 +1,133 @@
+# Kapitel 1 – Erste Schritte
+
+[🏠 Übersicht](../README.md) | [Weiter: Variablen →](02-Variablen.md)
+
+## 🎯 Ziel
+
+Nach diesem Kapitel kannst du:
+
+- ein neues Konsolenprojekt in Visual Studio anlegen und starten
+- Text im Terminal ausgeben
+- Kommentare schreiben
+- eine Fehlermeldung lesen und verstehen
+
+---
+
+## 📖 Erklärung
+
+### Projekt erstellen
+
+1. Visual Studio öffnen → **Neues Projekt erstellen**
+2. Die Vorlage **Konsolen-App** (Sprache: C#) auswählen → **Weiter**
+3. Einen Projektnamen eingeben, z. B. `ErsteSchritte` → **Weiter**
+4. Als Framework **.NET 8.0** wählen. Das Häkchen bei **„Keine Anweisungen der obersten Ebene verwenden“** bleibt **leer**. → **Erstellen**
+
+> [!TIP]
+> Lege für jedes Kapitel ein **eigenes Projekt** an (z. B. `Kapitel02`, `Kapitel03` …). So bleibt dein alter Code erhalten und du kannst später nachschauen.
+
+Visual Studio öffnet die Datei `Program.cs` mit diesem Code:
+
+```csharp
+// See <redacted URL> for more information
+Console.WriteLine("Hello, World!");
+```
+
+Starte das Programm mit **F5** oder dem grünen Pfeil ▶. Es öffnet sich ein schwarzes Fenster – das **Terminal** (auch **Konsole** genannt).
+
+### Was bedeutet diese Zeile?
+
+| Teil | Bedeutung |
+|---|---|
+| `Console` | Eine eingebaute **Klasse**, mit der du mit dem Terminal arbeitest |
+| `.` | „Davon möchte ich …“ – damit greifst du auf etwas *in* `Console` zu |
+| `WriteLine` | Schreibt Text ins Terminal und springt danach in die **nächste Zeile** |
+| `("Hello, World!")` | Der Text, der ausgegeben wird. Text steht immer in **Anführungszeichen** `" "` |
+| `;` | Jede Anweisung endet mit einem **Semikolon** |
+
+### Kommentare
+
+Kommentare werden vom Programm **ignoriert**. Du nutzt sie, um deinen Code zu erklären – für andere und für dich selbst.
+
+```csharp
+// Alles, was in einer Zeile nach "//" steht, ist ein Kommentar.
+
+/* Mit Schrägstrich und Stern
+   kannst du Kommentare über
+   mehrere Zeilen schreiben. */
+
+Console.WriteLine("Hallo!"); // Ein Kommentar darf auch hinter Code stehen.
+```
+
+---
+
+## ⚠️ Typische Fehler
+
+| Fehler | Was passiert |
+|---|---|
+| Semikolon `;` vergessen | Fehler **CS1002: ; erwartet** |
+| `console.writeline(...)` statt `Console.WriteLine(...)` | C# unterscheidet **Groß- und Kleinschreibung**. Das Programm kennt `console` nicht. |
+| Anführungszeichen vergessen | Das Programm hält deinen Text für Code und versteht ihn nicht. |
+
+---
+
+## ✍️ Aufgaben
+
+### Aufgabe 1.1 – Stell dich vor
+
+Schreib ein Programm, das zuerst deinen **Namen** und in der nächsten Zeile dein **Lieblingshobby** ausgibt.
+
+Beispielausgabe:
+```
+Ich heiße Lea.
+Mein Lieblingshobby ist Klettern.
+```
+
+### Aufgabe 1.2 – `Write` oder `WriteLine`?
+
+Ersetze in deinem Programm `Console.WriteLine` durch `Console.Write` und starte es erneut.
+Erkläre in einem Satz: **Was ist der Unterschied?**
+
+<details>
+<summary>💡 Tipp</summary>
+
+Achte darauf, **wo** der zweite Text erscheint. Was passiert mit dem Zeilenumbruch?
+</details>
+
+### Aufgabe 1.3 – Fehler mit Absicht
+
+Fehlermeldungen zu lesen ist eine der wichtigsten Fähigkeiten beim Programmieren. Wir üben das jetzt:
+
+1. Lösche das Semikolon am Ende einer Zeile und starte das Programm.
+   - Was steht in der **Fehlerliste** (unten in Visual Studio)?
+   - In welcher **Zeile** ist der Fehler?
+2. Mach das Semikolon wieder hin und schreibe stattdessen `console` klein. Welche Meldung bekommst du jetzt?
+
+### ⭐ Aufgabe 1.4 – Konsolen-Kunst
+
+Zeichne mit mehreren `Console.WriteLine` ein Bild aus Zeichen, zum Beispiel ein Haus oder ein Tier:
+
+```
+   /\
+  /  \
+ /____\
+ |    |
+ |_[]_|
+```
+
+<details>
+<summary>💡 Tipp</summary>
+
+Der Backslash `\` hat in C#-Texten eine Sonderbedeutung. Um einen echten Backslash auszugeben, musst du ihn **doppelt** schreiben: `"\\"`.
+</details>
+
+---
+
+## ✅ Checkliste
+
+- [ ] Ich kann ein neues Konsolenprojekt anlegen und starten.
+- [ ] Ich weiß, was `Console.WriteLine` macht und wie es sich von `Console.Write` unterscheidet.
+- [ ] Ich weiß, dass jede Anweisung mit `;` endet.
+- [ ] Ich kann Kommentare schreiben.
+- [ ] Ich finde in der Fehlerliste heraus, in welcher Zeile ein Fehler ist.
+
+[🏠 Übersicht](../README.md) | [Weiter: Variablen →](02-Variablen.md)
