@@ -55,16 +55,7 @@ Jedes Kapitel ist gleich aufgebaut:
 | 11 | [Abschlussprojekt](Kapitel/11-Abschlussprojekt.md) | Alles zusammen: dein eigenes Spiel | Rest der Zeit |
 
 Die Zeiten sind nur grobe Richtwerte. Lass dir so viel Zeit, wie du brauchst!
-
----
-
-## 🛠️ Was du brauchst
-
-- **Visual Studio 2022** (Community-Version reicht) mit der Workload **„.NET-Desktopentwicklung“**
-- **.NET 8** oder neuer
-
-Auf den Praktikums-Rechnern ist beides normalerweise schon installiert.
-
+[Kapitel 3](Kapitel/03-Rechnen-und-Vergleichen.md)
 ---
 
 ## 📁 Aufbau dieses Repositorys
