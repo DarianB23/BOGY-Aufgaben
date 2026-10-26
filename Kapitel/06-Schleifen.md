@@ -1,8 +1,8 @@
 # Kapitel 6 – Schleifen
 
-[← Verzweigungen](05-Verzweigungen.md) | [🏠 Übersicht](../README.md) | [Weiter: Arrays und Listen →](07-Collections.md)
+[← Verzweigungen](05-Verzweigungen.md) | [Übersicht](../README.md) | [Weiter: Arrays und Listen →](07-Collections.md)
 
-## 🎯 Ziel
+## Ziel
 
 Nach diesem Kapitel kannst du:
 
@@ -12,7 +12,7 @@ Nach diesem Kapitel kannst du:
 
 ---
 
-## 📖 Erklärung
+## Erklärung
 
 Schleifen (englisch *loops*) führen Code **mehrfach** aus. So musst du ihn nur einmal schreiben, statt ihn zehnmal zu kopieren.
 
@@ -101,7 +101,7 @@ for (int i = 1; i <= 10; i++)
 
 ---
 
-## ⚠️ Typische Fehler
+## Typische Fehler
 
 | Fehler | Was passiert |
 |---|---|
@@ -111,7 +111,7 @@ for (int i = 1; i <= 10; i++)
 
 ---
 
-## ✍️ Aufgaben
+## Aufgaben
 
 ### Aufgabe 6.1 – Denkfragen
 
@@ -129,7 +129,7 @@ Beantworte die Fragen **zuerst im Kopf** und prüfe sie dann im Code.
 4. Wann endet das `do-while`-Beispiel? Was passiert, wenn du `Ende` (mit großem E) eintippst?
 
 <details>
-<summary>💡 Tipp zu Frage 2</summary>
+<summary>Tipp zu Frage 2</summary>
 
 Wird `i` jemals kleiner als `0`? Lass die Schleife ruhig laufen (Abbruch mit **Strg + C**).
 Spannend für Profis: Ein `int` kann höchstens `2147483647` speichern. Was passiert danach?
@@ -162,13 +162,13 @@ Schreibe mit einer `do-while`-Schleife eine Passwortabfrage:
 - Nach **3 falschen Versuchen** soll `Zugang gesperrt!` erscheinen und die Schleife beendet werden.
 
 <details>
-<summary>💡 Tipp</summary>
+<summary>Tipp</summary>
 
 Lege das richtige Passwort und einen Zähler (`int versuche = 0;`) **vor** der Schleife an.
 Zum vorzeitigen Beenden hilft dir `break`.
 </details>
 
-### ⭐ Aufgabe 6.5 – FizzBuzz
+### Bonus-Aufgabe 6.5 – FizzBuzz
 
 Ein Klassiker, der auch in echten Bewerbungsgesprächen gestellt wird: Gib die Zahlen von 1 bis 100 aus. Aber:
 
@@ -176,7 +176,7 @@ Ein Klassiker, der auch in echten Bewerbungsgesprächen gestellt wird: Gib die Z
 - Ist sie durch 5 teilbar, gib `Buzz` aus.
 - Ist sie durch 3 **und** 5 teilbar, gib `FizzBuzz` aus.
 
-### ⭐ Aufgabe 6.6 – Sternen-Treppe
+### Bonus-Aufgabe 6.6 – Sternen-Treppe
 
 Frage nach einer Höhe und zeichne eine Treppe aus Sternen:
 
@@ -189,14 +189,14 @@ Höhe: 4
 ```
 
 <details>
-<summary>💡 Tipp</summary>
+<summary>Tipp</summary>
 
 Du brauchst eine Schleife **in** einer Schleife: Die äußere zählt die Zeilen, die innere schreibt die Sterne mit `Console.Write("*")`.
 </details>
 
 ---
 
-## ✅ Checkliste
+## Checkliste
 
 - [ ] Ich kann die drei Teile einer `for`-Schleife erklären.
 - [ ] Ich kenne den Unterschied zwischen `while` und `do-while`.
@@ -204,4 +204,4 @@ Du brauchst eine Schleife **in** einer Schleife: Die äußere zählt die Zeilen,
 - [ ] Ich weiß, was `break` und `continue` machen.
 - [ ] Ich kann eine Endlosschleife erkennen und stoppen.
 
-[← Verzweigungen](05-Verzweigungen.md) | [🏠 Übersicht](../README.md) | [Weiter: Arrays und Listen →](07-Collections.md)
+[← Verzweigungen](05-Verzweigungen.md) | [Übersicht](../README.md) | [Weiter: Arrays und Listen →](07-Collections.md)
