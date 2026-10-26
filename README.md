@@ -1,5 +1,3 @@
-# C#-Tutorial
-…
 # C#-Einstieg – BOGY-Tutorial 🚀
 
 Willkommen! In diesem Tutorial lernst du Schritt für Schritt, wie man mit **C#** eigene Programme schreibt.
