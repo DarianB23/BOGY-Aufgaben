@@ -7,7 +7,7 @@ plugins:
   - jekyll-relative-links
 
 # Dark mode
-color_scheme: light
+
 
 # Search
 search_enabled: true
