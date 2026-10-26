@@ -1,17 +1,118 @@
-// Narrower sidebar on medium and large screens
-@media (min-width: 50rem) {
-  .side-bar {
-    width: 15rem !important;
-    flex: 0 0 12rem !important;
-  }
+// =============================================================
+// custom.scss: custom styles for Just the Docs
+//
+// This file is compiled into BOTH the light and the dark stylesheet,
+// so it only uses neutral or transparent colors that work in both modes.
+//
+// Sidebar width, collapsing the sidebar and the light/dark button
+// are handled in _includes/head_custom.html. Don't add .side-bar or
+// .main layout rules here.
+// =============================================================
 
-  .main {
-    margin-left: 20rem !important;
-    max-width: none;
-  }
-}
 
-// Smaller menu text so long chapter names still fit
+// ---------- 1. Sidebar menu ----------
+// Smaller text so long chapter names still fit.
 .nav-list .nav-list-item .nav-list-link {
   font-size: 0.85rem !important;
+  line-height: 1.4;
+  white-space: normal;
+}
+
+
+// ---------- 2. Code blocks ----------
+// Long lines scroll sideways instead of stretching the page.
+div.highlighter-rouge,
+figure.highlight {
+  overflow-x: auto;
+}
+
+pre {
+  overflow-x: auto;
+  white-space: pre;
+  tab-size: 4;
+}
+
+
+// ---------- 3. Tables ----------
+// Wide tables scroll instead of breaking the layout.
+.table-wrapper {
+  overflow-x: auto;
+}
+
+
+// ---------- 4. Images ----------
+.main-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+
+// ---------- 5. Quotes (e.g. "> 💡 **Tipp:** ...") ----------
+.main-content blockquote {
+  margin-left: 0;
+  padding: 0.5rem 1rem;
+  border-left: 4px solid rgba(128, 128, 128, 0.5);
+  background: rgba(128, 128, 128, 0.08);
+  border-radius: 0 6px 6px 0;
+}
+
+.main-content blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+
+// ---------- 6. Collapsible tips (<details markdown="1">) ----------
+.main-content details {
+  margin: 1rem 0;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(128, 128, 128, 0.35);
+  border-radius: 6px;
+}
+
+.main-content details summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.main-content details[open] summary {
+  margin-bottom: 0.5rem;
+}
+
+
+// ---------- 7. Checklists (- [ ] ...) ----------
+// Removes the theme's bullet point in front of the checkbox.
+.main-content .task-list-item {
+  list-style: none;
+}
+
+.main-content .task-list-item::before {
+  content: none !important;
+}
+
+.main-content .task-list-item input[type="checkbox"] {
+  margin-right: 0.5em;
+  vertical-align: middle;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+
+// ---------- 8. Callout boxes ({: .tipp } etc.) ----------
+.main-content .tipp,
+.main-content .hinweis,
+.main-content .wichtig,
+.main-content .achtung {
+  border-radius: 6px;
+}
+
+
+// ---------- 9. Printing ----------
+// Leave the buttons and the drag handle out of printouts.
+@media print {
+  .theme-toggle,
+  .sidebar-toggle,
+  .sb-drag {
+    display: none !important;
+  }
 }
