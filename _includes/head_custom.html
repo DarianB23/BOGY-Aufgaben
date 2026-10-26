@@ -1,13 +1,14 @@
 <!--
-  _includes/head_custom.html – eigene Erweiterungen für Just the Docs
-  1. Hell/Dunkel-Umschalter          (in der oberen Leiste neben der Suche)
+  _includes/head_custom.html - eigene Erweiterungen fuer Just the Docs
+  1. Hell/Dunkel-Umschalter          (obere Leiste neben der Suche)
   2. Seitenleiste ein-/ausblenden    (Button unten links)
   3. Breite der Seitenleiste ziehen  (rechter Rand der Seitenleiste)
   4. Anklickbare Checklisten         (- [ ] in Markdown)
+  5. "Alle Tipps einklappen"-Button  (nur auf Seiten mit Tipps)
   Alle Einstellungen werden im Browser gespeichert (localStorage).
+  Farben fuer Tipps/Notizen stehen in _sass/custom/custom.scss.
 -->
 <style>
-  /* ---------- Farben und Grundwerte ---------- */
   :root {
     --sidebar-width: 200px;
     --btn-bg: #27262b;
@@ -41,13 +42,22 @@
   .sidebar-toggle { left: 1rem; }
   .theme-toggle   { right: 1rem; }
 
-  /* Hell/Dunkel-Button in der oberen Leiste statt schwebend */
   .theme-toggle.in-header {
     position: static !important;
     align-self: center;
     flex-shrink: 0;
     margin: 0 0.75rem;
     white-space: nowrap;
+  }
+
+  .jtd-btn.tips-collapse {
+    position: static;
+    display: inline-block;
+    margin: 0 0 1rem 0;
+  }
+  .jtd-btn.tips-collapse:disabled {
+    opacity: 0.5;
+    cursor: default;
   }
 
   /* ---------- Checklisten ---------- */
@@ -75,7 +85,6 @@
       max-width: none !important;
     }
 
-    /* Ziehgriff am rechten Rand der Seitenleiste */
     .sidebar-resizer {
       position: fixed;
       top: 0;
@@ -100,19 +109,16 @@
       user-select: none !important;
     }
 
-    /* Eingeklappt */
     html.sidebar-collapsed .side-bar        { display: none !important; }
     html.sidebar-collapsed .main            { margin-left: 0 !important; }
     html.sidebar-collapsed .sidebar-resizer { display: none; }
   }
 
-  /* Kleine Bildschirme: Das Theme hat einen eigenen ☰-Button */
   @media (max-width: 49.99rem) {
     .sidebar-toggle,
     .sidebar-resizer { display: none; }
   }
 
-  /* Beim Drucken ausblenden */
   @media print {
     .jtd-btn,
     .sidebar-resizer { display: none !important; }
@@ -123,13 +129,12 @@
 (function () {
   "use strict";
 
-  // ---------- Einstellungen ----------
   var CONFIG = {
-    defaultTheme: "dark", // muss zu color_scheme in _config.yml passen
-    sidebarDefault: 200,  // Startbreite in px (Doppelklick setzt zurück)
+    defaultTheme: "dark",
+    sidebarDefault: 200,
     sidebarMin: 150,
     sidebarMax: 450,
-    sidebarStep: 16       // Pfeiltasten-Schritt in px
+    sidebarStep: 16
   };
 
   var KEYS = {
@@ -145,10 +150,10 @@
     try { return localStorage.getItem(key); } catch (e) { return null; }
   }
   function save(key, value) {
-    try { localStorage.setItem(key, value); } catch (e) { /* z. B. privater Modus */ }
+    try { localStorage.setItem(key, value); } catch (e) { /* privater Modus */ }
   }
 
-  // ---------- 1. Hell/Dunkel ----------
+  /* ---------- 1. Hell/Dunkel ---------- */
   function applyTheme(theme) {
     var link = document.querySelector('link[rel="stylesheet"][href*="just-the-docs-"]');
     if (link) {
@@ -160,14 +165,14 @@
     return root.getAttribute("data-theme");
   }
 
-  // ---------- 3. Breite der Seitenleiste ----------
+  /* ---------- 3. Breite der Seitenleiste ---------- */
   var sidebarWidth = CONFIG.sidebarDefault;
   function setSidebarWidth(px) {
     sidebarWidth = Math.min(CONFIG.sidebarMax, Math.max(CONFIG.sidebarMin, Math.round(px)));
     root.style.setProperty("--sidebar-width", sidebarWidth + "px");
   }
 
-  // ---------- Sofort anwenden (verhindert Flackern) ----------
+  /* ---------- Sofort anwenden (verhindert Flackern) ---------- */
   var savedTheme = load(KEYS.theme);
   if (savedTheme) {
     applyTheme(savedTheme);
@@ -179,7 +184,6 @@
     root.classList.add("sidebar-collapsed");
   }
 
-  // ---------- Hilfsfunktion für Buttons ----------
   function makeButton(className) {
     var btn = document.createElement("button");
     btn.type = "button";
@@ -188,13 +192,13 @@
     return btn;
   }
 
-  // ---------- 1. Hell/Dunkel-Button ----------
+  /* ---------- 1. Hell/Dunkel-Button ---------- */
   function initThemeToggle() {
     var btn = makeButton("theme-toggle");
 
     function update() {
       var isDark = currentTheme() === "dark";
-      btn.textContent = isDark ? "☀️ Hell" : "🌙 Dunkel";
+      btn.textContent = isDark ? "\u2600\uFE0F Hell" : "\uD83C\uDF19 Dunkel";
       btn.setAttribute("aria-label", isDark ? "Helles Design aktivieren" : "Dunkles Design aktivieren");
     }
 
@@ -207,7 +211,6 @@
 
     update();
 
-    // In die obere Leiste neben die Suche verschieben (falls vorhanden)
     var header = document.querySelector(".main-header");
     if (header) {
       var search = header.querySelector(".search");
@@ -220,13 +223,13 @@
     }
   }
 
-  // ---------- 2. Seitenleiste ein-/ausblenden ----------
+  /* ---------- 2. Seitenleiste ein-/ausblenden ---------- */
   function initSidebarToggle() {
     var btn = makeButton("sidebar-toggle");
 
     function update() {
       var collapsed = root.classList.contains("sidebar-collapsed");
-      btn.textContent = collapsed ? "☰ Menü" : "« Menü ausblenden";
+      btn.textContent = collapsed ? "\u2630 Men\u00FC" : "\u00AB Men\u00FC ausblenden";
       btn.setAttribute("aria-expanded", collapsed ? "false" : "true");
     }
 
@@ -239,17 +242,17 @@
     update();
   }
 
-  // ---------- 3. Ziehgriff ----------
+  /* ---------- 3. Ziehgriff ---------- */
   function initSidebarResizer() {
     if (!document.querySelector(".side-bar")) return;
 
     var handle = document.createElement("div");
     handle.className = "sidebar-resizer";
     handle.tabIndex = 0;
-    handle.title = "Ziehen: Breite ändern · Doppelklick: zurücksetzen";
+    handle.title = "Ziehen: Breite \u00E4ndern \u00B7 Doppelklick: zur\u00FCcksetzen";
     handle.setAttribute("role", "separator");
     handle.setAttribute("aria-orientation", "vertical");
-    handle.setAttribute("aria-label", "Breite der Seitenleiste ändern");
+    handle.setAttribute("aria-label", "Breite der Seitenleiste \u00E4ndern");
     document.body.appendChild(handle);
 
     var dragging = false;
@@ -284,14 +287,13 @@
       commit();
     });
 
-    // Tastatur: Pfeil links/rechts
     handle.addEventListener("keydown", function (e) {
       if (e.key === "ArrowLeft")  { setSidebarWidth(sidebarWidth - CONFIG.sidebarStep); commit(); e.preventDefault(); }
       if (e.key === "ArrowRight") { setSidebarWidth(sidebarWidth + CONFIG.sidebarStep); commit(); e.preventDefault(); }
     });
   }
 
-  // ---------- 4. Checklisten ----------
+  /* ---------- 4. Checklisten ---------- */
   function initCheckboxes() {
     var boxes = document.querySelectorAll(".main-content input[type='checkbox']");
 
@@ -310,67 +312,52 @@
     });
   }
 
-  // ---------- Start ----------
-  // Jeder Teil läuft für sich: Ein Fehler in einem Teil stoppt die anderen nicht.
-  document.addEventListener("DOMContentLoaded", function () {
-    [initCheckboxes, initSidebarToggle, initSidebarResizer, initThemeToggle].forEach(function (fn) {
+  /* ---------- 5. Alle Tipps einklappen ---------- */
+  function initCollapseTips() {
+    var content = document.querySelector(".main-content");
+    if (!content) return;
+    if (content.querySelectorAll("details").length === 0) return;
+
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "jtd-btn tips-collapse";
+
+    function update() {
+      var n = content.querySelectorAll("details[open]").length;
+      btn.textContent = "\u25B2 Alle Tipps einklappen" + (n > 0 ? " (" + n + " offen)" : "");
+      btn.disabled = n === 0;
+    }
+
+    btn.addEventListener("click", function () {
+      content.querySelectorAll("details[open]").forEach(function (d) {
+        d.open = false;
+      });
+      update();
+    });
+
+    document.addEventListener("toggle", update, true);
+
+    var h1 = content.querySelector("h1");
+    if (h1) {
+      h1.insertAdjacentElement("afterend", btn);
+    } else {
+      content.insertBefore(btn, content.firstChild);
+    }
+
+    update();
+  }
+
+  /* ---------- Start ---------- */
+  function start() {
+    [initCheckboxes, initSidebarToggle, initSidebarResizer, initThemeToggle, initCollapseTips].forEach(function (fn) {
       try { fn(); } catch (e) { console.error("head_custom.html:", fn.name, e); }
     });
-  });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", start);
+  } else {
+    start();
+  }
 })();
 </script>
-<style>
-  /* ---------- Aufklappbare Hinweise (notiz.html) ---------- */
-  details.notiz {
-    margin: 1rem 0 !important;
-    padding: 0.5rem 0.75rem !important;
-    border: 1px solid rgba(128, 128, 128, 0.25) !important;
-    border-left-width: 4px !important;
-    border-radius: 6px !important;
-  }
-  details.notiz summary {
-    cursor: pointer;
-    font-weight: 600;
-  }
-  details.notiz[open] summary { margin-bottom: 0.5rem; }
-  details.notiz .notiz-inhalt > :last-child { margin-bottom: 0; }
-
-  /* Note: blau */
-  details.notiz.notiz-note {
-    border-left-color: #2f81f7 !important;
-    background: rgba(47, 129, 247, 0.08) !important;
-  }
-  details.notiz.notiz-note summary { color: #2f81f7 !important; }
-
-  /* Important: lila */
-  details.notiz.notiz-important {
-    border-left-color: #8957e5 !important;
-    background: rgba(137, 87, 229, 0.10) !important;
-  }
-  details.notiz.notiz-important summary { color: #8957e5 !important; }
-
-  /* Warning: orange */
-  details.notiz.notiz-warning {
-    border-left-color: #d29922 !important;
-    background: rgba(210, 153, 34, 0.10) !important;
-  }
-  details.notiz.notiz-warning summary { color: #d29922 !important; }
-</style>
-<style>
-  /* ---------- Tipps (tipp.html): grün ---------- */
-  details.tipp-box {
-    margin: 1rem 0 !important;
-    padding: 0.5rem 0.75rem !important;
-    border: 1px solid rgba(128, 128, 128, 0.25) !important;
-    border-left: 4px solid #2da44e !important;
-    border-radius: 6px !important;
-    background: rgba(45, 164, 78, 0.10) !important;
-  }
-  details.tipp-box summary {
-    cursor: pointer;
-    font-weight: 600;
-    color: #2da44e !important;
-  }
-  details.tipp-box[open] summary { margin-bottom: 0.5rem; }
-  details.tipp-box .tipp-inhalt > :last-child { margin-bottom: 0; }
-</style>
