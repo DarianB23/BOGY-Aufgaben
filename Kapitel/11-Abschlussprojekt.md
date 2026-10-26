@@ -1,26 +1,26 @@
-# Kapitel 11 – Abschlussprojekt: Zahlenraten 🎲
+# Kapitel 11 – Abschlussprojekt: Zahlenraten
 
-[← Fehler abfangen](10-Fehler-abfangen.md) | [🏠 Übersicht](../README.md) | [Weiter: Galgenraten →](../Zusatzaufgaben/Z1-Galgenraten.md)
+[← Fehler abfangen](10-Fehler-abfangen.md) | [Übersicht](../README.md) | [Weiter: Galgenraten →](../Zusatzaufgaben/Z1-Galgenraten.md)
 
-## 🎯 Ziel
+## Ziel
 
 Jetzt setzt du alles zusammen, was du gelernt hast, und baust ein **komplettes Spiel**.
 Das Projekt ist in **Stufen** aufgeteilt. Bring zuerst eine Stufe zum Laufen, bevor du mit der nächsten beginnst – so hast du immer ein funktionierendes Spiel.
 
 ---
 
-## 📖 Neu: Zufallszahlen
+## Neu: Zufallszahlen
 
 ```csharp
 int geheimeZahl = Random.Shared.Next(1, 101);   // Zufallszahl von 1 bis 100
 ```
 
-> ❗ **Wichtig:**
+> **Wichtig:**
 > Die **zweite** Zahl ist **nicht** mehr dabei! `Next(1, 101)` liefert Zahlen von 1 bis **100**.
 
 ---
 
-## 🛠️ Die Stufen
+## Die Stufen
 
 ### Stufe 1 – Das Grundspiel
 
@@ -41,7 +41,7 @@ Richtig! Die Zahl war 63. Du hast 3 Versuche gebraucht.
 *Du brauchst: Variablen, Eingaben, Verzweigungen, Schleifen (Kapitel 2–6)*
 
 <details>
-<summary>💡 Tipp</summary>
+<summary>Tipp</summary>
 
 Welche Schleife passt am besten? Der Spieler muss **mindestens einmal** raten …
 </details>
@@ -66,7 +66,7 @@ Der Spieler wählt am Anfang einen Schwierigkeitsgrad aus (mit `switch`):
 
 Sind alle Versuche aufgebraucht, hat der Spieler verloren und erfährt die geheime Zahl.
 
-### ⭐ Stufe 4 – Highscore und Extras
+### Bous Stufe 4 – Highscore und Extras
 
 Such dir aus, was dir gefällt:
 
@@ -76,7 +76,7 @@ Such dir aus, was dir gefällt:
 
 ---
 
-## 🔁 Andere Projektideen
+## Andere Projektideen
 
 Lieber etwas anderes bauen? Kein Problem – such dir eine dieser Ideen aus:
 
@@ -89,7 +89,7 @@ Lieber etwas anderes bauen? Kein Problem – such dir eine dieser Ideen aus:
 
 ---
 
-## ✅ Was du in diesem Projekt alles benutzt
+## Was du in diesem Projekt alles benutzt
 
 - [ ] Variablen und Datentypen (Kapitel 2)
 - [ ] Rechnen und Vergleichen (Kapitel 3)
@@ -103,7 +103,7 @@ Lieber etwas anderes bauen? Kein Problem – such dir eine dieser Ideen aus:
 
 ---
 
-## 🎉 Geschafft!
+## Geschafft!
 
 Herzlichen Glückwunsch – du hast die Grundlagen der Programmierung mit C# gelernt!
 Zeig dein Spiel ruhig den anderen Praktikant*innen oder deiner Betreuungsperson.
@@ -111,4 +111,4 @@ Zeig dein Spiel ruhig den anderen Praktikant*innen oder deiner Betreuungsperson.
 **Wie geht es weiter?**
 Wenn du zu Hause weitermachen möchtest: Die offizielle C#-Dokumentation von Microsoft gibt es auch auf Deutsch – mit vielen Tutorials für Einsteiger: [learn.microsoft.com/de-de/dotnet/csharp](<redacted URL>)
 
-[← Fehler abfangen](10-Fehler-abfangen.md) | [🏠 Übersicht](../README.md) | [Weiter: Galgenraten →](../Zusatzaufgaben/Z1-Galgenraten.md)
+[← Fehler abfangen](10-Fehler-abfangen.md) | [Übersicht](../README.md) | [Weiter: Galgenraten →](../Zusatzaufgaben/Z1-Galgenraten.md)
