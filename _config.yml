@@ -1,0 +1,18 @@
+title: C#-Tutorial
+remote_theme: just-the-docs/just-the-docs
+plugins:
+  - jekyll-remote-theme
+
+callouts:
+  tipp:
+    title: Tipp
+    color: green
+  hinweis:
+    title: Hinweis
+    color: blue
+  wichtig:
+    title: Wichtig
+    color: yellow
+  achtung:
+    title: Achtung
+    color: red
