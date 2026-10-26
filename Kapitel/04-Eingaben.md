@@ -1,8 +1,8 @@
 # Kapitel 4 – Benutzereingaben
 
-[← Rechnen und Vergleichen](03-Rechnen-und-Vergleichen.md) | [🏠 Übersicht](../README.md) | [Weiter: Verzweigungen →](05-Verzweigungen.md)
+[← Rechnen und Vergleichen](03-Rechnen-und-Vergleichen.md) | [Übersicht](../README.md) | [Weiter: Verzweigungen →](05-Verzweigungen.md)
 
-## 🎯 Ziel
+## Ziel
 
 Nach diesem Kapitel kannst du:
 
@@ -48,13 +48,13 @@ Console.WriteLine(zahl + 3);   // Ausgabe: 8   (es wird gerechnet)
 ```
 
 
-> ❗ **Wichtig:**
+> **Wichtig:**
 > Bei der **Eingabe** von Kommazahlen im Terminal gilt auf einem deutschen Windows das **Komma**: Tippe `1,5` statt `1.5`.
 > (Im **Code** schreibst du dagegen immer den Punkt.)
 
 ---
 
-## ⚠️ Typische Fehler
+## Typische Fehler
 
 | Fehler | Was passiert |
 |---|---|
@@ -64,7 +64,7 @@ Console.WriteLine(zahl + 3);   // Ausgabe: 8   (es wird gerechnet)
 
 ---
 
-## ✍️ Aufgaben
+## Aufgaben
 
 ### Aufgabe 4.1 – Wie alt bist du dieses Jahr?
 
@@ -118,7 +118,7 @@ Zweite Zahl: 5
 17 % 5 = 2
 ```
 
-### ⭐ Aufgabe 4.4 – Absturz-Detektiv
+### Bonus-Aufgabe 4.4 – Absturz-Detektiv
 
 1. Starte deinen Mini-Rechner und gib statt einer Zahl `abc` ein. Was passiert? Wie heißt der Fehler in der Meldung?
 2. Ändere den Temperatur-Umrechner auf `double.Parse` und gib einmal `1,5` und einmal `1.5` ein. Was fällt dir auf?
@@ -127,11 +127,11 @@ Merke dir die Ergebnisse – in [Kapitel 10](10-Fehler-abfangen.md) lösen wir d
 
 ---
 
-## ✅ Checkliste
+## Checkliste
 
 - [ ] Ich kann mit `Console.ReadLine()` eine Eingabe lesen.
 - [ ] Ich weiß, dass `ReadLine()` immer einen `string` liefert.
 - [ ] Ich kann Eingaben mit `int.Parse` und `double.Parse` in Zahlen umwandeln.
 - [ ] Ich weiß, warum `celsius * 9 / 5` und `celsius * (9 / 5)` unterschiedliche Ergebnisse liefern.
 
-[← Rechnen und Vergleichen](03-Rechnen-und-Vergleichen.md) | [🏠 Übersicht](../README.md) | [Weiter: Verzweigungen →](05-Verzweigungen.md)
+[← Rechnen und Vergleichen](03-Rechnen-und-Vergleichen.md) | [Übersicht](../README.md) | [Weiter: Verzweigungen →](05-Verzweigungen.md)
