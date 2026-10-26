@@ -1,10 +1,10 @@
-# Zusatzaufgabe 2 – Snackautomat 🥤
+# Zusatzaufgabe 2 – Snackautomat
 
-**Schwierigkeit:** 🟡 Mittel · **Dauer:** ca. 2 Stunden
+**Schwierigkeit:** Mittel · **Dauer:** ca. 2 Stunden
 
-[← Zusatzaufgabe 1 – Galgenraten](Z1-Galgenraten.md) | [🏠 Übersicht](../README.md) | [Weiter: Zusatzaufgabe 3 – Tic-Tac-Toe →](Z3-TicTacToe.md)
+[← Zusatzaufgabe 1 – Galgenraten](Z1-Galgenraten.md) | [Übersicht](../README.md) | [Weiter: Zusatzaufgabe 3 – Tic-Tac-Toe →](Z3-TicTacToe.md)
 
-## 🎯 Ziel
+## Ziel
 
 Du programmierst einen **Snackautomaten**, wie er in der Schule oder im Büro steht:
 Produkte anzeigen, Münzen einwerfen, Wechselgeld zurückgeben – und ein geheimer **Admin-Modus** zum Auffüllen.
@@ -14,7 +14,7 @@ Außerdem lernst du, warum man mit Geld **nicht** in `double` rechnen sollte.
 
 ---
 
-## 🧰 Was du brauchst
+## Was du brauchst
 
 | Thema | Kapitel |
 |---|---|
@@ -27,12 +27,12 @@ Außerdem lernst du, warum man mit Geld **nicht** in `double` rechnen sollte.
 
 ---
 
-## 📖 Neu: Geld in Cent speichern
+## Neu: Geld in Cent speichern
 
 Probier mal das hier aus:
 
 ```csharp
-Console.WriteLine(0.1 + 0.2);   // 0,30000000000000004 😱
+Console.WriteLine(0.1 + 0.2);   // 0,30000000000000004 
 ```
 
 `double` kann viele Kommazahlen nur **ungefähr** speichern. Bei einem Automaten, der tausendmal rechnet, fehlt dann irgendwann ein Cent.
@@ -54,7 +54,7 @@ string AlsEuro(int cent)
 ```
 
 	
-> ❗ **Wichtig:**
+> **Wichtig:**
 > Schreibe `100.0` und nicht `100`! Sonst ist es eine Ganzzahl-Division (Kapitel 3) und aus `150 / 100` wird `1`.
 
 ### Neu: Text in Spalten ausrichten
@@ -68,7 +68,7 @@ Console.WriteLine($"{"1,50 €",8}|");     // "  1,50 €|"        → rechts au
 
 ---
 
-## 🛠️ Die Stufen
+## Die Stufen
 
 ### Stufe 1 – Die Klasse `Produkt`
 
@@ -96,11 +96,11 @@ Lege in `Program.cs` eine `List<Produkt>` mit mindestens **5 Produkten** an (ein
 0) Beenden
 ```
 
-> ℹ️ **Hinweis:**
+> **Hinweis:**
 > Wähle nur Preise, die durch 10 teilbar sind (z. B. 120, nicht 125). Der Automat nimmt nur 10-Cent-Münzen und größere an.
 
 <details>
-<summary>💡 Tipp</summary>
+<summary>Tipp</summary>
 
 - Für die Nummern im Menü brauchst du den Index. Nimm deshalb eine `for`-Schleife statt `foreach` und gib `i + 1` aus.
 - Schreibe eine Methode `void ZeigeProdukte(List<Produkt> liste)`. Du brauchst sie später im Admin-Modus noch einmal.
@@ -129,7 +129,7 @@ Rückgabe: 1,50 €
 ```
 
 <details>
-<summary>💡 Tipp</summary>
+<summary>Tipp</summary>
 
 - Schreibe eine Methode `int Kaufen(Produkt produkt)`. Sie gibt den **Betrag zurück, der in der Kasse bleibt** (den Preis, oder `0` bei Abbruch). Den brauchst du in Stufe 4.
 - Achtung, Index: Menüpunkt `1` ist `produkte[0]`!
@@ -150,7 +150,7 @@ Rückgabe: 1,70 €
 Schreibe dafür eine Methode `void GibWechselgeld(int betrag)`. Sie wird auch beim Abbruch aufgerufen.
 
 <details>
-<summary>💡 Tipp</summary>
+<summary>Tipp</summary>
 
 Fang mit der **größten** Münze an. Erinnerst du dich an das Sekunden-Umrechnen aus Kapitel 3?
 
@@ -189,7 +189,7 @@ Aufgefüllt.
 
 ---
 
-## ⚠️ Typische Fehler
+## Typische Fehler
 
 | Fehler | Was passiert |
 |---|---|
@@ -200,7 +200,7 @@ Aufgefüllt.
 
 ---
 
-## ⭐ Extras
+## Extras
 
 - **Münzvorrat:** Der Automat hat nur eine begrenzte Anzahl jeder Münze zum Wechseln. Eingeworfene Münzen kommen dazu. Kann er nicht passend herausgeben, zeigt er `Bitte passend zahlen` an.
 - **Happy Hour:** Im Admin-Modus kann man eine Rabatt-Aktion starten (z. B. 20 % auf alles). Denk an das Runden auf 10 Cent!
@@ -208,11 +208,11 @@ Aufgefüllt.
 
 ---
 
-## ✅ Checkliste
+## Checkliste
 
 - [ ] Ich kann erklären, warum man Geld besser in Cent als `int` speichert.
 - [ ] Ich habe eine Klasse mit `private set` und mehreren Methoden geschrieben.
 - [ ] Ich kann mit `/` und `%` einen Betrag in Münzen aufteilen.
 - [ ] Mein Automat stürzt bei keiner Eingabe ab.
 
-[← Zusatzaufgabe 1 – Galgenraten](Z1-Galgenraten.md) | [🏠 Übersicht](../README.md) | [Weiter: Zusatzaufgabe 3 – Tic-Tac-Toe →](Z3-TicTacToe.md)
+[← Zusatzaufgabe 1 – Galgenraten](Z1-Galgenraten.md) | [Übersicht](../README.md) | [Weiter: Zusatzaufgabe 3 – Tic-Tac-Toe →](Z3-TicTacToe.md)
