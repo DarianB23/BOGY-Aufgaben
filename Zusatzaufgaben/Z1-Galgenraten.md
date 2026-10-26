@@ -147,14 +147,14 @@ Bitte genau einen Buchstaben eingeben: a
 A hast du schon geraten!
 ```
 
-<details>
-<summary>Tipp</summary>
-
+{% capture tipp %}
 - Probiere zuerst aus, was in Stufe 1 passiert, wenn du einfach **Enter** drückst. Welche Exception bekommst du – und warum?
 - Die Bedingung für „Eingabe ungültig“ lautet: Länge ist **nicht** 1 **oder** das Zeichen ist **kein** Buchstabe.
   Achte auf die Reihenfolge: Prüfe die Länge **zuerst**!
 - Für die Anzeige der geratenen Buchstaben hilft `string.Join(", ", geraten)`. Das verbindet alle Elemente einer Liste zu einem Text.
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
+
 
 ### Stufe 3 – Mehrere Runden mit Statistik
 
