@@ -15,7 +15,7 @@ Das Projekt ist in **Stufen** aufgeteilt. Bring zuerst eine Stufe zum Laufen, be
 int geheimeZahl = Random.Shared.Next(1, 101);   // Zufallszahl von 1 bis 100
 ```
 
-> [!WICHTIG]
+> [!IMPORTANT]
 > Die **zweite** Zahl ist **nicht** mehr dabei! `Next(1, 101)` liefert Zahlen von 1 bis **100**.
 
 ---
