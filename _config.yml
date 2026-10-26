@@ -9,7 +9,7 @@
 <style>
   /* ---------- Farben und Grundwerte ---------- */
   :root {
-    --sidebar-width: 200px;
+    --sidebar-width: #200px;
     --btn-bg: #27262b;
     --btn-fg: #e6e1e8;
     --btn-border: #44434d;
