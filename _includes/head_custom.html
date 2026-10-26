@@ -1,0 +1,33 @@
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var boxes = document.querySelectorAll(".main-content input[type='checkbox']");
+
+    boxes.forEach(function (box, i) {
+      // One key per page and checkbox
+      var key = "checkliste:" + location.pathname + ":" + i;
+
+      // Make the box clickable
+      box.disabled = false;
+      box.removeAttribute("disabled");
+
+      // Restore the saved state
+      var saved = localStorage.getItem(key);
+      if (saved !== null) {
+        box.checked = saved === "1";
+      }
+
+      // Save when clicked
+      box.addEventListener("change", function () {
+        localStorage.setItem(key, box.checked ? "1" : "0");
+      });
+    });
+  });
+</script>
+
+<style>
+  .main-content input[type="checkbox"] {
+    cursor: pointer;
+    transform: scale(1.2);
+    margin-right: 0.4em;
+  }
+</style>
