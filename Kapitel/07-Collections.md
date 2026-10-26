@@ -1,8 +1,8 @@
 # Kapitel 7 – Arrays und Listen
 
-[← Schleifen](06-Schleifen.md) | [🏠 Übersicht](../README.md) | [Weiter: Methoden →](08-Methoden.md)
+[← Schleifen](06-Schleifen.md) | [Übersicht](../README.md) | [Weiter: Methoden →](08-Methoden.md)
 
-## 🎯 Ziel
+## Ziel
 
 Nach diesem Kapitel kannst du:
 
@@ -12,7 +12,7 @@ Nach diesem Kapitel kannst du:
 
 ---
 
-## 📖 Erklärung
+## Erklärung
 
 Eine Variable speichert **einen** Wert. Für viele Werte (z. B. 30 Punktzahlen) brauchst du eine **Collection**.
 Wie eine Variable hat auch jede Collection einen festen **Typ** – ein `int`-Array speichert nur `int`-Werte.
@@ -33,7 +33,7 @@ string[] farben = { "Rot", "Grün", "Blau" };
 
 Arrays erkennst du an den **eckigen Klammern** `[ ]`. Ihre Größe kann sich **nicht mehr ändern**.
 
-> ❗ **Wichtig:**
+> **Wichtig:**
 > In der Informatik beginnt man beim Zählen mit **0**. Ein Array mit 4 Plätzen hat die Indizes `0, 1, 2, 3`.
 
 ### Listen – flexible Größe
@@ -84,7 +84,7 @@ foreach (Typ variable in sammlung)
 
 ---
 
-## ⚠️ Typische Fehler
+## Typische Fehler
 
 | Fehler | Was passiert |
 |---|---|
@@ -94,7 +94,7 @@ foreach (Typ variable in sammlung)
 
 ---
 
-## ✍️ Aufgaben
+## Aufgaben
 
 ### Aufgabe 7.1 – Vorhersage
 
@@ -129,17 +129,17 @@ Größte Zahl: 10
 Programmiere Summe und Maximum **selbst** mit einer Schleife.
 
 <details>
-<summary>💡 Tipp</summary>
+<summary>Tipp</summary>
 
 - Summe: Starte mit `int summe = 0;` und addiere in einer `foreach`-Schleife jede Zahl dazu.
 - Maximum: Merke dir am Anfang die erste Zahl als größte (`zahlen[0]`) und vergleiche jede weitere Zahl damit.
 - Durchschnitt: Achtung, Ganzzahl-Division (Kapitel 3)! `31 / 5` ergibt sonst `6`.
 </details>
 
-> 💡 **Tipp:**
+> **Tipp:**
 > Wenn deine Lösung funktioniert: Vergleiche dein Ergebnis mit `zahlen.Sum()`, `zahlen.Max()` und `zahlen.Average()`. Diese Befehle hat C# schon eingebaut.
 
-### ⭐ Aufgabe 7.4 – Einkaufsliste
+### Bous-Aufgabe 7.4 – Einkaufsliste
 
 - Der Benutzer gibt nacheinander Artikel ein, bis er `fertig` schreibt.
 - Ein Artikel, der schon auf der Liste steht, wird **nicht** doppelt hinzugefügt (gib dann einen Hinweis aus).
@@ -153,11 +153,11 @@ Programmiere Summe und Maximum **selbst** mit einer Schleife.
 
 ---
 
-## ✅ Checkliste
+## Checkliste
 
 - [ ] Ich weiß, dass der erste Index immer `0` ist.
 - [ ] Ich kann ein Array und eine Liste anlegen und Werte hineinschreiben.
 - [ ] Ich kenne den Unterschied zwischen Array und Liste (und zwischen `.Length` und `.Count`).
 - [ ] Ich kann mit `foreach` alle Elemente durchgehen.
 
-[← Schleifen](06-Schleifen.md) | [🏠 Übersicht](../README.md) | [Weiter: Methoden →](08-Methoden.md)
+[← Schleifen](06-Schleifen.md) | [Übersicht](../README.md) | [Weiter: Methoden →](08-Methoden.md)
