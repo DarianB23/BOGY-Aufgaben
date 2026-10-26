@@ -1,3 +1,8 @@
+---
+title: 04 - Benutzereingaben
+parent: Kapitel
+nav_order: 4
+---
 # Kapitel 4 – Benutzereingaben
 
 [← Rechnen und Vergleichen](03-Rechnen-und-Vergleichen.md) | [Übersicht](../README.md) | [Weiter: Verzweigungen →](05-Verzweigungen.md)
