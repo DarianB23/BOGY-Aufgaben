@@ -155,12 +155,12 @@ Nicht genug Geld auf dem Konto!
 Lea: 70,00 €
 ```
 
-<details>
-<summary>Tipp</summary>
-
+{% capture tipp %}
 - Mit `{Kontostand:0.00}` in einem `$"..."`-Text wird der Betrag immer mit zwei Nachkommastellen angezeigt.
 - Warum `private set`? Probiere in `Program.cs` einmal `konto.Kontostand = 1000000;` aus.
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
+
 
 ### Bonus-Aufgabe 9.3 – Überweisungen
 
