@@ -76,12 +76,12 @@ In welchem Jahr bist du geboren? 2010
 Hallo Max, du wirst dieses Jahr 16 Jahre alt.
 ```
 
-<details>
-<summary>💡 Tipp</summary>
-
+{% capture tipp %}
 Du kannst das aktuelle Jahr erst einmal als Zahl in eine Variable schreiben.
 Profis lassen es sich vom Computer geben: `int jahr = DateTime.Now.Year;`
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
+
 
 ### Aufgabe 4.2 – Temperatur-Umrechner
 
@@ -97,12 +97,12 @@ Die Temperatur 28° Celsius entspricht circa 82° Fahrenheit.
 
 Danach: Was musst du ändern, damit das **genaue** Ergebnis (`82,4`) angezeigt wird?
 
-<details>
-<summary>💡 Tipp</summary>
-
+{% capture tipp %}
 Denk an Kapitel 3: Was passiert, wenn man zwei `int`-Werte teilt?
 Probiere auch einmal `celsius * (9 / 5) + 32` aus. Warum kommt da etwas Falsches heraus?
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
+
 
 ### Aufgabe 4.3 – Mini-Rechner
 
