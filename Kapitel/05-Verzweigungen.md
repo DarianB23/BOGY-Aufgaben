@@ -1,8 +1,8 @@
 # Kapitel 5 – Verzweigungen
 
-[← Benutzereingaben](04-Eingaben.md) | [🏠 Übersicht](../README.md) | [Weiter: Schleifen →](06-Schleifen.md)
+[← Benutzereingaben](04-Eingaben.md) | [Übersicht](../README.md) | [Weiter: Schleifen →](06-Schleifen.md)
 
-## 🎯 Ziel
+## Ziel
 
 Nach diesem Kapitel kannst du:
 
@@ -12,7 +12,7 @@ Nach diesem Kapitel kannst du:
 
 ---
 
-## 📖 Erklärung
+## Erklärung
 
 Bisher lief dein Programm immer von oben nach unten durch. Mit einer **Verzweigung** entscheidet es selbst, welcher Code ausgeführt wird.
 
@@ -84,13 +84,13 @@ switch (tag)
 - Jeder `case` endet mit `break;` – damit wird der `switch` verlassen.
 - `default` fängt alle Werte ab, für die es keinen `case` gibt.
 
-> 💡 **Tipp:**
+> **Tipp:**
 > `switch` unterscheidet Groß- und Kleinschreibung: `"montag"` passt **nicht** zu `"Montag"`.
 > Mit `tag.ToLower()` machst du die Eingabe komplett klein – dann musst du die `case`-Werte natürlich auch kleinschreiben.
 
 ---
 
-## ⚠️ Typische Fehler
+## Typische Fehler
 
 | Fehler | Was passiert |
 |---|---|
@@ -101,7 +101,7 @@ switch (tag)
 
 ---
 
-## ✍️ Aufgaben
+## Aufgaben
 
 ### Aufgabe 5.1 – Denkfrage: Warum `else if`?
 
@@ -121,7 +121,7 @@ Die Zahl -7 ist eine ungerade negative Zahl.
 ```
 
 <details>
-<summary>💡 Tipp</summary>
+<summary>Tipp</summary>
 
 Kümmere dich zuerst um den Sonderfall `0`. Für alle anderen Zahlen kannst du die Wörter („positive“/„negative“, „gerade“/„ungerade“) in zwei `string`-Variablen speichern und am Ende einen Satz daraus bauen.
 Gerade heißt: `zahl % 2 == 0`.
@@ -141,7 +141,7 @@ Gerade heißt: `zahl % 2 == 0`.
 | ab 30 | 5 |
 | darunter | 6 |
 
-### ⭐ Aufgabe 5.4 – Persönlichere Sätze
+### Bonus-Aufgabe 5.4 – Persönlichere Sätze
 
 Erweitere deinen Zahlen-Check aus 5.2: Der Satz soll sich je nach Kombination verändern.
 
@@ -152,7 +152,7 @@ Die Zahl -2 ist zwar negativ, aber trotzdem gerade.
 Die Zahl -5 ist weder positiv noch gerade.
 ```
 
-### ⭐ Aufgabe 5.5 – Kinokasse
+### Bonus-Aufgabe 5.5 – Kinokasse
 
 Frage nach **Alter** und **Wochentag** und berechne den Eintrittspreis:
 
@@ -163,11 +163,11 @@ Frage nach **Alter** und **Wochentag** und berechne den Eintrittspreis:
 
 ---
 
-## ✅ Checkliste
+## Checkliste
 
 - [ ] Ich kann `if`, `else if` und `else` richtig einsetzen.
 - [ ] Ich weiß, dass nur der **erste** passende Block ausgeführt wird.
 - [ ] Ich kann Bedingungen mit `&&` und `||` kombinieren.
 - [ ] Ich kann einen `switch` mit `case`, `break` und `default` schreiben.
 
-[← Benutzereingaben](04-Eingaben.md) | [🏠 Übersicht](../README.md) | [Weiter: Schleifen →](06-Schleifen.md)
+[← Benutzereingaben](04-Eingaben.md) | [Übersicht](../README.md) | [Weiter: Schleifen →](06-Schleifen.md)
