@@ -91,13 +91,12 @@ Benutze sie in einer Schleife von 1 bis 10:
 3 ist ungerade.
 ...
 ```
-
-<details>
-<summary>Tipp</summary>
-
+{% capture tipp %}
 Der Rückgabetyp ist `bool`. Wie du prüfst, ob eine Zahl gerade ist, steht in Kapitel 3 und 5.
 Wusstest du, dass du einen Vergleich direkt zurückgeben kannst? `return zahl % 2 == 0;`
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
+
 
 ### Aufgabe 8.2 – Temperaturtabelle
 
@@ -135,11 +134,11 @@ Baue deinen **Mini-Rechner** aus Aufgabe 4.3 damit um. Wie viel kürzer wird er?
 
 Warum ist eine Methode besser, als denselben Code mehrmals zu kopieren? Finde mindestens **zwei** Gründe.
 
-<details>
-<summary>Tipp</summary>
-
+{% capture tipp %}
 Stell dir vor, du hast den Code 10-mal kopiert und findest dann einen Fehler darin …
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
+
 
 ### Bonus-Aufgabe 8.5 – Statistik aufräumen
 
