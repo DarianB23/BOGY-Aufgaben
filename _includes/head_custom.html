@@ -1,175 +1,298 @@
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var boxes = document.querySelectorAll(".main-content input[type='checkbox']");
+<!--
+  _includes/head_custom.html – eigene Erweiterungen für Just the Docs
 
-    boxes.forEach(function (box, i) {
-      // One key per page and checkbox
-      var key = "checkliste:" + location.pathname + ":" + i;
+  1. Hell/Dunkel-Umschalter          (Button unten rechts)
+  2. Seitenleiste ein-/ausblenden    (Button unten links)
+  3. Breite der Seitenleiste ziehen  (rechter Rand der Seitenleiste)
+  4. Anklickbare Checklisten         (- [ ] in Markdown)
 
-      // Make the box clickable
-      box.disabled = false;
-      box.removeAttribute("disabled");
-
-      // Restore the saved state
-      var saved = localStorage.getItem(key);
-      if (saved !== null) {
-        box.checked = saved === "1";
-      }
-
-      // Save when clicked
-      box.addEventListener("change", function () {
-        localStorage.setItem(key, box.checked ? "1" : "0");
-      });
-    });
-  });
-</script>
+  Alle Einstellungen werden im Browser gespeichert (localStorage).
+-->
 
 <style>
+  /* ---------- Farben und Grundwerte ---------- */
+  :root {
+    --sidebar-width: 200px;
+    --btn-bg: #27262b;
+    --btn-fg: #e6e1e8;
+    --btn-border: #44434d;
+    --btn-hover: #302d36;
+    --handle-color: #58a6ff;
+  }
+
+  html[data-theme="light"] {
+    --btn-bg: #f5f6fa;
+    --btn-fg: #27262b;
+    --btn-border: #d3d6de;
+    --btn-hover: #e6e8ef;
+    --handle-color: #7253ed;
+  }
+
+  /* ---------- Buttons ---------- */
+  .jtd-btn {
+    position: fixed;
+    bottom: 1rem;
+    z-index: 1000;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--btn-border);
+    border-radius: 6px;
+    background: var(--btn-bg);
+    color: var(--btn-fg);
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  .jtd-btn:hover { background: var(--btn-hover); }
+  .sidebar-toggle { left: 1rem; }
+  .theme-toggle   { right: 1rem; }
+
+  /* ---------- Checklisten ---------- */
   .main-content input[type="checkbox"] {
     cursor: pointer;
     transform: scale(1.2);
     margin-right: 0.4em;
   }
-</style>
-<script>
-  // Restore the state right away so the page doesn't flicker
-  if (localStorage.getItem("sidebar-collapsed") === "1") {
-    document.documentElement.classList.add("sidebar-collapsed");
+
+  /* ---------- Seitenleiste (nur breite Bildschirme) ---------- */
+  @media (min-width: 50rem) {
+    .side-bar {
+      width: var(--sidebar-width) !important;
+      min-width: 0 !important;
+      flex: 0 0 var(--sidebar-width) !important;
+    }
+    .side-bar .site-header,
+    .side-bar .site-nav,
+    .side-bar .site-footer {
+      width: 100% !important;
+    }
+    .main {
+      margin-left: var(--sidebar-width) !important;
+      max-width: none !important;
+    }
+
+    /* Ziehgriff am rechten Rand der Seitenleiste */
+    .sidebar-resizer {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: calc(var(--sidebar-width) - 3px);
+      width: 6px;
+      z-index: 999;
+      cursor: col-resize;
+      background: transparent;
+      touch-action: none;
+    }
+    .sidebar-resizer:hover,
+    .sidebar-resizer:focus-visible,
+    html.sidebar-resizing .sidebar-resizer {
+      background: var(--handle-color);
+      opacity: 0.6;
+      outline: none;
+    }
+    html.sidebar-resizing,
+    html.sidebar-resizing * {
+      cursor: col-resize !important;
+      user-select: none !important;
+    }
+
+    /* Eingeklappt */
+    html.sidebar-collapsed .side-bar       { display: none !important; }
+    html.sidebar-collapsed .main           { margin-left: 0 !important; }
+    html.sidebar-collapsed .sidebar-resizer { display: none; }
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    var btn = document.createElement("button");
-    btn.className = "sidebar-toggle";
-    btn.type = "button";
+  /* Kleine Bildschirme: Das Theme hat einen eigenen ☰-Button */
+  @media (max-width: 49.99rem) {
+    .sidebar-toggle,
+    .sidebar-resizer { display: none; }
+  }
+</style>
 
-    function updateLabel() {
-      var collapsed = document.documentElement.classList.contains("sidebar-collapsed");
+<script>
+(function () {
+  "use strict";
+
+  // ---------- Einstellungen ----------
+  var CONFIG = {
+    defaultTheme: "dark", // muss zu color_scheme in _config.yml passen
+    sidebarDefault: 200,  // Startbreite in px (Doppelklick setzt zurück)
+    sidebarMin: 150,
+    sidebarMax: 450,
+    sidebarStep: 16       // Pfeiltasten-Schritt in px
+  };
+
+  var KEYS = {
+    theme: "color-theme",
+    collapsed: "sidebar-collapsed",
+    width: "sidebar-width",
+    checkbox: "checkliste:"
+  };
+
+  var root = document.documentElement;
+
+  function load(key) {
+    try { return localStorage.getItem(key); } catch (e) { return null; }
+  }
+  function save(key, value) {
+    try { localStorage.setItem(key, value); } catch (e) { /* z. B. privater Modus */ }
+  }
+
+  // ---------- 1. Hell/Dunkel ----------
+  function applyTheme(theme) {
+    var link = document.querySelector('link[rel="stylesheet"][href*="just-the-docs-"]');
+    if (link) {
+      link.href = link.href.replace(/just-the-docs-[a-z]+\.css/, "just-the-docs-" + theme + ".css");
+    }
+    root.setAttribute("data-theme", theme);
+  }
+  function currentTheme() {
+    return root.getAttribute("data-theme");
+  }
+
+  // ---------- 3. Breite der Seitenleiste ----------
+  var sidebarWidth = CONFIG.sidebarDefault;
+
+  function setSidebarWidth(px) {
+    sidebarWidth = Math.min(CONFIG.sidebarMax, Math.max(CONFIG.sidebarMin, Math.round(px)));
+    root.style.setProperty("--sidebar-width", sidebarWidth + "px");
+  }
+
+  // ---------- Sofort anwenden (verhindert Flackern) ----------
+  var savedTheme = load(KEYS.theme);
+  if (savedTheme) {
+    applyTheme(savedTheme);
+  } else {
+    root.setAttribute("data-theme", CONFIG.defaultTheme);
+  }
+
+  setSidebarWidth(parseInt(load(KEYS.width), 10) || CONFIG.sidebarDefault);
+
+  if (load(KEYS.collapsed) === "1") {
+    root.classList.add("sidebar-collapsed");
+  }
+
+  // ---------- Hilfsfunktion für Buttons ----------
+  function makeButton(className) {
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "jtd-btn " + className;
+    document.body.appendChild(btn);
+    return btn;
+  }
+
+  // ---------- 1. Hell/Dunkel-Button ----------
+  function initThemeToggle() {
+    var btn = makeButton("theme-toggle");
+
+    function update() {
+      var isDark = currentTheme() === "dark";
+      btn.textContent = isDark ? "☀️ Hell" : "🌙 Dunkel";
+      btn.setAttribute("aria-label", isDark ? "Helles Design aktivieren" : "Dunkles Design aktivieren");
+    }
+
+    btn.addEventListener("click", function () {
+      var next = currentTheme() === "dark" ? "light" : "dark";
+      applyTheme(next);
+      save(KEYS.theme, next);
+      update();
+    });
+
+    update();
+  }
+
+  // ---------- 2. Seitenleiste ein-/ausblenden ----------
+  function initSidebarToggle() {
+    var btn = makeButton("sidebar-toggle");
+
+    function update() {
+      var collapsed = root.classList.contains("sidebar-collapsed");
       btn.textContent = collapsed ? "☰ Menü" : "« Menü ausblenden";
       btn.setAttribute("aria-expanded", collapsed ? "false" : "true");
     }
 
     btn.addEventListener("click", function () {
-      var collapsed = document.documentElement.classList.toggle("sidebar-collapsed");
-      localStorage.setItem("sidebar-collapsed", collapsed ? "1" : "0");
-      updateLabel();
+      var collapsed = root.classList.toggle("sidebar-collapsed");
+      save(KEYS.collapsed, collapsed ? "1" : "0");
+      update();
     });
 
-    updateLabel();
-    document.body.appendChild(btn);
-  });
-</script>
-
-<style>
-  /* The button, bottom left so it doesn't cover the search */
-  .sidebar-toggle {
-    position: fixed;
-    bottom: 1rem;
-    left: 1rem;
-    z-index: 1000;
-    padding: 0.4rem 0.8rem;
-    border: 1px solid #44434d;
-    border-radius: 6px;
-    background: #27262b;
-    color: #e6e1e8;
-    cursor: pointer;
-    font-size: 0.9rem;
-  }
-  .sidebar-toggle:hover { background: #302d36; }
-
-  /* Only on wide screens. Small screens keep the theme's own ☰ button */
-  @media (max-width: 49.99rem) {
-    .sidebar-toggle { display: none; }
+    update();
   }
 
-  @media (min-width: 50rem) {
-    html.sidebar-collapsed .side-bar {
-      display: none !important;
+  // ---------- 3. Ziehgriff ----------
+  function initSidebarResizer() {
+    var handle = document.createElement("div");
+    handle.className = "sidebar-resizer";
+    handle.tabIndex = 0;
+    handle.title = "Ziehen: Breite ändern · Doppelklick: zurücksetzen";
+    handle.setAttribute("role", "separator");
+    handle.setAttribute("aria-orientation", "vertical");
+    handle.setAttribute("aria-label", "Breite der Seitenleiste ändern");
+    document.body.appendChild(handle);
+
+    var dragging = false;
+
+    function commit() {
+      save(KEYS.width, String(sidebarWidth));
     }
-    html.sidebar-collapsed .main {
-      margin-left: 0 !important;
-      max-width: none !important;
+
+    handle.addEventListener("pointerdown", function (e) {
+      if (e.button !== 0) return;
+      e.preventDefault();
+      dragging = true;
+      handle.setPointerCapture(e.pointerId);
+      root.classList.add("sidebar-resizing");
+    });
+
+    handle.addEventListener("pointermove", function (e) {
+      if (dragging) setSidebarWidth(e.clientX);
+    });
+
+    function stop() {
+      if (!dragging) return;
+      dragging = false;
+      root.classList.remove("sidebar-resizing");
+      commit();
     }
+    handle.addEventListener("pointerup", stop);
+    handle.addEventListener("pointercancel", stop);
+
+    handle.addEventListener("dblclick", function () {
+      setSidebarWidth(CONFIG.sidebarDefault);
+      commit();
+    });
+
+    // Tastatur: Pfeil links/rechts
+    handle.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft")  { setSidebarWidth(sidebarWidth - CONFIG.sidebarStep); commit(); e.preventDefault(); }
+      if (e.key === "ArrowRight") { setSidebarWidth(sidebarWidth + CONFIG.sidebarStep); commit(); e.preventDefault(); }
+    });
   }
-</style>
-<script>
-  (function () {
-    var KEY = "color-theme";
 
-    // Find the theme's stylesheet (just-the-docs-default/-light/-dark.css)
-    function findStylesheet() {
-      return document.querySelector('link[rel="stylesheet"][href*="just-the-docs-"]');
-    }
+  // ---------- 4. Checklisten ----------
+  function initCheckboxes() {
+    var boxes = document.querySelectorAll(".main-content input[type='checkbox']");
 
-    function applyTheme(theme) {
-      var link = findStylesheet();
-      if (link) {
-        link.href = link.href.replace(
-          /just-the-docs-[a-z]+\.css/,
-          "just-the-docs-" + theme + ".css"
-        );
-      }
-      document.documentElement.setAttribute("data-theme", theme);
-    }
+    boxes.forEach(function (box, i) {
+      var key = KEYS.checkbox + location.pathname + ":" + i;
 
-    // Restore the saved choice right away so the page doesn't flash
-    var saved = localStorage.getItem(KEY);
-    if (saved) {
-      applyTheme(saved);
-    } else {
-      document.documentElement.setAttribute("data-theme", "dark"); // matches color_scheme: dark
-    }
+      box.disabled = false;
+      box.removeAttribute("disabled");
 
-    document.addEventListener("DOMContentLoaded", function () {
-      var btn = document.createElement("button");
-      btn.className = "theme-toggle";
-      btn.type = "button";
+      var saved = load(key);
+      if (saved !== null) box.checked = saved === "1";
 
-      function updateLabel() {
-        var isDark = document.documentElement.getAttribute("data-theme") === "dark";
-        btn.textContent = isDark ? "☀️ Hell" : "🌙 Dunkel";
-        btn.setAttribute("aria-label", isDark ? "Helles Design aktivieren" : "Dunkles Design aktivieren");
-      }
-
-      btn.addEventListener("click", function () {
-        var isDark = document.documentElement.getAttribute("data-theme") === "dark";
-        var next = isDark ? "light" : "dark";
-        applyTheme(next);
-        localStorage.setItem(KEY, next);
-        updateLabel();
+      box.addEventListener("change", function () {
+        save(key, box.checked ? "1" : "0");
       });
-
-      updateLabel();
-      document.body.appendChild(btn);
     });
-  })();
+  }
+
+  // ---------- Start ----------
+  document.addEventListener("DOMContentLoaded", function () {
+    initCheckboxes();
+    initSidebarToggle();
+    initSidebarResizer();
+    initThemeToggle();
+  });
+})();
 </script>
-
-<style>
-  /* Bottom right, so it doesn't overlap the sidebar button on the left */
-  .theme-toggle {
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    z-index: 1000;
-    padding: 0.4rem 0.8rem;
-    border: 1px solid #44434d;
-    border-radius: 6px;
-    background: #27262b;
-    color: #e6e1e8;
-    cursor: pointer;
-    font-size: 0.9rem;
-  }
-  .theme-toggle:hover { background: #302d36; }
-
-  /* Light mode colors for both buttons */
-  html[data-theme="light"] .theme-toggle,
-  html[data-theme="light"] .sidebar-toggle {
-    background: #f5f6fa;
-    color: #27262b;
-    border-color: #d3d6de;
-  }
-  html[data-theme="light"] .theme-toggle:hover,
-  html[data-theme="light"] .sidebar-toggle:hover {
-    background: #e6e8ef;
-  }
-</style>
