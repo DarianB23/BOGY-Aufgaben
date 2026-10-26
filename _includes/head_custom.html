@@ -319,3 +319,40 @@
   });
 })();
 </script>
+<style>
+  /* ---------- Aufklappbare Hinweise (notiz.html) ---------- */
+  details.notiz {
+    margin: 1rem 0 !important;
+    padding: 0.5rem 0.75rem !important;
+    border: 1px solid rgba(128, 128, 128, 0.25) !important;
+    border-left-width: 4px !important;
+    border-radius: 6px !important;
+  }
+  details.notiz summary {
+    cursor: pointer;
+    font-weight: 600;
+  }
+  details.notiz[open] summary { margin-bottom: 0.5rem; }
+  details.notiz .notiz-inhalt > :last-child { margin-bottom: 0; }
+
+  /* Note: blau */
+  details.notiz.notiz-note {
+    border-left-color: #2f81f7 !important;
+    background: rgba(47, 129, 247, 0.08) !important;
+  }
+  details.notiz.notiz-note summary { color: #2f81f7 !important; }
+
+  /* Important: lila */
+  details.notiz.notiz-important {
+    border-left-color: #8957e5 !important;
+    background: rgba(137, 87, 229, 0.10) !important;
+  }
+  details.notiz.notiz-important summary { color: #8957e5 !important; }
+
+  /* Warning: orange */
+  details.notiz.notiz-warning {
+    border-left-color: #d29922 !important;
+    background: rgba(210, 153, 34, 0.10) !important;
+  }
+  details.notiz.notiz-warning summary { color: #d29922 !important; }
+</style>
