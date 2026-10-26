@@ -91,3 +91,85 @@
     }
   }
 </style>
+<script>
+  (function () {
+    var KEY = "color-theme";
+
+    // Find the theme's stylesheet (just-the-docs-default/-light/-dark.css)
+    function findStylesheet() {
+      return document.querySelector('link[rel="stylesheet"][href*="just-the-docs-"]');
+    }
+
+    function applyTheme(theme) {
+      var link = findStylesheet();
+      if (link) {
+        link.href = link.href.replace(
+          /just-the-docs-[a-z]+\.css/,
+          "just-the-docs-" + theme + ".css"
+        );
+      }
+      document.documentElement.setAttribute("data-theme", theme);
+    }
+
+    // Restore the saved choice right away so the page doesn't flash
+    var saved = localStorage.getItem(KEY);
+    if (saved) {
+      applyTheme(saved);
+    } else {
+      document.documentElement.setAttribute("data-theme", "dark"); // matches color_scheme: dark
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var btn = document.createElement("button");
+      btn.className = "theme-toggle";
+      btn.type = "button";
+
+      function updateLabel() {
+        var isDark = document.documentElement.getAttribute("data-theme") === "dark";
+        btn.textContent = isDark ? "☀️ Hell" : "🌙 Dunkel";
+        btn.setAttribute("aria-label", isDark ? "Helles Design aktivieren" : "Dunkles Design aktivieren");
+      }
+
+      btn.addEventListener("click", function () {
+        var isDark = document.documentElement.getAttribute("data-theme") === "dark";
+        var next = isDark ? "light" : "dark";
+        applyTheme(next);
+        localStorage.setItem(KEY, next);
+        updateLabel();
+      });
+
+      updateLabel();
+      document.body.appendChild(btn);
+    });
+  })();
+</script>
+
+<style>
+  /* Bottom right, so it doesn't overlap the sidebar button on the left */
+  .theme-toggle {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid #44434d;
+    border-radius: 6px;
+    background: #27262b;
+    color: #e6e1e8;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  .theme-toggle:hover { background: #302d36; }
+
+  /* Light mode colors for both buttons */
+  html[data-theme="light"] .theme-toggle,
+  html[data-theme="light"] .sidebar-toggle {
+    background: #f5f6fa;
+    color: #27262b;
+    border-color: #d3d6de;
+  }
+  html[data-theme="light"] .theme-toggle:hover,
+  html[data-theme="light"] .sidebar-toggle:hover {
+    background: #e6e8ef;
+  }
+</style>
