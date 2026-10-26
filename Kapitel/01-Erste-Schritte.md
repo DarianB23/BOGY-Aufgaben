@@ -20,15 +20,13 @@ Nach diesem Kapitel kannst du:
 1. Visual Studio öffnen → **Neues Projekt erstellen**
 2. Die Vorlage **Konsolen-App** (Sprache: C#) auswählen → **Weiter**
 3. Einen Projektnamen eingeben, z. B. `ErsteSchritte` → **Weiter**
-4. Als Framework **.NET 8.0** wählen. Das Häkchen bei **„Keine Anweisungen der obersten Ebene verwenden“** bleibt **leer**. → **Erstellen**
 
-> [!TIP]
+> [!TIPP]
 > Lege für jedes Kapitel ein **eigenes Projekt** an (z. B. `Kapitel02`, `Kapitel03` …). So bleibt dein alter Code erhalten und du kannst später nachschauen.
 
 Visual Studio öffnet die Datei `Program.cs` mit diesem Code:
 
 ```csharp
-// See <redacted URL> for more information
 Console.WriteLine("Hello, World!");
 ```
 
