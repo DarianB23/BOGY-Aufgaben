@@ -2,7 +2,7 @@
 
 **Schwierigkeit:** 🟢 Leicht (Niveau Abschlussprojekt) · **Dauer:** ca. 1–1,5 Stunden
 
-[🏠 Übersicht](../README.md) | [Weiter: Zusatzaufgabe 2 – Snackautomat →](Z2-Snackautomat.md)
+[← Abschlussprojekt](../Kapitel/11-Abschlussprojekt.md) | [🏠 Übersicht](../README.md) | [Weiter: Zusatzaufgabe 2 – Snackautomat →](Z2-Snackautomat.md)
 
 ## 🎯 Ziel
 
@@ -198,4 +198,4 @@ Such dir aus, was dir gefällt:
 - [ ] Mein Spiel stürzt bei keiner Eingabe ab.
 - [ ] Ich habe mindestens drei eigene Methoden geschrieben.
 
-[🏠 Übersicht](../README.md) | [Weiter: Zusatzaufgabe 2 – Snackautomat →](Z2-Snackautomat.md)
+[← Abschlussprojekt](../Kapitel/11-Abschlussprojekt.md) | [🏠 Übersicht](../README.md) | [Weiter: Zusatzaufgabe 2 – Snackautomat →](Z2-Snackautomat.md)
