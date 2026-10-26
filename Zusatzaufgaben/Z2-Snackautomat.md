@@ -99,12 +99,12 @@ Lege in `Program.cs` eine `List<Produkt>` mit mindestens **5 Produkten** an (ein
 > **Hinweis:**
 > Wähle nur Preise, die durch 10 teilbar sind (z. B. 120, nicht 125). Der Automat nimmt nur 10-Cent-Münzen und größere an.
 
-<details>
-<summary>Tipp</summary>
-
+{% capture tipp %}
 - Für die Nummern im Menü brauchst du den Index. Nimm deshalb eine `for`-Schleife statt `foreach` und gib `i + 1` aus.
 - Schreibe eine Methode `void ZeigeProdukte(List<Produkt> liste)`. Du brauchst sie später im Admin-Modus noch einmal.
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
+
 
 ### Stufe 2 – Kaufen
 
@@ -128,13 +128,13 @@ Bitte entnimm dein Produkt: Cola
 Rückgabe: 1,50 €
 ```
 
-<details>
-<summary>Tipp</summary>
-
+{% capture tipp %}
 - Schreibe eine Methode `int Kaufen(Produkt produkt)`. Sie gibt den **Betrag zurück, der in der Kasse bleibt** (den Preis, oder `0` bei Abbruch). Den brauchst du in Stufe 4.
 - Achtung, Index: Menüpunkt `1` ist `produkte[0]`!
 - Für die Münzprüfung bietet sich eine Methode `bool IstGueltigeMuenze(int cent)` an.
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
+
 
 ### Stufe 3 – Wechselgeld in Münzen
 
@@ -149,16 +149,16 @@ Rückgabe: 1,70 €
 
 Schreibe dafür eine Methode `void GibWechselgeld(int betrag)`. Sie wird auch beim Abbruch aufgerufen.
 
-<details>
-<summary>Tipp</summary>
-
+{% capture tipp %}
 Fang mit der **größten** Münze an. Erinnerst du dich an das Sekunden-Umrechnen aus Kapitel 3?
 
 - `betrag / 200` → so viele 2-€-Münzen passen hinein
 - `betrag % 200` → das bleibt übrig, damit geht es mit der nächsten Münze weiter
 
 Speichere die Münzen in einem Array `{ 200, 100, 50, 20, 10 }` und geh mit `foreach` durch.
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
+
 
 ### Stufe 4 – Der geheime Admin-Modus
 
