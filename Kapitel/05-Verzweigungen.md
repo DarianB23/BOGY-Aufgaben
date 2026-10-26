@@ -120,12 +120,12 @@ Gib eine Zahl ein: -7
 Die Zahl -7 ist eine ungerade negative Zahl.
 ```
 
-<details>
-<summary>Tipp</summary>
-
+{% capture tipp %}
 Kümmere dich zuerst um den Sonderfall `0`. Für alle anderen Zahlen kannst du die Wörter („positive“/„negative“, „gerade“/„ungerade“) in zwei `string`-Variablen speichern und am Ende einen Satz daraus bauen.
 Gerade heißt: `zahl % 2 == 0`.
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
+
 
 ### Aufgabe 5.3 – Notenrechner
 
