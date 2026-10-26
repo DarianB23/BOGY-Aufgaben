@@ -28,11 +28,11 @@ Jedes Kapitel ist gleich aufgebaut:
 5. Hilft der Tipp nicht, frag einen anwesenden Azubi, Studenten oder deine Betreuungsperson. Das ist völlig normal!
 6. Hake die Checkliste ab und geh zum nächsten Kapitel.
 
-> [!TIPP]
+> [!TIP]
 > Fehler sind beim Programmieren völlig normal – auch Profis bekommen jeden Tag Fehlermeldungen.
 > Lies die Meldung in Ruhe durch: Sie verrät dir meistens, **in welcher Zeile** und **was** falsch ist.
 
-> [!HINWEIS]
+> [!NOTE]
 > Programmiert wird normalerweise auf **Englisch**. Damit du alles leichter verstehst, sind die Beispiele hier auf Deutsch.
 > Ob du deine Variablen auf Deutsch oder Englisch benennst, entscheidest du selbst.
 
@@ -53,6 +53,18 @@ Jedes Kapitel ist gleich aufgebaut:
 | 9 | [Klassen und Objekte](Kapitel/09-Klassen.md) | Einstieg in die objektorientierte Programmierung |
 | 10 | [Fehler abfangen](Kapitel/10-Fehler-abfangen.md) | Programme absturzsicher machen |
 | 11 | [Abschlussprojekt](Kapitel/11-Abschlussprojekt.md) | Alles zusammen: dein eigenes Spiel |
+
+---
+
+## 🏆 Zusatzaufgaben
+
+Du bist mit dem Abschlussprojekt fertig und willst mehr? Diese drei Projekte bauen auf dem gesamten Tutorial auf.
+
+| Schwierigkeit | Projekt | Dauer | Neu dabei |
+|---|---|---|---|
+| 🟢 Leicht | [Galgenraten](Zusatzaufgaben/Z1-Galgenraten.md) | ca. 1–1,5 h | Einzelne Zeichen (`char`) |
+| 🟡 Mittel | [Snackautomat](Zusatzaufgaben/Z2-Snackautomat.md) | ca. 2 h | Rechnen mit Geld, Text in Spalten |
+| 🔴 Schwer | [Tic-Tac-Toe mit Computergegner](Zusatzaufgaben/Z3-TicTacToe.md) | ca. 3 h | Private Variablen, einfache KI |
 
 ---
 
