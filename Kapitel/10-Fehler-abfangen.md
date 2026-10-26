@@ -120,12 +120,12 @@ Mach diese Programme mit deinen neuen Methoden absturzsicher:
 2. die **Zahlenstatistik** (7.3)
 3. den **Notenrechner** (5.3) – hier soll zusätzlich nur eine Note von **1 bis 6** akzeptiert werden
 
-<details>
-<summary>Tipp</summary>
-
+{% capture tipp %}
 Für Aufgabe 3 kannst du die Bedingung der `while`-Schleife erweitern:
 „Wiederholen, solange die Eingabe **keine Zahl** ist **oder** die Zahl **kleiner als 1** ist **oder** **größer als 6**.“
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
+
 
 ### Bonus-Aufgabe 10.4 – Teilen durch null
 
