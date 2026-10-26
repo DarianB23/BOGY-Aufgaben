@@ -118,10 +118,11 @@ Zeichne mit mehreren `Console.WriteLine` ein Bild aus Zeichen, zum Beispiel ein 
  |_[]_|
 ```
 
-{% capture tipp %}
+
+{% capture notiz %}
 Der Backslash `\` hat in C#-Texten eine Sonderbedeutung. Um einen echten Backslash auszugeben, musst du ihn **doppelt** schreiben: `"\\"`.
 {% endcapture %}
-{% include tipp.html inhalt=tipp %}
+{%include notiz.html typ="important" titel="Wichtig" offen=true inhalt=notiz %}
 
 ---
 
