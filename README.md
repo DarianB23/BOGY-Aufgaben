@@ -27,12 +27,12 @@ Jedes Kapitel ist gleich aufgebaut:
 4. Kommst du nicht weiter? Klappe zuerst den **💡 Tipp** auf.
 5. Hilft der Tipp nicht, frag einen anwesenden Azubi, Studenten oder deine Betreuungsperson. Das ist völlig normal!
 6. Hake die Checkliste ab und geh zum nächsten Kapitel.
-
-> **Tipp:**
+	
+> 💡 **Tipp:**
 > Fehler sind beim Programmieren völlig normal – auch Profis bekommen jeden Tag Fehlermeldungen.
 > Lies die Meldung in Ruhe durch: Sie verrät dir meistens, **in welcher Zeile** und **was** falsch ist.
 
-> **Hinweis:**
+> ℹ️ **Hinweis:**
 > Programmiert wird normalerweise auf **Englisch**. Damit du alles leichter verstehst, sind die Beispiele hier auf Deutsch.
 > Ob du deine Variablen auf Deutsch oder Englisch benennst, entscheidest du selbst.
 
