@@ -85,10 +85,11 @@ Mein Lieblingshobby ist Klettern.
 Ersetze in deinem Programm `Console.WriteLine` durch `Console.Write` und starte es erneut.
 Erkläre in einem Satz: **Was ist der Unterschied?**
 
-<details>
+<details markdown="1">
 <summary>💡 Tipp</summary>
 
 Achte darauf, **wo** der zweite Text erscheint. Was passiert mit dem Zeilenumbruch?
+
 </details>
 
 ### Aufgabe 1.3 – Fehler mit Absicht
