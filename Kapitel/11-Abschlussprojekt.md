@@ -1,3 +1,8 @@
+---
+title: 11 - Abschlussprojekt: Zahlenraten
+parent: Kapitel
+nav_order: 11
+---
 # Kapitel 11 – Abschlussprojekt: Zahlenraten
 
 [← Fehler abfangen](10-Fehler-abfangen.md) | [Übersicht](../README.md) | [Weiter: Galgenraten →](../Zusatzaufgaben/Z1-Galgenraten.md)
