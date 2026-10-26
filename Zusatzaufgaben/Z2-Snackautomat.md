@@ -1,3 +1,8 @@
+---
+title: 2 - Snackautomat
+parent: Zusatzaufgaben
+nav_order: 2
+---
 # Zusatzaufgabe 2 – Snackautomat
 
 **Schwierigkeit:** Mittel · **Dauer:** ca. 2 Stunden
