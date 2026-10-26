@@ -1,3 +1,8 @@
+---
+title: 07 - Arrays und Listen
+parent: Kapitel
+nav_order: 7
+---
 # Kapitel 7 – Arrays und Listen
 
 [← Schleifen](06-Schleifen.md) | [Übersicht](../README.md) | [Weiter: Methoden →](08-Methoden.md)
