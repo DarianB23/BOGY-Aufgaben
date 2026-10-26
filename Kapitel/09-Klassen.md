@@ -2,9 +2,9 @@
 
 *Einführung in die objektorientierte Programmierung*
 
-[← Methoden](08-Methoden.md) | [🏠 Übersicht](../README.md) | [Weiter: Fehler abfangen →](10-Fehler-abfangen.md)
+[← Methoden](08-Methoden.md) | [Übersicht](../README.md) | [Weiter: Fehler abfangen →](10-Fehler-abfangen.md)
 
-## 🎯 Ziel
+## Ziel
 
 Nach diesem Kapitel kannst du:
 
@@ -14,7 +14,7 @@ Nach diesem Kapitel kannst du:
 
 ---
 
-## 📖 Erklärung
+## Erklärung
 
 ### Bauplan und Bauwerk
 
@@ -100,7 +100,7 @@ Console.WriteLine($"{meinHund.Name} ist {meinHund.Alter} Jahre alt.");
 
 ---
 
-## ⚠️ Typische Fehler
+## Typische Fehler
 
 | Fehler | Was passiert |
 |---|---|
@@ -111,7 +111,7 @@ Console.WriteLine($"{meinHund.Name} ist {meinHund.Alter} Jahre alt.");
 
 ---
 
-## ✍️ Aufgaben
+## Aufgaben
 
 ### Aufgabe 9.1 – Dein erster Hund
 
@@ -156,18 +156,18 @@ Lea: 70,00 €
 ```
 
 <details>
-<summary>💡 Tipp</summary>
+<summary>Tipp</summary>
 
 - Mit `{Kontostand:0.00}` in einem `$"..."`-Text wird der Betrag immer mit zwei Nachkommastellen angezeigt.
-- Warum `private set`? Probiere in `Program.cs` einmal `konto.Kontostand = 1000000;` aus. 😉
+- Warum `private set`? Probiere in `Program.cs` einmal `konto.Kontostand = 1000000;` aus.
 </details>
 
-### ⭐ Aufgabe 9.3 – Überweisungen
+### Bonus-Aufgabe 9.3 – Überweisungen
 
 1. Füge eine Methode `Ueberweisen(BankKonto ziel, double betrag)` hinzu. Sie hebt das Geld vom eigenen Konto ab und zahlt es auf das Zielkonto ein – aber nur, wenn genug Geld da ist.
 2. Lege drei Konten in einer `List<BankKonto>` an, mache ein paar Überweisungen und gib am Ende alle Konten mit einer `foreach`-Schleife aus.
 
-### ⭐ Aufgabe 9.4 – Deine eigene Klasse
+### Bonus-Aufgabe 9.4 – Deine eigene Klasse
 
 Denk dir selbst eine Klasse aus, zum Beispiel:
 
@@ -176,7 +176,7 @@ Denk dir selbst eine Klasse aus, zum Beispiel:
 
 ---
 
-## ✅ Checkliste
+## Checkliste
 
 - [ ] Ich kann den Unterschied zwischen Klasse und Objekt erklären.
 - [ ] Ich kann eine Klasse in einer eigenen Datei anlegen.
@@ -184,4 +184,4 @@ Denk dir selbst eine Klasse aus, zum Beispiel:
 - [ ] Ich kann mit `new` Objekte erzeugen und mit `.` auf sie zugreifen.
 - [ ] Ich weiß, wofür `private set` gut ist.
 
-[← Methoden](08-Methoden.md) | [🏠 Übersicht](../README.md) | [Weiter: Fehler abfangen →](10-Fehler-abfangen.md)
+[← Methoden](08-Methoden.md) | [Übersicht](../README.md) | [Weiter: Fehler abfangen →](10-Fehler-abfangen.md)
