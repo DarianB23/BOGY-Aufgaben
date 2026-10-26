@@ -1,5 +1,5 @@
 // Full-width layout on large screens
-@media (min-width: 66.5rem) {
+@media {
   .side-bar {
     width: $nav-width;          // fixed sidebar width instead of growing
   }
