@@ -28,7 +28,7 @@ Jedes Kapitel ist gleich aufgebaut:
 5. Hilft der Tipp nicht, frag einen anwesenden Azubi, Studenten oder deine Betreuungsperson. Das ist völlig normal!
 6. Hake die Checkliste ab und geh zum nächsten Kapitel.
 	
-> 💡 **Tipp:**
+> {: .tipp }
 > Fehler sind beim Programmieren völlig normal – auch Profis bekommen jeden Tag Fehlermeldungen.
 > Lies die Meldung in Ruhe durch: Sie verrät dir meistens, **in welcher Zeile** und **was** falsch ist.
 
