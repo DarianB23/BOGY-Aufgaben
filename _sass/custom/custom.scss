@@ -1,11 +1,17 @@
-// Full-width layout on large screens
-@media {
+// Narrower sidebar on medium and large screens
+@media (min-width: 50rem) {
   .side-bar {
-    width: $nav-width;          // fixed sidebar width instead of growing
+    width: 12rem !important;
+    flex: 0 0 12rem !important;
   }
 
   .main {
-    max-width: none;            // remove the content cap
-    margin-left: $nav-width;    // start right after the sidebar
+    margin-left: 12rem !important;
+    max-width: none;
   }
+}
+
+// Smaller menu text so long chapter names still fit
+.nav-list .nav-list-item .nav-list-link {
+  font-size: 0.85rem !important;
 }
