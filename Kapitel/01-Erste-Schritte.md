@@ -1,8 +1,8 @@
 # Kapitel 1 – Erste Schritte
 
-[🏠 Übersicht](../README.md) | [Weiter: Variablen →](02-Variablen.md)
+[Übersicht](../README.md) | [Weiter: Variablen →](02-Variablen.md)
 
-## 🎯 Ziel
+## Ziel
 
 Nach diesem Kapitel kannst du:
 
@@ -13,7 +13,7 @@ Nach diesem Kapitel kannst du:
 
 ---
 
-## 📖 Erklärung
+## Erklärung
 
 ### Projekt erstellen
 
@@ -21,7 +21,7 @@ Nach diesem Kapitel kannst du:
 2. Die Vorlage **Konsolen-App** (Sprache: C#) auswählen → **Weiter**
 3. Einen Projektnamen eingeben, z. B. `ErsteSchritte` → **Weiter**
 
-> 💡 **Tipp:**
+> **Tipp:**
 > Lege für jedes Kapitel ein **eigenes Projekt** an (z. B. `Kapitel02`, `Kapitel03` …). So bleibt dein alter Code erhalten und du kannst später nachschauen.
 
 Visual Studio öffnet die Datei `Program.cs` mit diesem Code:
@@ -58,7 +58,7 @@ Console.WriteLine("Hallo!"); // Ein Kommentar darf auch hinter Code stehen.
 
 ---
 
-## ⚠️ Typische Fehler
+## Typische Fehler
 
 | Fehler | Was passiert |
 |---|---|
@@ -68,7 +68,7 @@ Console.WriteLine("Hallo!"); // Ein Kommentar darf auch hinter Code stehen.
 
 ---
 
-## ✍️ Aufgaben
+## Aufgaben
 
 ### Aufgabe 1.1 – Stell dich vor
 
@@ -99,7 +99,7 @@ Fehlermeldungen zu lesen ist eine der wichtigsten Fähigkeiten beim Programmiere
    - In welcher **Zeile** ist der Fehler?
 2. Mach das Semikolon wieder hin und schreibe stattdessen `console` klein. Welche Meldung bekommst du jetzt?
 
-### ⭐ Aufgabe 1.4 – Konsolen-Kunst
+### Bonus-Aufgabe 1.4 – Konsolen-Kunst
 
 Zeichne mit mehreren `Console.WriteLine` ein Bild aus Zeichen, zum Beispiel ein Haus oder ein Tier:
 
@@ -118,7 +118,7 @@ Der Backslash `\` hat in C#-Texten eine Sonderbedeutung. Um einen echten Backsla
 
 ---
 
-## ✅ Checkliste
+## Checkliste
 
 - [ ] Ich kann ein neues Konsolenprojekt anlegen und starten.
 - [ ] Ich weiß, was `Console.WriteLine` macht und wie es sich von `Console.Write` unterscheidet.
@@ -126,4 +126,4 @@ Der Backslash `\` hat in C#-Texten eine Sonderbedeutung. Um einen echten Backsla
 - [ ] Ich kann Kommentare schreiben.
 - [ ] Ich finde in der Fehlerliste heraus, in welcher Zeile ein Fehler ist.
 
-[🏠 Übersicht](../README.md) | [Weiter: Variablen →](02-Variablen.md)
+[Übersicht](../README.md) | [Weiter: Variablen →](02-Variablen.md)
