@@ -1,17 +1,19 @@
-// =============================================================
-// custom.scss: custom styles for Just the Docs
-//
-// This file is compiled into BOTH the light and the dark stylesheet,
-// so it only uses neutral or transparent colors that work in both modes.
-//
-// Sidebar width, collapsing the sidebar and the light/dark button
-// are handled in _includes/head_custom.html. Don't add .side-bar or
-// .main layout rules here.
-// =============================================================
+/* =============================================================
+   _sass/custom/custom.scss - eigene Styles fuer Just the Docs
+
+   Wird in das helle UND das dunkle Stylesheet eingebaut.
+   Deshalb nur halbtransparente oder neutrale Farben.
+
+   Bewusst einfaches CSS: keine Sass-Funktionen, keine Variablen,
+   kein @media mit Variablen, nur Kommentare dieser Art.
+   (GitHub Pages baut mit einer alten Sass-Version.)
+
+   Seitenleiste, Buttons und Ziehgriff stehen in
+   _includes/head_custom.html - hier KEINE .side-bar- oder .main-Regeln.
+   ============================================================= */
 
 
-// ---------- 1. Sidebar menu ----------
-// Smaller text so long chapter names still fit.
+/* ---------- 1. Menue in der Seitenleiste ---------- */
 .nav-list .nav-list-item .nav-list-link {
   font-size: 0.85rem !important;
   line-height: 1.4;
@@ -19,8 +21,7 @@
 }
 
 
-// ---------- 2. Code blocks ----------
-// Long lines scroll sideways instead of stretching the page.
+/* ---------- 2. Code-Bloecke ---------- */
 div.highlighter-rouge,
 figure.highlight {
   overflow-x: auto;
@@ -33,8 +34,7 @@ pre {
 }
 
 
-// ---------- 3. Tables ----------
-// Tabellen nur so breit wie ihr Inhalt (höchstens so breit wie die Seite).
+/* ---------- 3. Tabellen: nur so breit wie der Inhalt ---------- */
 .main-content .table-wrapper {
   display: inline-block;
   width: auto;
@@ -49,7 +49,8 @@ pre {
   max-width: 100%;
 }
 
-// ---------- 4. Images ----------
+
+/* ---------- 4. Bilder ---------- */
 .main-content img {
   max-width: 100%;
   height: auto;
@@ -57,7 +58,7 @@ pre {
 }
 
 
-// ---------- 5. Quotes (e.g. "> 💡 **Tipp:** ...") ----------
+/* ---------- 5. Zitate ---------- */
 .main-content blockquote {
   margin-left: 0;
   padding: 0.5rem 1rem;
@@ -71,11 +72,12 @@ pre {
 }
 
 
-// ---------- 6. Collapsible tips (<details markdown="1">) ----------
+/* ---------- 6. Aufklappbare Kaesten: Grundform ---------- */
 .main-content details {
   margin: 1rem 0;
   padding: 0.5rem 0.75rem;
-  border: 1px solid rgba(128, 128, 128, 0.35);
+  border: 1px solid rgba(128, 128, 128, 0.25);
+  border-left-width: 4px;
   border-radius: 6px;
 }
 
@@ -88,9 +90,54 @@ pre {
   margin-bottom: 0.5rem;
 }
 
+.main-content details .tipp-inhalt > :last-child,
+.main-content details .notiz-inhalt > :last-child {
+  margin-bottom: 0;
+}
 
-// ---------- 7. Checklists (- [ ] ...) ----------
-// Removes the theme's bullet point in front of the checkbox.
+
+/* ---------- 7. Farben der Kaesten ---------- */
+
+/* Tipp (tipp.html, class="tipp-box"): gruen */
+.main-content details.tipp-box,
+.main-content details.notiz-tipp {
+  border-left-color: #2da44e;
+  background: rgba(45, 164, 78, 0.10);
+}
+.main-content details.tipp-box summary,
+.main-content details.notiz-tipp summary {
+  color: #2da44e;
+}
+
+/* Note: blau */
+.main-content details.notiz-note {
+  border-left-color: #2f81f7;
+  background: rgba(47, 129, 247, 0.08);
+}
+.main-content details.notiz-note summary {
+  color: #2f81f7;
+}
+
+/* Important: lila */
+.main-content details.notiz-important {
+  border-left-color: #8957e5;
+  background: rgba(137, 87, 229, 0.10);
+}
+.main-content details.notiz-important summary {
+  color: #8957e5;
+}
+
+/* Warning: orange */
+.main-content details.notiz-warning {
+  border-left-color: #d29922;
+  background: rgba(210, 153, 34, 0.10);
+}
+.main-content details.notiz-warning summary {
+  color: #d29922;
+}
+
+
+/* ---------- 8. Checklisten ---------- */
 .main-content .task-list-item {
   list-style: none;
 }
@@ -107,7 +154,7 @@ pre {
 }
 
 
-// ---------- 8. Callout boxes ({: .tipp } etc.) ----------
+/* ---------- 9. Callouts ({: .tipp } usw.) ---------- */
 .main-content .tipp,
 .main-content .hinweis,
 .main-content .wichtig,
@@ -116,60 +163,16 @@ pre {
 }
 
 
-// ---------- 9. Printing ----------
-// Leave the buttons and the drag handle out of printouts.
+/* ---------- 10. Drucken ---------- */
 @media print {
+  .jtd-btn,
   .theme-toggle,
   .sidebar-toggle,
-  .sb-drag {
+  .sidebar-resizer {
     display: none !important;
   }
-  // ---------- 10. Aufklappbare Hinweise (notiz.html) ----------
-.main-content details.notiz {
-  margin: 1rem 0;
-  padding: 0.5rem 0.75rem;
-  border: 1px solid rgba(128, 128, 128, 0.25);
-  border-left-width: 4px;
-  border-radius: 6px;
-}
 
-.main-content details.notiz summary {
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.main-content details.notiz[open] summary {
-  margin-bottom: 0.5rem;
-}
-
-.main-content details.notiz .notiz-inhalt > :last-child {
-  margin-bottom: 0;
-}
-
-// Note: blau
-.main-content details.notiz-note {
-  border-left-color: #2f81f7;
-  background: rgba(47, 129, 247, 0.08);
-}
-.main-content details.notiz-note summary {
-  color: #2f81f7;
-}
-
-// Important: lila
-.main-content details.notiz-important {
-  border-left-color: #8957e5;
-  background: rgba(137, 87, 229, 0.10);
-}
-.main-content details.notiz-important summary {
-  color: #8957e5;
-}
-
-// Warning: orange
-.main-content details.notiz-warning {
-  border-left-color: #d29922;
-  background: rgba(210, 153, 34, 0.10);
-}
-.main-content details.notiz-warning summary {
-  color: #d29922;
-}
+  .main-content details {
+    border-left-width: 1px;
+  }
 }
