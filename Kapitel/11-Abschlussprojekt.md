@@ -71,7 +71,7 @@ Sind alle Versuche aufgebraucht, hat der Spieler verloren und erfährt die gehei
 Such dir aus, was dir gefällt:
 
 - **Highscore:** Lege eine Klasse `Spieler` an (`Name`, `BesteVersuche`). Speichere alle Spieler in einer Liste und zeige am Ende eine Bestenliste.
-- **Heiß oder kalt:** Ist der Tipp weniger als 5 von der Zahl entfernt, gib `Sehr heiß! 🔥` aus, bei weniger als 15 `Warm`, sonst `Kalt`.
+- **Heiß oder kalt:** Ist der Tipp weniger als 5 von der Zahl entfernt, gib `Sehr heiß!` aus, bei weniger als 15 `Warm`, sonst `Kalt`.
 - **Tauschen:** Jetzt denkst **du** dir eine Zahl aus und der Computer rät! Du antwortest mit `g` (größer), `k` (kleiner) oder `r` (richtig). Wie schafft es der Computer mit möglichst wenigen Versuchen?
 
 ---
