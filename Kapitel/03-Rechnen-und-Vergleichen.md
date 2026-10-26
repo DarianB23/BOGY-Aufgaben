@@ -1,3 +1,8 @@
+---
+title: 03 - Rechnen und Vergleichen
+parent: Kapitel
+nav_order: 3
+---
 # Kapitel 3 – Rechnen und Vergleichen
 
 [← Variablen](02-Variablen.md) | [Übersicht](../README.md) | [Weiter: Benutzereingaben →](04-Eingaben.md)
