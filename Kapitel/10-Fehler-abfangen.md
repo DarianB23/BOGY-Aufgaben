@@ -1,8 +1,8 @@
 # Kapitel 10 – Fehler abfangen
 
-[← Klassen und Objekte](09-Klassen.md) | [🏠 Übersicht](../README.md) | [Weiter: Abschlussprojekt →](11-Abschlussprojekt.md)
+[← Klassen und Objekte](09-Klassen.md) | [Übersicht](../README.md) | [Weiter: Abschlussprojekt →](11-Abschlussprojekt.md)
 
-## 🎯 Ziel
+## Ziel
 
 Nach diesem Kapitel kannst du:
 
@@ -13,7 +13,7 @@ Nach diesem Kapitel kannst du:
 
 ---
 
-## 📖 Erklärung
+## Erklärung
 
 ### Was ist eine Exception?
 
@@ -84,7 +84,7 @@ Console.WriteLine($"Danke! Du hast {zahl} eingegeben.");
 
 ---
 
-## ⚠️ Typische Fehler
+## Typische Fehler
 
 | Fehler | Was passiert |
 |---|---|
@@ -94,7 +94,7 @@ Console.WriteLine($"Danke! Du hast {zahl} eingegeben.");
 
 ---
 
-## ✍️ Aufgaben
+## Aufgaben
 
 ### Aufgabe 10.1 – Absturz provozieren
 
@@ -121,13 +121,13 @@ Mach diese Programme mit deinen neuen Methoden absturzsicher:
 3. den **Notenrechner** (5.3) – hier soll zusätzlich nur eine Note von **1 bis 6** akzeptiert werden
 
 <details>
-<summary>💡 Tipp</summary>
+<summary>Tipp</summary>
 
 Für Aufgabe 3 kannst du die Bedingung der `while`-Schleife erweitern:
 „Wiederholen, solange die Eingabe **keine Zahl** ist **oder** die Zahl **kleiner als 1** ist **oder** **größer als 6**.“
 </details>
 
-### ⭐ Aufgabe 10.4 – Teilen durch null
+### Bonus-Aufgabe 10.4 – Teilen durch null
 
 1. Teile im Mini-Rechner (4.3) durch `0`. Was passiert?
 2. Probiere dasselbe mit `double`-Werten aus. Was wird jetzt ausgegeben?
@@ -136,11 +136,11 @@ Für Aufgabe 3 kannst du die Bedingung der `while`-Schleife erweitern:
 
 ---
 
-## ✅ Checkliste
+## Checkliste
 
 - [ ] Ich weiß, was eine Exception ist, und kenne mindestens drei Arten.
 - [ ] Ich kann einen `try`/`catch`-Block schreiben.
 - [ ] Ich kann `int.TryParse` benutzen und erklären, was `out` bedeutet.
 - [ ] Meine `LiesZahl`-Methode stürzt bei falschen Eingaben nicht mehr ab.
 
-[← Klassen und Objekte](09-Klassen.md) | [🏠 Übersicht](../README.md) | [Weiter: Abschlussprojekt →](11-Abschlussprojekt.md)
+[← Klassen und Objekte](09-Klassen.md) | [Übersicht](../README.md) | [Weiter: Abschlussprojekt →](11-Abschlussprojekt.md)
