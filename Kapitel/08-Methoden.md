@@ -1,3 +1,8 @@
+---
+title: 08 - Methoden
+parent: Kapitel
+nav_order: 8
+---
 # Kapitel 8 – Methoden
 
 [← Arrays und Listen](07-Collections.md) | [Übersicht](../README.md) | [Weiter: Klassen und Objekte →](09-Klassen.md)
