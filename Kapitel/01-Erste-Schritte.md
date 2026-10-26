@@ -1,3 +1,8 @@
+---
+title: Erste Schritte
+nav_order: 2
+permalink: /
+---
 # Kapitel 1 – Erste Schritte
 
 [Übersicht](../README.md) | [Weiter: Variablen →](02-Variablen.md)
