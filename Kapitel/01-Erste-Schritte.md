@@ -29,7 +29,7 @@ Nach diesem Kapitel kannst du:
 {% capture notiz %}
 Lege für jedes Kapitel ein **eigenes Projekt** an (z. B. `Kapitel02`, `Kapitel03` …). So bleibt dein alter Code erhalten und du kannst später nachschauen.
 {% endcapture %}
-{%include notiz.html typ="note" offen=true inhalt=notiz %}
+{%include notiz.html typ="warning" titel="Bitte beachten" offen=true inhalt=notiz %}
 
 Visual Studio öffnet die Datei `Program.cs` mit diesem Code:
 
