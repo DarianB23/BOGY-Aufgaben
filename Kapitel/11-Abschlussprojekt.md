@@ -1,6 +1,6 @@
 # Kapitel 11 – Abschlussprojekt: Zahlenraten 🎲
 
-[← Fehler abfangen](10-Fehler-abfangen.md) | [🏠 Übersicht](../README.md)
+[← Fehler abfangen](10-Fehler-abfangen.md) | [🏠 Übersicht](../README.md) | [Weiter: Galgenraten →](../Zusatzaufgaben/Z1-Galgenraten)
 
 ## 🎯 Ziel
 
