@@ -1,11 +1,9 @@
 <!--
   _includes/head_custom.html – eigene Erweiterungen für Just the Docs
-
-  1. Hell/Dunkel-Umschalter          (Button unten rechts)
+  1. Hell/Dunkel-Umschalter          (in der oberen Leiste neben der Suche)
   2. Seitenleiste ein-/ausblenden    (Button unten links)
   3. Breite der Seitenleiste ziehen  (rechter Rand der Seitenleiste)
   4. Anklickbare Checklisten         (- [ ] in Markdown)
-
   Alle Einstellungen werden im Browser gespeichert (localStorage).
 -->
 <style>
@@ -18,7 +16,6 @@
     --btn-hover: #302d36;
     --handle-color: #58a6ff;
   }
-
   html[data-theme="light"] {
     --btn-bg: #f5f6fa;
     --btn-fg: #27262b;
@@ -44,6 +41,15 @@
   .sidebar-toggle { left: 1rem; }
   .theme-toggle   { right: 1rem; }
 
+  /* Hell/Dunkel-Button in der oberen Leiste statt schwebend */
+  .theme-toggle.in-header {
+    position: static !important;
+    align-self: center;
+    flex-shrink: 0;
+    margin: 0 0.75rem;
+    white-space: nowrap;
+  }
+
   /* ---------- Checklisten ---------- */
   .main-content input[type="checkbox"] {
     cursor: pointer;
@@ -62,6 +68,7 @@
     .side-bar .site-nav,
     .side-bar .site-footer {
       width: 100% !important;
+      max-width: none !important;
     }
     .main {
       margin-left: var(--sidebar-width) !important;
@@ -73,9 +80,9 @@
       position: fixed;
       top: 0;
       bottom: 0;
-      left: calc(var(--sidebar-width) - 3px);
-      width: 6px;
-      z-index: 999;
+      left: calc(var(--sidebar-width) - 4px);
+      width: 8px;
+      z-index: 1001;
       cursor: col-resize;
       background: transparent;
       touch-action: none;
@@ -94,8 +101,8 @@
     }
 
     /* Eingeklappt */
-    html.sidebar-collapsed .side-bar       { display: none !important; }
-    html.sidebar-collapsed .main           { margin-left: 0 !important; }
+    html.sidebar-collapsed .side-bar        { display: none !important; }
+    html.sidebar-collapsed .main            { margin-left: 0 !important; }
     html.sidebar-collapsed .sidebar-resizer { display: none; }
   }
 
@@ -103,6 +110,12 @@
   @media (max-width: 49.99rem) {
     .sidebar-toggle,
     .sidebar-resizer { display: none; }
+  }
+
+  /* Beim Drucken ausblenden */
+  @media print {
+    .jtd-btn,
+    .sidebar-resizer { display: none !important; }
   }
 </style>
 
@@ -149,7 +162,6 @@
 
   // ---------- 3. Breite der Seitenleiste ----------
   var sidebarWidth = CONFIG.sidebarDefault;
-
   function setSidebarWidth(px) {
     sidebarWidth = Math.min(CONFIG.sidebarMax, Math.max(CONFIG.sidebarMin, Math.round(px)));
     root.style.setProperty("--sidebar-width", sidebarWidth + "px");
@@ -162,9 +174,7 @@
   } else {
     root.setAttribute("data-theme", CONFIG.defaultTheme);
   }
-
   setSidebarWidth(parseInt(load(KEYS.width), 10) || CONFIG.sidebarDefault);
-
   if (load(KEYS.collapsed) === "1") {
     root.classList.add("sidebar-collapsed");
   }
@@ -196,6 +206,18 @@
     });
 
     update();
+
+    // In die obere Leiste neben die Suche verschieben (falls vorhanden)
+    var header = document.querySelector(".main-header");
+    if (header) {
+      var search = header.querySelector(".search");
+      if (search) {
+        search.insertAdjacentElement("afterend", btn);
+      } else {
+        header.insertBefore(btn, header.firstChild);
+      }
+      btn.classList.add("in-header");
+    }
   }
 
   // ---------- 2. Seitenleiste ein-/ausblenden ----------
@@ -219,6 +241,8 @@
 
   // ---------- 3. Ziehgriff ----------
   function initSidebarResizer() {
+    if (!document.querySelector(".side-bar")) return;
+
     var handle = document.createElement("div");
     handle.className = "sidebar-resizer";
     handle.tabIndex = 0;
@@ -287,52 +311,11 @@
   }
 
   // ---------- Start ----------
+  // Jeder Teil läuft für sich: Ein Fehler in einem Teil stoppt die anderen nicht.
   document.addEventListener("DOMContentLoaded", function () {
-    initCheckboxes();
-    initSidebarToggle();
-    initSidebarResizer();
-    initThemeToggle();
+    [initCheckboxes, initSidebarToggle, initSidebarResizer, initThemeToggle].forEach(function (fn) {
+      try { fn(); } catch (e) { console.error("head_custom.html:", fn.name, e); }
+    });
   });
 })();
 </script>
-<!-- Move the light/dark button into the top bar next to the search -->
-<script>
-  (function () {
-    function moveThemeToggle() {
-      var btn = document.querySelector(".theme-toggle");
-      var header = document.querySelector(".main-header");
-      if (!btn || !header || btn.classList.contains("in-header")) {
-        return !!(btn && btn.classList.contains("in-header"));
-      }
-
-      var search = header.querySelector(".search");
-      if (search) {
-        search.insertAdjacentElement("afterend", btn);   // right after the search
-      } else {
-        header.insertBefore(btn, header.firstChild);      // search disabled: far left
-      }
-      btn.classList.add("in-header");
-      return true;
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-      // Try right away. If the button doesn't exist yet, try again after loading.
-      if (!moveThemeToggle()) {
-        window.addEventListener("load", moveThemeToggle);
-      }
-    });
-  })();
-</script>
-
-<style>
-  /* Button inside the top bar instead of floating */
-  .theme-toggle.in-header {
-    position: static !important;
-    bottom: auto !important;
-    right: auto !important;
-    align-self: center;
-    flex-shrink: 0;
-    margin: 0 0.75rem;
-    white-space: nowrap;
-  }
-</style>
