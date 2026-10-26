@@ -1,10 +1,10 @@
-# Zusatzaufgabe 1 – Galgenraten 🪢
+# Zusatzaufgabe 1 – Galgenraten
 
-**Schwierigkeit:** 🟢 Leicht (Niveau Abschlussprojekt) · **Dauer:** ca. 1–1,5 Stunden
+**Schwierigkeit:** Leicht (Niveau Abschlussprojekt) · **Dauer:** ca. 1–1,5 Stunden
 
-[← Abschlussprojekt](../Kapitel/11-Abschlussprojekt.md) | [🏠 Übersicht](../README.md) | [Weiter: Zusatzaufgabe 2 – Snackautomat →](Z2-Snackautomat.md)
+[← Abschlussprojekt](../Kapitel/11-Abschlussprojekt.md) | [Übersicht](../README.md) | [Weiter: Zusatzaufgabe 2 – Snackautomat →](Z2-Snackautomat.md)
 
-## 🎯 Ziel
+## Ziel
 
 Du programmierst den Klassiker **Galgenraten** (auch „Hangman“ genannt):
 Der Computer wählt ein geheimes Wort aus, und du errätst es Buchstabe für Buchstabe.
@@ -14,7 +14,7 @@ Wie beim Abschlussprojekt arbeitest du in **Stufen**. Bring zuerst eine Stufe zu
 
 ---
 
-## 🧰 Was du brauchst
+## Was du brauchst
 
 | Thema | Kapitel |
 |---|---|
@@ -25,7 +25,7 @@ Wie beim Abschlussprojekt arbeitest du in **Stufen**. Bring zuerst eine Stufe zu
 
 ---
 
-## 📖 Neu: Einzelne Zeichen (`char`)
+## Neu: Einzelne Zeichen (`char`)
 
 Ein `string` besteht aus vielen einzelnen **Zeichen**. Ein einzelnes Zeichen hat den Datentyp `char`
 und steht in **einfachen** Anführungszeichen: `'A'`. Text steht weiterhin in doppelten: `"A"`.
@@ -60,12 +60,12 @@ string geheim = woerter[Random.Shared.Next(woerter.Length)];
 ```
 
 
-> ❗ **Wichtig:**
+> **Wichtig:**
 > `'A'` und `'a'` sind für den Computer **verschiedene** Zeichen. Wandle deshalb Wort **und** Eingabe in Großbuchstaben um.
 
 ---
 
-## 🛠️ Die Stufen
+## Die Stufen
 
 ### Stufe 1 – Das Grundspiel
 
@@ -104,7 +104,7 @@ Schreibe für diese Stufe mindestens diese zwei **Methoden**:
 | `bool IstGeloest(string wort, List<char> geraten)` | `true`, wenn **jeder** Buchstabe des Worts schon geraten wurde |
 
 <details>
-<summary>💡 Tipp: VerdecktesWort</summary>
+<summary>Tipp: VerdecktesWort</summary>
 
 Starte mit einem leeren Text `string anzeige = "";`.
 Geh mit `foreach` durch jedes Zeichen des Worts. Ist das Zeichen in der Liste `geraten`, hänge es an `anzeige` an – sonst ein `_`.
@@ -112,14 +112,14 @@ Vergiss das Leerzeichen dahinter nicht, sonst sieht man nicht, wie viele Striche
 </details>
 
 <details>
-<summary>💡 Tipp: IstGeloest</summary>
+<summary>Tipp: IstGeloest</summary>
 
 Geh wieder durch jedes Zeichen des Worts. Findest du **ein** Zeichen, das noch **nicht** geraten wurde, kannst du sofort `return false;` machen.
 Kommst du am Ende der Schleife an, waren alle geraten → `return true;`
 </details>
 
 <details>
-<summary>💡 Tipp: Die Spielschleife</summary>
+<summary>Tipp: Die Spielschleife</summary>
 
 Das Spiel läuft, **solange** noch nicht 8 Fehler gemacht wurden **und** das Wort noch nicht gelöst ist:
 
@@ -148,7 +148,7 @@ A hast du schon geraten!
 ```
 
 <details>
-<summary>💡 Tipp</summary>
+<summary>Tipp</summary>
 
 - Probiere zuerst aus, was in Stufe 1 passiert, wenn du einfach **Enter** drückst. Welche Exception bekommst du – und warum?
 - Die Bedingung für „Eingabe ungültig“ lautet: Länge ist **nicht** 1 **oder** das Zeichen ist **kein** Buchstabe.
@@ -169,7 +169,7 @@ Nochmal spielen? (j/n):
 
 ---
 
-## ⚠️ Typische Fehler
+## Typische Fehler
 
 | Fehler | Was passiert |
 |---|---|
@@ -180,7 +180,7 @@ Nochmal spielen? (j/n):
 
 ---
 
-## ⭐ Extras
+## Extras
 
 Such dir aus, was dir gefällt:
 
@@ -191,11 +191,11 @@ Such dir aus, was dir gefällt:
 
 ---
 
-## ✅ Checkliste
+## Checkliste
 
 - [ ] Ich weiß, was ein `char` ist und wie er sich von einem `string` unterscheidet.
 - [ ] Ich kann mit `foreach` durch alle Zeichen eines Worts gehen.
 - [ ] Mein Spiel stürzt bei keiner Eingabe ab.
 - [ ] Ich habe mindestens drei eigene Methoden geschrieben.
 
-[← Abschlussprojekt](../Kapitel/11-Abschlussprojekt.md) | [🏠 Übersicht](../README.md) | [Weiter: Zusatzaufgabe 2 – Snackautomat →](Z2-Snackautomat.md)
+[← Abschlussprojekt](../Kapitel/11-Abschlussprojekt.md) | [Übersicht](../README.md) | [Weiter: Zusatzaufgabe 2 – Snackautomat →](Z2-Snackautomat.md)
