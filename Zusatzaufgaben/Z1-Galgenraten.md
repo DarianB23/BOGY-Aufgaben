@@ -1,3 +1,8 @@
+---
+title: 1 - Galgenraten
+parent: Zusatzaufgaben
+nav_order: 1
+---
 # Zusatzaufgabe 1 – Galgenraten
 
 **Schwierigkeit:** Leicht (Niveau Abschlussprojekt) · **Dauer:** ca. 1–1,5 Stunden
