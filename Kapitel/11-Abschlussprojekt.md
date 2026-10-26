@@ -1,5 +1,5 @@
 ---
-title: 11 - Abschlussprojekt: Zahlenraten
+title: 11 - Abschlussprojekt
 parent: Kapitel
 nav_order: 11
 ---
