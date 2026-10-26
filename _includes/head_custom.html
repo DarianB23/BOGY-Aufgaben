@@ -31,3 +31,63 @@
     margin-right: 0.4em;
   }
 </style>
+<script>
+  // Restore the state right away so the page doesn't flicker
+  if (localStorage.getItem("sidebar-collapsed") === "1") {
+    document.documentElement.classList.add("sidebar-collapsed");
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.createElement("button");
+    btn.className = "sidebar-toggle";
+    btn.type = "button";
+
+    function updateLabel() {
+      var collapsed = document.documentElement.classList.contains("sidebar-collapsed");
+      btn.textContent = collapsed ? "☰ Menü" : "« Menü ausblenden";
+      btn.setAttribute("aria-expanded", collapsed ? "false" : "true");
+    }
+
+    btn.addEventListener("click", function () {
+      var collapsed = document.documentElement.classList.toggle("sidebar-collapsed");
+      localStorage.setItem("sidebar-collapsed", collapsed ? "1" : "0");
+      updateLabel();
+    });
+
+    updateLabel();
+    document.body.appendChild(btn);
+  });
+</script>
+
+<style>
+  /* The button, bottom left so it doesn't cover the search */
+  .sidebar-toggle {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 1000;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid #44434d;
+    border-radius: 6px;
+    background: #27262b;
+    color: #e6e1e8;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  .sidebar-toggle:hover { background: #302d36; }
+
+  /* Only on wide screens. Small screens keep the theme's own ☰ button */
+  @media (max-width: 49.99rem) {
+    .sidebar-toggle { display: none; }
+  }
+
+  @media (min-width: 50rem) {
+    html.sidebar-collapsed .side-bar {
+      display: none !important;
+    }
+    html.sidebar-collapsed .main {
+      margin-left: 0 !important;
+      max-width: none !important;
+    }
+  }
+</style>
