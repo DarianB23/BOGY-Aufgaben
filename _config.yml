@@ -1,0 +1,41 @@
+title: C#-Tutorial
+description: Programmieren lernen mit C# – Schritt für Schritt
+remote_theme: just-the-docs/just-the-docs
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-relative-links
+
+# Dark mode
+color_scheme: dark
+
+# Search
+search_enabled: true
+
+# Link to the repo at the top right
+aux_links:
+  "Auf GitHub ansehen":
+    - "https://github.com/BOGY11/BOGY-Aufgaben"
+
+# Callout boxes (German names)
+callouts:
+  tipp:
+    title: 💡 Tipp
+    color: green
+  hinweis:
+    title: ℹ️ Hinweis
+    color: blue
+  wichtig:
+    title: ❗ Wichtig
+    color: yellow
+  achtung:
+    title: ⚠️ Achtung
+    color: red
+
+# Allow Markdown inside HTML (e.g. <details>)
+kramdown:
+  parse_block_html: true
+
+# Keep these out of the website
+exclude:
+  - Loesungen/
