@@ -2,7 +2,7 @@ title: "C#-Tutorial"
 description: "Programmieren lernen mit C# - Schritt fuer Schritt"
 lang: "de-DE"
 url: "https://darianb23.github.io"
-baseurl: "/Test"
+baseurl: "/BOGY-Aufgaben"
 
 remote_theme: "just-the-docs/just-the-docs"
 color_scheme: "dark"
@@ -36,7 +36,7 @@ heading_anchors: true
 
 aux_links:
   "Auf GitHub ansehen":
-    - "https://github.com/DarianB23/Test"
+    - "https://github.com/DarianB23/BOGY-Aufgaben"
 aux_links_new_tab: true
 
 back_to_top: true
@@ -45,7 +45,7 @@ enable_copy_code_button: true
 
 gh_edit_link: true
 gh_edit_link_text: "Diese Seite auf GitHub bearbeiten"
-gh_edit_repository: "https://github.com/DarianB23/Test"
+gh_edit_repository: "https://github.com/DarianB23/BOGY-Aufgaben"
 gh_edit_branch: "main"
 gh_edit_view_mode: "tree"
 
