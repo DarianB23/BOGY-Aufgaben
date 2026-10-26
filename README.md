@@ -32,7 +32,7 @@ Jedes Kapitel ist gleich aufgebaut:
 > Fehler sind beim Programmieren völlig normal – auch Profis bekommen jeden Tag Fehlermeldungen.
 > Lies die Meldung in Ruhe durch: Sie verrät dir meistens, **in welcher Zeile** und **was** falsch ist.
 
-> ℹ️ **Hinweis:**
+> {: .hinweis }
 > Programmiert wird normalerweise auf **Englisch**. Damit du alles leichter verstehst, sind die Beispiele hier auf Deutsch.
 > Ob du deine Variablen auf Deutsch oder Englisch benennst, entscheidest du selbst.
 
