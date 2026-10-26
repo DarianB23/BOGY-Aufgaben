@@ -1,8 +1,8 @@
 title: "C#-Tutorial"
 description: "Programmieren lernen mit C# - Schritt fuer Schritt"
 lang: "de-DE"
-url: "<redacted URL>"
-baseurl: "/Test"
+url: "darianb23.github.io"
+baseurl: "/BOGY-Aufgaben"
 
 remote_theme: "just-the-docs/just-the-docs"
 color_scheme: "dark"
