@@ -33,7 +33,7 @@ int      alter  = 25;
 | `bool` | Wahr oder falsch | `bool istSchueler = true;` |
 | `char` | Genau **ein** Zeichen | `char note = 'A';` |
 
-> [!IMPORTANT]
+> **Wichtig:**
 > - Im Code schreibst du Kommazahlen immer mit **Punkt**: `1.72` (nicht `1,72`).
 > - Text (`string`) steht in **doppelten** Anführungszeichen `"..."`, ein einzelnes Zeichen (`char`) in **einfachen** `'...'`.
 
@@ -108,7 +108,7 @@ Hat der Wert Nachkommastellen? Dann reicht `int` nicht.
 Ob etwas verfügbar ist, kann nur **ja** oder **nein** sein – welcher Typ passt dazu?
 </details>
 
-> [!NOTE]
+> **Hinweis:**
 > Wundere dich nicht: Auf einem deutschen Windows wird `19.99` als `19,99` ausgegeben. Im Code schreibst du trotzdem den Punkt.
 
 ### Aufgabe 2.2 – Sonderangebot
@@ -122,7 +122,7 @@ Ob etwas verfügbar ist, kann nur **ja** oder **nein** sein – welcher Typ pass
 Schreibe einen Steckbrief über dich (oder eine erfundene Person), in dem **jeder Datentyp aus der Tabelle** mindestens einmal vorkommt – auch `char` (z. B. dein Anfangsbuchstabe).
 Gib ihn einmal mit `$"..."` und einmal mit `+` aus.
 
-> [!TIP]
+> **Tipp:**
 > **Profi-Wissen:** Für Geldbeträge benutzen Profis meistens den Typ `decimal` (`decimal preis = 19.99m;`), weil er genauer rechnet als `double`. Für dieses Tutorial reicht `double` aber völlig.
 
 ---
