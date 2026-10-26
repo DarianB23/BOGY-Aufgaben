@@ -13,39 +13,39 @@ Du brauchst keine Vorkenntnisse. Wichtig sind nur zwei Dinge: **Ausprobieren** u
 
 ---
 
-## 🧭 So funktioniert das Tutorial
+## So funktioniert das Tutorial
 
 Jedes Kapitel ist gleich aufgebaut:
 
 | Abschnitt | Was dich erwartet |
 |---|---|
-| 🎯 **Ziel** | Was du am Ende des Kapitels kannst |
-| 📖 **Erklärung** | Das Wichtigste kurz erklärt – mit Beispielcode |
-| ⚠️ **Typische Fehler** | Stolperfallen, in die fast jeder einmal tritt |
-| ✍️ **Aufgaben** | Pflichtaufgaben und ⭐ Bonusaufgaben für Schnelle |
-| ✅ **Checkliste** | Prüfe selbst, ob du bereit fürs nächste Kapitel bist |
+| **Ziel** | Was du am Ende des Kapitels kannst |
+| **Erklärung** | Das Wichtigste kurz erklärt – mit Beispielcode |
+| **Typische Fehler** | Stolperfallen, in die fast jeder einmal tritt |
+| **Aufgaben** | Pflichtaufgaben und Bonusaufgaben für Schnelle |
+| **Checkliste** | Prüfe selbst, ob du bereit fürs nächste Kapitel bist |
 
 **So arbeitest du am besten:**
 
 1. Lies die Erklärung.
 2. **Tippe** den Beispielcode selbst ab (nicht kopieren – beim Tippen lernst du mehr!) und starte ihn.
-3. Löse die Aufgaben. Bonusaufgaben ⭐ sind freiwillig.
-4. Kommst du nicht weiter? Klappe zuerst den **💡 Tipp** auf.
+3. Löse die Aufgaben. Bonusaufgaben sind freiwillig.
+4. Kommst du nicht weiter? Klappe zuerst den **Tipp** auf.
 5. Hilft der Tipp nicht, frag einen anwesenden Azubi, Studenten oder deine Betreuungsperson. Das ist völlig normal!
 6. Hake die Checkliste ab und geh zum nächsten Kapitel.
 	
 	
-> 💡 **Tipp:**
+> **Tipp:**
 > Fehler sind beim Programmieren völlig normal – auch Profis bekommen jeden Tag Fehlermeldungen.
 > Lies die Meldung in Ruhe durch: Sie verrät dir meistens, **in welcher Zeile** und **was** falsch ist.
 
-> ℹ️ **Hinweis:**
+>**Hinweis:**
 > Programmiert wird normalerweise auf **Englisch**. Damit du alles leichter verstehst, sind die Beispiele hier auf Deutsch.
 > Ob du deine Variablen auf Deutsch oder Englisch benennst, entscheidest du selbst.
 
 ---
 
-## 🗺️ Lernpfad
+## Lernpfad
 
 | # | Kapitel | Du lernst … |
 |---|---|---|
@@ -63,15 +63,15 @@ Jedes Kapitel ist gleich aufgebaut:
 
 ---
 
-## 🏆 Zusatzaufgaben
+## Zusatzaufgaben
 
 Du bist mit dem Abschlussprojekt fertig und willst mehr? Diese drei Projekte bauen auf dem gesamten Tutorial auf.
 
 | Schwierigkeit | Projekt | Dauer | Neu dabei |
 |---|---|---|---|
-| 🟢 Leicht | [Galgenraten](Zusatzaufgaben/Z1-Galgenraten.md) | ca. 1–1,5 h | Einzelne Zeichen (`char`) |
-| 🟡 Mittel | [Snackautomat](Zusatzaufgaben/Z2-Snackautomat.md) | ca. 2 h | Rechnen mit Geld, Text in Spalten |
-| 🔴 Schwer | [Tic-Tac-Toe mit Computergegner](Zusatzaufgaben/Z3-TicTacToe.md) | ca. 3 h | Private Variablen, einfache KI |
+| Leicht | [Galgenraten](Zusatzaufgaben/Z1-Galgenraten.md) | ca. 1–1,5 h | Einzelne Zeichen (`char`) |
+| Mittel | [Snackautomat](Zusatzaufgaben/Z2-Snackautomat.md) | ca. 2 h | Rechnen mit Geld, Text in Spalten |
+| Schwer | [Tic-Tac-Toe mit Computergegner](Zusatzaufgaben/Z3-TicTacToe.md) | ca. 3 h | Private Variablen, einfache KI |
 
 ---
 
