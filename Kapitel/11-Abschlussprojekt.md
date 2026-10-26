@@ -40,11 +40,11 @@ Richtig! Die Zahl war 63. Du hast 3 Versuche gebraucht.
 
 *Du brauchst: Variablen, Eingaben, Verzweigungen, Schleifen (Kapitel 2–6)*
 
-<details>
-<summary>Tipp</summary>
-
+{% capture tipp %}
 Welche Schleife passt am besten? Der Spieler muss **mindestens einmal** raten …
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
+
 
 ### Stufe 2 – Absturzsicher und mit Neustart
 
