@@ -1,9 +1,3 @@
----
-title: Start
-nav_order: 1
-permalink: /
----
-
 # C#-Tutorial
 …
 # C#-Einstieg – BOGY-Tutorial 🚀
