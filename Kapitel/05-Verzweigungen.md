@@ -1,3 +1,8 @@
+---
+title: 05 - Verzweigungen
+parent: Kapitel
+nav_order: 5
+---
 # Kapitel 5 – Verzweigungen
 
 [← Benutzereingaben](04-Eingaben.md) | [Übersicht](../README.md) | [Weiter: Schleifen →](06-Schleifen.md)
