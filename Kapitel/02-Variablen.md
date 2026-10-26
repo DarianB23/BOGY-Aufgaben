@@ -1,8 +1,8 @@
 # Kapitel 2 – Variablen und Datentypen
 
-[← Erste Schritte](01-Erste-Schritte.md) | [🏠 Übersicht](../README.md) | [Weiter: Rechnen und Vergleichen →](03-Rechnen-und-Vergleichen.md)
+[← Erste Schritte](01-Erste-Schritte.md) | [Übersicht](../README.md) | [Weiter: Rechnen und Vergleichen →](03-Rechnen-und-Vergleichen.md)
 
-## 🎯 Ziel
+## Ziel
 
 Nach diesem Kapitel kannst du:
 
@@ -12,7 +12,7 @@ Nach diesem Kapitel kannst du:
 
 ---
 
-## 📖 Erklärung
+## Erklärung
 
 ### Was ist eine Variable?
 
@@ -34,7 +34,7 @@ int      alter  = 25;
 | `char` | Genau **ein** Zeichen | `char note = 'A';` |
 
 
-> ❗ **Wichtig:**
+> **Wichtig:**
 > - Im Code schreibst du Kommazahlen immer mit **Punkt**: `1.72` (nicht `1,72`).
 > - Text (`string`) steht in **doppelten** Anführungszeichen `"..."`, ein einzelnes Zeichen (`char`) in **einfachen** `'...'`.
 
@@ -76,7 +76,7 @@ const double Pi = 3.14159;   // const: Dieser Wert kann sich NIE ändern
 
 ---
 
-## ⚠️ Typische Fehler
+## Typische Fehler
 
 | Fehler | Beispiel | Was passiert |
 |---|---|---|
@@ -87,7 +87,7 @@ const double Pi = 3.14159;   // const: Dieser Wert kann sich NIE ändern
 
 ---
 
-## ✍️ Aufgaben
+## Aufgaben
 
 ### Aufgabe 2.1 – Produktbeschreibung
 
@@ -109,7 +109,7 @@ Ob etwas verfügbar ist, kann nur **ja** oder **nein** sein – welcher Typ pass
 {% endcapture %}
 {% include tipp.html inhalt=tipp %}
 
-> ℹ️ **Hinweis:**
+> **Hinweis:**
 > Wundere dich nicht: Auf einem deutschen Windows wird `19.99` als `19,99` ausgegeben. Im Code schreibst du trotzdem den Punkt.
 
 ### Aufgabe 2.2 – Sonderangebot
@@ -118,21 +118,21 @@ Ob etwas verfügbar ist, kann nur **ja** oder **nein** sein – welcher Typ pass
 2. Lege eine Konstante an: `const double Mehrwertsteuer = 0.19;`
    Versuche danach, ihren Wert zu ändern. Was passiert?
 
-### ⭐ Aufgabe 2.3 – Steckbrief
+### Bonus-Aufgabe 2.3 – Steckbrief
 
 Schreibe einen Steckbrief über dich (oder eine erfundene Person), in dem **jeder Datentyp aus der Tabelle** mindestens einmal vorkommt – auch `char` (z. B. dein Anfangsbuchstabe).
 Gib ihn einmal mit `$"..."` und einmal mit `+` aus.
 
-> 💡 **Tipp:**
+> **Tipp:**
 > **Profi-Wissen:** Für Geldbeträge benutzen Profis meistens den Typ `decimal` (`decimal preis = 19.99m;`), weil er genauer rechnet als `double`. Für dieses Tutorial reicht `double` aber völlig.
 
 ---
 
-## ✅ Checkliste
+## Checkliste
 
 - [ ] Ich kann eine Variable anlegen und ihren Wert ändern.
 - [ ] Ich kenne `string`, `int`, `double`, `bool` und `char` und weiß, wann ich welchen Typ nutze.
 - [ ] Ich kann Variablen mit `$"... {variable} ..."` ausgeben.
 - [ ] Ich weiß, was `var` und `const` bedeuten.
 
-[← Erste Schritte](01-Erste-Schritte.md) | [🏠 Übersicht](../README.md) | [Weiter: Rechnen und Vergleichen →](03-Rechnen-und-Vergleichen.md)
+[← Erste Schritte](01-Erste-Schritte.md) | [Übersicht](../README.md) | [Weiter: Rechnen und Vergleichen →](03-Rechnen-und-Vergleichen.md)
