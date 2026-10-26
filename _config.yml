@@ -1,12 +1,75 @@
-title: "CSharp Tutorial"
-url: "https://darianb23.github.io"
-baseurl: "/BOGY-Aufgaben"
+title: "C#-Tutorial"
+description: "Programmieren lernen mit C# - Schritt fuer Schritt"
+lang: "de-DE"
+url: "<redacted URL>"
+baseurl: "/Test"
+
 remote_theme: "just-the-docs/just-the-docs"
 color_scheme: "dark"
-search_enabled: true
+
 plugins:
   - jekyll-remote-theme
   - jekyll-include-cache
   - jekyll-seo-tag
+  - jekyll-relative-links
+
+relative_links:
+  enabled: true
+  collections: false
+
+markdown: "kramdown"
+kramdown:
+  input: "GFM"
+  syntax_highlighter: "rouge"
+  parse_block_html: true
+
+search_enabled: true
+search:
+  heading_level: 2
+  previews: 3
+  preview_words_before: 5
+  preview_words_after: 10
+  button: false
+
+nav_sort: "case_insensitive"
+heading_anchors: true
+
+aux_links:
+  "Auf GitHub ansehen":
+    - "<redacted URL>"
+aux_links_new_tab: true
+
+back_to_top: true
+back_to_top_text: "Nach oben"
+enable_copy_code_button: true
+
+gh_edit_link: true
+gh_edit_link_text: "Diese Seite auf GitHub bearbeiten"
+gh_edit_repository: "<redacted URL>"
+gh_edit_branch: "main"
+gh_edit_view_mode: "tree"
+
+callouts:
+  tipp:
+    title: "Tipp"
+    color: "green"
+  hinweis:
+    title: "Hinweis"
+    color: "blue"
+  wichtig:
+    title: "Wichtig"
+    color: "yellow"
+  achtung:
+    title: "Achtung"
+    color: "red"
+
 exclude:
   - "Loesungen/"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "node_modules/"
+  - "vendor/bundle/"
+  - "vendor/cache/"
+  - "vendor/gems/"
+  - "vendor/ruby/"
+  - ".github/"
