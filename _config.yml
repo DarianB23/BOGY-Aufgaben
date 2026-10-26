@@ -51,16 +51,16 @@ gh_edit_view_mode: "tree"
 
 callouts:
   tipp:
-    title: "💡 Tipp"
+    title: "Tipp"
     color: "green"
   hinweis:
-    title: "ℹ️ Hinweis"
+    title: "Hinweis"
     color: "blue"
   wichtig:
-    title: "❗ Wichtig"
+    title: "Wichtig"
     color: "yellow"
   achtung:
-    title: "⚠️ Achtung"
+    title: "Achtung"
     color: "red"
 
 exclude:
