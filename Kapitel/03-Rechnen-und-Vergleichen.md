@@ -1,8 +1,8 @@
 # Kapitel 3 – Rechnen und Vergleichen
 
-[← Variablen](02-Variablen.md) | [🏠 Übersicht](../README.md) | [Weiter: Benutzereingaben →](04-Eingaben.md)
+[← Variablen](02-Variablen.md) | [Übersicht](../README.md) | [Weiter: Benutzereingaben →](04-Eingaben.md)
 
-## 🎯 Ziel
+## Ziel
 
 Nach diesem Kapitel kannst du:
 
@@ -12,7 +12,7 @@ Nach diesem Kapitel kannst du:
 
 ---
 
-## 📖 Erklärung
+## Erklärung
 
 ### Rechenoperatoren
 
@@ -56,7 +56,7 @@ Vergleiche liefern **immer** `true` (wahr) oder `false` (falsch).
 | `>=` | größer oder gleich | `a >= 10` | `true` |
 | `<=` | kleiner oder gleich | `b <= 2` | `false` |
 
-> ⚠️ **Achtung:**
+> **Achtung:**
 > `=` und `==` sind **nicht** dasselbe!
 > `=` **weist zu** („speichere den Wert“), `==` **vergleicht** („sind beide gleich?“).
 
@@ -81,7 +81,7 @@ Console.WriteLine($"Teenager: {istTeenager}");
 
 ---
 
-## ⚠️ Typische Fehler
+## Typische Fehler
 
 | Fehler | Was passiert |
 |---|---|
@@ -91,7 +91,7 @@ Console.WriteLine($"Teenager: {istTeenager}");
 
 ---
 
-## ✍️ Aufgaben
+## Aufgaben
 
 ### Aufgabe 3.1 – Erst denken, dann starten
 
@@ -140,11 +140,11 @@ x % 2 == 1
 
 ---
 
-## ✅ Checkliste
+## Checkliste
 
 - [ ] Ich kann mit `+ - * / %` rechnen und weiß, was Modulo macht.
 - [ ] Ich weiß, warum `10 / 3` bei `int` den Wert `3` ergibt, und wie ich `3.333...` bekomme.
 - [ ] Ich kenne den Unterschied zwischen `=` und `==`.
 - [ ] Ich kann Bedingungen mit `&&`, `||` und `!` verknüpfen.
 
-[← Variablen](02-Variablen.md) | [🏠 Übersicht](../README.md) | [Weiter: Benutzereingaben →](04-Eingaben.md)
+[← Variablen](02-Variablen.md) | [Übersicht](../README.md) | [Weiter: Benutzereingaben →](04-Eingaben.md)
