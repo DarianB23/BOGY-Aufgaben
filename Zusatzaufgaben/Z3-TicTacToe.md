@@ -95,19 +95,18 @@ Spieler X, wähle ein Feld (1-9): 5
 Dieses Feld geht nicht. Bitte ein freies Feld wählen: 3
 ```
 
-<details>
-<summary>Tipp: Anzeigen</summary>
-
+{% capture tipp %}
 Eine Zeile des Spielfelds besteht aus den Feldern `start`, `start + 1` und `start + 2`. Für die drei Zeilen ist `start` = 0, 3 und 6.
 Eine kleine private Hilfsmethode `string Zeichen(int index)` macht den Code übersichtlicher: Sie gibt entweder `"X"`/`"O"` zurück oder die Feldnummer `(index + 1).ToString()`.
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
 
-<details>
-<summary>Tipp: Abwechseln</summary>
-
+{% capture tipp %}
 Merke dir den aktuellen Spieler in einer Variablen `char aktuell = 'X';`. Nach jedem Zug wechselst du:
 Ist `aktuell` gleich `'X'`, wird es `'O'` – sonst wird es `'X'`.
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
+
 
 ### Stufe 2 – Wer hat gewonnen?
 
@@ -130,14 +129,14 @@ Punktestand – X: 1 | O: 0 | Unentschieden: 0
 Nochmal? (j/n):
 ```
 
-<details>
-<summary>Tipp</summary>
-
+{% capture tipp %}
 - Schreibe Gewinnlinien zuerst auf Papier auf. Zum Beispiel ist die erste Zeile `0, 1, 2` und die eine Diagonale `0, 4, 8`.
 - Eine private Hilfsmethode `bool DreiGleich(int a, int b, int c, char zeichen)` prüft **eine** Linie.
   `HatGewonnen` verknüpft dann 8 Aufrufe mit `||`.
 - Verschiebe eine ganze Runde in eine Methode `char SpieleRunde(...)`. Sie gibt den Sieger zurück (`'X'` oder `'O'`) oder `' '` bei unentschieden.
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
+
 
 ### Stufe 3 – Der Computer spielt mit
 
@@ -149,11 +148,12 @@ Nochmal? (j/n):
 Der Computer setzt auf Feld 7.
 ```
 
-<details>
-<summary>Tipp</summary>
-
+{% capture tipp %}
 Sammle alle freien Felder in einer `List<int>` und wähle daraus zufällig eins aus – genau wie beim zufälligen Wort im Galgenraten.
-</details>
+
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
+
 
 ### Stufe 4 – Ein schlauer Computer
 
@@ -167,9 +167,7 @@ Ein Computer, der zufällig spielt, ist langweilig. Bring ihm diese Strategie be
 
 Teste deinen Computer: Schaffst du es noch, ihn zu besiegen?
 
-<details>
-<summary>Tipp: Wie findet der Computer einen Gewinnzug?</summary>
-
+{% capture tipp %}
 Der Trick: Der Computer **probiert einfach aus**!
 
 Geh alle Felder von 1 bis 9 durch. Für jedes freie Feld:
@@ -183,7 +181,8 @@ Schreibe dafür eine Methode `int FindeGewinnzug(Spielfeld spielfeld, char zeich
 
 Das Schöne: Dieselbe Methode funktioniert für **beide** Schritte.
 Mit `'O'` findest du deinen eigenen Gewinnzug, mit `'X'` den Zug, den du blockieren musst.
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
 
 ---
 
