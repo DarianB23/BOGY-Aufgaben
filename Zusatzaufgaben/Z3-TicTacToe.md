@@ -1,10 +1,10 @@
-# Zusatzaufgabe 3 – Tic-Tac-Toe mit Computergegner ❌⭕
+# Zusatzaufgabe 3 – Tic-Tac-Toe mit Computergegner
 
-**Schwierigkeit:** 🔴 Schwer · **Dauer:** ca. 3 Stunden
+**Schwierigkeit:** Schwer · **Dauer:** ca. 3 Stunden
 
-[← Zusatzaufgabe 2 – Snackautomat](Z2-Snackautomat.md) | [🏠 Übersicht](../README.md)
+[← Zusatzaufgabe 2 – Snackautomat](Z2-Snackautomat.md) | [Übersicht](../README.md)
 
-## 🎯 Ziel
+## Ziel
 
 Du programmierst **Tic-Tac-Toe** – zuerst für zwei Spieler, danach gegen den Computer.
 Am Ende baust du dem Computer ein bisschen **künstliche Intelligenz** ein, damit er nicht mehr so leicht zu schlagen ist.
@@ -14,7 +14,7 @@ Welche Klasse ist wofür zuständig? Wie prüft man, ob jemand gewonnen hat? Wie
 
 ---
 
-## 🧰 Was du brauchst
+## Was du brauchst
 
 Eigentlich **alles** aus dem Tutorial – besonders:
 
@@ -28,7 +28,7 @@ Eigentlich **alles** aus dem Tutorial – besonders:
 
 ---
 
-## 📖 Neu: Das Spielfeld als Array
+## Neu: Das Spielfeld als Array
 
 Das Spielfeld hat 9 Felder. Für den Spieler sind sie von **1 bis 9** nummeriert, im Array von **0 bis 8**:
 
@@ -61,12 +61,12 @@ public class Spielfeld
 
 Von außen kann man das Spielfeld also **nur über die Methoden** verändern. So kann niemand aus Versehen ein Feld überschreiben.
 
-> 💡 **Tipp:**
+> **Tipp:**
 > Überlege dir **vor** dem Programmieren auf Papier, welche Methoden dein Spielfeld braucht. Die Tabelle in Stufe 1 hilft dir dabei.
 
 ---
 
-## 🛠️ Die Stufen
+## Die Stufen
 
 ### Stufe 1 – Spielfeld und Züge
 
@@ -96,14 +96,14 @@ Dieses Feld geht nicht. Bitte ein freies Feld wählen: 3
 ```
 
 <details>
-<summary>💡 Tipp: Anzeigen</summary>
+<summary>Tipp: Anzeigen</summary>
 
 Eine Zeile des Spielfelds besteht aus den Feldern `start`, `start + 1` und `start + 2`. Für die drei Zeilen ist `start` = 0, 3 und 6.
 Eine kleine private Hilfsmethode `string Zeichen(int index)` macht den Code übersichtlicher: Sie gibt entweder `"X"`/`"O"` zurück oder die Feldnummer `(index + 1).ToString()`.
 </details>
 
 <details>
-<summary>💡 Tipp: Abwechseln</summary>
+<summary>Tipp: Abwechseln</summary>
 
 Merke dir den aktuellen Spieler in einer Variablen `char aktuell = 'X';`. Nach jedem Zug wechselst du:
 Ist `aktuell` gleich `'X'`, wird es `'O'` – sonst wird es `'X'`.
@@ -131,7 +131,7 @@ Nochmal? (j/n):
 ```
 
 <details>
-<summary>💡 Tipp</summary>
+<summary>Tipp</summary>
 
 - Schreibe Gewinnlinien zuerst auf Papier auf. Zum Beispiel ist die erste Zeile `0, 1, 2` und die eine Diagonale `0, 4, 8`.
 - Eine private Hilfsmethode `bool DreiGleich(int a, int b, int c, char zeichen)` prüft **eine** Linie.
@@ -150,7 +150,7 @@ Der Computer setzt auf Feld 7.
 ```
 
 <details>
-<summary>💡 Tipp</summary>
+<summary>Tipp</summary>
 
 Sammle alle freien Felder in einer `List<int>` und wähle daraus zufällig eins aus – genau wie beim zufälligen Wort im Galgenraten.
 </details>
@@ -168,7 +168,7 @@ Ein Computer, der zufällig spielt, ist langweilig. Bring ihm diese Strategie be
 Teste deinen Computer: Schaffst du es noch, ihn zu besiegen?
 
 <details>
-<summary>💡 Tipp: Wie findet der Computer einen Gewinnzug?</summary>
+<summary>Tipp: Wie findet der Computer einen Gewinnzug?</summary>
 
 Der Trick: Der Computer **probiert einfach aus**!
 
@@ -187,7 +187,7 @@ Mit `'O'` findest du deinen eigenen Gewinnzug, mit `'X'` den Zug, den du blockie
 
 ---
 
-## ⚠️ Typische Fehler
+## Typische Fehler
 
 | Fehler | Was passiert |
 |---|---|
@@ -198,7 +198,7 @@ Mit `'O'` findest du deinen eigenen Gewinnzug, mit `'X'` den Zug, den du blockie
 
 ---
 
-## ⭐ Extras
+## Extras
 
 - **Abwechselnd beginnen:** In jeder neuen Runde beginnt der andere Spieler.
 - **Schwierigkeitsgrade:** Leicht = zufällig (Stufe 3), Mittel = nur gewinnen und blockieren, Schwer = komplette Strategie (Stufe 4).
@@ -209,11 +209,11 @@ Mit `'O'` findest du deinen eigenen Gewinnzug, mit `'X'` den Zug, den du blockie
 
 ---
 
-## ✅ Checkliste
+## Checkliste
 
 - [ ] Ich habe eine Klasse mit einer privaten Variablen geschrieben, die man nur über Methoden ändern kann.
 - [ ] Ich kann zwischen „Spieler zählt ab 1“ und „Array zählt ab 0“ umrechnen.
 - [ ] Mein Programm erkennt alle 8 Gewinnlinien und ein Unentschieden.
 - [ ] Ich kann erklären, wie mein Computer seinen nächsten Zug auswählt.
 
-[← Zusatzaufgabe 2 – Snackautomat](Z2-Snackautomat.md) | [🏠 Übersicht](../README.md)
+[← Zusatzaufgabe 2 – Snackautomat](Z2-Snackautomat.md) | [Übersicht](../README.md)
