@@ -127,14 +127,13 @@ Größte Zahl: 10
 ```
 
 Programmiere Summe und Maximum **selbst** mit einer Schleife.
-
-<details>
-<summary>Tipp</summary>
-
+{% capture tipp %}
 - Summe: Starte mit `int summe = 0;` und addiere in einer `foreach`-Schleife jede Zahl dazu.
 - Maximum: Merke dir am Anfang die erste Zahl als größte (`zahlen[0]`) und vergleiche jede weitere Zahl damit.
 - Durchschnitt: Achtung, Ganzzahl-Division (Kapitel 3)! `31 / 5` ergibt sonst `6`.
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
+
 
 > **Tipp:**
 > Wenn deine Lösung funktioniert: Vergleiche dein Ergebnis mit `zahlen.Sum()`, `zahlen.Max()` und `zahlen.Average()`. Diese Befehle hat C# schon eingebaut.
