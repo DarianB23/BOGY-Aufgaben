@@ -34,11 +34,20 @@ pre {
 
 
 // ---------- 3. Tables ----------
-// Wide tables scroll instead of breaking the layout.
-.table-wrapper {
+// Tabellen nur so breit wie ihr Inhalt (höchstens so breit wie die Seite).
+.main-content .table-wrapper {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
   overflow-x: auto;
+  vertical-align: top;
 }
 
+.main-content table {
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: 100%;
+}
 
 // ---------- 4. Images ----------
 .main-content img {
