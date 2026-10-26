@@ -59,7 +59,8 @@ string[] woerter = { "KATZE", "COMPUTER", "PIZZA" };
 string geheim = woerter[Random.Shared.Next(woerter.Length)];
 ```
 
-> [!IMPORTANT]
+
+> ❗ **Wichtig:**
 > `'A'` und `'a'` sind für den Computer **verschiedene** Zeichen. Wandle deshalb Wort **und** Eingabe in Großbuchstaben um.
 
 ---
