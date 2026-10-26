@@ -57,7 +57,7 @@ int Addiere(int x, int y)             // gibt einen int zurück
 }
 ```
 
-> [!NOTE]
+> [!HINWEIS]
 > In `Program.cs` schreibst du deine Methoden einfach **unter** den restlichen Code. Du kannst sie trotzdem schon weiter oben aufrufen.
 
 ### Variablen leben nur in ihrer Methode
@@ -127,7 +127,7 @@ int a = LiesZahl("Erste Zahl: ");
 
 Baue deinen **Mini-Rechner** aus Aufgabe 4.3 damit um. Wie viel kürzer wird er?
 
-> [!TIP]
+> [!TIPP]
 > Heb dir `LiesZahl` gut auf! In Kapitel 10 machst du die Methode absturzsicher und benutzt sie im Abschlussprojekt.
 
 ### Aufgabe 8.4 – Denkfrage
