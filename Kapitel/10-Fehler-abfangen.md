@@ -1,3 +1,8 @@
+---
+title: 10 - Fehler abfangen
+parent: Kapitel
+nav_order: 10
+---
 # Kapitel 10 – Fehler abfangen
 
 [← Klassen und Objekte](09-Klassen.md) | [Übersicht](../README.md) | [Weiter: Abschlussprojekt →](11-Abschlussprojekt.md)
