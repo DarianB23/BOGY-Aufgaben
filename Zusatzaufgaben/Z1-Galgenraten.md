@@ -103,24 +103,22 @@ Schreibe für diese Stufe mindestens diese zwei **Methoden**:
 | `string VerdecktesWort(string wort, List<char> geraten)` | Gibt z. B. `"_ A T _ _ "` zurück |
 | `bool IstGeloest(string wort, List<char> geraten)` | `true`, wenn **jeder** Buchstabe des Worts schon geraten wurde |
 
-<details>
-<summary>Tipp: VerdecktesWort</summary>
-
+{% capture tipp %}
 Starte mit einem leeren Text `string anzeige = "";`.
 Geh mit `foreach` durch jedes Zeichen des Worts. Ist das Zeichen in der Liste `geraten`, hänge es an `anzeige` an – sonst ein `_`.
 Vergiss das Leerzeichen dahinter nicht, sonst sieht man nicht, wie viele Striche es sind.
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
 
-<details>
-<summary>Tipp: IstGeloest</summary>
 
+{% capture tipp %}
 Geh wieder durch jedes Zeichen des Worts. Findest du **ein** Zeichen, das noch **nicht** geraten wurde, kannst du sofort `return false;` machen.
 Kommst du am Ende der Schleife an, waren alle geraten → `return true;`
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
 
-<details>
-<summary>Tipp: Die Spielschleife</summary>
 
+{% capture tipp %}
 Das Spiel läuft, **solange** noch nicht 8 Fehler gemacht wurden **und** das Wort noch nicht gelöst ist:
 
 ```csharp
@@ -129,7 +127,9 @@ while (fehler < 8 && !IstGeloest(wort, geraten))
     // ...
 }
 ```
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
+
 
 ### Stufe 2 – Keine Abstürze, keine Doppelten
 
