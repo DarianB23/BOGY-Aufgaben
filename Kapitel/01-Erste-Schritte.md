@@ -85,15 +85,10 @@ Mein Lieblingshobby ist Klettern.
 Ersetze in deinem Programm `Console.WriteLine` durch `Console.Write` und starte es erneut.
 Erkläre in einem Satz: **Was ist der Unterschied?**
 
-
-<details>
-<summary>💡 Tipp</summary>
-<div markdown="1">
-
+{% capture tipp %}
 Achte darauf, **wo** der zweite Text erscheint. Was passiert mit dem Zeilenumbruch?
-
-</div>
-</details>
+{% endcapture %}
+{% include tipp.html inhalt =tipp%}
 
 ### Aufgabe 1.3 – Fehler mit Absicht
 
