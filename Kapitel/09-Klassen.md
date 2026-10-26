@@ -1,3 +1,8 @@
+---
+title: 09 - Klassen und Objekte
+parent: Kapitel
+nav_order: 9
+---
 # Kapitel 9 – Klassen und Objekte
 
 *Einführung in die objektorientierte Programmierung*
