@@ -102,12 +102,12 @@ Das Produkt Kopfhörer kostet 19,99 € und ist verfügbar: True
 
 **Denkfrage:** Welchen Datentyp brauchst du, wenn ein Produkt `19.99` € kostet? Welcher würde bei `42` € reichen?
 
-<details>
-<summary>💡 Tipp</summary>
 
+{% capture tipp %}
 Hat der Wert Nachkommastellen? Dann reicht `int` nicht.
 Ob etwas verfügbar ist, kann nur **ja** oder **nein** sein – welcher Typ passt dazu?
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
 
 > ℹ️ **Hinweis:**
 > Wundere dich nicht: Auf einem deutschen Windows wird `19.99` als `19,99` ausgegeben. Im Code schreibst du trotzdem den Punkt.
