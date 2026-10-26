@@ -56,7 +56,7 @@ Vergleiche liefern **immer** `true` (wahr) oder `false` (falsch).
 | `>=` | größer oder gleich | `a >= 10` | `true` |
 | `<=` | kleiner oder gleich | `b <= 2` | `false` |
 
-> [!WARNING]
+> [!ACHTUNG]
 > `=` und `==` sind **nicht** dasselbe!
 > `=` **weist zu** („speichere den Wert“), `==` **vergleicht** („sind beide gleich?“).
 
