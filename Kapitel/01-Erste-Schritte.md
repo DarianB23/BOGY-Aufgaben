@@ -1,7 +1,7 @@
 ---
-title: Erste Schritte
-nav_order: 2
-permalink: /
+title: 01 - Erste Schritte
+parent: Kapitel
+nav_order: 1
 ---
 # Kapitel 1 – Erste Schritte
 
