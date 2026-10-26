@@ -1,8 +1,8 @@
 # Kapitel 8 – Methoden
 
-[← Arrays und Listen](07-Collections.md) | [🏠 Übersicht](../README.md) | [Weiter: Klassen und Objekte →](09-Klassen.md)
+[← Arrays und Listen](07-Collections.md) | [Übersicht](../README.md) | [Weiter: Klassen und Objekte →](09-Klassen.md)
 
-## 🎯 Ziel
+## Ziel
 
 Nach diesem Kapitel kannst du:
 
@@ -12,7 +12,7 @@ Nach diesem Kapitel kannst du:
 
 ---
 
-## 📖 Erklärung
+## Erklärung
 
 Eine **Methode** ist ein Stück Code mit einem Namen. Du schreibst ihn **einmal** und kannst ihn danach **beliebig oft** aufrufen.
 Eine Methode sollte möglichst **genau eine Aufgabe** erledigen. `Console.WriteLine` ist übrigens auch eine Methode!
@@ -58,7 +58,7 @@ int Addiere(int x, int y)             // gibt einen int zurück
 ```
 
 
-> ℹ️ **Hinweis:**
+> **Hinweis:**
 > In `Program.cs` schreibst du deine Methoden einfach **unter** den restlichen Code. Du kannst sie trotzdem schon weiter oben aufrufen.
 
 ### Variablen leben nur in ihrer Methode
@@ -67,7 +67,7 @@ Eine Variable, die **in** einer Methode angelegt wird (wie `summe`), gibt es nur
 
 ---
 
-## ⚠️ Typische Fehler
+## Typische Fehler
 
 | Fehler | Was passiert |
 |---|---|
@@ -78,7 +78,7 @@ Eine Variable, die **in** einer Methode angelegt wird (wie `summe`), gibt es nur
 
 ---
 
-## ✍️ Aufgaben
+## Aufgaben
 
 ### Aufgabe 8.1 – `IstGerade`
 
@@ -93,7 +93,7 @@ Benutze sie in einer Schleife von 1 bis 10:
 ```
 
 <details>
-<summary>💡 Tipp</summary>
+<summary>Tipp</summary>
 
 Der Rückgabetyp ist `bool`. Wie du prüfst, ob eine Zahl gerade ist, steht in Kapitel 3 und 5.
 Wusstest du, dass du einen Vergleich direkt zurückgeben kannst? `return zahl % 2 == 0;`
@@ -128,7 +128,7 @@ int a = LiesZahl("Erste Zahl: ");
 
 Baue deinen **Mini-Rechner** aus Aufgabe 4.3 damit um. Wie viel kürzer wird er?
 
-> 💡 **Tipp:**
+> **Tipp:**
 > Heb dir `LiesZahl` gut auf! In Kapitel 10 machst du die Methode absturzsicher und benutzt sie im Abschlussprojekt.
 
 ### Aufgabe 8.4 – Denkfrage
@@ -136,22 +136,22 @@ Baue deinen **Mini-Rechner** aus Aufgabe 4.3 damit um. Wie viel kürzer wird er?
 Warum ist eine Methode besser, als denselben Code mehrmals zu kopieren? Finde mindestens **zwei** Gründe.
 
 <details>
-<summary>💡 Tipp</summary>
+<summary>Tipp</summary>
 
 Stell dir vor, du hast den Code 10-mal kopiert und findest dann einen Fehler darin …
 </details>
 
-### ⭐ Aufgabe 8.5 – Statistik aufräumen
+### Bonus-Aufgabe 8.5 – Statistik aufräumen
 
 Baue deine Zahlenstatistik aus Aufgabe 7.3 um: Schreibe die Methoden `int Summe(List<int> zahlen)`, `int Maximum(List<int> zahlen)` und `double Durchschnitt(List<int> zahlen)`.
 
 ---
 
-## ✅ Checkliste
+## Checkliste
 
 - [ ] Ich kann eine Methode mit und ohne Rückgabewert schreiben.
 - [ ] Ich weiß, was `void` bedeutet.
 - [ ] Ich kann einer Methode Parameter übergeben.
 - [ ] Ich weiß, warum Variablen aus einer Methode außerhalb nicht sichtbar sind.
 
-[← Arrays und Listen](07-Collections.md) | [🏠 Übersicht](../README.md) | [Weiter: Klassen und Objekte →](09-Klassen.md)
+[← Arrays und Listen](07-Collections.md) | [Übersicht](../README.md) | [Weiter: Klassen und Objekte →](09-Klassen.md)
