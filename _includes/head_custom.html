@@ -295,3 +295,44 @@
   });
 })();
 </script>
+<!-- Move the light/dark button into the top bar next to the search -->
+<script>
+  (function () {
+    function moveThemeToggle() {
+      var btn = document.querySelector(".theme-toggle");
+      var header = document.querySelector(".main-header");
+      if (!btn || !header || btn.classList.contains("in-header")) {
+        return !!(btn && btn.classList.contains("in-header"));
+      }
+
+      var search = header.querySelector(".search");
+      if (search) {
+        search.insertAdjacentElement("afterend", btn);   // right after the search
+      } else {
+        header.insertBefore(btn, header.firstChild);      // search disabled: far left
+      }
+      btn.classList.add("in-header");
+      return true;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Try right away. If the button doesn't exist yet, try again after loading.
+      if (!moveThemeToggle()) {
+        window.addEventListener("load", moveThemeToggle);
+      }
+    });
+  })();
+</script>
+
+<style>
+  /* Button inside the top bar instead of floating */
+  .theme-toggle.in-header {
+    position: static !important;
+    bottom: auto !important;
+    right: auto !important;
+    align-self: center;
+    flex-shrink: 0;
+    margin: 0 0.75rem;
+    white-space: nowrap;
+  }
+</style>
