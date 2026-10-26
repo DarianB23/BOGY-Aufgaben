@@ -1,3 +1,8 @@
+---
+title: 06 - Schleifen
+parent: Kapitel
+nav_order: 6
+---
 # Kapitel 6 – Schleifen
 
 [← Verzweigungen](05-Verzweigungen.md) | [Übersicht](../README.md) | [Weiter: Arrays und Listen →](07-Collections.md)
