@@ -104,12 +104,11 @@ Lagst du überall richtig?
    Denke daran, welchen Datentyp `a` und `b` haben.
 2. Ändere den Code so, dass `3.333...` ausgegeben wird. Findest du **zwei** verschiedene Wege?
 
-<details>
-<summary>💡 Tipp</summary>
-
+{% capture tipp %}
 Kann ein `int` überhaupt Nachkommastellen speichern?
 Weg 1: Ändere den Typ der Variablen. Weg 2: Schreibe `(double)` vor `a` – damit wandelst du `a` für diese Rechnung in eine Kommazahl um.
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
 
 ### Aufgabe 3.3 – Zeit umrechnen
 
@@ -121,12 +120,11 @@ Lege eine Variable `int sekundenGesamt = 3725;` an. Rechne aus, wie viele Stunde
 
 Teste dein Programm auch mit `86399` (Ergebnis: 23 Stunden, 59 Minuten, 59 Sekunden).
 
-<details>
-<summary>💡 Tipp</summary>
-
+{% capture tipp %}
 Eine Stunde hat 3600 Sekunden, eine Minute 60.
 Mit `/` bekommst du, wie oft etwas **ganz** hineinpasst, mit `%` den **Rest**, der übrig bleibt.
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
 
 ### Aufgabe 3.4 – Wahr oder falsch?
 
