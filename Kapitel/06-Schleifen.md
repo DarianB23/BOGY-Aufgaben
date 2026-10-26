@@ -128,12 +128,12 @@ Beantworte die Fragen **zuerst im Kopf** und prüfe sie dann im Code.
 3. Welche Zahlen gibt das `while`-Beispiel aus? Warum nicht die `0`?
 4. Wann endet das `do-while`-Beispiel? Was passiert, wenn du `Ende` (mit großem E) eintippst?
 
-<details>
-<summary>Tipp zu Frage 2</summary>
-
+{% capture tipp %}
 Wird `i` jemals kleiner als `0`? Lass die Schleife ruhig laufen (Abbruch mit **Strg + C**).
 Spannend für Profis: Ein `int` kann höchstens `2147483647` speichern. Was passiert danach?
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
+
 
 ### Aufgabe 6.2 – Zählen
 
@@ -161,12 +161,12 @@ Schreibe mit einer `do-while`-Schleife eine Passwortabfrage:
 - Zähle die Versuche mit und gib sie am Ende aus.
 - Nach **3 falschen Versuchen** soll `Zugang gesperrt!` erscheinen und die Schleife beendet werden.
 
-<details>
-<summary>Tipp</summary>
-
+{% capture tipp %}
 Lege das richtige Passwort und einen Zähler (`int versuche = 0;`) **vor** der Schleife an.
 Zum vorzeitigen Beenden hilft dir `break`.
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
+
 
 ### Bonus-Aufgabe 6.5 – FizzBuzz
 
@@ -188,11 +188,12 @@ Höhe: 4
 ****
 ```
 
-<details>
-<summary>Tipp</summary>
-
+{% capture tipp %}
 Du brauchst eine Schleife **in** einer Schleife: Die äußere zählt die Zeilen, die innere schreibt die Sterne mit `Console.Write("*")`.
-</details>
+
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
+
 
 ---
 
