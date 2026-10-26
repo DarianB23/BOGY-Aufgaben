@@ -1,12 +1,12 @@
 // Narrower sidebar on medium and large screens
 @media (min-width: 50rem) {
   .side-bar {
-    width: 12rem !important;
+    width: 15rem !important;
     flex: 0 0 12rem !important;
   }
 
   .main {
-    margin-left: 12rem !important;
+    margin-left: 15rem !important;
     max-width: none;
   }
 }
