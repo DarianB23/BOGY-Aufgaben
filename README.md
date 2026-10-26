@@ -37,7 +37,7 @@ Jedes Kapitel ist gleich aufgebaut:
 > Ob du deine Variablen auf Deutsch oder Englisch benennst, entscheidest du selbst.
 
 ---
-
+Hallo
 ## 🗺️ Lernpfad
 
 | # | Kapitel | Du lernst … |
