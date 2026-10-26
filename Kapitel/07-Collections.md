@@ -33,7 +33,7 @@ string[] farben = { "Rot", "Grün", "Blau" };
 
 Arrays erkennst du an den **eckigen Klammern** `[ ]`. Ihre Größe kann sich **nicht mehr ändern**.
 
-> [!WICHTIG]
+> [!IMPORTANT]
 > In der Informatik beginnt man beim Zählen mit **0**. Ein Array mit 4 Plätzen hat die Indizes `0, 1, 2, 3`.
 
 ### Listen – flexible Größe
@@ -136,7 +136,7 @@ Programmiere Summe und Maximum **selbst** mit einer Schleife.
 - Durchschnitt: Achtung, Ganzzahl-Division (Kapitel 3)! `31 / 5` ergibt sonst `6`.
 </details>
 
-> [!TIPP]
+> [!TIP]
 > Wenn deine Lösung funktioniert: Vergleiche dein Ergebnis mit `zahlen.Sum()`, `zahlen.Max()` und `zahlen.Average()`. Diese Befehle hat C# schon eingebaut.
 
 ### ⭐ Aufgabe 7.4 – Einkaufsliste
