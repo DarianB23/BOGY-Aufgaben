@@ -124,4 +124,52 @@ pre {
   .sb-drag {
     display: none !important;
   }
+  // ---------- 10. Aufklappbare Hinweise (notiz.html) ----------
+.main-content details.notiz {
+  margin: 1rem 0;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(128, 128, 128, 0.25);
+  border-left-width: 4px;
+  border-radius: 6px;
+}
+
+.main-content details.notiz summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.main-content details.notiz[open] summary {
+  margin-bottom: 0.5rem;
+}
+
+.main-content details.notiz .notiz-inhalt > :last-child {
+  margin-bottom: 0;
+}
+
+// Note: blau
+.main-content details.notiz-note {
+  border-left-color: #2f81f7;
+  background: rgba(47, 129, 247, 0.08);
+}
+.main-content details.notiz-note summary {
+  color: #2f81f7;
+}
+
+// Important: lila
+.main-content details.notiz-important {
+  border-left-color: #8957e5;
+  background: rgba(137, 87, 229, 0.10);
+}
+.main-content details.notiz-important summary {
+  color: #8957e5;
+}
+
+// Warning: orange
+.main-content details.notiz-warning {
+  border-left-color: #d29922;
+  background: rgba(210, 153, 34, 0.10);
+}
+.main-content details.notiz-warning summary {
+  color: #d29922;
+}
 }
