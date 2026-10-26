@@ -53,7 +53,8 @@ string AlsEuro(int cent)
 }
 ```
 
-> [!IMPORTANT]
+	
+> ❗ **Wichtig:**
 > Schreibe `100.0` und nicht `100`! Sonst ist es eine Ganzzahl-Division (Kapitel 3) und aus `150 / 100` wird `1`.
 
 ### Neu: Text in Spalten ausrichten
@@ -95,7 +96,7 @@ Lege in `Program.cs` eine `List<Produkt>` mit mindestens **5 Produkten** an (ein
 0) Beenden
 ```
 
-> [!NOTE]
+> ℹ️ **Hinweis:**
 > Wähle nur Preise, die durch 10 teilbar sind (z. B. 120, nicht 125). Der Automat nimmt nur 10-Cent-Münzen und größere an.
 
 <details>
