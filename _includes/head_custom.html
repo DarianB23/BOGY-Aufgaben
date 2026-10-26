@@ -357,10 +357,20 @@
   details.notiz.notiz-warning summary { color: #d29922 !important; }
 </style>
 <style>
-  /* Tipp: grün */
-details.tipp {
-  border-left-color: #2da44e !important;
-  background: rgba(45, 164, 78, 0.10) !important;
-}
-details.tipp { color: #2da44e !important; }
-  </style>
+  /* ---------- Tipps (tipp.html): grün ---------- */
+  details.tipp-box {
+    margin: 1rem 0 !important;
+    padding: 0.5rem 0.75rem !important;
+    border: 1px solid rgba(128, 128, 128, 0.25) !important;
+    border-left: 4px solid #2da44e !important;
+    border-radius: 6px !important;
+    background: rgba(45, 164, 78, 0.10) !important;
+  }
+  details.tipp-box summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #2da44e !important;
+  }
+  details.tipp-box[open] summary { margin-bottom: 0.5rem; }
+  details.tipp-box .tipp-inhalt > :last-child { margin-bottom: 0; }
+</style>
