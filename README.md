@@ -56,13 +56,4 @@ Jedes Kapitel ist gleich aufgebaut:
 
 ---
 
-## 📁 Aufbau dieses Repositorys
-
-```
-README.md              ← Du bist hier (Startseite)
-Kapitel/               ← Alle Kapitel mit Erklärungen und Aufgaben
-Tutorials/Bilder/      ← Screenshots für die Anleitungen
-Loesungen/             ← Musterlösungen (nur für Betreuer*innen)
-```
-
 **Viel Spaß – los geht's mit [Kapitel 1](Kapitel/01-Erste-Schritte.md)!**
