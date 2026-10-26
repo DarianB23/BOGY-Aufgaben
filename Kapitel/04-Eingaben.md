@@ -12,7 +12,7 @@ Nach diesem Kapitel kannst du:
 
 ---
 
-## 📖 Erklärung
+## Erklärung
 
 ### Eingaben lesen
 
