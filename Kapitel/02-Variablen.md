@@ -1,3 +1,8 @@
+---
+title: 02 - Variablen und Datentypen
+parent: Kapitel
+nav_order: 2
+---
 # Kapitel 2 – Variablen und Datentypen
 
 [← Erste Schritte](01-Erste-Schritte.md) | [Übersicht](../README.md) | [Weiter: Rechnen und Vergleichen →](03-Rechnen-und-Vergleichen.md)
