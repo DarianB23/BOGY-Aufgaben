@@ -89,9 +89,11 @@ switch (tag)
 - Jeder `case` endet mit `break;` – damit wird der `switch` verlassen.
 - `default` fängt alle Werte ab, für die es keinen `case` gibt.
 
-> **Tipp:**
-> `switch` unterscheidet Groß- und Kleinschreibung: `"montag"` passt **nicht** zu `"Montag"`.
-> Mit `tag.ToLower()` machst du die Eingabe komplett klein – dann musst du die `case`-Werte natürlich auch kleinschreiben.
+{% capture tipp %}
+`switch` unterscheidet Groß- und Kleinschreibung: `"montag"` passt **nicht** zu `"Montag"`.
+Mit `tag.ToLower()` machst du die Eingabe komplett klein – dann musst du die `case`-Werte natürlich auch kleinschreiben.
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
 
 ---
 
