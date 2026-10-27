@@ -1,18 +1,18 @@
 ---
-title: "🟢 Taschenrechner"
+title: "5 - Taschenrechner"
 parent: Zusatzaufgaben
 nav_order: 5
 ---
 
-# 🟢 Taschenrechner
+# Taschenrechner
 
 | | |
 |---|---|
-| **Schwierigkeit** | 🟢 Leicht bis 🟡 Mittel (Stufe 4) |
+| **Schwierigkeit** | Leicht bis Mittel (Stufe 4) |
 | **Dauer** | ca. 1,5 Stunden |
 | **Benötigte Kapitel** | 1–8 und 10 |
 
-## 🎯 Ziel
+## Ziel
 
 Du baust einen Konsolen-Taschenrechner. Er beginnt ganz einfach mit zwei Zahlen und einem Rechenzeichen. Am Ende kann man ganze Rechnungen wie `12 * 3` in einer Zeile eingeben, mit dem letzten Ergebnis weiterrechnen und sich den Verlauf anzeigen lassen.
 
@@ -25,7 +25,7 @@ Dabei übst du:
 
 ---
 
-## 📖 Was du dafür brauchst
+## Was du dafür brauchst
 
 **Kommazahlen einlesen**
 
@@ -56,7 +56,7 @@ string[] teile = eingabe.Split(' ');
 
 ---
 
-## ✍️ Aufgaben
+## Aufgaben
 
 ### Stufe 1: Eine Rechnung
 
@@ -103,11 +103,11 @@ Bei einer **Division durch 0** soll das Programm nicht `∞` ausgeben, sondern e
 
 ```text
 Erste Zahl: zehn
-❌ Das ist keine Zahl. Nochmal: 10
+Das ist keine Zahl. Nochmal: 10
 Rechenzeichen (+ - * /): %
-❌ Nur + - * / erlaubt. Nochmal: /
+Nur + - * / erlaubt. Nochmal: /
 Zweite Zahl: 0
-❌ Durch 0 kann man nicht teilen!
+Durch 0 kann man nicht teilen!
 ```
 
 {% capture tipp %}
@@ -116,13 +116,13 @@ Bei `double` stürzt eine Division durch 0 **nicht** ab, sondern ergibt `∞` (u
 ```csharp
 if (zeichen == "/" && b == 0)
 {
-    Console.WriteLine("❌ Durch 0 kann man nicht teilen!");
+    Console.WriteLine("Durch 0 kann man nicht teilen!");
 }
 ```
 
 Alternative für Fortgeschrittene: In `Rechne` mit `throw new DivideByZeroException();` einen Fehler auslösen und ihn im Hauptprogramm mit `try`/`catch` abfangen (Kapitel 10).
 {% endcapture %}
-{% include tipp.html titel="💡 Tipp zur Division durch 0" inhalt=tipp %}
+{% include tipp.html titel="Tipp zur Division durch 0" inhalt=tipp %}
 
 ### Stufe 3: Weiterrechnen und Verlauf
 
@@ -168,7 +168,7 @@ Rechnung (oder "exit"): 12 * 3
 Rechnung (oder "exit"): 2,5 + 4
 = 6,5
 Rechnung (oder "exit"): 5 +
-❌ Format: Zahl Zeichen Zahl, z. B. 3 + 4
+Format: Zahl Zeichen Zahl, z. B. 3 + 4
 Rechnung (oder "exit"): exit
 ```
 
@@ -187,11 +187,11 @@ if (teile.Length != 3)
 }
 ```
 {% endcapture %}
-{% include tipp.html titel="💡 Tipp zu Split" inhalt=tipp %}
+{% include tipp.html titel="Tipp zu Split" inhalt=tipp %}
 
 ---
 
-## ⚠️ Typische Fehler
+## Typische Fehler
 
 | Fehler | Was passiert | Lösung |
 |---|---|---|
@@ -203,7 +203,7 @@ if (teile.Length != 3)
 
 ---
 
-## ⭐ Extras
+## Extras
 
 1. **Mehr Rechenarten:** Potenz (`^`), Wurzel (`sqrt 16`) und Prozent (`200 % 15` = 15 % von 200).
 2. **Schöne Ausgabe:** Runde Ergebnisse auf höchstens 4 Nachkommastellen, damit nicht `0,30000000000000004` erscheint.
@@ -212,7 +212,7 @@ if (teile.Length != 3)
 
 ---
 
-## ✅ Checkliste
+## Checkliste
 
 - [ ] Alle vier Grundrechenarten funktionieren, auch mit Kommazahlen
 - [ ] Buchstaben oder falsche Rechenzeichen bringen das Programm nicht zum Absturz
