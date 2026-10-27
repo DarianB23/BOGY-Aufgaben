@@ -105,14 +105,15 @@ Console.WriteLine($"{meinHund.Name} ist {meinHund.Alter} Jahre alt.");
 
 ---
 
-## Typische Fehler
-
+{% capture notiz %}
 | Fehler | Was passiert |
 |---|---|
 | Konstruktor heißt anders als die Klasse | Fehler – der Konstruktor muss **genau** wie die Klasse heißen |
 | `Hund` ist in `Program.cs` rot unterstrichen | Es fehlt `using MeinProjekt;` ganz oben (mit dem Namen deines Projekts). Tipp: Mit **Strg + .** schlägt Visual Studio die Lösung vor. |
 | `public` vergessen | Fehler: Auf die Eigenschaft oder Methode kann man von außen nicht zugreifen |
 | `new` vergessen | Fehler – ohne `new` wird kein Objekt erzeugt |
+{% endcapture %}
+{%include notiz.html typ="warning" titel="Typische Fehler" offen=false inhalt=notiz %}
 
 ---
 
