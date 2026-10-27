@@ -61,9 +61,12 @@ Vergleiche liefern **immer** `true` (wahr) oder `false` (falsch).
 | `>=` | größer oder gleich | `a >= 10` | `true` |
 | `<=` | kleiner oder gleich | `b <= 2` | `false` |
 
-> **Achtung:**
-> `=` und `==` sind **nicht** dasselbe!
-> `=` **weist zu** („speichere den Wert“), `==` **vergleicht** („sind beide gleich?“).
+{% capture notiz %}
+`=` und `==` sind **nicht** dasselbe!
+`=` **weist zu** („speichere den Wert“), `==` **vergleicht** („sind beide gleich?“).
+{% endcapture %}
+{%include notiz.html typ="warning" titel="Achtung" offen=true inhalt=notiz %}
+
 
 ### Logikoperatoren
 
