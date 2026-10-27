@@ -1,18 +1,18 @@
 ---
-title: "🟡 Vokabeltrainer"
+title: "6 - Vokabeltrainer"
 parent: Zusatzaufgaben
 nav_order: 6
 ---
 
-# 🟡 Vokabeltrainer
+# Vokabeltrainer
 
 | | |
 |---|---|
-| **Schwierigkeit** | 🟡 Mittel |
+| **Schwierigkeit** | Mittel |
 | **Dauer** | ca. 2 Stunden |
 | **Benötigte Kapitel** | 1–10 |
 
-## 🎯 Ziel
+## Ziel
 
 Du programmierst einen Vokabeltrainer für Deutsch und Englisch. Er fragt Vokabeln in zufälliger Reihenfolge ab, merkt sich, welche du falsch hattest, und wiederholt genau diese so lange, bis alle sitzen.
 
@@ -25,7 +25,7 @@ Dabei übst du:
 
 ---
 
-## 📖 Was du dafür brauchst
+## Was du dafür brauchst
 
 **Texte vergleichbar machen**
 
@@ -55,7 +55,7 @@ So kannst du aus der Kopie Elemente entfernen, ohne die Originalliste zu veränd
 
 ---
 
-## ✍️ Aufgaben
+## Aufgaben
 
 ### Stufe 1: Feste Abfrage
 
@@ -64,9 +64,9 @@ Lege zwei Arrays an: eins mit 8 deutschen Wörtern, eins mit den passenden engli
 ```text
 === Vokabeltrainer ===
 Haus = house
-✅ Richtig!
+Richtig!
 Hund = cat
-❌ Falsch. Richtig ist: dog
+Falsch. Richtig ist: dog
 ...
 Ergebnis: 6 von 8 richtig
 ```
@@ -125,7 +125,7 @@ public bool Pruefe(string antwort)
 
 Damit `Richtig` und `Falsch` nur von der Klasse selbst geändert werden können, schreib `public int Richtig { get; private set; }`.
 {% endcapture %}
-{% include tipp.html titel="💡 Tipp zu Pruefe" inhalt=tipp %}
+{% include tipp.html titel="Tipp zu Pruefe" inhalt=tipp %}
 
 ### Stufe 3: Menü, Zufall und Richtung
 
@@ -146,7 +146,7 @@ Baue ein Menü in einer Schleife:
 - Bei **4** werden alle Vokabeln als Tabelle angezeigt:
 
 ```text
-Deutsch        Englisch       ✅   ❌
+Deutsch        Englisch      de   en
 Haus           house          3    0
 Hund           dog            1    2
 ```
@@ -189,7 +189,7 @@ Durchgang 2: 2 von 3 richtig
 1 Vokabel wird wiederholt ...
 
 Durchgang 3: 1 von 1 richtig
-🎉 Alle Vokabeln gelernt!
+Alle Vokabeln gelernt!
 
 === Deine schwierigsten Vokabeln ===
 1. Schmetterling = butterfly (3 Fehler)
@@ -204,11 +204,11 @@ Sammle die falschen Vokabeln eines Durchgangs in einer **neuen** Liste `falsche`
 
 Für die schwierigsten Vokabeln suchst du dreimal hintereinander die Vokabel mit den meisten Fehlern aus einer Kopie der Liste und entfernst sie danach aus der Kopie.
 {% endcapture %}
-{% include tipp.html titel="💡 Tipp zum Wiederholen" inhalt=tipp %}
+{% include tipp.html titel="Tipp zum Wiederholen" inhalt=tipp %}
 
 ---
 
-## ⚠️ Typische Fehler
+## Typische Fehler
 
 | Fehler | Was passiert | Lösung |
 |---|---|---|
@@ -220,7 +220,7 @@ Für die schwierigsten Vokabeln suchst du dreimal hintereinander die Vokabel mit
 
 ---
 
-## ⭐ Extras
+## Extras
 
 1. **Mehrere richtige Antworten:** Erlaube Einträge wie `car/automobile`. Zerlege sie mit `Split('/')` und akzeptiere jede Variante.
 2. **Tippfehler-Toleranz:** Wenn genau **ein** Buchstabe falsch ist (gleiche Länge), gilt die Antwort als „Fast richtig!“ und zählt halb.
@@ -229,7 +229,7 @@ Für die schwierigsten Vokabeln suchst du dreimal hintereinander die Vokabel mit
 
 ---
 
-## ✅ Checkliste
+## Checkliste
 
 - [ ] Groß- und Kleinschreibung und Leerzeichen spielen keine Rolle
 - [ ] Die Klasse `Vokabel` enthält die Vergleichslogik in `Pruefe`
