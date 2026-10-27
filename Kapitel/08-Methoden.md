@@ -63,8 +63,10 @@ int Addiere(int x, int y)             // gibt einen int zurück
 ```
 
 
-> **Hinweis:**
-> In `Program.cs` schreibst du deine Methoden einfach **unter** den restlichen Code. Du kannst sie trotzdem schon weiter oben aufrufen.
+{% capture notiz %}
+In `Program.cs` schreibst du deine Methoden einfach **unter** den restlichen Code. Du kannst sie trotzdem schon weiter oben aufrufen.
+{% endcapture %}
+{%include notiz.html typ="note" titel="Hinweis" offen=true inhalt=notiz %}
 
 ### Variablen leben nur in ihrer Methode
 
@@ -132,8 +134,10 @@ int a = LiesZahl("Erste Zahl: ");
 
 Baue deinen **Mini-Rechner** aus Aufgabe 4.3 damit um. Wie viel kürzer wird er?
 
-> **Tipp:**
-> Heb dir `LiesZahl` gut auf! In Kapitel 10 machst du die Methode absturzsicher und benutzt sie im Abschlussprojekt.
+{% capture notiz %}
+Heb dir `LiesZahl` gut auf! In Kapitel 10 machst du die Methode absturzsicher und benutzt sie im Abschlussprojekt.
+{% endcapture %}
+{%include notiz.html typ="important" titel="Wichtig" offen=true inhalt=notiz %}
 
 ### Aufgabe 8.4 – Denkfrage
 
