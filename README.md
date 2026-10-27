@@ -52,8 +52,7 @@ Jedes Kapitel ist gleich aufgebaut:
 
 Der Kurs hat 5 Etappen. Jede Etappe baut auf der vorherigen auf. Arbeite sie deshalb der Reihe nach durch.
 
-### Etappe 1: Die Grundlagen
-
+{% capture notiz %}
 Du schreibst dein erstes Programm, speicherst Werte und rechnest damit.
 
 | Kapitel | Das lernst du |
@@ -64,6 +63,8 @@ Du schreibst dein erstes Programm, speicherst Werte und rechnest damit.
 | [4 – Eingaben](Kapitel/04-Eingaben.md) | Benutzer fragen, Text in Zahlen umwandeln |
 
 **Danach kannst du:** ein Programm schreiben, das Eingaben entgegennimmt und damit rechnet.
+{% endcapture %}
+{%include notiz.html typ="note" titel="Etappe 1: Die Grundlagen" offen=false inhalt=notiz %}
 
 ### Etappe 2: Das Programm entscheiden lassen
 
