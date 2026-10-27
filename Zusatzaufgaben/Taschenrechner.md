@@ -1,7 +1,7 @@
 ---
-title: "5 - Taschenrechner"
+title: "3 - Taschenrechner"
 parent: Zusatzaufgaben
-nav_order: 5
+nav_order: 3
 ---
 
 # Taschenrechner
