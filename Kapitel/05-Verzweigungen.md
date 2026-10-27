@@ -97,14 +97,15 @@ Mit `tag.ToLower()` machst du die Eingabe komplett klein – dann musst du die `
 
 ---
 
-## Typische Fehler
-
+{% capture notiz %}
 | Fehler | Was passiert |
 |---|---|
 | `if (alter >= 18);` – Semikolon nach der Klammer | Der Block darunter wird **immer** ausgeführt, egal ob die Bedingung stimmt! |
 | `if (zahl = 0)` | Fehler – zum Vergleichen brauchst du `==` |
 | `break;` im `switch` vergessen | Fehler: Das Programm darf nicht einfach in den nächsten `case` „durchfallen“ |
 | Ungerade Zahl mit `zahl % 2 == 1` prüfen | Funktioniert bei **negativen** Zahlen nicht: `-3 % 2` ergibt `-1`! Prüfe lieber `zahl % 2 != 0`. |
+{% endcapture %}
+{%include notiz.html typ="warning" titel="Typische Fehler" offen=true inhalt=notiz %}
 
 ---
 
