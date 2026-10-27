@@ -83,18 +83,6 @@ Such dir aus, was dir gefällt:
 
 ---
 
-## Andere Projektideen
-
-Lieber etwas anderes bauen? Kein Problem – such dir eine dieser Ideen aus:
-
-| Projekt | Beschreibung | Schwerpunkte |
-|---|---|---|
-| **Schere, Stein, Papier** | Spiel gegen den Computer, „Best of 3“ mit Punktestand | Zufall, `switch`, Schleifen |
-| **Vokabeltrainer** | Klasse `Vokabel` (Deutsch, Englisch), zufällige Abfrage, Auswertung am Ende | Klassen, Listen, Zufall |
-| **Bankautomat** | Menü (1 = Einzahlen, 2 = Abheben, 3 = Kontostand, 0 = Beenden) mit deiner `BankKonto`-Klasse | Klassen, `switch`, Schleifen |
-| **Taschenrechner** | Menügesteuerter Rechner, der nicht abstürzt (auch nicht bei Division durch 0) | Methoden, Fehler abfangen |
-
----
 
 ## Was du in diesem Projekt alles benutzt
 
