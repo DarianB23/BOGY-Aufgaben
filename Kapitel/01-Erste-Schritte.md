@@ -20,19 +20,7 @@ Nach diesem Kapitel kannst du:
 
 ## Erklärung
 
-### Projekt erstellen
-
-1. Visual Studio öffnen → **Neues Projekt erstellen**
-   
-![Neues Projekt](../Bilder/NewProjectButton.png)
-
-2. Die Vorlage **Konsolen-App** (Sprache: C#) auswählen → **Weiter**
-
-![image](../Bilder/ConsoleAppSelection.png)
-
-3. Einen Projektnamen eingeben, z. B. `ErsteSchritte` → **Weiter**
-
-![image](../Bilder/ProjectName.png)
+Falls du nicht weißt wie du ein neues Projekt erstellst, schau dir die Seite [Neues Projekt erstellen](NewProjects.md) an.
 
 {% capture notiz %}
 Lege für jedes Kapitel ein **eigenes Projekt** an (z. B. `Kapitel02`, `Kapitel03` …). So bleibt dein alter Code erhalten und du kannst später nachschauen.
