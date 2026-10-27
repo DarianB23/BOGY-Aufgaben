@@ -101,7 +101,7 @@ Achte darauf, **wo** der zweite Text erscheint. Was passiert mit dem Zeilenumbru
 
 Fehlermeldungen zu lesen ist eine der wichtigsten Fähigkeiten beim Programmieren. Wir üben das jetzt:
 
-1. Lösche das Semikolon am Ende einer Zeile und starte das Programm.
+1. Lösche das Semikolon am Ende einer Zeile und versuche das Programm zu starten.
    - Was steht in der **Fehlerliste** (unten in Visual Studio)?
    - In welcher **Zeile** ist der Fehler?
 2. Mach das Semikolon wieder hin und schreibe stattdessen `console` klein. Welche Meldung bekommst du jetzt?
