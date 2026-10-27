@@ -39,9 +39,11 @@ int      alter  = 25;
 | `char` | Genau **ein** Zeichen | `char note = 'A';` |
 
 
-> **Wichtig:**
-> - Im Code schreibst du Kommazahlen immer mit **Punkt**: `1.72` (nicht `1,72`).
-> - Text (`string`) steht in **doppelten** Anführungszeichen `"..."`, ein einzelnes Zeichen (`char`) in **einfachen** `'...'`.
+{% capture notiz %}
+- Im Code schreibst du Kommazahlen immer mit **Punkt**: `1.72` (nicht `1,72`).
+- Text (`string`) steht in **doppelten** Anführungszeichen `"..."`, ein einzelnes Zeichen (`char`) in **einfachen** `'...'`.
+{% endcapture %}
+{%include notiz.html typ="important" titel="Wichtig" offen=true inhalt=notiz %}
 
 ### Werte ändern
 
@@ -130,10 +132,6 @@ Wundere dich nicht: Auf einem deutschen Windows wird `19.99` als `19,99` ausgege
 Schreibe einen Steckbrief über dich (oder eine erfundene Person), in dem **jeder Datentyp aus der Tabelle** mindestens einmal vorkommt – auch `char` (z. B. dein Anfangsbuchstabe).
 Gib ihn einmal mit `$"..."` und einmal mit `+` aus.
 
-{% capture notiz %}
-Für Geldbeträge benutzen Profis meistens den Typ `decimal` (`decimal preis = 19.99m;`), weil er genauer rechnet als `double`. Für dieses Tutorial reicht `double` aber völlig.
-{% endcapture %}
-{%include notiz.html typ="note" titel="Profi Wissen" offen=true inhalt=notiz %}
 
 ---
 
