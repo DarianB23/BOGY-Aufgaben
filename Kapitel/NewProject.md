@@ -1,4 +1,4 @@
-# Wie erstellt man ein neues Projekt?
+# Neues Projekt erstellen
 ## Schritt 1
 Öffne Visual Studio und drücke auf 'Neues Projekt erstellen'.
 
