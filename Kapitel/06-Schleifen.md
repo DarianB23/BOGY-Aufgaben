@@ -106,13 +106,14 @@ for (int i = 1; i <= 10; i++)
 
 ---
 
-## Typische Fehler
-
+{% capture notiz %}
 | Fehler | Was passiert |
 |---|---|
 | In einer `while`-Schleife wird die Variable nie verändert | **Endlosschleife** – das Programm hört nie auf. Stoppen mit **Strg + C** oder durch Schließen des Fensters. |
 | `<` und `<=` verwechselt | Die Schleife läuft einmal zu oft oder zu wenig |
 | Semikolon nach der Klammer: `for (...);` | Der Block darunter läuft nur **einmal** |
+{% endcapture %}
+{%include notiz.html typ="warning" titel="Typische Fehler" offen=true inhalt=notiz %}
 
 ---
 
