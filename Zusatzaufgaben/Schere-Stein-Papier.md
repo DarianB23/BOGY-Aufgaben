@@ -1,18 +1,18 @@
 ---
-title: "🟢 Schere, Stein, Papier"
+title: "Schere, Stein, Papier"
 parent: Zusatzaufgaben
 nav_order: 4
 ---
 
-# 🟢 Schere, Stein, Papier
+# Schere, Stein, Papier
 
 | | |
 |---|---|
-| **Schwierigkeit** | 🟢 Leicht (Niveau Abschlussprojekt) |
+| **Schwierigkeit** | Leicht |
 | **Dauer** | ca. 1–1,5 Stunden |
 | **Benötigte Kapitel** | 1–8 und 10 (Zufallszahlen kennst du aus Kapitel 11) |
 
-## 🎯 Ziel
+## Ziel
 
 Du programmierst das bekannte Spiel gegen den Computer. Am Ende spielt man „Best of 5“ (wer zuerst 3 Runden gewinnt) und bekommt eine kleine Statistik angezeigt.
 
@@ -25,7 +25,7 @@ Dabei übst du:
 
 ---
 
-## 📖 Was du dafür brauchst
+## Was du dafür brauchst
 
 **Zufallszahlen**
 
@@ -47,13 +47,13 @@ Index 0 bleibt leer, damit die Zahl 1 direkt zu „Schere“ passt.
 
 | Wahl | schlägt |
 |---|---|
-| ✂️ Schere | 📄 Papier |
-| 🪨 Stein | ✂️ Schere |
-| 📄 Papier | 🪨 Stein |
+| Schere | Papier |
+| Stein | Schere |
+| Papier | Stein |
 
 ---
 
-## ✍️ Aufgaben
+## Aufgaben
 
 ### Stufe 1: Eine Runde
 
@@ -66,7 +66,7 @@ Deine Wahl: 2
 
 Du: Stein
 Computer: Schere
-🎉 Du gewinnst!
+Du gewinnst!
 ```
 
 {% capture tipp %}
@@ -75,17 +75,17 @@ Prüfe zuerst auf **Unentschieden** (`spieler == computer`). Danach reichen drei
 ```csharp
 if (spieler == computer)
 {
-    Console.WriteLine("🤝 Unentschieden!");
+    Console.WriteLine("Unentschieden!");
 }
 else if ((spieler == 1 && computer == 3) ||
          (spieler == 2 && computer == 1) ||
          (spieler == 3 && computer == 2))
 {
-    Console.WriteLine("🎉 Du gewinnst!");
+    Console.WriteLine("Du gewinnst!");
 }
 else
 {
-    Console.WriteLine("💻 Der Computer gewinnt!");
+    Console.WriteLine("Der Computer gewinnt!");
 }
 ```
 {% endcapture %}
@@ -105,9 +105,9 @@ Die Ausgabe („Du gewinnst!“ usw.) passiert **nicht** in `ErmittleGewinner`, 
 
 ```text
 Deine Wahl: abc
-❌ Bitte gib 1, 2 oder 3 ein.
+Bitte gib 1, 2 oder 3 ein.
 Deine Wahl: 5
-❌ Bitte gib 1, 2 oder 3 ein.
+Bitte gib 1, 2 oder 3 ein.
 Deine Wahl: 3
 ```
 
@@ -124,12 +124,12 @@ static int LiesWahl()
         {
             return wahl;
         }
-        Console.WriteLine("❌ Bitte gib 1, 2 oder 3 ein.");
+        Console.WriteLine("Bitte gib 1, 2 oder 3 ein.");
     }
 }
 ```
 {% endcapture %}
-{% include tipp.html titel="💡 Tipp zu LiesWahl" inhalt=tipp %}
+{% include tipp.html titel="Tipp zu LiesWahl" inhalt=tipp %}
 
 ### Stufe 3: Best of 5
 
@@ -139,10 +139,10 @@ Es wird so lange gespielt, bis **einer 3 Runden gewonnen** hat. Unentschieden z�
 --- Runde 4 ---
 Deine Wahl: 1
 Du: Schere | Computer: Papier
-🎉 Du gewinnst die Runde!
+Du gewinnst die Runde!
 Stand: Du 3 : 1 Computer
 
-🏆 Du hast das Spiel gewonnen!
+Du hast das Spiel gewonnen!
 ```
 
 {% capture tipp %}
@@ -187,7 +187,7 @@ Für die Prozentzahl: `gewonnen * 100 / spiele` funktioniert mit `int`. Achte da
 
 ---
 
-## ⚠️ Typische Fehler
+## Typische Fehler
 
 | Fehler | Was passiert | Lösung |
 |---|---|---|
@@ -199,7 +199,7 @@ Für die Prozentzahl: `gewonnen * 100 / spiele` funktioniert mit `int`. Achte da
 
 ---
 
-## ⭐ Extras
+## Extras
 
 1. **Echse und Spock:** Erweitere das Spiel auf 5 Möglichkeiten (Schere, Stein, Papier, Echse, Spock). Die Regeln findest du im Internet unter „Rock Paper Scissors Lizard Spock“. Wie viele `if`-Bedingungen brauchst du jetzt? Fällt dir eine kürzere Lösung ein?
 2. **Zwei Spieler:** Zwei Personen spielen gegeneinander. Damit Spieler 2 die Wahl von Spieler 1 nicht sieht, nutze `Console.Clear();` nach der ersten Eingabe.
@@ -208,7 +208,7 @@ Für die Prozentzahl: `gewonnen * 100 / spiele` funktioniert mit `int`. Achte da
 
 ---
 
-## ✅ Checkliste
+## Checkliste
 
 - [ ] Der Computer wählt zufällig alle drei Möglichkeiten
 - [ ] Falsche Eingaben bringen das Programm nicht zum Absturz
