@@ -74,14 +74,15 @@ Eine Variable, die **in** einer Methode angelegt wird (wie `summe`), gibt es nur
 
 ---
 
-## Typische Fehler
-
+{% capture notiz %}
 | Fehler | Was passiert |
 |---|---|
 | `return` vergessen (bei Rückgabetyp ≠ `void`) | Fehler: „Nicht alle Codepfade geben einen Wert zurück“ |
 | Falscher Typ zurückgegeben | Fehler – eine `bool`-Methode darf keinen `string` zurückgeben |
 | Klammern beim Aufruf vergessen: `Gruesse;` | Fehler – Methoden rufst du immer mit `( )` auf |
 | Falsche Anzahl Parameter: `Addiere(3)` | Fehler – die Methode erwartet zwei Werte |
+{% endcapture %}
+{%include notiz.html typ="warning" titel="Typische Fehler" offen=false inhalt=notiz %}
 
 ---
 
