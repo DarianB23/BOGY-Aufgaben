@@ -36,18 +36,13 @@ heading_anchors: true
 
 aux_links:
   "Auf GitHub ansehen":
-    - "<redacted URL>"
+    - "https://github.com/DarianB23/BOGY-Aufgaben"
 aux_links_new_tab: true
 
 back_to_top: true
 back_to_top_text: "Nach oben"
 enable_copy_code_button: true
 
-gh_edit_link: true
-gh_edit_link_text: "Diese Seite auf GitHub bearbeiten"
-gh_edit_repository: "<redacted URL>"
-gh_edit_branch: "main"
-gh_edit_view_mode: "tree"
 
 callouts:
   tipp:
