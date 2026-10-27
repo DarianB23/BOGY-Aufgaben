@@ -20,7 +20,7 @@ Nach diesem Kapitel kannst du:
 
 ## Erklärung
 
-Falls du nicht weißt wie du ein neues Projekt erstellst, schau dir die Seite [Neues Projekt erstellen](../Kapitel/NewProjects.md) an.
+Falls du nicht weißt wie du ein neues Projekt erstellst, schau dir die Seite [Neues Projekt erstellen](NewProject.md) an.
 
 {% capture notiz %}
 Lege für jedes Kapitel ein **eigenes Projekt** an (z. B. `Kapitel02`, `Kapitel03` …). So bleibt dein alter Code erhalten und du kannst später nachschauen.
