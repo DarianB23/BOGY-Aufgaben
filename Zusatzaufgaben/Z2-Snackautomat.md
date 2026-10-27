@@ -103,8 +103,10 @@ Lege in `Program.cs` eine `List<Produkt>` mit mindestens **5 Produkten** an (ein
 0) Beenden
 ```
 
-> **Hinweis:**
-> Wähle nur Preise, die durch 10 teilbar sind (z. B. 120, nicht 125). Der Automat nimmt nur 10-Cent-Münzen und größere an.
+{% capture notiz %}
+Wähle nur Preise, die durch 10 teilbar sind (z. B. 120, nicht 125). Der Automat nimmt nur 10-Cent-Münzen und größere an.
+{% endcapture %}
+{%include notiz.html typ="note" titel="Hinweis" offen=true inhalt=notiz %}
 
 {% capture tipp %}
 - Für die Nummern im Menü brauchst du den Index. Nimm deshalb eine `for`-Schleife statt `foreach` und gib `i + 1` aus.
