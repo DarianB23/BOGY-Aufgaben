@@ -91,13 +91,14 @@ foreach (Typ variable in sammlung)
 
 ---
 
-## Typische Fehler
-
+{% capture notiz %}
 | Fehler | Was passiert |
 |---|---|
 | Zugriff auf einen Index, den es nicht gibt (`punkte[4]`) | Absturz: `IndexOutOfRangeException` |
 | `.Length` bei einer Liste / `.Count` bei einem Array | Fehler – die Eigenschaft gibt es dort nicht |
 | In einer `foreach`-Schleife Elemente hinzufügen oder entfernen | Absturz: Die Liste darf sich während `foreach` nicht verändern |
+{% endcapture %}
+{%include notiz.html typ="warning" titel="Typische Fehler" offen=false inhalt=notiz %}
 
 ---
 
