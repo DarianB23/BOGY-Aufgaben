@@ -83,14 +83,15 @@ const double Pi = 3.14159;   // const: Dieser Wert kann sich NIE ändern
 
 ---
 
-## Typische Fehler
-
+{% capture notiz %}
 | Fehler | Beispiel | Was passiert |
 |---|---|---|
 | Typ passt nicht zum Wert | `int alter = "25";` | Fehler: `string` lässt sich nicht in `int` umwandeln |
 | Kommazahl in `int` | `int preis = 19.99;` | Fehler: `double` lässt sich nicht in `int` umwandeln |
 | Variable doppelt angelegt | `int a = 1;` … `int a = 2;` | Fehler: Der Name `a` ist schon vergeben |
 | `{ }` ohne `$` | `"Hallo {name}"` | Es wird wirklich `{name}` ausgegeben statt des Namens |
+{% endcapture %}
+{%include notiz.html typ="warning" titel="Typische Fehler" offen=false inhalt=notiz %}
 
 ---
 
