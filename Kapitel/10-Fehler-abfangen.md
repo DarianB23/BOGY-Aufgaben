@@ -89,13 +89,14 @@ Console.WriteLine($"Danke! Du hast {zahl} eingegeben.");
 
 ---
 
-## Typische Fehler
-
+{% capture notiz %}
 | Fehler | Was passiert |
 |---|---|
 | `catch` für die falsche Exception | Der Fehler wird nicht abgefangen – das Programm stürzt trotzdem ab |
 | Leerer `catch`-Block | Der Fehler wird „verschluckt“, niemand merkt etwas. Gib immer eine Meldung aus! |
 | Variable im `try`-Block angelegt und danach benutzt | Fehler – Variablen aus `{ }` gibt es nur innerhalb der Klammern |
+{% endcapture %}
+{%include notiz.html typ="warning" titel="Typische Fehler" offen=false inhalt=notiz %}
 
 ---
 
