@@ -59,8 +59,10 @@ string AlsEuro(int cent)
 ```
 
 	
-> **Wichtig:**
-> Schreibe `100.0` und nicht `100`! Sonst ist es eine Ganzzahl-Division (Kapitel 3) und aus `150 / 100` wird `1`.
+{% capture notiz %}
+Schreibe `100.0` und nicht `100`! Sonst ist es eine Ganzzahl-Division (Kapitel 3) und aus `150 / 100` wird `1`.
+{% endcapture %}
+{%include notiz.html typ="warning" titel="Bitte beachten" offen=true inhalt=notiz %}
 
 ### Neu: Text in Spalten ausrichten
 
