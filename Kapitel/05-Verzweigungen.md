@@ -105,7 +105,7 @@ Mit `tag.ToLower()` machst du die Eingabe komplett klein – dann musst du die `
 | `break;` im `switch` vergessen | Fehler: Das Programm darf nicht einfach in den nächsten `case` „durchfallen“ |
 | Ungerade Zahl mit `zahl % 2 == 1` prüfen | Funktioniert bei **negativen** Zahlen nicht: `-3 % 2` ergibt `-1`! Prüfe lieber `zahl % 2 != 0`. |
 {% endcapture %}
-{%include notiz.html typ="warning" titel="Typische Fehler" offen=true inhalt=notiz %}
+{%include notiz.html typ="warning" titel="Typische Fehler" offen=false inhalt=notiz %}
 
 ---
 
