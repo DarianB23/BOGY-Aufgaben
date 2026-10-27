@@ -20,8 +20,10 @@ Das Projekt ist in **Stufen** aufgeteilt. Bring zuerst eine Stufe zum Laufen, be
 int geheimeZahl = Random.Shared.Next(1, 101);   // Zufallszahl von 1 bis 100
 ```
 
-> **Wichtig:**
-> Die **zweite** Zahl ist **nicht** mehr dabei! `Next(1, 101)` liefert Zahlen von 1 bis **100**.
+{% capture notiz %}
+Die **zweite** Zahl ist **nicht** mehr dabei! `Next(1, 101)` liefert Zahlen von 1 bis **100**.
+{% endcapture %}
+{%include notiz.html typ="important" titel="Wichtig" offen=true inhalt=notiz %}
 
 ---
 
