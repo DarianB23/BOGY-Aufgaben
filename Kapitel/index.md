@@ -14,9 +14,9 @@ Arbeite die Kapitel der Reihe nach durch, denn jedes baut auf dem vorherigen auf
 
 | Nr. | Kapitel | Das lernst du |
 |---|---|---|
-| 1 | [Erste Schritte](01-Erste-Schritte.md) | Projekt anlegen, `Console.WriteLine`, Kommentare |
-| 2 | [Variablen](02-Variablen.md) | `int`, `double`, `string`, `bool`, String-Interpolation |
-| 3 | [Rechnen & Vergleichen](03-Rechnen-und-Vergleichen.md) | Rechenzeichen, Modulo `%`, Vergleiche, `&&` und `\|\|` |
+|   1 | [Erste Schritte](01-Erste-Schritte.md) | Projekt anlegen, `Console.WriteLine`, Kommentare |
+|     2 | [Variablen](02-Variablen.md) | `int`, `double`, `string`, `bool`, String-Interpolation |
+|       3 | [Rechnen & Vergleichen](03-Rechnen-und-Vergleichen.md) | Rechenzeichen, Modulo `%`, Vergleiche, `&&` und `\|\|` |
 | 4 | [Eingaben](04-Eingaben.md) | `Console.ReadLine`, Text in Zahlen umwandeln |
 | 5 | [Verzweigungen](05-Verzweigungen.md) | `if`, `else if`, `else`, `switch` |
 | 6 | [Schleifen](06-Schleifen.md) | `for`, `while`, `do-while`, `break` |
