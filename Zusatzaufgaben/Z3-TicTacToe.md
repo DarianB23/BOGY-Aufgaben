@@ -1,7 +1,7 @@
 ---
-title: 3 - Tic-Tac-Toe mit Computergegner
+title: 6 - Tic-Tac-Toe mit Computergegner
 parent: Zusatzaufgaben
-nav_order: 3
+nav_order: 6
 ---
 # Zusatzaufgabe 3 – Tic-Tac-Toe mit Computergegner
 
