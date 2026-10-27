@@ -1,5 +1,5 @@
 ---
-title: "Bankautomat"
+title: "7 - Bankautomat"
 parent: Zusatzaufgaben
 nav_order: 7
 ---
