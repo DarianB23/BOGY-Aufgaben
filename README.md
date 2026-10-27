@@ -107,26 +107,6 @@ Du willst mehr? In den [Zusatzaufgaben](Zusatzaufgaben/) warten sieben Projekte 
 - **Mittel:** Snackautomat, Vokabeltrainer
 - **Schwer:** Tic-Tac-Toe, Bankautomat
 
-## So arbeitest du mit dem Kurs
-
-Jedes Kapitel ist gleich aufgebaut:
-
-| Abschnitt | Was dich erwartet |
-|---|---|
-| Ziel | Was du am Ende des Kapitels kannst |
-| Erklärung | Neuer Stoff mit Beispielen |
-| Typische Fehler | Stolperfallen, die fast jeder einmal macht |
-| Aufgaben | Pflichtaufgaben und freiwillige Bonusaufgaben |
-| Tipps | Aufklappbare Hilfen, wenn du nicht weiterkommst |
-| Checkliste | Zum Abhaken, bevor du weitermachst |
-
-## Tipps zum Lernen
-
-1. **Abtippen statt kopieren.** So merkst du dir die Befehle viel besser.
-2. **Fehler sind normal.** Lies die Fehlermeldung genau, meistens steht darin, was falsch ist.
-3. **Erst selbst probieren.** Öffne den Tipp erst, wenn du wirklich nicht weiterkommst.
-4. **Nach jeder Änderung testen.** Lieber oft kleine Schritte als einmal einen großen.
-5. **Fragen ist erlaubt.** Wenn du länger als 10 Minuten feststeckst, frag nach.
 
 ## Los geht's
 
