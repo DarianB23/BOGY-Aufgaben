@@ -53,9 +53,12 @@ Console.WriteLine(zahl + 3);   // Ausgabe: 8   (es wird gerechnet)
 ```
 
 
-> **Wichtig:**
-> Bei der **Eingabe** von Kommazahlen im Terminal gilt auf einem deutschen Windows das **Komma**: Tippe `1,5` statt `1.5`.
-> (Im **Code** schreibst du dagegen immer den Punkt.)
+{% capture notiz %}
+Bei der **Eingabe** von Kommazahlen im Terminal gilt auf einem deutschen Windows das **Komma**: Tippe `1,5` statt `1.5`.
+(Im **Code** schreibst du dagegen immer den Punkt.)
+{% endcapture %}
+{%include notiz.html typ="important" titel="Wichtig" offen=true inhalt=notiz %}
+
 
 ---
 
