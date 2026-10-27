@@ -114,8 +114,10 @@ Ob etwas verfügbar ist, kann nur **ja** oder **nein** sein – welcher Typ pass
 {% endcapture %}
 {% include tipp.html inhalt=tipp %}
 
-> **Hinweis:**
-> Wundere dich nicht: Auf einem deutschen Windows wird `19.99` als `19,99` ausgegeben. Im Code schreibst du trotzdem den Punkt.
+{% capture notiz %}
+Wundere dich nicht: Auf einem deutschen Windows wird `19.99` als `19,99` ausgegeben. Im Code schreibst du trotzdem den Punkt.
+{% endcapture %}
+{%include notiz.html typ="note" titel="Hinweis" offen=true inhalt=notiz %}
 
 ### Aufgabe 2.2 – Sonderangebot
 
@@ -128,8 +130,10 @@ Ob etwas verfügbar ist, kann nur **ja** oder **nein** sein – welcher Typ pass
 Schreibe einen Steckbrief über dich (oder eine erfundene Person), in dem **jeder Datentyp aus der Tabelle** mindestens einmal vorkommt – auch `char` (z. B. dein Anfangsbuchstabe).
 Gib ihn einmal mit `$"..."` und einmal mit `+` aus.
 
-> **Tipp:**
-> **Profi-Wissen:** Für Geldbeträge benutzen Profis meistens den Typ `decimal` (`decimal preis = 19.99m;`), weil er genauer rechnet als `double`. Für dieses Tutorial reicht `double` aber völlig.
+{% capture notiz %}
+Für Geldbeträge benutzen Profis meistens den Typ `decimal` (`decimal preis = 19.99m;`), weil er genauer rechnet als `double`. Für dieses Tutorial reicht `double` aber völlig.
+{% endcapture %}
+{%include notiz.html typ="note" titel="Profi Wissen" offen=true inhalt=notiz %}
 
 ---
 
