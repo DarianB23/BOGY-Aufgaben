@@ -66,8 +66,7 @@ Du schreibst dein erstes Programm, speicherst Werte und rechnest damit.
 {% endcapture %}
 {%include notiz.html typ="note" titel="Etappe 1: Die Grundlagen" offen=false inhalt=notiz %}
 
-### Etappe 2: Das Programm entscheiden lassen
-
+{% capture notiz %}
 Dein Programm reagiert auf Eingaben und wiederholt Aufgaben.
 
 | Kapitel | Das lernst du |
@@ -76,9 +75,10 @@ Dein Programm reagiert auf Eingaben und wiederholt Aufgaben.
 | [6 – Schleifen](Kapitel/06-Schleifen.md) | `for`, `while`, `do-while` |
 
 **Danach kannst du:** Menüs bauen und Eingaben so lange abfragen, bis sie stimmen.
+{% endcapture %}
+{%include notiz.html typ="note" titel="Etappe 2: Das Programm entscheiden lassen" offen=false inhalt=notiz %}
 
-### Etappe 3: Ordnung in den Code bringen
-
+{% capture notiz %}
 Du speicherst viele Werte auf einmal und teilst deinen Code in sinnvolle Teile auf.
 
 | Kapitel | Das lernst du |
@@ -88,9 +88,10 @@ Du speicherst viele Werte auf einmal und teilst deinen Code in sinnvolle Teile a
 | [9 – Klassen](Kapitel/09-Klassen.md) | eigene Datentypen und Objekte |
 
 **Danach kannst du:** größere Programme übersichtlich aufbauen.
+{% endcapture %}
+{%include notiz.html typ="note" titel="Etappe 3: Ordnung in den Code bringen" offen=false inhalt=notiz %}
 
-### Etappe 4: Absturzsicher und fertig
-
+{% capture notiz %}
 Du fängst Fehler ab und setzt alles in einem eigenen Projekt zusammen.
 
 | Kapitel | Das lernst du |
@@ -99,14 +100,17 @@ Du fängst Fehler ab und setzt alles in einem eigenen Projekt zusammen.
 | [11 – Abschlussprojekt](Kapitel/11-Abschlussprojekt.md) | Zahlenraten in 4 Stufen |
 
 **Danach kannst du:** ein komplettes kleines Spiel selbst programmieren.
+{% endcapture %}
+{%include notiz.html typ="note" titel="Etappe 4: Absturzsicher und fertigstellen" offen=false inhalt=notiz %}
 
-### Etappe 5: Zusatzaufgaben
-
+{% capture notiz %}
 Du willst mehr? In den [Zusatzaufgaben](Zusatzaufgaben/) warten sieben Projekte in drei Schwierigkeitsstufen:
 
 - **Leicht:** Galgenraten, Schere-Stein-Papier, Taschenrechner
 - **Mittel:** Snackautomat, Vokabeltrainer
 - **Schwer:** Tic-Tac-Toe, Bankautomat
+{% endcapture %}
+{%include notiz.html typ="important" titel="Etappe 5: Zusatzaufgaben" offen=false inhalt=notiz %}
 
 
 ## Los geht's
