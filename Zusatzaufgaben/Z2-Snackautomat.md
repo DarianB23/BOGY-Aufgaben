@@ -1,7 +1,7 @@
 ---
-title: 2 - Snackautomat
+title: 4 - Snackautomat
 parent: Zusatzaufgaben
-nav_order: 2
+nav_order: 4
 ---
 # Zusatzaufgabe 2 – Snackautomat
 
