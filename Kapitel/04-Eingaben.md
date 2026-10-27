@@ -62,13 +62,14 @@ Bei der **Eingabe** von Kommazahlen im Terminal gilt auf einem deutschen Windows
 
 ---
 
-## Typische Fehler
-
+{% capture notiz %}
 | Fehler | Was passiert |
 |---|---|
 | `int alter = Console.ReadLine();` | Fehler: Ein `string` ist kein `int` – du musst `int.Parse(...)` benutzen |
 | Benutzer tippt `abc` statt einer Zahl | Das Programm **stürzt ab** (`FormatException`). Wie man das verhindert, lernst du in [Kapitel 10](10-Fehler-abfangen.md). |
 | Grüne Wellenlinie unter `Console.ReadLine()` | Nur eine **Warnung**, kein Fehler. Du kannst sie vorerst ignorieren. |
+{% endcapture %}
+{%include notiz.html typ="warning" titel="Typische Fehler" offen=true inhalt=notiz %}
 
 ---
 
