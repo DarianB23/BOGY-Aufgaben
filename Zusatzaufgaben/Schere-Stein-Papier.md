@@ -1,7 +1,7 @@
 ---
-title: "4 - Schere, Stein, Papier"
+title: "2 - Schere, Stein, Papier"
 parent: Zusatzaufgaben
-nav_order: 4
+nav_order: 2
 ---
 
 # Schere, Stein, Papier
