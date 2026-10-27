@@ -311,40 +311,6 @@
       });
     });
   }
- /* ---------- 5. Alle Tipps einklappen ---------- */
-  function initCollapseTips() {
-    var content = document.querySelector(".main-content");
-    if (!content) return;
-    if (content.querySelectorAll("details").length === 0) return;
-
-    var btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "jtd-btn tips-collapse";
-
-    function update() {
-      var n = content.querySelectorAll("details[open]").length;
-      btn.textContent = "\u25B2 Alle Tipps einklappen" + (n > 0 ? " (" + n + " offen)" : "");
-      btn.disabled = n === 0;
-    }
-
-    btn.addEventListener("click", function () {
-      content.querySelectorAll("details[open]").forEach(function (d) {
-        d.open = false;
-      });
-      update();
-    });
-
-    document.addEventListener("toggle", update, true);
-
-    var h1 = content.querySelector("h1");
-    if (h1) {
-      h1.insertAdjacentElement("afterend", btn);
-    } else {
-      content.insertBefore(btn, content.firstChild);
-    }
-
-    update();
-  }
 
 
   /* ---------- Start ---------- */
