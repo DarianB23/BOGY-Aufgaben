@@ -1,18 +1,18 @@
 ---
-title: "🔴 Bankautomat"
+title: "Bankautomat"
 parent: Zusatzaufgaben
 nav_order: 7
 ---
 
-# 🔴 Bankautomat
+# Bankautomat
 
 | | |
 |---|---|
-| **Schwierigkeit** | 🔴 Schwer |
+| **Schwierigkeit** | Schwer |
 | **Dauer** | ca. 2,5–3 Stunden |
 | **Benötigte Kapitel** | 1–10, vor allem 9 (Klassen) und 10 (Fehler abfangen) |
 
-## 🎯 Ziel
+## Ziel
 
 Du baust einen Geldautomaten für mehrere Kunden. Man meldet sich mit Kontonummer und PIN an, kann Geld einzahlen, abheben und überweisen und bekommt einen Kontoauszug. Nach drei falschen PINs wird das Konto gesperrt, und das Geld kommt in möglichst wenigen Scheinen heraus.
 
@@ -26,7 +26,7 @@ Dabei übst du:
 
 ---
 
-## 📖 Was du dafür brauchst
+## Was du dafür brauchst
 
 **`decimal` für Geld**
 
@@ -57,7 +57,7 @@ string zeit = DateTime.Now.ToString("dd.MM.yyyy HH:mm");   // 27.10.2026 09:42
 
 ---
 
-## ✍️ Aufgaben
+## Aufgaben
 
 ### Stufe 1: Ein Konto mit Menü
 
@@ -71,7 +71,7 @@ Starte mit **einem** Konto (Kontostand als `decimal`-Variable, Startwert 500 €
 4) Beenden
 Auswahl: 3
 Betrag: 700
-❌ Nicht genug Guthaben. Verfügbar: 500,00 €
+Nicht genug Guthaben. Verfügbar: 500,00 €
 ```
 
 Regeln:
@@ -105,9 +105,9 @@ Zusätzliche Regeln beim **Abheben**, denn der Automat hat nur Scheine:
 
 ```text
 Betrag: 35
-❌ Der Automat gibt nur 10-€-Scheine und größer aus. Bitte ein Vielfaches von 10 eingeben.
+Der Automat gibt nur 10-€-Scheine und größer aus. Bitte ein Vielfaches von 10 eingeben.
 Betrag: 1500
-❌ Höchstens 1.000 € pro Abhebung.
+Höchstens 1.000 € pro Abhebung.
 ```
 
 {% capture tipp %}
@@ -115,7 +115,7 @@ Die Methoden geben nur `true` oder `false` zurück. Die **Fehlermeldung** gibt d
 
 Ob ein Betrag ein Vielfaches von 10 ist, prüfst du mit dem Rest: `betrag % 10 == 0`. Das funktioniert auch mit `decimal`.
 {% endcapture %}
-{% include tipp.html titel="💡 Tipp zur Klasse Konto" inhalt=tipp %}
+{% include tipp.html titel="Tipp zur Klasse Konto" inhalt=tipp %}
 
 ### Stufe 3: Anmeldung mit mehreren Konten
 
@@ -124,11 +124,11 @@ Lege beim Start mindestens drei Konten in einer `List<Konto>` an. Vor dem Menü 
 ```text
 Kontonummer: DE1002
 PIN: 0000
-❌ Falsche PIN. Noch 2 Versuche.
+Falsche PIN. Noch 2 Versuche.
 PIN: 1111
-❌ Falsche PIN. Noch 1 Versuch.
+Falsche PIN. Noch 1 Versuch.
 PIN: 9999
-🔒 Konto gesperrt. Bitte wende dich an deine Filiale.
+Konto gesperrt. Bitte wende dich an deine Filiale.
 ```
 
 - Gibt es die Kontonummer nicht, erscheint „Konto nicht gefunden“.
@@ -182,7 +182,7 @@ Nach dem Abheben zeigt der Automat, welche Scheine herauskommen. Er verwendet 20
 
 ```text
 Betrag: 380
-💶 Ausgabe: 1 x 200 €, 1 x 100 €, 1 x 50 €, 1 x 20 €, 1 x 10 €
+Ausgabe: 1 x 200 €, 1 x 100 €, 1 x 50 €, 1 x 20 €, 1 x 10 €
 ```
 
 {% capture tipp %}
@@ -203,11 +203,11 @@ foreach (int schein in scheine)
 **Überweisung:** Am saubersten ist eine Methode in `Konto`:
 `public bool UeberweisenAn(Konto ziel, decimal betrag)`. Sie prüft das Guthaben, bucht ab, ruft eine Gutschrift beim Ziel auf und schreibt in **beide** Kontoauszüge.
 {% endcapture %}
-{% include tipp.html titel="💡 Tipp zu Stufe 4" inhalt=tipp %}
+{% include tipp.html titel="Tipp zu Stufe 4" inhalt=tipp %}
 
 ---
 
-## ⚠️ Typische Fehler
+## Typische Fehler
 
 | Fehler | Was passiert | Lösung |
 |---|---|---|
@@ -221,7 +221,7 @@ foreach (int schein in scheine)
 
 ---
 
-## ⭐ Extras
+## Extras
 
 1. **Dispo:** Jedes Konto bekommt einen Dispokredit (z. B. 300 €). Der Kontostand darf bis `-300 €` sinken.
 2. **PIN ändern:** Neuer Menüpunkt. Die alte PIN muss eingegeben werden, und die neue PIN muss genau 4 Ziffern haben.
@@ -231,7 +231,7 @@ foreach (int schein in scheine)
 
 ---
 
-## ✅ Checkliste
+## Checkliste
 
 - [ ] Der Kontostand kann außerhalb der Klasse nicht direkt geändert werden
 - [ ] Negative Beträge, Buchstaben und zu hohe Beträge werden abgelehnt
