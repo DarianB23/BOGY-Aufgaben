@@ -113,7 +113,7 @@ for (int i = 1; i <= 10; i++)
 | `<` und `<=` verwechselt | Die Schleife läuft einmal zu oft oder zu wenig |
 | Semikolon nach der Klammer: `for (...);` | Der Block darunter läuft nur **einmal** |
 {% endcapture %}
-{%include notiz.html typ="warning" titel="Typische Fehler" offen=true inhalt=notiz %}
+{%include notiz.html typ="warning" titel="Typische Fehler" offen=false inhalt=notiz %}
 
 ---
 
