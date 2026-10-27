@@ -89,13 +89,14 @@ Console.WriteLine($"Teenager: {istTeenager}");
 
 ---
 
-## Typische Fehler
-
+{% capture notiz %}
 | Fehler | Was passiert |
 |---|---|
 | `if (a = 5)` statt `if (a == 5)` | Fehler – `=` ist eine Zuweisung, kein Vergleich |
 | Zwei ganze Zahlen teilen | `7 / 2` ergibt `3`, nicht `3.5` (siehe Aufgabe 3.2) |
 | Klammern vergessen | `2 + 3 * 4` ergibt `14`, nicht `20` |
+{% endcapture %}
+{%include notiz.html typ="warning" titel="Typische Fehler" offen=true inhalt=notiz %}
 
 ---
 
