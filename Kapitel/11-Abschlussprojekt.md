@@ -73,7 +73,7 @@ Der Spieler wählt am Anfang einen Schwierigkeitsgrad aus (mit `switch`):
 
 Sind alle Versuche aufgebraucht, hat der Spieler verloren und erfährt die geheime Zahl.
 
-### Bous Stufe 4 – Highscore und Extras
+### Bonus Stufe 4 – Highscore und Extras
 
 Such dir aus, was dir gefällt:
 
