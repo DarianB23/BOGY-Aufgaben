@@ -24,15 +24,15 @@ Nach diesem Kapitel kannst du:
 
 ##### Visual Studio öffnen → **Neues Projekt erstellen**
    
-![Neues Projekt](Bilder/NewProjectButton.png)
+![Neues Projekt](../Bilder/NewProjectButton.png)
 {: width="400" }
 
 ##### Die Vorlage **Konsolen-App** (Sprache: C#) auswählen → **Weiter**
 
-![image](Bilder/ConsoleAppSelection.png)
+![image](../Bilder/ConsoleAppSelection.png)
 ##### Einen Projektnamen eingeben, z. B. `ErsteSchritte` → **Weiter**
 
-![image](Bilder/ProjectName.png)
+![image](../Bilder/ProjectName.png)
 
 {% capture notiz %}
 Lege für jedes Kapitel ein **eigenes Projekt** an (z. B. `Kapitel02`, `Kapitel03` …). So bleibt dein alter Code erhalten und du kannst später nachschauen.
