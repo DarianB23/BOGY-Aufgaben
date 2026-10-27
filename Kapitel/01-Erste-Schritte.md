@@ -24,7 +24,9 @@ Nach diesem Kapitel kannst du:
 
 ##### Visual Studio öffnen → **Neues Projekt erstellen**
    
-![image](Bilder/NewProjectButton.png)
+![Neues Projekt](Bilder/NewProjectButton.png)
+{: width="400" }
+
 ##### Die Vorlage **Konsolen-App** (Sprache: C#) auswählen → **Weiter**
 
 ![image](Bilder/ConsoleAppSelection.png)
