@@ -64,14 +64,14 @@ Console.WriteLine("Hallo!"); // Ein Kommentar darf auch hinter Code stehen.
 ```
 
 ---
-
-## Typische Fehler
-
+{% capture notiz %}
 | Fehler | Was passiert |
 |---|---|
 | Semikolon `;` vergessen | Fehler **CS1002: ; erwartet** |
 | `console.writeline(...)` statt `Console.WriteLine(...)` | C# unterscheidet **Groß- und Kleinschreibung**. Das Programm kennt `console` nicht. |
 | Anführungszeichen vergessen | Das Programm hält deinen Text für Code und versteht ihn nicht. |
+{% endcapture %}
+{%include notiz.html typ="warning" titel="Typische Fehler" offen=false inhalt=notiz %}
 
 ---
 
