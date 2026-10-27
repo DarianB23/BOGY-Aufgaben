@@ -37,7 +37,7 @@ Visual Studio öffnet die Datei `Program.cs` mit diesem Code:
 Console.WriteLine("Hello, World!");
 ```
 
-Starte das Programm mit **F5** oder dem grünen Pfeil ▶. Es öffnet sich ein schwarzes Fenster – das **Terminal** (auch **Konsole** genannt).
+Gestartet wird das Programm mit **F5** oder dem grünen Pfeil ▶. Es öffnet sich ein schwarzes Fenster – das **Terminal** (auch **Konsole** genannt).
 
 ### Was bedeutet diese Zeile?
 
