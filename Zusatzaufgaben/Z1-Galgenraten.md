@@ -65,8 +65,10 @@ string geheim = woerter[Random.Shared.Next(woerter.Length)];
 ```
 
 
-> **Wichtig:**
-> `'A'` und `'a'` sind für den Computer **verschiedene** Zeichen. Wandle deshalb Wort **und** Eingabe in Großbuchstaben um.
+{% capture notiz %}
+`'A'` und `'a'` sind für den Computer **verschiedene** Zeichen. Wandle deshalb Wort **und** Eingabe in Großbuchstaben um.
+{% endcapture %}
+{%include notiz.html typ="important" titel="Wichtig" offen=true inhalt=notiz %}
 
 ---
 
