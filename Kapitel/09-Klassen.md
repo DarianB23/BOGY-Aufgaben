@@ -41,11 +41,11 @@ Jede Klasse bekommt eine **eigene Datei**:
 
 1. Im **Projektmappen-Explorer** mit Rechtsklick auf dein Projekt klicken (Beispiel: **Benutzerverwaltung**)
 
-   ![Rechtsklick auf das Projekt](../Tutorials/Bilder/KlassenTutorial1.png)
+   ![Rechtsklick auf das Projekt](../Bilder/KlassenTutorial1.png)
 
 2. **Hinzufügen** → **Neues Element** wählen
 
-   ![Neues Element hinzufügen](../Tutorials/Bilder/KlassenTutorial2.png)
+   ![Neues Element hinzufügen](../Bilder/KlassenTutorial2.png)
 
 3. **Klasse** auswählen
 4. Einen Namen eingeben (z. B. `Hund`)
