@@ -66,8 +66,10 @@ public class Spielfeld
 
 Von außen kann man das Spielfeld also **nur über die Methoden** verändern. So kann niemand aus Versehen ein Feld überschreiben.
 
-> **Tipp:**
-> Überlege dir **vor** dem Programmieren auf Papier, welche Methoden dein Spielfeld braucht. Die Tabelle in Stufe 1 hilft dir dabei.
+{% capture notiz %}
+Überlege dir **vor** dem Programmieren auf Papier, welche Methoden dein Spielfeld braucht. Die Tabelle in Stufe 1 hilft dir dabei.
+{% endcapture %}
+{%include notiz.html typ="note" titel="Ansatz" offen=true inhalt=notiz %}
 
 ---
 
