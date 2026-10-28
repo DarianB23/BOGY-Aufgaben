@@ -101,6 +101,7 @@ Mein Lieblingshobby ist Klettern.
 
 Ersetze in deinem Programm `Console.WriteLine` durch `Console.Write` und starte es erneut.
 Erkläre in einem Satz: **Was ist der Unterschied?**
+Schreibe deine Erklärung als Kommentar direkt auch in deinen Code, so kannst du gleich auch deine Kommentar-Kenntnisse beweisen.
 
 {% capture tipp %}
 Achte darauf, **wo** der zweite Text erscheint. Was passiert mit dem Zeilenumbruch?
