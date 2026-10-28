@@ -8,7 +8,7 @@ Wähle 'Console App' und drücke 'Next' oder mache ein Doppel-Klick auf 'Console
 
 ![image](../Bilder/ConsoleAppSelection.png)
 ## Schritt 3
-Gebe ein Projektname ein.
+Gebe ein Projektname ein. Am besten benennst du die Projekte einfach nach der jeweiligen Aufgabe.
 
 ![image](../Bilder/ProjectName.png)
 
