@@ -66,7 +66,7 @@ Kommentare werden vom Programm **ignoriert**. Du nutzt sie, um deinen Code zu er
 
 Console.WriteLine("Hallo!"); // Ein Kommentar darf auch hinter Code stehen.
 ```
-Kommentare stehen meist in den Zeilen über dem Kommentieren Code, so wie hier:
+Kommentare stehen meist in den Zeilen über dem kommentierten Code, so wie hier:
 
 ```csharp
 // Diese Zeile gibt "Beispieltext" aus.
