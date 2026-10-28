@@ -50,8 +50,8 @@ Gestartet wird das Programm mit **F5** oder dem grünen Pfeil ▶. Es öffnet si
 | Farbe | Bedeutung | Beispiel |
 |---|---|---|
 | Dunkles Grün | Dieser Text ist auskommentiert | ![image](../Bilder/Beispielkommentar.png) |
-| Helles Grün | Dies ist eine Klasse | Console |
-| Gelb | Dies ist eine Methode | WriteLine |
+| Helles Grün | Dies ist eine Klasse | ![image](../Bilder/Beispielklasse.png) |
+| Gelb | Dies ist eine Methode | ![image](../Bilder/Beispielmethode.png) |
 
 ### Kommentare
 
