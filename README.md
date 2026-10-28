@@ -27,12 +27,13 @@ Jedes Kapitel ist gleich aufgebaut:
 
 **So arbeitest du am besten:**
 
-1. Lies die Erklärung.
-2. **Tippe** den Beispielcode selbst ab (nicht kopieren – beim Tippen lernst du mehr!) und starte ihn.
-3. Löse die Aufgaben. Bonusaufgaben sind freiwillig.
-4. Kommst du nicht weiter? Klappe zuerst den **Tipp** auf.
-5. Hilft der Tipp nicht, frag einen anwesenden Azubi, Studenten oder deine Betreuungsperson. Das ist völlig normal!
-6. Hake die Checkliste ab und geh zum nächsten Kapitel.
+1. Erstelle für jede Seite ein neues Projekt. So kannst du im Nachhinein immer wieder zurück gehen wenn du etwas nicht verstehst oder noch etwas ändern möchtest.
+2. Lies die Erklärung.
+3. **Tippe** den Beispielcode selbst ab (nicht kopieren – beim Tippen lernst du mehr!) und starte ihn.
+4. Löse die Aufgaben. Bonusaufgaben sind freiwillig. 
+5. Kommst du nicht weiter? Klappe zuerst den **Tipp** auf.
+6. Hilft der Tipp nicht, frag einen anwesenden Azubi, Studenten oder deine Betreuungsperson. Das ist völlig normal!
+7. Hake die Checkliste ab und geh zum nächsten Kapitel.
 	
 {% capture notiz %}
 - Fehler sind beim Programmieren völlig normal – auch Profis bekommen jeden Tag Fehlermeldungen.
