@@ -47,11 +47,11 @@ Gestartet wird das Programm mit **F5** oder dem grünen Pfeil ▶. Es öffnet si
 
 ### Farben im Code
 
-| Farbe | Bedeutung |
-|---|---|
-| Dunkles Grün | Dieser Text ist auskommentiert |
-| Helles Grün | Dies ist eine Klasse |
-| Gelb | Dies ist eine Methode |
+| Farbe | Bedeutung | Beispiel |
+|---|---|---|
+| Dunkles Grün | Dieser Text ist auskommentiert | Siehe Kommentare |
+| Helles Grün | Dies ist eine Klasse | Console |
+| Gelb | Dies ist eine Methode | WriteLine |
 
 ### Kommentare
 
