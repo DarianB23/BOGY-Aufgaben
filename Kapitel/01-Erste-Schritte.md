@@ -39,11 +39,19 @@ Gestartet wird das Programm mit **F5** oder dem grünen Pfeil ▶. Es öffnet si
 
 | Teil | Bedeutung |
 |---|---|
-| `Console` | Eine eingebaute **Klasse**, mit der du mit dem Terminal arbeitest |
+| `Console` | Eine eingebaute **Klasse**, mit der du mit dem Terminal arbeitest. |
 | `.` | „Davon möchte ich …“ – damit greifst du auf etwas *in* `Console` zu |
 | `WriteLine` | Schreibt Text ins Terminal und springt danach in die **nächste Zeile** |
 | `("Hello, World!")` | Der Text, der ausgegeben wird. Text steht immer in **Anführungszeichen** `" "` |
 | `;` | Jede Anweisung endet mit einem **Semikolon** |
+
+### Farben im Code
+
+| Farbe | Bedeutung |
+|---|---|
+| Dunkles Grün | Dieser Text ist auskommentiert |
+| Helles Grün | Dies ist eine Klasse |
+| Gelb | Dies ist eine Methode |
 
 ### Kommentare
 
