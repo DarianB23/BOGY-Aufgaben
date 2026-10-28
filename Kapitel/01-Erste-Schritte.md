@@ -53,6 +53,7 @@ Gestartet wird das Programm mit **F5** oder dem grünen Pfeil ▶. Es öffnet si
 | Helles Grün | Klasse | ![image](../Bilder/Beispielklasse.png) |
 | Gelb | Methode | ![image](../Bilder/Beispielmethode.png) |
 | Orange | String | ![image](../Bilder/Beispielstring.png) |
+| Hellblau | Variable | ![image](../Bilder/Beispielvariable.png) |
 
 ### Kommentare
 
