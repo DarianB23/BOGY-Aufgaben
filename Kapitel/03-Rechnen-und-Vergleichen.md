@@ -104,7 +104,7 @@ Console.WriteLine($"Teenager: {istTeenager}");
 
 ### Aufgabe 3.1 – Erst denken, dann starten
 
-Schreib **zuerst auf**, welche fünf Zahlen der Code unter „Rechenoperatoren“ ausgibt. Starte ihn dann und vergleiche.
+Schreib **zuerst** einen Kommentar über den Code, welche fünf Zahlen der Code unter „Rechenoperatoren“ ausgibt. Starte ihn dann und vergleiche.
 Lagst du überall richtig?
 
 ### Aufgabe 3.2 – Das Rätsel von `10 / 3`
