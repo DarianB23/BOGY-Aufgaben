@@ -49,7 +49,7 @@ Gestartet wird das Programm mit **F5** oder dem grünen Pfeil ▶. Es öffnet si
 
 | Farbe | Bedeutung | Beispiel |
 |---|---|---|
-| Dunkles Grün | Dieser Text ist auskommentiert | Siehe Kommentare |
+| Dunkles Grün | Dieser Text ist auskommentiert | ![image](../Bilder/ |
 | Helles Grün | Dies ist eine Klasse | Console |
 | Gelb | Dies ist eine Methode | WriteLine |
 
