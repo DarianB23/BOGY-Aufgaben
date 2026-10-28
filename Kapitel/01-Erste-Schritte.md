@@ -20,10 +20,10 @@ Nach diesem Kapitel kannst du:
 
 ## Erklärung
 
-Falls du nicht weißt wie du ein neues Projekt erstellst, schau dir die Seite [Neues Projekt erstellen](NewProject.md) an.
+Falls du nicht weißt wie du ein neues Projekt erstellst, schau dir die Seite [Neues Projekt erstellen](../Tutorials/NewProject.md) an.
 
 {% capture notiz %}
-Lege für jedes Kapitel ein **eigenes Projekt** an (z. B. `Kapitel02`, `Kapitel03` …). So bleibt dein alter Code erhalten und du kannst später nachschauen.
+Lege für jedes Kapitel ein **eigenes Projekt** an (z. B. `01-ErsteSchritte`, `02-VariablenUndDatentypen`, …). So bleibt dein alter Code erhalten und du kannst später nachschauen.
 {% endcapture %}
 {%include notiz.html typ="warning" titel="Bitte beachten" offen=true inhalt=notiz %}
 
