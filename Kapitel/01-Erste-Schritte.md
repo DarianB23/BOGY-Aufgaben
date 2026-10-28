@@ -49,9 +49,10 @@ Gestartet wird das Programm mit **F5** oder dem grünen Pfeil ▶. Es öffnet si
 
 | Farbe | Bedeutung | Beispiel |
 |---|---|---|
-| Dunkles Grün | Dieser Text ist auskommentiert | ![image](../Bilder/Beispielkommentar.png) |
-| Helles Grün | Dies ist eine Klasse | ![image](../Bilder/Beispielklasse.png) |
-| Gelb | Dies ist eine Methode | ![image](../Bilder/Beispielmethode.png) |
+| Dunkles Grün | Kommentar | ![image](../Bilder/Beispielkommentar.png) |
+| Helles Grün | Klasse | ![image](../Bilder/Beispielklasse.png) |
+| Gelb | Methode | ![image](../Bilder/Beispielmethode.png) |
+| Orange | String | ![image](../Bilder/Beispielstring.png) |
 
 ### Kommentare
 
