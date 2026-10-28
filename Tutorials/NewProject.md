@@ -1,3 +1,8 @@
+---
+title: Neues Projekt
+nav_order: 1
+parent: Tutorials
+---
 # Neues Projekt erstellen
 ## Schritt 1
 Öffne Visual Studio und drücke auf 'Neues Projekt erstellen'.
