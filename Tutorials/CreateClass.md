@@ -23,12 +23,12 @@ Statt diese Informationen in mehreren einzelnen Variablen zu speichern, können 
 
 1. Rechtsklick auf das Projekt (Beispiel: **Benutzerverwaltung**)
 
-![image](Bilder/KlassenTutorial1.png)
+[image](../Bilder/KlassenTutorial1.png)
 
 2. **Hinzufügen**
 3. **Neues Element**
 
-![image](Bilder/KlassenTutorial2.png)
+[image](../Bilder/KlassenTutorial2.png)
 
 4. **Klasse** auswählen
 5. Namen eingeben (z.B. `User`)
