@@ -80,9 +80,12 @@ const double Pi = 3.14159;   // const: Dieser Wert kann sich NIE ändern
 ### Regeln für Variablennamen
 
 - Keine Leerzeichen, nicht mit einer Zahl beginnen: ~~`2tePunkte`~~, ~~`mein alter`~~
-- Üblich ist **camelCase**: erstes Wort klein, jedes weitere groß → `anzahlSpieler`, `istVerfuegbar`
-- Wähle **aussagekräftige** Namen: `preis` statt `p`
 - Umlaute (ä, ö, ü, ß) sind erlaubt, aber unüblich. Schreib lieber `groesse` statt `größe`.
+- Üblich ist **camelCase**: erstes Wort klein, jedes weitere groß → `anzahlSpieler`, `istVerfuegbar`
+- Variablennamen müssen einzigartig sein. Es darf immer nur eine Variable des Typs int mit dem Namen "alter" geben
+- String müssen immer mit "Gänsefüßchen" angegeben werden
+- Wähle **aussagekräftige** Namen: `preis` statt `p`
+- Die Benennung von Variablen ist sehr wichtig! Nur mit aussagekräftigen Namen kann jemand der den Code und Kontext nicht kennt den Code trotzdem verstehen
 
 ---
 
