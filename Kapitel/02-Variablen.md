@@ -132,7 +132,9 @@ Wundere dich nicht: Auf einem deutschen Windows wird `19.99` als `19,99` ausgege
 
 1. Erweitere dein Programm aus 2.1: Ändere nach der ersten Ausgabe den Preis (z. B. auf `14.99`) und gib den Satz **noch einmal** aus.
 2. Lege eine Konstante an: `const double Mehrwertsteuer = 0.19;`
-   Versuche danach, ihren Wert zu ändern. Was passiert? -> Schreibe das Ergebnis wieder als Kommentar in den Code
+   Versuche danach, ihren Wert zu ändern. Was passiert?
+
+   Schreibe das Ergebnis wieder als Kommentar in den Code
 
 ### Bonus-Aufgabe 2.3 – Steckbrief
 
