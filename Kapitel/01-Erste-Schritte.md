@@ -29,7 +29,7 @@ Lege für jedes Kapitel ein **eigenes Projekt** an (z. B. `01-ErsteSchritte`, `0
 
 Visual Studio öffnet die Datei `Program.cs` mit diesem Code:
 
-```c
+```c#
 Console.WriteLine("Hello, World!");
 ```
 
