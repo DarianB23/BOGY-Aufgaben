@@ -54,6 +54,9 @@ int alter = 25;
 alter = 26;   // Kein "int" mehr davor!
 ```
 
+Jedes mal wenn man nach dem Anlegen einer Variable einen Wert zuweisen will, wird der alte Wert überschrieben.
+Es gibt also immer nur eine alter-Variable mit dem Wert 26, der alte Wert welcher bei der Erstellung zugewiesen wurde ist nach neuer Zuweisung weg.
+
 ### Variablen ausgeben
 
 ```csharp
