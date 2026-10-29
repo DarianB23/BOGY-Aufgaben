@@ -37,21 +37,7 @@ Vergleich: Eine **Ausstechform** (Klasse) legt fest, wie ein Plätzchen aussieht
 
 ### Eine Klasse anlegen
 
-Jede Klasse bekommt eine **eigene Datei**:
-
-1. Im **Projektmappen-Explorer** mit Rechtsklick auf dein Projekt klicken (Beispiel: **Benutzerverwaltung**)
-
-   ![Rechtsklick auf das Projekt](../Bilder/KlassenTutorial1.png)
-
-2. **Hinzufügen** → **Neues Element** wählen
-
-   ![Neues Element hinzufügen](../Bilder/KlassenTutorial2.png)
-
-3. **Klasse** auswählen
-4. Einen Namen eingeben (z. B. `Hund`)
-5. Auf **Hinzufügen** klicken
-
-Visual Studio erstellt automatisch die Datei `Hund.cs`.
+Wenn du nicht weißt wie du eine Klasse erstellst schau dir das Tutorial [Neue Klasse erstellen](../Tutorials/CreateClass.md)
 
 ### Beispiel: Die Klasse `Hund`
 
