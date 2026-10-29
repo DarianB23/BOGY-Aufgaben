@@ -37,7 +37,7 @@ Vergleich: Eine **Ausstechform** (Klasse) legt fest, wie ein Plätzchen aussieht
 
 ### Eine Klasse anlegen
 
-Wenn du nicht weißt wie du eine Klasse erstellst schau dir das Tutorial [Neue Klasse erstellen](../Tutorials/CreateClass.md)
+Wenn du nicht weißt wie du eine Klasse erstellst schau dir das Tutorial [Neue Klasse erstellen](../Tutorials/CreateClass.md) an.
 
 ### Beispiel: Die Klasse `Hund`
 
