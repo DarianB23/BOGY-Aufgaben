@@ -75,7 +75,7 @@ Mit Logikoperatoren verknüpfst du mehrere Aussagen:
 | Operator | Name | Ergebnis ist `true`, wenn … |
 |---|---|---|
 | && | UND | **beide** Aussagen wahr sind |
-| \|\| | ODER | **mindestens eine** Aussage wahr ist |
+| \|\\| | ODER | **mindestens eine** Aussage wahr ist |
 | ! | NICHT | die Aussage **falsch** ist (dreht `true`/`false` um) |
 
 ```csharp
