@@ -3,7 +3,7 @@ title: 4 - Snackautomat
 parent: Zusatzaufgaben
 nav_order: 4
 ---
-# Zusatzaufgabe 2 – Snackautomat
+# Zusatzaufgabe 4 – Snackautomat
 
 **Schwierigkeit:** Mittel · **Dauer:** ca. 2 Stunden
 
