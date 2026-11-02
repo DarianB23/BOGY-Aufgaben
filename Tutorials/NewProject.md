@@ -27,7 +27,8 @@ Drücke auf die drei Punkte.
 
 ## Schritt 6
 Wähle in Dieser PC -> O: den ordner mit deinem Namen aus.\
-Falls dieser nicht exsestiert erstelle einen.
+Falls dieser nicht exsestiert erstelle einen. \
+Diesen Schritt musst du nur beim ersten Projekt machen, danach wählt Visual Studio automatisch diesen Ordner aus
 
 ![image](../Bilder/ProjectLocation.png)
 
