@@ -4,7 +4,7 @@ parent: Zusatzaufgaben
 nav_order: 7
 ---
 
-# Bankautomat
+# Zusatzaufgabe 7 - Bankautomat
 
 | | |
 |---|---|
