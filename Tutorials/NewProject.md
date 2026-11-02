@@ -33,7 +33,7 @@ Diesen Schritt musst du nur beim ersten Projekt machen, danach wählt Visual Stu
 ![image](../Bilder/ProjectLocation.png)
 
 ## Schritt 7
-Wenn du dinen Ordner ausgewählt hast drücke rechts unten auf 'Weiter'.
+Wenn du deinen Ordner ausgewählt hast drücke rechts unten auf 'Weiter'.
 
 ## Schritt 8
 Klicke auf 'Erstellen'
