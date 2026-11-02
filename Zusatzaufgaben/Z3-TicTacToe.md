@@ -3,7 +3,7 @@ title: 6 - Tic-Tac-Toe mit Computergegner
 parent: Zusatzaufgaben
 nav_order: 6
 ---
-# Zusatzaufgabe 3 – Tic-Tac-Toe mit Computergegner
+# Zusatzaufgabe 6 – Tic-Tac-Toe mit Computergegner
 
 **Schwierigkeit:** Schwer · **Dauer:** ca. 3 Stunden
 
