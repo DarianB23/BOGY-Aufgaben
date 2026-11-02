@@ -4,7 +4,7 @@ parent: Zusatzaufgaben
 nav_order: 2
 ---
 
-# Schere, Stein, Papier
+# Zusatzaufgabe 2 - Schere, Stein, Papier
 
 | | |
 |---|---|
