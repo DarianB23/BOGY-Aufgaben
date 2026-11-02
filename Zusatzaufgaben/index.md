@@ -14,12 +14,12 @@ Jedes Projekt ist in Stufen aufgeteilt. Fang mit Stufe 1 an, die Extras sind fre
 
 | Level | Projekt | Das übst du |
 |---|---|---|
-| Leicht | [Galgenraten](Galgenraten.md) | Schleifen, `List<char>`, Zufall |
+| Leicht | [Galgenraten](Z1-Galgenraten.md) | Schleifen, `List<char>`, Zufall |
 | Leicht | [Schere, Stein, Papier](Schere-Stein-Papier.md) | `Random`, Methoden, Statistik |
 | Leicht | [Taschenrechner](Taschenrechner.md) | `switch`, `double`, Fehler abfangen |
-| Mittel | [Snackautomat](Snackautomat.md) | Klassen, Geld in Cent, Wechselgeld |
+| Mittel | [Snackautomat](Z2-Snackautomat.md) | Klassen, Geld in Cent, Wechselgeld |
 | Mittel | [Vokabeltrainer](Vokabeltrainer.md) | Klassen, Listen, Texte vergleichen |
-| Schwer | [Tic-Tac-Toe](Tic-Tac-Toe.md) | 2D-Denken, Gewinnprüfung, Computergegner |
+| Schwer | [Tic-Tac-Toe](Z3-TicTacToe.md) | 2D-Denken, Gewinnprüfung, Computergegner |
 | Schwer | [Bankautomat](Bankautomat.md) | `private set`, `decimal`, mehrere Konten |
 
 ## So arbeitest du
