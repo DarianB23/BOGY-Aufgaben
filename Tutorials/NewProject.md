@@ -9,7 +9,7 @@ parent: Tutorials
 
 ![image](../Bilder/NewProjectButton.png)
 ## Schritt 2
-Wähle 'Console App' und drücke 'Next' oder mache ein Doppel-Klick auf 'Console App'.
+Wähle 'Konsolen-App' und drücke 'Weiter' oder mache ein Doppel-Klick auf 'Konsolen-App'.
 
 ![image](../Bilder/ConsoleAppSelection.png)
 ## Schritt 3
@@ -18,7 +18,7 @@ Gebe ein Projektname ein. Am besten benennst du die Projekte einfach nach der je
 ![image](../Bilder/ProjectName.png)
 
 ## Schritt 4
-Wenn du den Namen eingegeben hast drücke auf 'Next'.
+Wenn du den Namen eingegeben hast drücke auf 'Weiter'.
 
 ## Schritt 5
 Drücke auf die drei Punkte.
@@ -33,10 +33,10 @@ Diesen Schritt musst du nur beim ersten Projekt machen, danach wählt Visual Stu
 ![image](../Bilder/ProjectLocation.png)
 
 ## Schritt 7
-Wenn du dinen Ordner ausgewählt hast drücke rechts unten auf 'Next'.
+Wenn du dinen Ordner ausgewählt hast drücke rechts unten auf 'Weiter'.
 
 ## Schritt 8
-Klicke auf 'Create'
+Klicke auf 'Erstellen'
 
 ![image](../Bilder/NewProjectCreateButton.png)
 ## Fertig
