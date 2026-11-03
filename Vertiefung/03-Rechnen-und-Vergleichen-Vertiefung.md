@@ -1,5 +1,5 @@
 ---
-title: 03 - Vertiefung: Rechnen und Vergleichen
+title: 03 - Vertiefung Rechnen und Vergleichen
 parent: Kapitel
 nav_order: 103
 ---
