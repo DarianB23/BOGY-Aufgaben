@@ -1,5 +1,5 @@
 ---
-title: 09 - Vertiefung: Klassen und Objekte
+title: 09 - Vertiefung Klassen und Objekte
 parent: Kapitel
 nav_order: 109
 ---
