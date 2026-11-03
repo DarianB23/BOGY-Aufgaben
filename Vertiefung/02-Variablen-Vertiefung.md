@@ -5,7 +5,7 @@ nav_order: 2
 ---
 # Kapitel 2 – Vertiefung: Variablen und Datentypen
 
-[← Zurück zu Kapitel 2](02-Variablen.md) | [Übersicht](../README.md)
+[← Zurück zu Kapitel 2](../Kapitel/02-Variablen.md) | [Übersicht](../README.md)
 
 Variablen wirken am Anfang simpel, führen aber oft zu Verwirrung: *Warum muss ich den Typ angeben? Warum darf ich später kein `int` mehr davor schreiben? Was bedeutet das `$` bei Strings?* Hier klären wir diese Fragen im Detail.
 
