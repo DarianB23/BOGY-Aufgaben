@@ -3,73 +3,76 @@ title: 09 - Vertiefung Klassen und Objekte
 parent: Vertiefung
 nav_order: 9
 ---
-# Kapitel 9 – Vertiefung: Klassen, Objekte und Kapselung
+# Kapitel 9 – Klassen und Objekte (Vertiefung)
 
-[← Zurück zu Kapitel 9](09-Klassen.md) | [Übersicht](../README.md)
+[← Zurück zu Kapitel 9](../Kapitel/09-Klassen.md) | [Übersicht](../README.md) | [Weiter: Fehler abfangen Vertiefung →](10-Fehler-abfangen-Vertiefung.md)
 
-Die objektorientierte Programmierung (OOP) ist die Art und Weise, wie fast alle großen Softwaresysteme der Welt gebaut sind. Am Anfang fällt der Übergang von "einfachen Befehlen" zu "Klassen und Objekten" oft schwer. Hier machen wir die Zusammenhänge kristallklar.
-
----
-
-## 1. Bauplan vs. Haus (Klasse vs. Objekt)
-
-Der Unterschied lässt sich am besten an einer Baustelle erklären:
-
-- **Die Klasse (`Auto`):** Ist die **technische Zeichnung** auf dem Papier. Auf dem Papier kann man nicht fahren! Sie beschreibt nur: *"Jedes Auto hat 4 Räder, eine Farbe und eine Methode namens Hupen()."*
-- **Das Objekt (`meinGolf`, `nachbarBMW`):** Ist das **echte Auto aus Blech**, das nach der Zeichnung in der Fabrik gebaut wurde. Du kannst 100 Autos nach demselben Plan bauen – jedes hat seine eigene Lackierung, seinen eigenen Kilometerstand und fährt unabhängig von den anderen!
-
-```
-    KLASSE (Bauplan)                 OBJEKTE (Instanzen)
-┌──────────────────────┐         ┌──────────────────────┐
-│  Klasse: Auto        │  new    │  meinGolf            │
-│  - Farbe             ├────────►│  Farbe: "Blau"       │
-│  - PS                │         └──────────────────────┘
-│  - Hupen()           │  new    ┌──────────────────────┐
-└──────────────────────┘ ────────►│  nachbarBMW          │
-                                 │  Farbe: "Schwarz"    │
-                                 └──────────────────────┘
-```
+Die objektorientierte Programmierung (OOP) ist das Herzstück von C#. Wenn der Unterschied zwischen einer "Klasse" und einem "Objekt" einmal Klick gemacht hat, wird die gesamte Softwareentwicklung plötzlich viel klarer.
 
 ---
 
-## 2. Was genau macht das Wort `new`?
+## 1. Bauplan vs. Echtes Haus
 
-Wenn du schreibst:
-```csharp
-Auto meinGolf = new Auto("Blau", 110);
-```
-
-Passieren drei Dinge in Bruchteilen einer Sekunde:
-1. **Speicher reservieren:** Der Computer sucht im Speicher einen freien Platz für ein neues Auto-Objekt.
-2. **Konstruktor anrufen:** Er ruft den Konstruktor auf und übergibt `"Blau"` und `110`.
-3. **Adresse speichern:** Die Variable `meinGolf` merkt sich, wo dieses Auto im Speicher steht.
-
----
-
-## 3. Kapselung: Warum `{ get; private set; }` Gold wert ist
-
-Stell dir vor, du hast ein `BankKonto`:
+- **Die Klasse (`class`):** Ist die **technische Zeichnung** (der Bauplan). Auf dem Plan steht, dass jedes Haus eine Wandfarbe, eine Anzahl Fenster und eine Tür hat. Der Bauplan selbst ist aber kein Haus – man kann darin nicht wohnen!
+- **Das Objekt (`object` / Instanz):** Ist das **echte, gebaute Haus** aus Stein und Mörtel, das nach dem Bauplan errichtet wurde. Aus einem einzigen Bauplan kannst du 100 verschiedene Häuser bauen: eines ist blau, eines rot, eines hat 4 Fenster.
 
 ```csharp
-public class UnsicheresKonto
+// Der Bauplan:
+class Auto
 {
-    public double Kontostand; // Jeder darf direkt reinschreiben!
+    public string Marke;
+    public int Geschwindigkeit;
 }
+
+// Das Erschaffen der echten Objekte mit "new":
+Auto meinGolf = new Auto();
+meinGolf.Marke = "VW";
+
+Auto meinTesla = new Auto();
+meinTesla.Marke = "Tesla";
 ```
 
-Jeder Programmierer (oder ein Fehler im Code) könnte jetzt schreiben:
-```csharp
-UnsicheresKonto k = new UnsicheresKonto();
-k.Kontostand = -500000; // Autsch!
-k.Kontostand = 1000000; // Geld aus dem Nichts gezaubert!
-```
+---
 
-### Die Lösung: Sichere Kapselung
+## 2. Was macht `new` eigentlich?
+
+Das Schlüsselwort `new` ist die Baufirma:
+1. Es reserviert frischen Speicherplatz auf dem Arbeitsspeicher (auf dem sogenannten *Heap*).
+2. Es ruft den **Konstruktor** der Klasse auf, um Startwerte zu setzen.
+3. Es gibt eine **Referenz** (eine Art Adresse) auf das neue Objekt zurück.
+
+---
+
+## 3. Die Referenz-Falle: Vorsicht bei Zuweisungen!
+
+Objekte verhalten sich ganz anders als einfache Zahlen:
+
 ```csharp
-public class SicheresKonto
+Auto a1 = new Auto();
+a1.Marke = "BMW";
+
+Auto a2 = a1; // ACHTUNG! Hier wird KEIN zweites Auto gebaut!
+a2.Marke = "Audi";
+
+Console.WriteLine(a1.Marke); // Ausgabe: Audi!
+```
+*Warum steht bei a1 jetzt auch Audi?*
+Weil `a1` und `a2` wie zwei Fernbedienungen für **dasselbe Auto** sind. `a2 = a1` kopiert nicht das Auto, sondern nur die Fernbedienung! Beide zeigen auf denselben Speicherplatz.
+
+---
+
+## 4. Kapselung: Warum Properties (`{ get; set; }`) wichtig sind
+
+Warum schreiben wir nicht einfach `public int guthaben;`?
+Weil dann jeder von außen unsinnige Dinge tun könnte:
+```csharp
+meinKonto.guthaben = -999999; // Plötzlich riesige Schulden ohne Prüfung!
+```
+Mit Properties und Methoden schützen wir das Objekt:
+```csharp
+class Bankkonto
 {
-    // Lesen darf jeder (get), aber ÄNDERN darf nur das Konto selbst (private set)!
-    public double Kontostand { get; private set; }
+    public double Kontostand { get; private set; } // Lesen darf jeder, ändern nur das Konto selbst!
 
     public void Einzahlen(double betrag)
     {
@@ -80,77 +83,105 @@ public class SicheresKonto
     }
 }
 ```
-Jetzt gibt es **Türsteher-Methoden** (`Einzahlen`, `Abheben`). Niemand kann von außen schummeln!
 
 ---
 
-## 4. Die Referenzfalle: Zwei Namen für dasselbe Ding
+## 5. Vertiefungsaufgaben mit Tipps
 
-Objekte verhalten sich anders als einfache Zahlen (`int`).
-Schau dir das an:
+### Aufgabe V9.1: Klasse `Rechteck`
+Erstelle eine Klasse `Rechteck` mit:
+- Den Properties `Breite` (`double`) und `Hoehe` (`double`).
+- Einem Konstruktor `Rechteck(double breite, double hoehe)`.
+- Einer Methode `double BerechneFlaeche()`, die $Breite \times Hoehe$ zurückgibt.
+- Einer Methode `double BerechneUmfang()`, die $2 \times (Breite + Hoehe)$ zurückgibt.
 
-```csharp
-Hund a = new Hund("Bello", 3);
-Hund b = a; // ACHTUNG: Hier wird KEIN neuer Hund geklont!
+Erstelle im Hauptprogramm zwei Rechtecke und gib Fläche und Umfang aus.
 
-b.Name = "Rex";
+{% capture tipp %}
+**Lösung / Tipp zu V9.1:**
 
-Console.WriteLine(a.Name); // Was steht hier? Bello oder Rex?
-```
-
-**Ergebnis:** Es steht **Rex** da!
-**Warum?**
-`a` und `b` sind wie zwei Fernbedienungen für denselben Fernseher. Wenn du mit Fernbedienung `b` das Programm umschaltest, zeigt der Fernseher auch für Fernbedienung `a` das neue Programm.
-Nur wenn das Wort **`new`** fällt, entsteht ein wirklich eigenständiges neues Objekt!
-
----
-
-## 5. Vertiefungsaufgaben
-
-### Vertiefungsaufgabe 9.1 – Das Smartphone
-Erstelle eine Klasse `Smartphone`:
-- **Eigenschaften:** `Modell` (string), `Akkustand` (int, startet bei 100, `private set`)
-- **Konstruktor:** Setzt das Modell.
-- **Methoden:**
-  - `void Benutze(int minuten)`: Verbraucht 1 % Akku pro 2 Minuten. Wenn der Akku 0 erreicht, geht nichts mehr.
-  - `void Laden()`: Setzt den Akku wieder auf 100 %.
-  - `void Status()`: Gibt Modell und Akkustand aus.
-
-<details>
-<summary>👉 Klicke hier für die Lösung</summary>
+Hier ist der Bauplan und die Verwendung der Klasse `Rechteck`:
 
 ```csharp
-public class Smartphone
+class Rechteck
 {
-    public string Modell { get; set; }
-    public int Akkustand { get; private set; }
+    public double Breite { get; set; }
+    public double Hoehe { get; set; }
 
-    public Smartphone(string modell)
+    public Rechteck(double breite, double hoehe)
     {
-        Modell = modell;
-        Akkustand = 100;
+        Breite = breite;
+        Hoehe = hoehe;
     }
 
-    public void Benutze(int minuten)
+    public double BerechneFlaeche()
     {
-        int verbrauch = minuten / 2;
-        Akkustand -= verbrauch;
-        if (Akkustand < 0) Akkustand = 0;
-        
-        Console.WriteLine($"{Modell} benutzt. Akku jetzt: {Akkustand}%");
-        if (Akkustand == 0) Console.WriteLine("Akku ist leer! Bitte laden.");
+        return Breite * Hoehe;
     }
 
-    public void Laden()
+    public double BerechneUmfang()
     {
-        Akkustand = 100;
-        Console.WriteLine($"{Modell} ist wieder voll aufgeladen (100%).");
-    }
-
-    public void Status()
-    {
-        Console.WriteLine($"[Smartphone] Modell: {Modell}, Akku: {Akkustand}%");
+        return 2 * (Breite + Hoehe);
     }
 }
+
+// Hauptprogramm:
+Rechteck r1 = new Rechteck(5.0, 3.0);
+Console.WriteLine($"Rechteck 1: Fläche = {r1.BerechneFlaeche()}, Umfang = {r1.BerechneUmfang()}");
+
+Rechteck r2 = new Rechteck(10.0, 2.5);
+Console.WriteLine($"Rechteck 2: Fläche = {r2.BerechneFlaeche()}, Umfang = {r2.BerechneUmfang()}");
 ```
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
+
+---
+
+### Aufgabe V9.2: Ein einfacher RPG-Held
+Erstelle eine Klasse `Held` mit:
+- `string Name`
+- `int Lebenspunkte`
+- Einer Methode `NimmSchaden(int schaden)`, die die Lebenspunkte verringert. Die Lebenspunkte dürfen aber **nicht unter 0** fallen!
+- Einer Methode `IstKopflos()` oder `LebtNoch()`, die `true` liefert, wenn `Lebenspunkte > 0` ist.
+
+{% capture tipp %}
+**Lösung / Tipp zu V9.2:**
+
+So kannst du sicherstellen, dass die Lebenspunkte nicht ins Minus rutschen:
+
+```csharp
+class Held
+{
+    public string Name { get; set; }
+    public int Lebenspunkte { get; private set; }
+
+    public Held(string name, int startLeben)
+    {
+        Name = name;
+        Lebenspunkte = startLeben;
+    }
+
+    public void NimmSchaden(int schaden)
+    {
+        Lebenspunkte -= schaden;
+        if (Lebenspunkte < 0)
+        {
+            Lebenspunkte = 0;
+        }
+        Console.WriteLine($"{Name} erleidet {schaden} Schaden. Verbleibendes Leben: {Lebenspunkte}");
+    }
+
+    public bool LebtNoch()
+    {
+        return Lebenspunkte > 0;
+    }
+}
+
+// Test:
+Held ritter = new Held("Lancelot", 25);
+ritter.NimmSchaden(10);
+ritter.NimmSchaden(20); // Sinkt auf 0, nicht auf -5!
+Console.WriteLine($"Lebt Lancelot noch? {ritter.LebtNoch()}");
+```
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
