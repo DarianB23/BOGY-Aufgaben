@@ -1,6 +1,6 @@
 ---
-title: 01 - Erste Schritte Vertiefung
-parent: Kapitel
+title: 01 - Vertiefung Erste Schritte
+parent: Vertiefung
 nav_order: 101
 ---
 # Kapitel 1 – Vertiefung: Erste Schritte & Fehlersuche
