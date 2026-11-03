@@ -1,7 +1,7 @@
 ---
 title: 10 - Vertiefung Fehler abfangen
-parent: Kapitel
-nav_order: 110
+parent: Vertiefung
+nav_order: 0
 ---
 # Kapitel 10 – Vertiefung: Fehlerbehandlung und TryParse
 
