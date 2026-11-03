@@ -1,5 +1,5 @@
 ---
-title: 04 - Vertiefung: Benutzereingaben
+title: 04 - Vertiefung Benutzereingaben
 parent: Kapitel
 nav_order: 104
 ---
