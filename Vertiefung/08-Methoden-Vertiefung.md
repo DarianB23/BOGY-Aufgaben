@@ -1,5 +1,5 @@
 ---
-title: 08 - Vertiefung: Methoden
+title: 08 - Vertiefung Methoden
 parent: Kapitel
 nav_order: 108
 ---
