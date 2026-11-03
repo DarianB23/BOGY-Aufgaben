@@ -1,7 +1,7 @@
 ---
 title: 03 - Vertiefung Rechnen und Vergleichen
-parent: Kapitel
-nav_order: 103
+parent: Vertiefung
+nav_order: 3
 ---
 # Kapitel 3 – Vertiefung: Rechnen, Modulo und Logik
 
