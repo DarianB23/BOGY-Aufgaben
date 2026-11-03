@@ -1,5 +1,5 @@
 ---
-title: 05 - Vertiefung: Verzweigungen
+title: 05 - Vertiefung Verzweigungen
 parent: Kapitel
 nav_order: 105
 ---
