@@ -3,147 +3,185 @@ title: 10 - Vertiefung Fehler abfangen
 parent: Vertiefung
 nav_order: 10
 ---
-# Kapitel 10 – Vertiefung: Fehlerbehandlung und TryParse
+# Kapitel 10 – Fehler abfangen (Vertiefung)
 
-[← Zurück zu Kapitel 10](10-Fehler-abfangen.md) | [Übersicht](../README.md)
+[← Zurück zu Kapitel 10](../Kapitel/10-Fehler-abfangen.md) | [Übersicht](../README.md) | [Weiter: Abschlussprojekt Vertiefung →](11-Abschlussprojekt-Vertiefung.md)
 
-Ein Programm, das abstürzt, frustriert Benutzer. Professionelle Software zeichnet sich dadurch aus, dass sie stabil bleibt – egal, was der Benutzer eintippt. Hier schauen wir uns an, warum `int.TryParse` so genial ist und wie das Geheimnis des Wortes `out` gelüftet wird.
+Ein Programm, das bei der kleinsten Fehleingabe sofort abstürzt, frustriert Nutzer. In diesem Kapitel lernst du, wie du dein Programm wie eine gepanzerte Festung baust.
 
 ---
 
-## 1. Was ist eine Exception wirklich?
+## 1. Was ist eine "Exception" eigentlich?
 
-Eine **Exception** (Ausnahme) ist das Signal von C#: *"Hier ist etwas passiert, mit dem ich unmöglich alleine weitermachen kann!"*
+Eine **Exception** (Ausnahme) ist die Notbremse des Computers:
+Wenn C# an eine Stelle kommt, die es unmöglich ausführen kann (z. B. Teilen durch 0, Umwandeln von Buchstaben in Zahlen, Zugriff auf Datei die nicht existiert), ruft es:
+> „Halt! Ich weiß nicht weiter! Entweder fängt jemand diesen Fehler auf, oder ich beende das Programm sofort!“
 
-Wenn ein Fehler auftritt und **kein** `catch`-Block da ist, stürzt das Programm ab.
-Ein `try / catch` funktioniert wie ein Rettungsnetz:
+---
 
+## 2. `try-catch` vs. `int.TryParse`: Wann nutzt man was?
+
+Das ist einer der wichtigsten Architektur-Unterschiede in C#:
+
+### A. `try-catch` (Das Rettungsnetz)
 ```csharp
 try
 {
-    // Akrobat auf dem Seil (kann schiefgehen!)
-    int ergebnis = 100 / teiler;
-}
-catch (DivideByZeroException)
-{
-    // Das Rettungsnetz fängt den Sturz sanft ab
-    Console.WriteLine("Teilen durch 0 ist in der Mathematik nicht erlaubt!");
-}
-```
-
----
-
-## 2. `try-catch` vs. `TryParse`: Wann nimmt man was?
-
-| Eigenschaft | `try-catch` | `TryParse` |
-|---|---|---|
-| **Einsatzgebiet** | Echte, unvorhersehbare Notfälle (z. B. Datei auf der Festplatte plötzlich gelöscht, Server nicht erreichbar). | Völlig normale Benutzereingaben, die sich vertippen können. |
-| **Geschwindigkeit** | Sehr langsam, wenn ein Fehler auftritt (Computer muss den Notfall protokollieren). | Rasend schnell, weil es nur ein simpler `true/false`-Check ist. |
-| **Code-Stil** | Schreibt man für System- und Hardware-Probleme. | Standard für jede Konsolen-Zahleneingabe! |
-
-**Faustregel:** Nutze für Benutzereingaben an der Konsole immer **`int.TryParse`** oder **`double.TryParse`** statt `try-catch`!
-
----
-
-## 3. Was bedeutet das Zauberwort `out`?
-
-Normalerweise kann eine C#-Methode mit `return` immer nur **einen einzigen Wert** zurückgeben.
-
-Bei einer Zahleneingabe wollen wir aber eigentlich **zwei Dinge auf einmal** wissen:
-1. Hat die Umwandlung überhaupt geklappt? (`bool`: `true` oder `false`)
-2. Wenn ja, wie lautet die umgewandelte Zahl? (`int`)
-
-Hier kommt der **`out`-Parameter** ins Spiel:
-
-```csharp
-bool erfolg = int.TryParse("42", out int zahl);
-```
-
-- Das `out` vor der Variablen sagt: *"Liebe Methode `TryParse`, ich gebe dir meine leere Variable `zahl` mit. Bitte fülle sie im Inneren mit dem fertigen Ergebnis!"*
-- Der normale Rückgabewert der Methode (`true`/`false`) landet in `erfolg`.
-- Der Wert der Zahl landet direkt in der `out`-Variable `zahl`!
-
----
-
-## 4. Die unzerstörbare Eingabe-Schleife: Schritt für Schritt erklärt
-
-Hier ist das Standard-Muster, das du in jedem professionellen Programm wiederfinden wirst:
-
-```csharp
-int zahl;
-while (!int.TryParse(Console.ReadLine(), out zahl))
-{
-    Console.ForegroundColor = ConsoleColor.Red;
-    Console.Write("Ungültig! Bitte gib eine ganze Zahl ein: ");
-    Console.ResetColor();
-}
-```
-
-**Wie das Schritt für Schritt tickt:**
-1. `Console.ReadLine()` holt den Text ab.
-2. `int.TryParse(...)` prüft den Text:
-   - Ist es `"123"`? `TryParse` liefert `true`, schreibt 123 in `zahl`. Durch das `!` davor wird daraus `false` -> **Die Schleife bricht ab, weiter geht's!**
-   - Ist es `"abc"`? `TryParse` liefert `false`. Durch das `!` davor wird daraus `true` -> **Die Schleife läuft noch einmal** und fragt erneut nach!
-
----
-
-## 5. Mehrere Fehler gezielt abfangen
-
-Wenn du doch `try-catch` nutzt, kannst du mehrere Fangnetze untereinander spannen:
-
-```csharp
-try
-{
-    Console.Write("Zahl 1: ");
-    int a = int.Parse(Console.ReadLine());
-    Console.Write("Zahl 2: ");
-    int b = int.Parse(Console.ReadLine());
-    Console.WriteLine($"Ergebnis: {a / b}");
+    // Gefährlicher Code
+    int zahl = int.Parse(Console.ReadLine()!);
 }
 catch (FormatException)
 {
-    Console.WriteLine("Fehler: Du hast keine Zahl eingegeben!");
+    // Was tun, wenn es schiefgeht
+    Console.WriteLine("Das war keine Zahl!");
 }
-catch (DivideByZeroException)
+```
+- **Wann nutzen?** Für unvorhersehbare Fehler, die von außen kommen (z. B. Netzwerk bricht ab, Festplatte voll, Datei gesperrt).
+- **Nachteil:** `try-catch` ist relativ langsam, wenn der Fehler tatsächlich auftritt, und unterbricht den normalen Kontrollfluss.
+
+---
+
+### B. `int.TryParse` (Die vorausschauende Ampel)
+```csharp
+Console.Write("Zahl eingeben: ");
+string eingabe = Console.ReadLine()!;
+
+bool klappte = int.Parse(eingabe, out int zahl);
+```
+- **Wann nutzen?** Immer bei **Nutzereingaben in der Konsole**!
+- `TryParse` wirft **niemals** eine Exception und bringt das Programm **niemals** zum Absturz.
+- Es gibt einfach `true` zurück, wenn es geklappt hat, und `false`, wenn die Eingabe ungültig war.
+
+---
+
+## 3. Das Geheimnis des `out`-Schlüsselworts
+
+Normalerweise kann eine C#-Methode mit `return` nur **einen einzigen Wert** zurückgeben.
+`int.TryParse` muss uns aber **zwei Dinge gleichzeitig** mitteilen:
+1. Hat es geklappt? (`bool`)
+2. Was ist die umgewandelte Zahl? (`int`)
+
+Dafür gibt es das Schlüsselwort **`out`**:
+```csharp
+if (int.TryParse(eingabe, out int zahl))
 {
-    Console.WriteLine("Fehler: Du darfst nicht durch 0 teilen!");
+    // "zahl" ist jetzt mit dem fertigen Wert befüllt!
+    Console.WriteLine($"Erfolg: {zahl * 2}");
 }
-catch (Exception ex)
+```
+Das `out` bedeutet: „Liebe Methode, schreibe dein zweites Ergebnis direkt in diese Variable hinein!“
+
+---
+
+## 4. Die "unzerstörbare" Eingabeschleife
+
+Das Standardmuster für saubere Programme:
+```csharp
+int alter;
+
+while (true)
 {
-    // Fängt alle anderen, unbekannten Fehler ab
-    Console.WriteLine($"Unerwarteter Fehler: {ex.Message}");
+    Console.Write("Bitte gib dein Alter ein (0-120): ");
+    string eingabe = Console.ReadLine()!;
+
+    if (int.TryParse(eingabe, out alter) && alter >= 0 && alter <= 120)
+    {
+        break; // Gültige Zahl im richtigen Bereich -> Schleife verlassen!
+    }
+
+    Console.ForegroundColor = ConsoleColor.Red;
+    Console.WriteLine("Ungültige Eingabe! Bitte eine Zahl zwischen 0 und 120 eingeben.");
+    Console.ResetColor();
 }
+
+Console.WriteLine($"Eingabe akzeptiert: {alter} Jahre.");
 ```
 
 ---
 
-## 6. Vertiefungsaufgaben
+## 5. Vertiefungsaufgaben mit Tipps
 
-### Vertiefungsaufgabe 10.1 – Altersabfrage mit Wertebereich
-Schreibe eine Schleife, die das Alter des Benutzers abfragt. Das Programm darf **nur** weitergehen, wenn:
-- eine echte Zahl eingegeben wurde, **UND**
-- die Zahl zwischen `0` und `120` liegt.
+### Aufgabe V10.1: Sichere Division
+Schreibe ein Programm, das zwei Zahlen abfragt: `zaehler` und `nenner`.
+Berechne das Ergebnis der Division `zaehler / nenner`.
+Fange mit `TryParse` ab:
+- Falls keine Zahl eingegeben wurde.
+- Falls der `nenner == 0` ist (Division durch 0 verhindern!).
 
-<details>
-<summary>👉 Klicke hier für die Lösung</summary>
+{% capture tipp %}
+**Lösung / Tipp zu V10.1:**
+
+Prüfe sowohl die Zahlengültigkeit als auch die Null-Division:
 
 ```csharp
-int alter;
-while (true)
+Console.Write("Zähler eingeben: ");
+if (!double.TryParse(Console.ReadLine(), out double zaehler))
 {
-    Console.Write("Gib dein Alter ein (0-120): ");
-    if (int.TryParse(Console.ReadLine(), out alter) && alter >= 0 && alter <= 120)
-    {
-        break; // Alles super, wir verlassen die Schleife!
-    }
-    Console.WriteLine("Ungültige Eingabe! Bitte ein realistisches Alter eingeben.");
+    Console.WriteLine("Fehler: Ungültiger Zähler!");
+    return;
 }
 
-Console.WriteLine($"Erfasst: Alter {alter} Jahre.");
-```
-</details>
+Console.Write("Nenner eingeben: ");
+if (!double.TryParse(Console.ReadLine(), out double nenner))
+{
+    Console.WriteLine("Fehler: Ungültiger Nenner!");
+    return;
+}
 
-### Vertiefungsaufgabe 10.2 – Die universelle `LiesGanzeZahl`-Methode
-Schreibe eine Methode mit folgendem Kopf:
-`int LiesGanzeZahl(string meldung, int min, int max)`
-Sie soll die `meldung` ausgeben und so lange nachfragen, bis eine Zahl zwischen `min` und `max` eingegeben wurde.
+if (nenner == 0)
+{
+    Console.WriteLine("Fehler: Durch 0 kann nicht geteilt werden!");
+}
+else
+{
+    double ergebnis = zaehler / nenner;
+    Console.WriteLine($"Ergebnis: {zaehler} / {nenner} = {ergebnis:F2}");
+}
+```
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
+
+---
+
+### Aufgabe V10.2: Robuster Menüwähler
+Erstelle ein Konsolenmenü:
+```text
+1. Spiel starten
+2. Highscore ansehen
+3. Beenden
+```
+Frage den Nutzer nach seiner Wahl.
+Lass den Nutzer bei Fehleingaben (Buchstaben, Zahlen außer 1–3) nicht weiter, sondern zeige eine Fehlermeldung und frage erneut, bis eine gültige Auswahl getroffen wurde.
+
+{% capture tipp %}
+**Lösung / Tipp zu V10.2:**
+
+Kombiniere eine `while(true)`-Schleife mit `int.TryParse`:
+
+```csharp
+int auswahl;
+
+while (true)
+{
+    Console.WriteLine("=== HAUPTMENÜ ===");
+    Console.WriteLine("1. Spiel starten");
+    Console.WriteLine("2. Highscore ansehen");
+    Console.WriteLine("3. Beenden");
+    Console.Write("Deine Wahl (1-3): ");
+
+    string eingabe = Console.ReadLine()!;
+
+    if (int.TryParse(eingabe, out auswahl) && auswahl >= 1 && auswahl <= 3)
+    {
+        break; // Gültige Auswahl!
+    }
+
+    Console.Clear();
+    Console.WriteLine(">>> Ungültige Auswahl! Bitte nur 1, 2 oder 3 wählen. <<<\n");
+}
+
+Console.WriteLine($"Du hast Menüpunkt {auswahl} gewählt!");
+```
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
+
