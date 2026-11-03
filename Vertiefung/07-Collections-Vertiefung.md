@@ -3,143 +3,154 @@ title: 07 - Vertiefung Arrays und Listen
 parent: Vertiefung
 nav_order: 7
 ---
-# Kapitel 7 – Vertiefung: Arrays, Listen und Indizes
+# Kapitel 7 – Collections (Vertiefung)
 
-[← Zurück zu Kapitel 7](07-Collections.md) | [Übersicht](../README.md)
+[← Zurück zu Kapitel 7](../Kapitel/07-Collections.md) | [Übersicht](../README.md) | [Weiter: Methoden Vertiefung →](08-Methoden-Vertiefung.md)
 
-Warum fängt der Computer bei 0 an zu zählen? Warum stürzt das Programm ab, wenn man auf Platz 4 eines 4-elementigen Arrays zugreift? Und warum heißen die Eigenschaften einmal `.Length` und einmal `.Count`? Hier erfährst du die Hintergründe.
+Eine Variable speichert genau einen Wert. Collections (Sammlungen) wie Arrays und Listen erlauben es dir, Dutzende oder Tausende Werte unter einem einzigen Namen zu verwalten.
 
 ---
 
 ## 1. Warum fängt der Index bei 0 an?
 
-Fast jeder Programmieranfänger wundert sich: *"Warum ist das erste Element nicht Nummer 1?"*
+Die sogenannte **Nullbasierte Indizierung** (Zero-based Indexing) verwirrt fast jeden Einsteiger:
+- Erstes Element: Index `0`
+- Zweites Element: Index `1`
+- Letztes Element bei 5 Elementen: Index `4`
 
-Der Grund liegt tief in der Geschichte des Computer-Speichers:
-- Ein Array liegt als zusammenhängender Block im Arbeitsspeicher (RAM).
-- Die Variable speichert eigentlich nur die **Start-Adresse** dieses Blocks.
-- Der **Index** ist der **Abstand (Offset)** vom Startpunkt!
-
-```
-Array im Speicher:
-[ Erstes Element ] [ Zweites Element ] [ Drittes Element ]
-      ▲                     ▲                   ▲
-      │                     │                   │
-Start + 0 Schritte    Start + 1 Schritt   Start + 2 Schritte
-  (Index 0)             (Index 1)           (Index 2)
-```
-
-- Um zum 1. Element zu kommen, musst du **0 Schritte** vom Start weglaufen -> `[0]`.
-- Um zum 2. Element zu kommen, machst du **1 Schritt** -> `[1]`.
-- Daher hat das letzte Element bei 4 Einträgen den Index **3**!
+### Der historische/technische Grund:
+Stell dir den Arbeitsspeicher wie eine Straße vor. Ein Array liegt an einer bestimmten Startadresse (z. B. Hausnummer 100).
+Der **Index ist der Abstand (Offset)** vom Startpunkt:
+- `array[0]`: Gehe 0 Schritte vom Start weg -> Du stehst genau beim **ersten** Element.
+- `array[1]`: Gehe 1 Schritt weiter -> Du stehst beim **zweiten** Element.
 
 ---
 
-## 2. Array vs. Liste: Die Analogie
+## 2. Array vs. List: Eierkarton vs. Notizzettel
 
-| Eigenschaft | Array (`int[]`) | Liste (`List<int>`) |
+| Eigenschaft | Array (`string[]`) | List (`List<string>`) |
 |---|---|---|
-| **Analogie** | Ein **Eierkarton** mit 6 Mulden | Ein **Einkaufszettel** aus Papier |
-| **Größe** | Einmal hergestellt, nie mehr änderbar. | Kann wachsen (`.Add()`) und schrumpfen (`.Remove()`). |
-| **Größen-Eigenschaft** | `.Length` (feste Länge) | `.Count` (aktuelle Zählung) |
-| **Wann nutzen?** | Wenn die Anzahl von vornherein unveränderlich feststeht (z. B. 12 Monate, 7 Wochentage). | In 90 % der Fälle im Alltag: Wenn Daten hinzukommen oder gelöscht werden. |
+| **Analogie** | Eierkarton: Feste Anzahl Mulden. Kann nicht vergrößert werden. | Notizzettel: Du kannst jederzeit Zeilen anhängen oder durchstreichen. |
+| **Größe** | **Fest** (wird beim Erstellen definiert). | **Dynamisch** (wächst und schrumpft automatisch). |
+| **Anzahl abfragen** | `.Length` | `.Count` |
+| **Element hinzufügen** | Geht nicht direkt! | `liste.Add("Neues Element");` |
+| **Element löschen** | Geht nicht direkt! | `liste.Remove("Element");` oder `liste.RemoveAt(0);` |
+
+**Faustregel:** Nimm im Zweifelsfall fast immer `List<T>`, es sei denn, du weißt zu 100% im Voraus, dass sich die Anzahl niemals ändert (z. B. 7 Wochentage).
 
 ---
 
 ## 3. Die berüchtigte `IndexOutOfRangeException`
 
+Dieser Fehler tritt auf, wenn du nach einem Index fragst, den es nicht gibt:
 ```csharp
-string[] tiere = { "Hund", "Katze", "Maus" }; // Größe 3: Indizes 0, 1, 2
-
-Console.WriteLine(tiere[3]); // BUMM! IndexOutOfRangeException
+string[] namen = { "Anna", "Ben", "Clara" }; // Länge = 3, Indizes: 0, 1, 2
+Console.WriteLine(namen[3]); // BUMM! IndexOutOfRangeException!
 ```
-
-**Was bedeutet das?**
-Du hast dem Computer befohlen: *"Geh an die Startadresse von `tiere` und laufe 3 Schritte weiter."* Dort liegt aber kein Tier mehr, sondern fremder Arbeitsspeicher! Um dich und das System zu schützen, zieht C# sofort die Notbremse.
-
-**Die goldene Regel zur Vermeidung:**
-Der gültige Index liegt immer zwischen `0` und `Anzahl - 1`.
-Prüfe im Zweifel vorher:
-```csharp
-int wunschIndex = 3;
-if (wunschIndex >= 0 && wunschIndex < tiere.Length)
-{
-    Console.WriteLine(tiere[wunschIndex]);
-}
-else
-{
-    Console.WriteLine("Diesen Platz gibt es nicht!");
-}
-```
+*Warum?* Es gibt 3 Elemente, aber der höchste gültige Index ist `2`!
+Die goldene Regel: **Der höchste Index ist immer `Länge - 1`!**
 
 ---
 
-## 4. Die Kardinalsünde: Die Liste in `foreach` verändern
+## 4. Die Kardinalsünde bei `foreach`
 
-Probiere das **niemals** so aus:
+Verändere **niemals** eine Liste, während du mit `foreach` darüber iterierst:
+```csharp
+foreach (string name in namen)
+{
+    namen.Remove(name); // FEHLER! InvalidOperationException: Sammlung wurde geändert!
+}
+```
+*Warum?* `foreach` führt Buch über den internen Zeiger. Wenn du währenddessen Elemente entfernst oder hinzufügst, gerät der Zeiger durcheinander.
+*Lösung:* Wenn du filtern/löschen musst, nutze eine Rückwärts-`for`-Schleife oder erstelle eine neue Liste.
+
+---
+
+## 5. Vertiefungsaufgaben mit Tipps
+
+### Aufgabe V7.1: Noten-Statistik mit `List<int>`
+Erstelle eine `List<int>` mit Noten (z. B. `1, 2, 3, 2, 1, 4, 2`).
+Berechne mithilfe einer Schleife:
+1. Die Summe aller Noten
+2. Den Notendurchschnitt (als Kommazahl `double`)
+3. Wie oft die Note `1` vorkommt
+
+{% capture tipp %}
+**Lösung / Tipp zu V7.1:**
+
+So kannst du die Liste mit einer `foreach`-Schleife analysieren:
 
 ```csharp
-List<string> namen = new List<string> { "Anna", "Ben", "Clara" };
+List<int> noten = new List<int> { 1, 2, 3, 2, 1, 4, 2 };
 
-foreach (string n in namen)
+int summe = 0;
+int anzahlEinsen = 0;
+
+foreach (int note in noten)
 {
-    if (n == "Ben")
+    summe += note;
+    if (note == 1)
     {
-        namen.Remove(n); // FEHLER: InvalidOperationException!
+        anzahlEinsen++;
     }
 }
+
+double durchschnitt = (double)summe / noten.Count;
+
+Console.WriteLine($"Anzahl Noten: {noten.Count}");
+Console.WriteLine($"Durchschnitt: {durchschnitt:F2}");
+Console.WriteLine($"Anzahl Einsen: {anzahlEinsen}");
 ```
-
-**Warum ist das verboten?**
-`foreach` verlässt sich darauf, dass die Liste während des Durchlaufs absolut unverändert bleibt. Wenn du mittendrin ein Element entfernst, gerät der interne Zähler völlig aus dem Takt.
-
-**Wie macht man es richtig?**
-1. **Möglichkeit A:** Mit einer Rückwärts-`for`-Schleife:
-   ```csharp
-   for (int i = namen.Count - 1; i >= 0; i--)
-   {
-       if (namen[i] == "Ben")
-       {
-           namen.RemoveAt(i);
-       }
-   }
-   ```
-2. **Möglichkeit B:** Die elegante C#-Methode:
-   ```csharp
-   namen.RemoveAll(n => n == "Ben");
-   ```
+*Tipp:* Achte auf `(double)summe / noten.Count`, damit die Ganzzahldivision verhindert wird!
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
 
 ---
 
-## 5. Vertiefungsaufgaben
+### Aufgabe V7.2: Einkaufsliste interaktiv
+Schreibe ein Programm mit einer `List<string> einkaufsliste`.
+In einer Schleife kann der Nutzer:
+- Einen Artikel eingeben (wird mit `.Add()` hinzugefügt).
+- `"fertig"` eingeben, um die Eingabe zu beenden.
 
-### Vertiefungsaufgabe 7.1 – Array rückwärts ausgeben
-Lege ein Array mit 5 Wörtern an. Gib alle Wörter in **umgekehrter Reihenfolge** (vom letzten zum ersten) mit einer `for`-Schleife aus:
+Gib am Ende alle Artikel nummeriert aus:
+```text
+Deine Einkaufsliste:
+1. Milch
+2. Brot
+3. Äpfel
+```
 
-<details>
-<summary>👉 Klicke hier für die Lösung</summary>
+{% capture tipp %}
+**Lösung / Tipp zu V7.2:**
+
+Nutze eine `while(true)`-Schleife mit `break;` und gib die Liste danach mit einer `for`-Schleife aus:
 
 ```csharp
-string[] worte = { "Eins", "Zwei", "Drei", "Vier", "Fünf" };
+List<string> einkaufsliste = new List<string>();
 
-for (int i = worte.Length - 1; i >= 0; i--)
+while (true)
 {
-    Console.WriteLine(worte[i]);
+    Console.Write("Artikel hinzufügen (oder 'fertig'): ");
+    string eingabe = Console.ReadLine()!.Trim();
+
+    if (eingabe.ToLower() == "fertig")
+    {
+        break;
+    }
+
+    if (eingabe != "")
+    {
+        einkaufsliste.Add(eingabe);
+    }
+}
+
+Console.WriteLine("\nDeine Einkaufsliste:");
+for (int i = 0; i < einkaufsliste.Count; i++)
+{
+    Console.WriteLine($"{i + 1}. {einkaufsliste[i]}");
 }
 ```
-*Beachte:* Wir starten bei `worte.Length - 1` (Index 4) und laufen, solange `i >= 0` ist, mit `i--`.
-</details>
-
-### Vertiefungsaufgabe 7.2 – Das Zufalls-Los
-Schreibe ein Programm, das eine Liste von 5 Teilnehmern hat. Ziehe mit `Random.Shared.Next(0, teilnehmer.Count)` einen zufälligen Gewinner und gib ihn aus:
-
-<details>
-<summary>👉 Klicke hier für die Lösung</summary>
-
-```csharp
-List<string> teilnehmer = new List<string> { "Tom", "Sara", "Mia", "Leo", "Jonas" };
-
-int gewinnerIndex = Random.Shared.Next(0, teilnehmer.Count);
-Console.WriteLine($"Der Gewinner ist: {teilnehmer[gewinnerIndex]}!");
-```
-</details>
+*Tipp:* Mit `${i + 1}` beginnt die Nummerierung für den Menschen bei 1, obwohl der Listen-Index bei 0 startet!
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
