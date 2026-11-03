@@ -1,5 +1,5 @@
 ---
-title: 10 - Vertiefung: Fehler abfangen
+title: 10 - Vertiefung Fehler abfangen
 parent: Kapitel
 nav_order: 110
 ---
