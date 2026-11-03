@@ -3,125 +3,138 @@ title: 02 - Vertiefung Variablen und Datentypen
 parent: Vertiefung
 nav_order: 2
 ---
-# Kapitel 2 – Vertiefung: Variablen und Datentypen
+# Kapitel 2 – Variablen und Datentypen (Vertiefung)
 
-[← Zurück zu Kapitel 2](../Kapitel/02-Variablen.md) | [Übersicht](../README.md)
+[← Zurück zu Kapitel 2](../Kapitel/02-Variablen.md) | [Übersicht](../README.md) | [Weiter: Rechnen und Vergleichen Vertiefung →](03-Rechnen-und-Vergleichen-Vertiefung.md)
 
-Variablen wirken am Anfang simpel, führen aber oft zu Verwirrung: *Warum muss ich den Typ angeben? Warum darf ich später kein `int` mehr davor schreiben? Was bedeutet das `$` bei Strings?* Hier klären wir diese Fragen im Detail.
+In diesem Vertiefungskapitel schauen wir uns genauer an, was im Arbeitsspeicher (RAM) passiert, warum C# so streng mit Datentypen ist und wie du typische Fehler vermeidest.
 
 ---
 
-## 1. Was passiert wirklich im Computer-Speicher?
+## 1. Was passiert im Arbeitsspeicher?
 
-Stell dir den Arbeitsspeicher (RAM) deines PCs wie ein riesiges Regal mit nummerierten Fächern vor:
+Stell dir den Arbeitsspeicher wie ein riesiges Regal mit nummerierten Fächern vor:
 
-1. Wenn du schreibst:
-   ```csharp
-   int alter = 25;
-   ```
-   reserviert der Computer ein Fach im Regal, das groß genug für eine ganze Zahl ist (bei `int` sind das genau 4 Bytes / 32 Bits), gibt diesem Fach das Namensschild **`alter`** und legt die Zahl **`25`** hinein.
+```text
+[Fach 0x1A] -> "Anna"   (Typ: string)  Label: name
+[Fach 0x2B] -> 25       (Typ: int)     Label: alter
+```
 
-2. **Deklaration vs. Zuweisung:**
-   - **Deklaration:** `int alter;` -> "Bitte reserviere mir eine Box für eine ganze Zahl namens 'alter'."
-   - **Initialisierung:** `alter = 25;` -> "Lege als Startwert 25 in die Box."
-   - **Zuweisung:** `alter = 26;` -> "Nimm den alten Inhalt raus und lege 26 rein."
+Wenn du schreibst:
+```csharp
+int alter = 25;
+```
+passieren drei Dinge gleichzeitig:
+1. **Deklaration:** Du reservierst ein Fach für eine ganze Zahl (`int`) und gibst ihm das Etikett `alter`.
+2. **Zuweisungsoperator `=`:** Das Gleichheitszeichen bedeutet nicht mathematische Gleichheit, sondern: **„Nimm den Wert von rechts und packe ihn in das Fach links!“**
+3. **Initialisierung:** Der Wert `25` wird zum ersten Mal in das Fach gelegt.
 
-### Warum steht später kein `int` mehr davor?
-
-Das ist der **häufigste Anfängerfehler**:
+### Die `int`-Dopplungs-Falle
+Ein sehr häufiger Anfängerfehler ist:
 ```csharp
 int punkte = 10;
-int punkte = 20; // FEHLER: Eine lokale Variable namens "punkte" ist bereits definiert!
+int punkte = 20; // FEHLER!
 ```
-Wenn du nochmals `int punkte` schreibst, sagst du dem Computer: *"Erstelle bitte eine NEUE Box namens punkte."* Der Computer antwortet: *"Halt! Ich habe schon eine Box mit diesem Namen!"*
-
-Möchtest du den Wert nur ändern, nennst du **nur den Namen**:
+*Warum meckert C#?*
+Mit dem Wort `int` sagst du: „Erstelle ein *neues* Fach mit diesem Namen“. Aber ein Fach mit dem Namen `punkte` existiert bereits!
+Richtig ist:
 ```csharp
-punkte = 20; // Richtig: Greift auf die existierende Box zu und überschreibt den Wert.
+int punkte = 10;
+punkte = 20; // Richtig: Greife auf das bestehende Fach zu und überschreibe den Inhalt
 ```
 
 ---
 
-## 2. Die Typen-Familie genauer betrachtet
+## 2. Die Unterschiede der Datentypen im Detail
 
-| Typ | Größe im Speicher | Wertebereich / Besonderheit | Typische Eselsbrücke |
-|---|---|---|---|
-| `int` | 4 Bytes | ca. -2,1 Milliarden bis +2,1 Milliarden | Ganze Zählbare Dinge (Äpfel, Alter, Punktestand) |
-| `double` | 8 Bytes | Sehr große/kleine Kommazahlen (ca. 15-17 Stellen genau) | Messwerte, Gewichte, Preise (`19.99`) |
-| `bool` | 1 Byte | Nur `true` (wahr) oder `false` (falsch) | Lichtschalter: an oder aus |
-| `char` | 2 Bytes | Genau **ein** Zeichen in einfachen Hochkommas: `'A'` | Einzelner Buchstabe auf einer Scrabble-Tafel |
-| `string` | dynamisch | Ganzer Text in doppelten Anführungszeichen: `"Hallo"` | Perlenkette aus vielen `char`-Zeichen |
+### `char` vs. `string`
+- **`char` (Character):** Genau ein einziges Zeichen. Wird immer mit **einfachen Anführungszeichen** `'A'` geschrieben.
+- **`string` (Zeichenkette):** Eine Kette aus beliebig vielen Zeichen (auch 0 Zeichen `""` oder 1 Zeichen `"A"`). Wird immer mit **doppelten Anführungszeichen** `"..."` geschrieben.
 
-### `char` vs. `string` – Der Unterschied zwischen `'A'` und `"A"`
+```csharp
+char buchstabe = 'A'; // Genau 1 Zeichen, einfache Quotes
+string text = "A";    // Zeichenkette mit 1 Zeichen, doppelte Quotes
+```
 
-- `'A'` (`char`): Ist ein einzelnes Zeichen. C# speichert intern einfach die Ziffer 65 (den Unicode-Code für 'A').
-- `"A"` (`string`): Ist ein Text-Objekt, das zufällig nur aus einem Zeichen besteht.
-- **Merkhilfe:** Ein einzelnes Zeichen bekommt einfache Striche `' '`. Text bekommt doppelte Striche `" "`.
+### `int` vs. `double`
+- `int` schneidet Nachkommastellen gnadenlos ab – es kann keine Kommazahlen speichern.
+- `double` speichert Gleitkommazahlen. Im Code schreibst du immer den **englischen Punkt** (`1.75`), nicht das deutsche Komma (`1,75`).
 
 ---
 
-## 3. String-Interpolation: Das magische `$`
+## 3. String-Interpolation verstehen: Was macht das `$`?
 
-Vergleiche diese beiden Zeilen:
 ```csharp
-string name = "Sam";
-Console.WriteLine("Hallo {name}!");   // Ausgabe: Hallo {name}!
-Console.WriteLine($"Hallo {name}!");  // Ausgabe: Hallo Sam!
+string name = "Ben";
+Console.WriteLine("Hallo {name}");  // Gibt aus: Hallo {name}
+Console.WriteLine($"Hallo {name}"); // Gibt aus: Hallo Ben
 ```
 
-Das **`$` vor dem Anführungszeichen** schaltet den "Dolmetscher-Modus" ein. Es sagt C#: *"Achtung! Wenn geschweifte Klammern `{ }` im Text vorkommen, gib sie nicht wörtlich aus, sondern schau nach, was in der Variablen drinsteht!"*
-
-Du kannst in `{ }` sogar direkt rechnen:
-```csharp
-int preis = 5;
-Console.WriteLine($"Zwei Stück kosten {preis * 2} Euro."); // Ausgabe: Zwei Stück kosten 10 Euro.
-```
+Das Dollarzeichen `$` vor den Anführungszeichen ist wie ein Schalter:
+- Ohne `$`: C# druckt die geschweiften Klammern `{name}` buchstabengetreu ab.
+- Mit `$`: C# geht in den "Dolmetscher-Modus". Immer wenn `{ }` auftauchen, schaut C# nach, welche Variable gemeint ist, und setzt ihren aktuellen Wert ein.
 
 ---
 
-## 4. Vertiefungsaufgaben
+## 4. Vertiefungsaufgaben mit Tipps
 
-### Vertiefungsaufgabe 2.1 – Der Gläsertausch (Variablen tauschen)
-Stell dir vor, du hast zwei Variablen:
+### Aufgabe V2.1: Der Drei-Gläser-Tausch (Swap)
+Stell dir vor:
+- Glas A enthält `Apfelsaft`.
+- Glas B enthält `Orangensaft`.
+
+Du möchtest den Inhalt tauschen, sodass in Glas A `Orangensaft` und in Glas B `Apfelsaft` ist.
+Wenn du einfach schreibst:
 ```csharp
-int glasWasser = 1;  // Glas 1 enthält Wasser
-int glasSaft = 2;    // Glas 2 enthält Saft
+string glasA = "Apfelsaft";
+string glasB = "Orangensaft";
+
+glasA = glasB; // Jetzt ist in beiden Gläsern Orangensaft! Der Apfelsaft ist weg!
 ```
-Ziel: Tausche die Werte so, dass `glasWasser` am Ende `2` und `glasSaft` am Ende `1` hat.
-Wenn du einfach `glasWasser = glasSaft;` schreibst, ist das Wasser für immer verloren!
+Wie kannst du den Tausch mit Hilfe einer **dritten Hilfsvariable** sauber durchführen?
 
-Wie schaffst du den Tausch mithilfe einer dritten Hilfsvariablen `int hilfsGlas`?
+{% capture tipp %}
+**Lösung / Tipp zu V2.1:**
 
-<details>
-<summary>👉 Klicke hier für die Lösung</summary>
+Um zwei Variablen zu tauschen, brauchst du eine temporäre Zwischenspeicher-Variable (wie ein leeres drittes Glas):
 
 ```csharp
-int glasWasser = 1;
-int glasSaft = 2;
+string glasA = "Apfelsaft";
+string glasB = "Orangensaft";
 
-// Tausch über eine temporäre Hilfsvariable:
-int hilfsGlas = glasWasser; // Wasser zwischenparken
-glasWasser = glasSaft;      // Saft ins Wasserglas kippen
-glasSaft = hilfsGlas;       // Zwischengeparktes Wasser ins Saftglas kippen
+// 1. Apfelsaft im Hilfsglas sichern
+string zwischenspeicher = glasA;
 
-Console.WriteLine($"Wasserglas: {glasWasser}, Saftglas: {glasSaft}");
+// 2. Orangensaft nach Glas A füllen
+glasA = glasB;
+
+// 3. Den gesicherten Apfelsaft aus dem Hilfsglas nach Glas B füllen
+glasB = zwischenspeicher;
+
+Console.WriteLine($"Glas A: {glasA}, Glas B: {glasB}");
+// Ausgabe: Glas A: Orangensaft, Glas B: Apfelsaft
 ```
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
 
-### Vertiefungsaufgabe 2.2 – Welcher Datentyp passt?
-Wähle für folgende Beispiele den perfekten Datentyp (`string`, `int`, `double`, `bool`, `char`):
-1. Die Anzahl der Leben in einem Spiel (z. B. 3)
-2. Der Preis eines Liters Benzin (z. B. 1.749)
-3. Eine Postleitzahl (z. B. "01067" – Achtung, Fangfrage!)
-4. Ob ein Benutzer eingeloggt ist (ja/nein)
-5. Die Schulnote als Buchstabe (z. B. 'A')
+---
 
-<details>
-<summary>👉 Klicke hier für die Erklärung</summary>
+### Aufgabe V2.2: Typ-Detektiv
+Welcher Datentyp ist für folgende Informationen am besten geeignet? Begründe deine Wahl:
+1. Das Geburtsjahr einer Person (z. B. `1998`)
+2. Der Durchschnittspreis einer Kinokarte (z. B. `12.50`)
+3. Ob das Licht im Raum an ist oder aus
+4. Die Postleitzahl (z. B. `"01067"`)
+5. Das Geschlecht als Kürzel (`'m'`, `'w'`, `'d'`)
 
-1. `int` (Ganze Zahl für Leben)
-2. `double` (Kommazahl für Benzinpreis)
-3. `string`! Warum nicht `int`? Weil Postleitzahlen mit einer `0` beginnen können (z. B. Dresden `01067`). Ein `int` würde die führende Null einfach weglöschen (`1067`)! Außerdem rechnet man nie mit Postleitzahlen.
-4. `bool` (Nur zwei Zustände möglich: eingeloggt oder nicht)
-5. `char` (Genau ein Zeichen in einfachen Anführungszeichen)
-</details>
+{% capture tipp %}
+**Lösung / Tipp zu V2.2:**
+
+1. **`int`**: Ein Jahr ist immer eine ganze Zahl ohne Kommastellen.
+2. **`double`**: Preise haben Cent-Beträge, also Nachkommastellen.
+3. **`bool`**: Ein Lichtschalter hat nur zwei Zustände (`true` = an, `false` = aus).
+4. **`string`** *(Achtung Falle!)*: Postleitzahlen wie `"01067"` in Dresden beginnen mit einer führenden Null. Ein `int` würde die Null weglassen (`1067`). Außerdem rechnet man nicht mit Postleitzahlen (man addiert keine Postleitzahlen). Daher ist `string` hier die richtige Wahl!
+5. **`char`**: Es handelt sich um genau ein einzelnes Zeichen.
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
+
