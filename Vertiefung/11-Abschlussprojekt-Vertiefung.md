@@ -1,5 +1,5 @@
 ---
-title: 11 - Vertiefung: Abschlussprojekt
+title: 11 - Vertiefung Abschlussprojekt
 parent: Kapitel
 nav_order: 111
 ---
