@@ -21,7 +21,7 @@ Statt diese Informationen in mehreren einzelnen Variablen zu speichern, können 
 
 ## Neue Klasse erstellen
 
-1. Rechtsklick auf das Projekt (Beispiel: **Benutzerverwaltung**)
+1. Rechtsklick auf das Projekt (Beispiel: **BOGY Aufgaben**)
 
 ![image](../Bilder/KlassenTutorial1.png)
 
