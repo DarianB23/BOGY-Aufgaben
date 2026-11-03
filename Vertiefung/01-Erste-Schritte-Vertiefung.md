@@ -1,5 +1,5 @@
 ---
-title: 01 - Vertiefung: Erste Schritte
+title: 01 - Erste Schritte Vertiefung
 parent: Kapitel
 nav_order: 101
 ---
