@@ -1,5 +1,5 @@
 ---
-title: 06 - Vertiefung: Schleifen
+title: 06 - Vertiefung Schleifen
 parent: Kapitel
 nav_order: 106
 ---
