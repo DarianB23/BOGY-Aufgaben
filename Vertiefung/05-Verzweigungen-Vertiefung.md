@@ -1,7 +1,7 @@
 ---
 title: 05 - Vertiefung Verzweigungen
-parent: Kapitel
-nav_order: 105
+parent: Vertiefung
+nav_order: 5
 ---
 # Kapitel 5 – Vertiefung: Verzweigungen und Entscheidungslogik
 
