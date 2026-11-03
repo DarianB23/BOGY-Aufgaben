@@ -3,135 +3,146 @@ title: 04 - Vertiefung Benutzereingaben
 parent: Vertiefung
 nav_order: 4
 ---
-# Kapitel 4 – Vertiefung: Benutzereingaben und Typumwandlung
+# Kapitel 4 – Eingaben (Vertiefung)
 
-[← Zurück zu Kapitel 4](04-Eingaben.md) | [Übersicht](../README.md)
+[← Zurück zu Kapitel 4](04-Eingaben.md) | [Übersicht](../README.md) | [Weiter: Verzweigungen Vertiefung →](05-Verzweigungen-Vertiefung.md)
 
-Bis jetzt war dein Programm stumm und starr. Mit `Console.ReadLine()` wird es interaktiv. Doch warum liefert `ReadLine()` immer nur Text? Und warum stürzt das Programm ab, wenn man sich vertippt? Das klären wir hier.
-
----
-
-## 1. Was macht `Console.ReadLine()` eigentlich?
-
-Wenn der Computer an die Zeile `string eingabe = Console.ReadLine();` gelangt, passiert Folgendes:
-
-1. **Der Computer hält an:** Er wartet geduldig, bis der Benutzer Tasten drückt.
-2. **Der Eingabepuffer:** Jeder Tastendruck wird in einem temporären Zwischenspeicher gesammelt.
-3. **Die Enter-Taste:** Erst wenn du **Enter** drückst, liest `ReadLine()` den gesamten Text bis zum Zeilenumbruch aus und übergibt ihn an dein Programm.
-4. **Wichtig:** Für die Tastatur ist jedes Zeichen zunächst ein Textzeichen (`char`). Selbst wenn du `42` tippst, liest der Computer das Zeichen `'4'` und das Zeichen `'2'` – also den Text `"42"`.
+Die Interaktion mit dem Nutzer über `Console.ReadLine()` bringt eine fundamentale Neuerung: Das Programm verhält sich plötzlich dynamisch und reagiert auf Tastatureingaben. Hier erfährst du, was dabei im Hintergrund passiert.
 
 ---
 
-## 2. Text vs. Zahl: Das `+` Problem
+## 1. Wie `Console.ReadLine()` funktioniert
 
-Weil `ReadLine()` immer einen `string` zurückgibt, passiert ohne Umwandlung Folgendes:
-
+Wenn das Programm die Zeile:
 ```csharp
-Console.Write("Gib eine Zahl ein: ");
-string a = Console.ReadLine(); // Benutzer tippt: 10
+string eingabe = Console.ReadLine();
+```
+erreicht, friert die Programmausführung ein und wartet.
+- Der Nutzer tippt Zeichen in die Konsole (diese landen im sogenannten **Eingabepuffer**).
+- Erst wenn der Nutzer **Enter** drückt, liest `Console.ReadLine()` den gesamten Text bis zum Zeilenumbruch aus.
+- **Wichtig:** Das Ergebnis ist **immer ein `string`** – selbst wenn der Nutzer nur Zahlen wie `42` eingetippt hat!
 
-Console.Write("Gib noch eine Zahl ein: ");
-string b = Console.ReadLine(); // Benutzer tippt: 20
+### Warum `string` + `string` nicht rechnet:
+```csharp
+string a = "10";
+string b = "20";
+Console.WriteLine(a + b); // Ausgabe: 1020 (Textverkettung!)
+```
+Das Pluszeichen `+` klebt Texte zusammen. Damit gerechnet werden kann, müssen die Zeichenketten in echte Zahlen umgewandelt werden.
 
-Console.WriteLine(a + b); // Ausgabe: 1020 (Text aneinandergehängt!)
+---
+
+## 2. Was bedeutet "Parsen" (`int.Parse`)?
+
+Das englische Wort *to parse* bedeutet „eine Struktur analysieren und zerlegen“.
+Wenn du `int.Parse("123")` aufrufst:
+1. Prüft C# Zeichen für Zeichen: `'1'`, `'2'`, `'3'`.
+2. Wandelt es die Zeichen in den binären Integer-Wert `123` um.
+3. **Problem:** Wenn im Text ein Buchstabe steht (`"12a"`), weiß C# nicht weiter und das Programm **stürzt mit einem Fehler ab** (`FormatException`). Wie man das elegant verhindert, lernst du in Kapitel 10.
+
+---
+
+## 3. Die Tücke mit Kommazahlen: Punkt vs. Komma
+
+In C# gibt es einen wichtigen Kultur-Unterschied:
+- **Im Code** schreibst du immer den englischen Punkt: `double d = 1.5;`
+- **Bei der Konsoleneingabe** über `double.Parse(Console.ReadLine())` hängt es von den Spracheinstellungen deines Windows-Systems ab:
+  - Auf einem **deutschen PC** erwartet `double.Parse` ein **Komma** (`1,5`). Gibst du `1.5` ein, stürzt das Programm ab oder liest fälschlicherweise `15` ein!
+  - Auf einem **englischen PC** erwartet es einen Punkt (`1.5`).
+
+---
+
+## 4. Die grüne Wellenlinie: `string?` und Nullable
+
+Vielleicht hast du in Visual Studio eine grüne oder gelbe Warnlinie bei `Console.ReadLine()` bemerkt:
+```text
+CS8600: Das NULL-Literal oder ein möglicher NULL-Wert wird in einen Non-Nullable-Typ konvertiert.
+```
+*Was bedeutet das?*
+`Console.ReadLine()` kann theoretisch `null` zurückgeben (wenn der Eingabestrom geschlossen wird). Wenn du die Warnung loswerden willst, kannst du entweder:
+```csharp
+string? eingabe = Console.ReadLine(); // Das Fragezeichen erlaubt "null"
+```
+oder
+```csharp
+string eingabe = Console.ReadLine()!; // Das Ausrufezeichen sagt: "Ich garantiere, dass hier Text kommt!"
+```
+schreiben. Für deine ersten Schritte kannst du die Warnung aber auch einfach ignorieren.
+
+---
+
+## 5. Vertiefungsaufgaben mit Tipps
+
+### Aufgabe V4.1: Der Rabatt-Rechner
+Schreibe ein Konsolenprogramm, das:
+1. Den Originalpreis eines Produkts abfragt (z. B. `50`).
+2. Den Rabatt in Prozent abfragt (z. B. `20`).
+3. Den errechneten Sparbetrag und den neuen Endpreis ausgibt:
+```text
+Originalpreis: 50.00 €
+Rabatt (20%):  10.00 €
+Endpreis:      40.00 €
 ```
 
-Das Plus-Zeichen `+` hat in C# eine doppelte Bedeutung:
-- Bei zwei Zahlen: **Mathematische Addition** (`10 + 20 = 30`).
-- Bei Texten: **Aneinanderhängen (Konkatenation)** (`"10" + "20" = "1020"`).
-
----
-
-## 3. Was bedeutet "Parsen" (z. B. `int.Parse`)?
-
-Das englische Wort *to parse* bedeutet *grammatikalisch zerlegen und verstehen*.
-
-Wenn du `int.Parse("123")` aufrufst, geschieht intern Folgendes:
-1. C# prüft jedes Zeichen: Ist `'1'` eine Ziffer? Ja (Wert 1).
-2. Ist `'2'` eine Ziffer? Ja. Aus `1` und `2` wird der Wert `12`.
-3. Ist `'3'` eine Ziffer? Ja. Der Gesamtwert wird als die Ganzzahl `123` im Speicher abgelegt.
-4. Trifft C# dabei auf einen Buchstaben wie `"12a3"`, weiß es nicht mehr weiter und bricht mit einer Fehlermeldung (**`FormatException`**) ab!
-
----
-
-## 4. Die Sache mit Punkt und Komma
-
-Warum stürzt `double.Parse("1.5")` auf vielen deutschen PCs ab?
-
-- In Deutschland schreiben wir Kommazahlen mit einem **Komma**: `1,5 Euro`.
-- In den USA schreibt man Kommazahlen mit einem **Punkt**: `1.5 Dollars`.
-- C# orientiert sich bei `double.Parse(...)` an der **Spracheinstellung deines Betriebssystems**.
-  - Deutsches Windows: Erwartet bei der Eingabe im Terminal `1,5`.
-  - Englischer Code: Im C#-Quellcode schreibst du immer den Punkt `1.5`.
-
 {% capture tipp %}
-Wenn du möchtest, dass dein Programm immer den Punkt akzeptiert (egal auf welchem PC), kannst du später `CultureInfo.InvariantCulture` kennenlernen. Für den Moment gilt: **Im Code der Punkt, bei der Konsolen-Eingabe auf deutschen Tastaturen das Komma!**
+**Lösung / Tipp zu V4.1:**
+
+Denke daran, beide Eingaben in `double` umzuwandeln und die Prozentrechnung durchzuführen:
+
+```csharp
+Console.Write("Gib den Originalpreis ein: ");
+double preis = double.Parse(Console.ReadLine()!);
+
+Console.Write("Gib den Rabatt in Prozent ein (z. B. 20): ");
+double rabattProzent = double.Parse(Console.ReadLine()!);
+
+double ersparnis = preis * (rabattProzent / 100.0);
+double endpreis = preis - ersparnis;
+
+Console.WriteLine();
+Console.WriteLine($"Originalpreis: {preis:F2} €");
+Console.WriteLine($"Rabatt ({rabattProzent}%):  {ersparnis:F2} €");
+Console.WriteLine($"Endpreis:      {endpreis:F2} €");
+```
+*Tipp:* `{preis:F2}` formatiert die Kommazahl auf genau 2 Nachkommastellen!
 {% endcapture %}
 {% include tipp.html inhalt=tipp %}
 
 ---
 
-## 5. Die grüne Wellenlinie bei `ReadLine()`
+### Aufgabe V4.2: Namens-Kombinierer
+Frage den Nutzer nach:
+1. Vorname
+2. Nachname
+3. Geburtsjahr
 
-Vielleicht ist dir in Visual Studio eine kleine gelbe oder grüne Welle unter `Console.ReadLine()` aufgefallen mit der Meldung:
-`CS8600: Das NULL-Literal oder ein möglicher NULL-Wert wird in einen Non-Nullable-Typ konvertiert.`
+Gib anschließend einen automatisch generierten Benutzernamen aus, der aus dem ersten Buchstaben des Vornamens, dem vollen Nachnamen und den letzten beiden Ziffern des Geburtsjahres besteht:
+*Beispiel:* `Max`, `Mustermann`, `1998` -> `mmustermann98`
 
-**Was bedeutet das?**
-Der Benutzer könnte rein theoretisch die Eingabe abbrechen (z. B. mit `Strg + Z` im Terminal). Dann würde `ReadLine()` den Wert `null` ("gar nichts / kein Objekt") zurückgeben.
-C# möchte dich nur freundlich warnen: *"Hey, bist du sicher, dass da Text ankommt?"*
+{% capture tipp %}
+**Lösung / Tipp zu V4.2:**
 
-Für Einsteiger gilt: Du kannst diese Warnung vorerst getrost ignorieren, oder du schreibst `string? eingabe = Console.ReadLine();` (mit einem Fragezeichen hinter `string`), um C# zu beruhigen.
-
----
-
-## 6. Vertiefungsaufgaben
-
-### Vertiefungsaufgabe 4.1 – Die Kassen-Abrechnung
-Schreibe ein Programm für einen Kiosk:
-1. Frage nach dem Preis eines Artikels (als `double`).
-2. Frage nach der Stückzahl (als `int`).
-3. Frage, wie viel Bargeld der Kunde gibt (als `double`).
-4. Berechne den Gesamtpreis und das Wechselgeld und gib beides übersichtlich aus.
-
-<details>
-<summary>👉 Klicke hier für eine Beispiellösung</summary>
+Du kannst mit `ToLower()` alles kleinschreiben und mit Modulo `% 100` die letzten beiden Ziffern des Jahres herausfiltern:
 
 ```csharp
-Console.Write("Preis pro Stück (z. B. 1,50): ");
-double einzelpreis = double.Parse(Console.ReadLine());
+Console.Write("Vorname: ");
+string vorname = Console.ReadLine()!;
 
-Console.Write("Anzahl: ");
-int anzahl = int.Parse(Console.ReadLine());
+Console.Write("Nachname: ");
+string nachname = Console.ReadLine()!;
 
-double gesamtpreis = einzelpreis * anzahl;
-Console.WriteLine($"Das macht zusammen: {gesamtpreis:0.00} €");
+Console.Write("Geburtsjahr: ");
+int jahr = int.Parse(Console.ReadLine()!);
 
-Console.Write("Gegebener Betrag: ");
-double gegeben = double.Parse(Console.ReadLine());
+// Erster Buchstabe des Vornamens (Index 0)
+char vornameInitial = vorname[0];
 
-double wechselgeld = gegeben - gesamtpreis;
-Console.WriteLine($"Wechselgeld: {wechselgeld:0.00} €");
+// Letzte zwei Ziffern des Jahres (z. B. 1998 % 100 = 98)
+int kurzJahr = jahr % 100;
+
+string benutzername = $"{vornameInitial}{nachname}{kurzJahr}".ToLower();
+
+Console.WriteLine($"Dein generierter Benutzername: {benutzername}");
 ```
-</details>
-
-### Vertiefungsaufgabe 4.2 – Denkaufgabe: Was passiert hier?
-Schau dir folgenden Code an:
-```csharp
-Console.Write("Alter: ");
-int alter = int.Parse(Console.ReadLine());
-Console.WriteLine("In 5 Jahren bist du: " + alter + 5);
-```
-Warum gibt das Programm bei Eingabe von `20` am Ende `In 5 Jahren bist du: 205` aus?
-Wie reparierst du den Fehler?
-
-<details>
-<summary>👉 Klicke hier für die Erklärung</summary>
-
-C# arbeitet von links nach rechts. Sobald ein `string` ("In 5 Jahren bist du: ") mit einer Zahl (`alter = 20`) mit `+` verbunden wird, wird das Gesamte zu Text ("In 5 Jahren bist du: 20"). Das nächste `+ 5` hängt dann einfach wieder die `5` hinten als Text an!
-
-**Lösung 1 (Klammern):**
-`Console.WriteLine("In 5 Jahren bist du: " + (alter + 5));`
-
-**Lösung 2 (viel schöner mit `$`):**
-`Console.WriteLine($"In 5 Jahren bist du: {alter + 5}");`
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
