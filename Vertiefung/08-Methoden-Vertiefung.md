@@ -1,7 +1,7 @@
 ---
 title: 08 - Vertiefung Methoden
-parent: Kapitel
-nav_order: 108
+parent: Vetiefung
+nav_order: 8
 ---
 # Kapitel 8 – Vertiefung: Methoden, Parameter und Scope
 
