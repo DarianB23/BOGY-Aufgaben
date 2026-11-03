@@ -1,7 +1,7 @@
 ---
 title: 06 - Vertiefung Schleifen
-parent: Kapitel
-nav_order: 106
+parent: Vertiefung
+nav_order: 6
 ---
 # Kapitel 6 – Vertiefung: Schleifen meistern
 
