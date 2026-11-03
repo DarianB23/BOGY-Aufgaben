@@ -1,5 +1,5 @@
 ---
-title: 07 - Vertiefung: Arrays und Listen
+title: 07 - Vertiefung Arrays und Listen
 parent: Kapitel
 nav_order: 107
 ---
