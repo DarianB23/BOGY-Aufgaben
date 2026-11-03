@@ -3,130 +3,143 @@ title: 03 - Vertiefung Rechnen und Vergleichen
 parent: Vertiefung
 nav_order: 3
 ---
-# Kapitel 3 – Vertiefung: Rechnen, Modulo und Logik
+# Kapitel 3 – Rechnen und Vergleichen (Vertiefung)
 
-[← Zurück zu Kapitel 3](03-Rechnen-und-Vergleichen.md) | [Übersicht](../README.md)
+[← Zurück zu Kapitel 3](../Kapitel/03-Rechnen-und-Vergleichen.md) | [Übersicht](../README.md) | [Weiter: Eingaben Vertiefung →](04-Eingaben-Vertiefung.md)
 
-Rechnen am Computer scheint vertraut, birgt aber zwei der größten Überraschungen für Programmieranfänger: die Ganzzahldivision und der Modulo-Operator `%`. Hier erfährst du, was dahintersteckt.
-
----
-
-## 1. Das Rätsel der Ganzzahldivision
-
-Warum ergibt `7 / 2` in C# das Ergebnis `3` und nicht `3.5`?
-
-### Die goldene Regel der Typ-Berechnung
-C# schaut sich vor dem Rechnen die Typen der beiden Operanden an:
-- `int` geteilt durch `int` ergibt **immer einen `int`**!
-- Bei einem `int` gibt es schlicht keine Nachkommastellen im Speicher. C# schneidet die Nachkommastellen einfach rigoros ab (es rundet nicht!). Aus `3.99` wird `3`.
-
-```csharp
-int a = 7;
-int b = 2;
-int ergebnis = a / b; // Ergebnis ist 3
-```
-
-### Wie erzwingst du Nachkommastellen?
-Sobald **mindestens einer** der beiden Werte ein `double` ist, rechnet C# in Kommazahlen weiter!
-
-```csharp
-double ergebnis1 = 7.0 / 2;         // 3.5 (weil 7.0 ein double ist)
-double ergebnis2 = 7 / 2.0;         // 3.5 (weil 2.0 ein double ist)
-double ergebnis3 = (double)a / b;   // 3.5 (Typumwandlung / "Cast" von a in double)
-```
-
-{% capture notiz %}
-Achtung Falle:
-```csharp
-double falsch = 7 / 2; // falsch ist 3.0, NICHT 3.5!
-```
-Warum? Weil C# zuerst rechts rechnet: `7 / 2` (zwei ints) ergibt `3`. Erst danach wird die `3` in das `double` gespeichert und zu `3.0`!
-{% endcapture %}
-{% include notiz.html typ="warning" titel="Typische Denk-Falle" offen=true inhalt=notiz %}
+Rechnen und Vergleichen wirken auf den ersten Blick wie einfache Schulmathematik. In Programmiersprachen gibt es jedoch ein paar Besonderheiten, die regelmäßig zu Verwirrung führen.
 
 ---
 
-## 2. Modulo `%` bildlich verstehen
+## 1. Die Ganzzahldivision: Warum ist `7 / 2 = 3`?
 
-Der Modulo-Operator `%` berechnet den **Rest** einer ganzzahligen Division.
+Wenn du zwei ganze Zahlen (`int`) teilst, führt C# eine **Ganzzahldivision** durch:
+```csharp
+int ergebnis = 7 / 2;
+Console.WriteLine(ergebnis); // Ausgabe: 3
+```
 
-### Das Kisten-Beispiel:
-Du hast **14 Äpfel** und Kartons, in die genau **4 Äpfel** passen:
-- **Ganzzahl-Division (`14 / 4`):** Wie viele Kartons werden randvoll? -> **3 Kartons** (denn 3 * 4 = 12).
-- **Modulo (`14 % 4`):** Wie viele Äpfel bleiben lose übrig? -> **2 Äpfel** (14 - 12 = 2).
+*Warum nicht 3.5?*
+Weil `7` ein `int` ist und `2` ein `int` ist. C# rechnet: `int / int = int`. Der Rest bzw. die Nachkommastelle wird einfach abgeschnitten (nicht gerundet!).
 
-### Wofür braucht man das ständig?
-1. **Gerade oder ungerade Zahl?**
-   Jede gerade Zahl lässt sich restlos durch 2 teilen:
+### Wie erreichst du eine echte Kommazahl?
+Mindestens **eine** der beiden Zahlen muss ein `double` sein:
+```csharp
+double ergebnis1 = 7.0 / 2;   // 3.5
+double ergebnis2 = 7 / 2.0;   // 3.5
+double ergebnis3 = (double)7 / 2; // 3.5 (sogenannter "Cast")
+```
+
+---
+
+## 2. Der Modulo-Operator `%` (Der Divisionsrest)
+
+Modulo berechnet den **Rest** einer Ganzzahldivision.
+
+**Anschauliches Beispiel:**
+Du hast 14 Äpfel und packst sie in 4er-Tüten:
+- $14 / 4 = 3$ volle Tüten (das sind 12 Äpfel).
+- Es bleiben **2 Äpfel übrig**.
+- $14 \% 4 = 2$.
+
+### Wichtigste Anwendungsfälle in der Praxis:
+1. **Gerade oder ungerade Zahl prüfen:**
    ```csharp
-   bool istGerade = (zahl % 2 == 0); // true, wenn Rest 0 ist
+   bool istGerade = (zahl % 2 == 0); // Rest 0 bei Teilung durch 2 -> gerade!
    ```
-2. **Uhren & Kreisläufe:**
-   Wenn es 10 Uhr ist und 5 Stunden vergehen: `(10 + 5) % 12` ergibt `3` Uhr.
-3. **Jeden N-ten Durchlauf erkennen:**
-   Z. B. in Spielen jeden 10. Frame speichern: `if (runde % 10 == 0)`.
+2. **Uhrzeit / Minuten umrechnen:**
+   ```csharp
+   int gesamtMinuten = 130;
+   int stunden = gesamtMinuten / 60; // 2
+   int restMinuten = gesamtMinuten % 60; // 10 (also 2 Stunden und 10 Minuten)
+   ```
 
 ---
 
 ## 3. Zuweisung `=` vs. Vergleich `==`
 
-- **`=` (Ein Gleichheitszeichen):** Der **Befehl zum Speichern**. Nimm den Wert rechts und pack ihn in die Variable links.
-  `alter = 18;` -> "Mach das Alter zu 18!"
-- **`==` (Zwei Gleichheitszeichen):** Die **Frage nach Gleichheit**. Vergleiche links und rechts und antworte mit `true` oder `false`.
-  `alter == 18;` -> "Ist das Alter gleich 18?"
+Das ist eine der häufigsten Fehlerquellen überhaupt:
+
+| Operator | Name | Bedeutung | Beispiel |
+|---|---|---|---|
+| `=` | Zuweisungsoperator | **Befehl:** "Speichere den rechten Wert in der linken Variable!" | `x = 5;` |
+| `==` | Gleichheitsoperator | **Frage:** "Ist der linke Wert gleich dem rechten Wert?" | `x == 5` (ergibt `true` oder `false`) |
+
+Merkregel:
+- Ein `=` vergibt einen Wert.
+- Zwei `==` fragen den Wert ab.
 
 ---
 
-## 4. Logische Operatoren im Alltag
+## 4. Logische Operatoren (`&&`, `||`, `!`)
 
-Logik-Operatoren verbinden Wahrheitswerte:
+- `&&` (UND): Beide Bedingungen müssen wahr sein.
+- `||` (ODER): Mindestens eine Bedingung muss wahr sein.
+- `!` (NICHT): Kehrt den Wahrheitswert um (`!true` wird zu `false`).
 
-| Operator | Bedeutung | Alltagsbeispiel |
-|---|---|---|
-| `&&` (UND) | **Beide** müssen wahr sein | *"Du darfst den Rabatt nutzen, wenn du Schüler bist `&&` einen Schülerausweis dabeihast."* Fehlt eins davon, gibt es keinen Rabatt. |
-| `\|\|` (ODER) | **Mindestens eine** Seite muss wahr sein | *"Du darfst kostenlos fahren, wenn du ein Ticket hast `\|\|` heute autofreier Sonntag ist."* Eines reicht völlig aus! |
-| `!` (NICHT) | Dreht den Wert um | `!istRegnerisch` -> Es ist **nicht** regnerisch (also schönes Wetter). |
-
-### Das "Kurzschluss"-Prinzip (Short-Circuit)
+### Kurzschluss-Auswertung (Short-Circuit Evaluation)
 C# ist clever:
-- Bei `false && ...`: Da die erste Bedingung schon `false` ist, kann der gesamte Ausdruck niemals mehr `true` werden. C# schaut die zweite Bedingung gar nicht mehr an!
-- Bei `true || ...`: Da die erste Bedingung schon `true` ist, steht fest, dass das Gesamtergebnis `true` ist.
+- Bei `false && ...` schaut C# gar nicht mehr auf die zweite Bedingung, weil ein `UND` sowieso schon verloren ist.
+- Bei `true || ...` schaut C# gar nicht mehr auf die zweite Bedingung, weil ein `ODER` sowieso schon gewonnen hat.
 
 ---
 
-## 5. Vertiefungsaufgaben
+## 5. Vertiefungsaufgaben mit Tipps
 
-### Vertiefungsaufgabe 3.1 – Rechenausdrücke vorhersagen
-Was kommt bei diesen Rechnungen heraus? Überlege erst im Kopf:
-1. `15 / 4`
-2. `15 % 4`
-3. `15.0 / 4`
-4. `(10 + 2) * 3`
-5. `10 + 2 * 3`
+### Aufgabe V3.1: Minuten und Sekunden aufteilen
+Schreibe ein Programm, das eine vorgegebene Sekundenanzahl (z. B. `325` Sekunden) in Minuten und Restsekunden aufteilt und formatiert ausgibt:
+```text
+325 Sekunden entsprechen 5 Minute(n) und 25 Sekunde(n).
+```
 
-<details>
-<summary>👉 Klicke hier für die Lösung</summary>
+{% capture tipp %}
+**Lösung / Tipp zu V3.1:**
 
-1. `3` (15 / 4 passt 3-mal ganz hinein)
-2. `3` (Rest: 3 * 4 = 12; 15 - 12 = 3)
-3. `3.75` (Kommadivision wegen `15.0`)
-4. `36` (Klammern zuerst: 12 * 3)
-5. `16` (Punkt vor Strich: 2 * 3 = 6, dann 10 + 6)
-</details>
-
-### Vertiefungsaufgabe 3.2 – Der Schaltjahr-Detektiv
-Ein Jahr ist ein Schaltjahr, wenn:
-- es durch 4 teilbar ist, **UND**
-- es **nicht** durch 100 teilbar ist (außer es ist durch 400 teilbar).
-
-Versuche diesen Ausdruck in einer einzigen C#-Bedingung für `int jahr = 2024;` aufzuschreiben:
-
-<details>
-<summary>👉 Klicke hier für die Lösung</summary>
+Nutze die Ganzzahldivision `/` für die vollen Minuten und Modulo `%` für die verbleibenden Sekunden:
 
 ```csharp
-int jahr = 2024;
-bool istSchaltjahr = (jahr % 4 == 0 && jahr % 100 != 0) || (jahr % 400 == 0);
-Console.WriteLine($"Ist {jahr} ein Schaltjahr? {istSchaltjahr}");
+int gesamtSekunden = 325;
+
+int minuten = gesamtSekunden / 60;
+int sekunden = gesamtSekunden % 60;
+
+Console.WriteLine($"{gesamtSekunden} Sekunden entsprechen {minuten} Minute(n) und {sekunden} Sekunde(n).");
 ```
-</details>
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
+
+---
+
+### Aufgabe V3.2: Freizeitpark-Einlassprüfer
+Eine Achterbahn darf nur betreten werden, wenn:
+- Die Person mindestens **140 cm** groß ist **UND**
+- Die Person mindestens **12 Jahre** alt ist **ODER** in Begleitung eines Erwachsenen ist.
+
+Lege drei Variablen an:
+```csharp
+int groesseInCm = 135;
+int alter = 10;
+bool hatBegleitung = true;
+```
+Formuliere einen einzigen logischen Ausdruck, der in einem `bool darfMitfahren` speichert, ob die Person mitfahren darf.
+
+{% capture tipp %}
+**Lösung / Tipp zu V3.2:**
+
+Achte auf die Klammern, damit `UND` und `ODER` in der richtigen Reihenfolge ausgewertet werden:
+
+```csharp
+int groesseInCm = 135;
+int alter = 10;
+bool hatBegleitung = true;
+
+// Größe muss stimmen UND (Alter ODER Begleitung)
+bool darfMitfahren = (groesseInCm >= 140) && (alter >= 12 || hatBegleitung);
+
+Console.WriteLine($"Darf mitfahren: {darfMitfahren}");
+// Hier: False, da groesseInCm (135) unter 140 liegt!
+```
+*Hinweis:* Ohne die Klammern um `(alter >= 12 || hatBegleitung)` würde C# wegen Operator-Vorrang zuerst das `&&` auswerten, was zu falschen Ergebnissen führen könnte.
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
+
