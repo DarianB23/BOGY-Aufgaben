@@ -3,171 +3,181 @@ title: 05 - Vertiefung Verzweigungen
 parent: Vertiefung
 nav_order: 5
 ---
-# Kapitel 5 – Vertiefung: Verzweigungen und Entscheidungslogik
+# Kapitel 5 – Verzweigungen (Vertiefung)
 
-[← Zurück zu Kapitel 5](05-Verzweigungen.md) | [Übersicht](../README.md)
+[← Zurück zu Kapitel 5](../Kapitel/05-Verzweigungen.md) | [Übersicht](../README.md) | [Weiter: Schleifen Vertiefung →](06-Schleifen-Vertiefung.md)
 
-Computer wirken intelligent, weil sie Entscheidungen treffen können. Doch wie genau hangelt sich C# durch Bedingungen? Warum ist der Unterschied zwischen mehreren `if`s und einer Kette aus `else if` so entscheidend?
+Mit Verzweigungen triffst du Entscheidungen im Code. Manchmal verhalten sich `if`-Anweisungen jedoch ganz anders als erwartet – vor allem, wenn man mehrere Bedingungen hintereinander hängt.
 
 ---
 
-## 1. Die große Falle: `if` vs. `else if`
+## 1. Die Kaskaden-Falle: Mehrere `if` vs. `if - else if`
 
-Stell dir eine Ampel vor: Sie kann rot, gelb oder grün sein – aber immer nur **eines** davon.
+Das ist einer der häufigsten logischen Fehler bei Programmieranfängern:
 
-Schau dir diesen Fehler an:
-
+### Fall A: Viele unabhängige `if`s
 ```csharp
-int punkte = 95;
+int alter = 20;
 
-// FALSCH: Lauter einzelne ifs
-if (punkte >= 50)
+if (alter >= 12)
 {
-    Console.WriteLine("Bestanden!");
+    Console.WriteLine("Du darfst Jugendfilme sehen.");
 }
-if (punkte >= 90)
+if (alter >= 18)
 {
-    Console.WriteLine("Auszeichnung erhalten!");
+    Console.WriteLine("Du bist volljährig.");
 }
 ```
 **Ausgabe:**
+```text
+Du darfst Jugendfilme sehen.
+Du bist volljährig.
 ```
-Bestanden!
-Auszeichnung erhalten!
-```
-Beide Blöcke werden ausgeführt, weil C# jedes `if` als **völlig neue, unabhängige Frage** betrachtet!
+*Warum?* Der Computer prüft **jedes** `if` einzeln! Da `20 >= 12` wahr ist und `20 >= 18` auch wahr ist, werden **beide** Blöcke ausgeführt.
 
-### Die Lösung: Die `else if`-Kette
+---
 
-Bei einer `if - else if - else`-Kette gilt: **Sobald eine Tür aufgeht, sind alle anderen Türen für immer verschlossen!**
-
+### Fall B: Geschlossene Kette mit `else if`
 ```csharp
-if (punkte >= 90)
+int alter = 20;
+
+if (alter >= 18)
 {
-    Console.WriteLine("Note: Sehr Gut");
+    Console.WriteLine("Erwachsener");
 }
-else if (punkte >= 75)
+else if (alter >= 12)
 {
-    Console.WriteLine("Note: Gut");
-}
-else if (punkte >= 50)
-{
-    Console.WriteLine("Note: Bestanden");
+    Console.WriteLine("Jugendlicher");
 }
 else
 {
-    Console.WriteLine("Nicht bestanden");
+    Console.WriteLine("Kind");
 }
 ```
-*Beachte auch die Reihenfolge:* Wir prüfen von **oben nach unten**, beginnend mit dem höchsten Wert. Wenn du mit `punkte >= 50` angefangen hättest, wäre jeder mit 95 Punkten sofort bei "Bestanden" gelandet und hätte nie das "Sehr Gut" erreicht!
+**Ausgabe:**
+```text
+Erwachsener
+```
+*Warum?* Sobald eine Bedingung in einer `if - else if`-Kette wahr ist, führt C# **nur diesen einen Block** aus und überspringt den Rest der Kette komplett!
 
 ---
 
-## 2. Der unsichtbare Killer: Das Semikolon nach dem `if`
+## 2. Der unsichtbare Killer: Das Semikolon hinter dem `if`
 
-Einer der am schwersten zu findenden Tippfehler ist dieser:
-
+Siehst du den Fehler in diesem Code?
 ```csharp
-int alter = 12;
+int note = 5;
 
-if (alter >= 18); // <-- ACHTUNG: Hier steht ein Semikolon!
+if (note == 1);
 {
-    Console.WriteLine("Du darfst Auto fahren!");
+    Console.WriteLine("Hervorragend! Du hast eine 1!");
 }
 ```
-**Was passiert hier?**
-Das Programm gibt fröhlich *"Du darfst Auto fahren!"* aus, obwohl `alter` nur 12 ist!
+Wenn du das ausführst, gibt das Programm den Text aus, obwohl `note == 5` ist!
 
-**Warum?**
-Ein Semikolon beendet eine Anweisung. C# liest das so:
-`if (alter >= 18)` -> *Mache gar nichts! (leere Anweisung)*
-Danach kommt ein ganz gewöhnlicher Code-Block in `{ }`, der **in jedem Fall** ausgeführt wird!
-
-**Merke:** Hinter die runde Klammer einer Bedingung `if (...)` kommt **niemals** direkt ein Semikolon `;`!
+**Warum passiert das?**
+Das Semikolon hinter `if (note == 1);` beendet die `if`-Anweisung sofort mit einem leeren Befehl. Die geschweiften Klammern `{ ... }` darunter gelten für C# als eigenständiger Codeblock, der **immer** ausgeführt wird.
+**Regel:** Hinter runde Klammern bei `if (...)` gehört **niemals** ein Semikolon!
 
 ---
 
-## 3. `switch` vs. `if`: Wann nimmt man was?
+## 3. Wann `switch` und wann `if`?
 
-| Kriterium | `if` / `else if` | `switch` |
-|---|---|---|
-| Wertebereiche | Perfekt: `alter >= 18 && alter < 67` | Umständlich / nicht dafür gedacht |
-| Feste Einzelwerte | Möglich, aber viel Schreibarbeit | Perfekt: Menüs (`"1"`, `"2"`, `"3"`), Wochentage |
-| Logische Verknüpfungen | Beliebig mit `&&` und `\|\|` kombinierbar | Nur ein einziger Wert wird verglichen |
+- Nimm **`switch`**, wenn du **eine einzige Variable** auf feste, konkrete Werte vergleichst (z. B. Wochentage 1–7, Menüauswahl `'A'`, `'B'`, `'C'`).
+- Nimm **`if`**, wenn du **Bereiche** prüfst (`groesse > 140 && groesse < 190`) oder **unterschiedliche Variablen** miteinander verknüpfst.
 
-### Der Trick mit `switch` und gemeinsamen Fällen
+---
 
-Wusstest du, dass mehrere `case`-Blöcke denselben Code ausführen können, wenn du das `break` weglässt?
+## 4. Vertiefungsaufgaben mit Tipps
+
+### Aufgabe V5.1: Noten-Bewerter
+Schreibe ein Programm, das eine Schulnote (1 bis 6) abfragt und eine passende Rückmeldung gibt:
+- 1: "Sehr gut"
+- 2: "Gut"
+- 3: "Befriedigend"
+- 4: "Ausreichend"
+- 5: "Mangelhaft"
+- 6: "Ungenügend"
+- Alle anderen Zahlen: "Ungültige Note!"
+
+Löse die Aufgabe einmal mit `switch` und überlege, warum `switch` hier besonders übersichtlich ist.
+
+{% capture tipp %}
+**Lösung / Tipp zu V5.1:**
+
+Mit `switch` sieht die Lösung extrem aufgeräumt aus:
 
 ```csharp
-Console.Write("Gib einen Buchstaben ein: ");
-char c = char.ToLower(Console.ReadKey().KeyChar);
-Console.WriteLine();
+Console.Write("Gib eine Schulnote (1-6) ein: ");
+int note = int.Parse(Console.ReadLine()!);
 
-switch (c)
+switch (note)
 {
-    case 'a':
-    case 'e':
-    case 'i':
-    case 'o':
-    case 'u':
-        Console.WriteLine("Das ist ein Vokal!");
+    case 1:
+        Console.WriteLine("Sehr gut");
+        break;
+    case 2:
+        Console.WriteLine("Gut");
+        break;
+    case 3:
+        Console.WriteLine("Befriedigend");
+        break;
+    case 4:
+        Console.WriteLine("Ausreichend");
+        break;
+    case 5:
+        Console.WriteLine("Mangelhaft");
+        break;
+    case 6:
+        Console.WriteLine("Ungenügend");
         break;
     default:
-        Console.WriteLine("Das ist ein Konsonant oder Sonderzeichen.");
+        Console.WriteLine("Ungültige Note!");
         break;
 }
 ```
+*Tipp:* Vergiss nach jedem `case` das `break;` nicht, sonst beschwert sich der C#-Compiler!
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
 
 ---
 
-## 4. Vertiefungsaufgaben
+### Aufgabe V5.2: Ampel-Schaltung
+Programmiere eine Ampel-Logik:
+Der Nutzer gibt die Farbe der Ampel ein (`"rot"`, `"gelb"`, `"grün"`).
+- Bei `"rot"`: "Stehen bleiben!"
+- Bei `"gelb"`: "Bremsbereit machen!"
+- Bei `"grün"`: "Fahren!"
+- Bei jeder anderen Eingabe: "Ampel ist defekt!"
 
-### Vertiefungsaufgabe 5.1 – Logik aufräumen
-Vereinfache folgenden verschachtelten Code in ein einziges, übersichtliches `if - else`:
+Sorge dafür, dass die Eingabe auch funktioniert, wenn der Nutzer `"ROT"` oder `"Grün"` mit Großbuchstaben schreibt.
+
+{% capture tipp %}
+**Lösung / Tipp zu V5.2:**
+
+Nutze `.ToLower()`, um die Eingabe vor der Prüfung in Kleinbuchstaben umzuwandeln:
 
 ```csharp
-if (istWochenende == true)
+Console.Write("Welche Farbe zeigt die Ampel? ");
+string farbe = Console.ReadLine()!.ToLower().Trim();
+
+if (farbe == "rot")
 {
-    if (scheintSonne == true)
-    {
-        Console.WriteLine("Ab an den See!");
-    }
-    else
-    {
-        Console.WriteLine("Zuhause Serien schauen.");
-    }
+    Console.WriteLine("Stehen bleiben!");
+}
+else if (farbe == "gelb")
+{
+    Console.WriteLine("Bremsbereit machen!");
+}
+else if (farbe == "grün")
+{
+    Console.WriteLine("Fahren!");
 }
 else
 {
-    Console.WriteLine("Arbeiten oder lernen.");
+    Console.WriteLine("Ampel ist defekt!");
 }
 ```
-
-<details>
-<summary>👉 Klicke hier für die Lösung</summary>
-
-```csharp
-if (istWochenende && scheintSonne)
-{
-    Console.WriteLine("Ab an den See!");
-}
-else if (istWochenende && !scheintSonne)
-{
-    Console.WriteLine("Zuhause Serien schauen.");
-}
-else
-{
-    Console.WriteLine("Arbeiten oder lernen.");
-}
-```
-*Tipp:* `== true` lässt man in C# einfach weg. `if (istWochenende)` ist viel eleganter und liest sich wie gesprochenes Deutsch!
-</details>
-
-### Vertiefungsaufgabe 5.2 – Das Text-Abenteuerspiel
-Erstelle ein winziges textbasiertes Verzweigungs-Abenteuer:
-Der Spieler steht vor zwei Türen ("links" oder "rechts").
-- Links: Dahinter ist ein schlafender Drache. Der Spieler kann "schleichen" oder "rennen".
-- Rechts: Dahinter ist eine Schatztruhe. Der Spieler kann "oeffnen" oder "umkehren".
-
-Baue die Entscheidungen mit `if` oder `switch` und fang Fehleingaben mit einem `else` / `default` ab.
+*Tipp:* `.Trim()` entfernt zusätzlich versehentliche Leerzeichen am Anfang oder Ende der Eingabe.
+{% endcapture %}
+{% include tipp.html inhalt=tipp %}
