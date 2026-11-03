@@ -1,7 +1,7 @@
 ---
 title: 11 - Vertiefung Abschlussprojekt
-parent: Kapitel
-nav_order: 111
+parent: Vertiefung
+nav_order: 11
 ---
 # Kapitel 11 – Vertiefung: Projektarchitektur und Game-Loop
 
