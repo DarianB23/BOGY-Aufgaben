@@ -131,10 +131,4 @@ Console.WriteLine("Er sagte: "Hallo Welt"");
 Console.Write("Ende des Programms")
 ```
 
-<details>
-<summary>👉 Klicke hier für die Lösung</summary>
 
-1. **Zeile 1:** `console` muss großgeschrieben werden (`Console`), und am Zeilenende fehlt das Semikolon `;`.
-2. **Zeile 2:** Die inneren Anführungszeichen verwirren C#. Richtig ist `\"Hallo Welt\"`.
-3. **Zeile 3:** Am Zeilenende fehlt das Semikolon `;`.
-</details>
