@@ -11,16 +11,16 @@ Hier gibt es für jedes einzelne Kapitel noch weitere Erklärungen, Aufgaben und
 
 ## Überblick
 
-| Nr. | Kapitel | Das lernst du | Vertiefung |
-|---|---|---|---|
-| 1 | [Erste Schritte](01-Erste-Schritte.md) | Projekt anlegen, `Console.WriteLine`, Kommentare | [Vertiefung Erste Schritte](../Vertiefung/01-Erste-Schritte-Vertiefung.md) |
-| 2 | [Variablen](02-Variablen.md) | `int`, `double`, `string`, `bool`, String-Interpolation | [Vertiefung Variablen](../Vertiefung/02-Variablen-Vertiefung.md) |
-| 3 | [Rechnen & Vergleichen](03-Rechnen-und-Vergleichen.md) | Rechenzeichen, Modulo `%`, Vergleiche, `&&` und `\|\|` | [Vertiefung Rechnen und Vergleichen](../Vertiefung/03-Rechnen-und-Vergleiche-Vertiefung.md) |
-| 4 | [Eingaben](04-Eingaben.md) | `Console.ReadLine`, Text in Zahlen umwandeln | [Vertiefung Eingaben](../Vertiefung/04-Eingaben-Vertiefung.md) |
-| 5 | [Verzweigungen](05-Verzweigungen.md) | `if`, `else if`, `else`, `switch` | [Vertiefung Verzweigungen](../Vertiefung/05-Verzweigungen-Vertiefung.md) |
-| 6 | [Schleifen](06-Schleifen.md) | `for`, `while`, `do-while`, `break` | [Vertiefung Schleifen](../Vertiefung/06-Schleifen-Vertiefung.md) |
-| 7 | [Collections](07-Collections.md) | Arrays, `List<T>`, `foreach` | [Vertiefung Collections](../Vertiefung/07-Collections-Vertiefung.md) |
-| 8 | [Methoden](08-Methoden.md) | eigene Methoden, Parameter, `return` | [Vertiefung Methoden](../Vertiefung/08-Methoden-Vertiefung.md) |
-| 9 | [Klassen](09-Klassen.md) | Klassen, Objekte, Konstruktor | [Vertiefung Klassen](../Vertiefung/09-Klassen-Vertiefung.md) |
-| 10 | [Fehler abfangen](10-Fehler-abfangen.md) | `try`/`catch`, `int.TryParse` | [Vertiefung Fehler abfangen](../Vertiefung/10-Fehler-abfangen-Vertiefung.md) |
-| 11 | [Abschlussprojekt](11-Abschlussprojekt.md) | alles zusammen: Zahlenraten in 4 Stufen | [Vertiefung Abschlussprojekt](../Vertiefung/11-Abschlussprojekt-Vertiefung.md) |
+| Nr. | Kapitel | Das lernst du |
+|---|---|---|
+| 1 | [Erste Schritte](01-Erste-Schritte-Vertiefung.md) | Compiler-Denkweise, `Write` vs `WriteLine`, Escape-Sequenzen (`\n`,`\t`,`\"`), Verbatim-Strings (`@"..."`), Fehlermeldungen verstehen |
+| 2 | [Variablen](02-Variablen-Vertiefung.md) | RAM-Speichermodell, Deklaration vs. Zuweisung, `int`-Dopplungs-Falle, `char` vs. `string`, Variablen-Tausch (Swap) |
+| 3 | [Rechnen & Vergleichen](03-Rechnen-und-Vergleichen-Vertiefung.md) | Ganzzahldivision & Typecasting, Modulo `%`, Zuweisung `=` vs. Vergleich `==`, Logikoperatioren (`&&`,`\|\|`,`!`), Short-Circuit |
+| 4 | [Eingaben](04-Eingaben-Vertiefung.md) | `Console.ReadLine`, Text in Zahlen umwandeln |
+| 5 | [Verzweigungen](05-Verzweigungen-Vertiefung.md) | `if`, `else if`, `else`, `switch` |
+| 6 | [Schleifen](06-Schleifen-Vertiefung.md) | `for`, `while`, `do-while`, `break` |
+| 7 | [Collections](07-Collections-Vertiefung.md) | Arrays, `List<T>`, `foreach` |
+| 8 | [Methoden](08-Methoden-Vertiefung.md) | eigene Methoden, Parameter, `return` |
+| 9 | [Klassen](09-Klassen-Vertiefung.md) | Klassen, Objekte, Konstruktor |
+| 10 | [Fehler abfangen](10-Fehler-abfangen-Vertiefung.md) | `try`/`catch`, `int.TryParse` |
+| 11 | [Abschlussprojekt](11-Abschlussprojekt-Vertiefung.md) | alles zusammen: Zahlenraten in 4 Stufen |
