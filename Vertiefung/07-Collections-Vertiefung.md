@@ -1,7 +1,7 @@
 ---
 title: 07 - Vertiefung Arrays und Listen
-parent: Kapitel
-nav_order: 107
+parent: Vertiefung
+nav_order: 7
 ---
 # Kapitel 7 – Vertiefung: Arrays, Listen und Indizes
 
