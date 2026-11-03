@@ -1,5 +1,5 @@
 ---
-title: 02 - Vertiefung: Variablen und Datentypen
+title: 02 - Vertiefung Variablen und Datentypen
 parent: Vertiefung
 nav_order: 102
 ---
