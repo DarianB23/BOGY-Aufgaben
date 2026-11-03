@@ -12,9 +12,9 @@ Arbeite die Kapitel der Reihe nach durch, denn jedes baut auf dem vorherigen auf
 
 ## Überblick
 
-| Nr. | Kapitel | Das lernst du |
-|---|---|---|
-| 1 | [Erste Schritte](01-Erste-Schritte.md) | Projekt anlegen, `Console.WriteLine`, Kommentare |
+| Nr. | Kapitel | Das lernst du | Vertiefung |
+|---|---|---|---|
+| 1 | [Erste Schritte](01-Erste-Schritte.md) | Projekt anlegen, `Console.WriteLine`, Kommentare | [Vertiefung Erste Schritte](../Vertiefung/01-Erste-Schritte-Vertiefung.md) |
 | 2 | [Variablen](02-Variablen.md) | `int`, `double`, `string`, `bool`, String-Interpolation |
 | 3 | [Rechnen & Vergleichen](03-Rechnen-und-Vergleichen.md) | Rechenzeichen, Modulo `%`, Vergleiche, `&&` und `\|\|` |
 | 4 | [Eingaben](04-Eingaben.md) | `Console.ReadLine`, Text in Zahlen umwandeln |
