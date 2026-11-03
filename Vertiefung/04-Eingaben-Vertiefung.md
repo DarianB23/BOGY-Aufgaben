@@ -1,7 +1,7 @@
 ---
 title: 04 - Vertiefung Benutzereingaben
-parent: Kapitel
-nav_order: 104
+parent: Vertiefung
+nav_order: 4
 ---
 # Kapitel 4 – Vertiefung: Benutzereingaben und Typumwandlung
 
