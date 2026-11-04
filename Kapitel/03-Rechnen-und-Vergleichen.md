@@ -151,7 +151,7 @@ x % 2 == 1
 
 ## Checkliste
 
-- [ ] Ich kann mit `+`,`-`,`*`,`/` und `%` rechnen und weiß, was Modulo macht.
+- [ ] Ich kann mit `+`, `-`, `*`, `/` und `%` rechnen und weiß, was Modulo macht.
 - [ ] Ich weiß, warum `10 / 3` bei `int` den Wert `3` ergibt, und wie ich `3.333...` bekomme.
 - [ ] Ich kenne den Unterschied zwischen `=` und `==`.
 - [ ] Ich kann Bedingungen mit `&&`, `||` und `!` verknüpfen.
