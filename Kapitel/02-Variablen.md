@@ -151,4 +151,12 @@ Gib ihn einmal mit `$"..."` und einmal mit `+` aus.
 - [ ] Ich kann Variablen mit `$"... {variable} ..."` ausgeben.
 - [ ] Ich weiß, was `var` und `const` bedeuten.
 
+---
+
+
+Hast du noch weitere Fragen, bist bei einzelnen Themen noch unsicher oder möchtest einfach mehr Aufgaben zu diesem Kapitel bearbeiten? Schau dir gerne das Vertiefungskapitel an: \
+[Klicke hier um zur Vertiefung zu gelangen](../Vertiefung/02-Variablen-Vertiefung.md)
+
+---
+
 [← Erste Schritte](01-Erste-Schritte.md) | [Übersicht](../README.md) | [Weiter: Rechnen und Vergleichen →](03-Rechnen-und-Vergleichen.md)
