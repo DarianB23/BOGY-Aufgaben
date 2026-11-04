@@ -143,4 +143,11 @@ Merke dir die Ergebnisse – in [Kapitel 10](10-Fehler-abfangen.md) lösen wir d
 - [ ] Ich kann Eingaben mit `int.Parse` und `double.Parse` in Zahlen umwandeln.
 - [ ] Ich weiß, warum `celsius * 9 / 5` und `celsius * (9 / 5)` unterschiedliche Ergebnisse liefern.
 
+---
+
+Hast du noch weitere Fragen, bist bei einzelnen Themen noch unsicher oder möchtest einfach mehr Aufgaben zu diesem Kapitel bearbeiten? Schau dir gerne das Vertiefungskapitel an: \
+[Klicke hier um zur Vertiefung zu gelangen](../Vertiefung/04-Eingaben-Vertiefung.md)
+
+---
+
 [← Rechnen und Vergleichen](03-Rechnen-und-Vergleichen.md) | [Übersicht](../README.md) | [Weiter: Verzweigungen →](05-Verzweigungen.md)
