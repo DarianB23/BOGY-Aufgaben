@@ -5,7 +5,7 @@ nav_order: 4
 ---
 # Kapitel 4 – Eingaben (Vertiefung)
 
-[← Zurück zu Kapitel 4](04-Eingaben.md) | [Übersicht](../README.md) | [Weiter: Verzweigungen Vertiefung →](05-Verzweigungen-Vertiefung.md)
+[← Zurück zu Kapitel 4](../Kapitel/04-Eingaben.md) | [Übersicht](../README.md) | [Weiter: Verzweigungen Vertiefung →](05-Verzweigungen-Vertiefung.md)
 
 Die Interaktion mit dem Nutzer über `Console.ReadLine()` bringt eine fundamentale Neuerung: Das Programm verhält sich plötzlich dynamisch und reagiert auf Tastatureingaben. Hier erfährst du, was dabei im Hintergrund passiert.
 
