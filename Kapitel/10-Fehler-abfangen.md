@@ -149,4 +149,11 @@ Für Aufgabe 3 kannst du die Bedingung der `while`-Schleife erweitern:
 - [ ] Ich kann `int.TryParse` benutzen und erklären, was `out` bedeutet.
 - [ ] Meine `LiesZahl`-Methode stürzt bei falschen Eingaben nicht mehr ab.
 
+---
+
+Hast du noch weitere Fragen, bist bei einzelnen Themen noch unsicher oder möchtest einfach mehr Aufgaben zu diesem Kapitel bearbeiten? Schau dir gerne das Vertiefungskapitel an: \
+[Klicke hier um zur Vertiefung zu gelangen](../Vertiefung/10-Fehler-abfangen-Vertiefung.md)
+
+---
+
 [← Klassen und Objekte](09-Klassen.md) | [Übersicht](../README.md) | [Weiter: Abschlussprojekt →](11-Abschlussprojekt.md)
