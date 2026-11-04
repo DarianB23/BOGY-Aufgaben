@@ -98,6 +98,11 @@ Such dir aus, was dir gefällt:
 
 ---
 
+Hast du noch weitere Fragen, bist bei einzelnen Themen noch unsicher oder möchtest einfach mehr Aufgaben zu diesem Kapitel bearbeiten? Schau dir gerne das Vertiefungskapitel an: \
+[Klicke hier um zur Vertiefung zu gelangen](../Vertiefung/11-Abschlussprojekt-Vertiefung.md)
+
+---
+
 ## Geschafft!
 
 Herzlichen Glückwunsch – du hast die Grundlagen der Programmierung mit C# gelernt!
