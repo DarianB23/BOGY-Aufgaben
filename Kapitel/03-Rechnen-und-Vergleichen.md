@@ -156,4 +156,11 @@ x % 2 == 1
 - [ ] Ich kenne den Unterschied zwischen `=` und `==`.
 - [ ] Ich kann Bedingungen mit `&&`, `||` und `!` verknüpfen.
 
+---
+
+Hast du noch weitere Fragen, bist bei einzelnen Themen noch unsicher oder möchtest einfach mehr Aufgaben zu diesem Kapitel bearbeiten? Schau dir gerne das Vertiefungskapitel an: \
+[Klicke hier um zur Vertiefung zu gelangen](../Vertiefung/03-Rechnen-und-Vergleichen-Vertiefung.md)
+
+---
+
 [← Variablen](02-Variablen.md) | [Übersicht](../README.md) | [Weiter: Benutzereingaben →](04-Eingaben.md)
