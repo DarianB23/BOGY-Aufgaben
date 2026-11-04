@@ -15,7 +15,7 @@ Hier gibt es für jedes einzelne Kapitel noch weitere Erklärungen, Aufgaben und
 |---|---|---|
 | 1 | [Erste Schritte](01-Erste-Schritte-Vertiefung.md) | Compiler-Denkweise, `Write` vs `WriteLine`, Escape-Sequenzen (`\n`,`\t`,`\"`), Verbatim-Strings (`@"..."`), Fehlermeldungen verstehen |
 | 2 | [Variablen](02-Variablen-Vertiefung.md) | RAM-Speichermodell, Deklaration vs. Zuweisung, `int`-Dopplungs-Falle, `char` vs. `string`, Variablen-Tausch (Swap) |
-| 3 | [Rechnen & Vergleichen](03-Rechnen-und-Vergleichen-Vertiefung.md) | Ganzzahldivision & Typecasting, Modulo `%`, Zuweisung `=` vs. Vergleich `==`, Logikoperatioren (&&, \| \|, !), Short-Circuit |
+| 3 | [Rechnen & Vergleichen](03-Rechnen-und-Vergleichen-Vertiefung.md) | Ganzzahldivision & Typecasting, Modulo `%`, Zuweisung `=` vs. Vergleich `==`, Logikoperatioren (&&, `||`, !), Short-Circuit |
 | 4 | [Eingaben](04-Eingaben-Vertiefung.md) | `ReadLine`-Puffer, Text vs. Zahl beim Pluszeichen, `Parse`-Arbeitsweise, Kulturproblem (Komma vs. Punkt), Nullable-Warnung |
 | 5 | [Verzweigungen](05-Verzweigungen-Vertiefung.md) | Einzelne `if`s vs. `else if`-Kaskade, Semikolon-Falle hinter `if`, Entscheidungshilfe `switch` vs. `if` |
 | 6 | [Schleifen](06-Schleifen-Vertiefung.md) | Chronologie der `for`-Shcleife, Off-by-One (`<` vs. `<=`), `while` vs. `do-while`, `break` & `continue`, 2D-Gitter |
