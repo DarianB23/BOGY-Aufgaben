@@ -178,4 +178,11 @@ Frage nach **Alter** und **Wochentag** und berechne den Eintrittspreis:
 - [ ] Ich kann Bedingungen mit `&&` und `||` kombinieren.
 - [ ] Ich kann einen `switch` mit `case`, `break` und `default` schreiben.
 
+---
+
+Hast du noch weitere Fragen, bist bei einzelnen Themen noch unsicher oder möchtest einfach mehr Aufgaben zu diesem Kapitel bearbeiten? Schau dir gerne das Vertiefungskapitel an: \
+[Klicke hier um zur Vertiefung zu gelangen](../Vertiefung/05-Verzweigungen-Vertiefung.md)
+
+---
+
 [← Benutzereingaben](04-Eingaben.md) | [Übersicht](../README.md) | [Weiter: Schleifen →](06-Schleifen.md)
