@@ -176,4 +176,11 @@ Denk dir selbst eine Klasse aus, zum Beispiel:
 - [ ] Ich kann mit `new` Objekte erzeugen und mit `.` auf sie zugreifen.
 - [ ] Ich weiß, wofür `private set` gut ist.
 
+---
+
+Hast du noch weitere Fragen, bist bei einzelnen Themen noch unsicher oder möchtest einfach mehr Aufgaben zu diesem Kapitel bearbeiten? Schau dir gerne das Vertiefungskapitel an: \
+[Klicke hier um zur Vertiefung zu gelangen](../Vertiefung/09-Klassen-Vertiefung.md)
+
+---
+
 [← Methoden](08-Methoden.md) | [Übersicht](../README.md) | [Weiter: Fehler abfangen →](10-Fehler-abfangen.md)
