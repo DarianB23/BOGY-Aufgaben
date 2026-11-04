@@ -211,4 +211,11 @@ Du brauchst eine Schleife **in** einer Schleife: Die äußere zählt die Zeilen,
 - [ ] Ich weiß, was `break` und `continue` machen.
 - [ ] Ich kann eine Endlosschleife erkennen und stoppen.
 
+---
+
+Hast du noch weitere Fragen, bist bei einzelnen Themen noch unsicher oder möchtest einfach mehr Aufgaben zu diesem Kapitel bearbeiten? Schau dir gerne das Vertiefungskapitel an: \
+[Klicke hier um zur Vertiefung zu gelangen](../Vertiefung/06-Schleifen-Vertiefung.md)
+
+---
+
 [← Verzweigungen](05-Verzweigungen.md) | [Übersicht](../README.md) | [Weiter: Arrays und Listen →](07-Collections.md)
