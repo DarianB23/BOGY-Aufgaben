@@ -56,7 +56,7 @@ Hier ist die **exakte Chronologie**, wie C# das ausführt:
 
 ## 4. Vertiefungsaufgaben mit Tipps
 
-### Aufgabe V6.1: Das kleine 1x1 einer Zahl
+### Aufgabe 6.1: Das kleine 1x1 einer Zahl
 Frage den Nutzer nach einer Zahl (z. B. `7`). Gib dann mit einer `for`-Schleife die Multiplikationstabelle von 1 bis 10 aus:
 ```text
 1 x 7 = 7
@@ -66,7 +66,7 @@ Frage den Nutzer nach einer Zahl (z. B. `7`). Gib dann mit einer `for`-Schleife 
 ```
 
 {% capture tipp %}
-**Lösung / Tipp zu V6.1:**
+**Lösung / Tipp zu 6.1:**
 
 Starte die Zählschleife bei 1 und lasse sie bis einschließlich 10 laufen:
 
@@ -85,14 +85,14 @@ for (int i = 1; i <= 10; i++)
 
 ---
 
-### Aufgabe V6.2: Geheimzahl erraten mit `while`
+### Aufgabe 6.2: Geheimzahl erraten mit `while`
 Lege eine feste Geheimzahl fest (z. B. `42`).
 Lasse den Nutzer in einer `while`-Schleife so lange Zahlen raten, bis er die richtige Zahl trifft.
 Gib nach jedem falschen Versuch aus: "Leider falsch, versuche es noch einmal!"
 Gib bei Erfolg aus: "Glückwunsch, du hast die Zahl erraten!"
 
 {% capture tipp %}
-**Lösung / Tipp zu V6.2:**
+**Lösung / Tipp zu 6.2:**
 
 Hier ist eine saubere Umsetzung mit `while`:
 
