@@ -1,7 +1,7 @@
 ---
 title: Feedback
 nav_order: 10
-permalink: /
+permalink: /Feedback
 ---
 
 # Dein Feedback
