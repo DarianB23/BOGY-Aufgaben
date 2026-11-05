@@ -1,43 +1,41 @@
 <!-- Feedback Formular powered by FormSubmit -->
 <div class="feedback-card">
-  <h3>💬 Feedback zu diesem Kapitel</h3>
-  <p class="feedback-subtitle">
-    Ist etwas unklar, hast du einen Tippfehler gefunden oder möchtest du Rückmeldung geben?
-  </p>
-
-  <form action="https://formsubmit.co/darian.bliese@gmail.com" method="POST" class="feedback-form">
+<h3>💬 Feedback zu diesem Kapitel</h3>
+<p class="feedback-subtitle">
+Ist etwas unklar, hast du einen Tippfehler gefunden oder möchtest du Rückmeldung geben?
+</p>
+<form action="https://formsubmit.co/darian.bliese@gmail.com" method="POST" class="feedback-form">
     <!-- Spam-Schutz (Honeypot) & Einstellungen -->
-    <input type="text" name="_honey" style="display:none">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_subject" value="Tutorial-Feedback: {{ page.title | default: 'Allgemein' }}">
+<input type="text" name="_honey" style="display:none">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_subject" value="Tutorial-Feedback: {{ page.title | default: 'Allgemein' }}">
     <!-- Automatische Erkennung des aktuellen Kapitels -->
-    <input type="hidden" name="Kapitel" value="{{ page.title }} ({{ page.url }})">
+<input type="hidden" name="Kapitel" value="{{ page.title }} ({{ page.url }})">
+<div class="feedback-row">
+<div class="feedback-field">
+<label for="fb-name">Dein Name (optional):</label>
+<input type="text" id="fb-name" name="Name" placeholder="z. B. Max">
+</div>
+<div class="feedback-field">
+<label for="fb-rating">Wie verständlich war es?</label>
+<select id="fb-rating" name="Bewertung">
+<option value="Super / Sehr gut">⭐⭐⭐⭐⭐ Super verständlich</option>
+<option value="Gut" selected>⭐⭐⭐⭐ Gut machbar</option>
+<option value="Mittel">⭐⭐⭐ Ging so / einiges unklar</option>
+<option value="Schwer">⭐⭐ Eher schwer / verwirrend</option>
+<option value="Zu schwer">⭐ Viel zu schwer</option>
+</select>
+</div>
+</div>
 
-    <div class="feedback-row">
-      <div class="feedback-field">
-        <label for="fb-name">Dein Name (optional):</label>
-        <input type="text" id="fb-name" name="Name" placeholder="z. B. Max">
-      </div>
-      <div class="feedback-field">
-        <label for="fb-rating">Wie verständlich war es?</label>
-        <select id="fb-rating" name="Bewertung">
-          <option value="Super / Sehr gut">⭐⭐⭐⭐⭐ Super verständlich</option>
-          <option value="Gut" selected>⭐⭐⭐⭐ Gut machbar</option>
-          <option value="Mittel">⭐⭐⭐ Ging so / einiges unklar</option>
-          <option value="Schwer">⭐⭐ Eher schwer / verwirrend</option>
-          <option value="Zu schwer">⭐ Viel zu schwer</option>
-        </select>
-      </div>
-    </div>
+<div class="feedback-field">
+<label for="fb-message">Dein Feedback / gefundener Fehler:*</label>
+<textarea id="fb-message" name="Nachricht" rows="4" required placeholder="Was hat dir geholfen oder wo bist du steckengeblieben?"></textarea>
+</div>
 
-    <div class="feedback-field">
-      <label for="fb-message">Dein Feedback / gefundener Fehler:*</label>
-      <textarea id="fb-message" name="Nachricht" rows="4" required placeholder="Was hat dir geholfen oder wo bist du steckengeblieben?"></textarea>
-    </div>
-
-    <button type="submit" class="feedback-submit-btn">Feedback absenden</button>
-  </form>
+<button type="submit" class="feedback-submit-btn">Feedback absenden</button>
+</form>
 </div>
 
 <style>
