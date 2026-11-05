@@ -149,10 +149,6 @@ Der Backslash `\` hat in C#-Texten eine Sonderbedeutung. Um einen echten Backsla
 
 ---
 
-{% include feedback.html %}
-
----
-
 Hast du noch weitere Fragen, bist bei einzelnen Themen noch unsicher oder möchtest einfach mehr Aufgaben zu diesem Kapitel bearbeiten? Schau dir gerne das Vertiefungskapitel an: \
 [Klicke hier um zur Vertiefung zu gelangen](../Vertiefung/01-Erste-Schritte-Vertiefung.md)
 
