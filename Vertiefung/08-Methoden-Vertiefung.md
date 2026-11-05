@@ -1,6 +1,6 @@
 ---
 title: 08 - Vertiefung Methoden
-parent: Vetiefung
+parent: Vertiefung
 nav_order: 8
 ---
 # Kapitel 8 – Methoden (Vertiefung)
