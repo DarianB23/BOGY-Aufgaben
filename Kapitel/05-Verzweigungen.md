@@ -134,33 +134,7 @@ Gerade heißt: `zahl % 2 == 0`.
 {% endcapture %}
 {% include tipp.html inhalt=tipp %}
 
-
-### Aufgabe 5.3 – Notenrechner
-
-1. Frage nach einer **Schulnote** (1–6) und gib mit einem `switch` das Wort dazu aus: 1 → „sehr gut“, 2 → „gut“ … 6 → „ungenügend“. Bei jeder anderen Zahl: „Das ist keine gültige Note.“
-2. Erweitere das Programm: Frage stattdessen nach **Punkten** (0–100) und berechne die Note mit `if`/`else if`:
-
-| Punkte | Note |
-|---|---|
-| ab 90 | 1 |
-| ab 80 | 2 |
-| ab 65 | 3 |
-| ab 50 | 4 |
-| ab 30 | 5 |
-| darunter | 6 |
-
-### Bonus-Aufgabe 5.4 – Persönlichere Sätze
-
-Erweitere deinen Zahlen-Check aus 5.2: Der Satz soll sich je nach Kombination verändern.
-
-```
-Die Zahl 4 ist sowohl positiv als auch gerade.
-Die Zahl 7 ist zwar positiv, aber nicht gerade.
-Die Zahl -2 ist zwar negativ, aber trotzdem gerade.
-Die Zahl -5 ist weder positiv noch gerade.
-```
-
-### Bonus-Aufgabe 5.5 – Kinokasse
+### Bonus-Aufgabe 5.3 – Kinokasse
 
 Frage nach **Alter** und **Wochentag** und berechne den Eintrittspreis:
 
