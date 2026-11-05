@@ -101,7 +101,7 @@ Console.WriteLine($"Eingabe akzeptiert: {alter} Jahre.");
 
 ## 5. Vertiefungsaufgaben mit Tipps
 
-### Aufgabe V10.1: Sichere Division
+### Aufgabe 10.1: Sichere Division
 Schreibe ein Programm, das zwei Zahlen abfragt: `zaehler` und `nenner`.
 Berechne das Ergebnis der Division `zaehler / nenner`.
 Fange mit `TryParse` ab:
@@ -109,7 +109,7 @@ Fange mit `TryParse` ab:
 - Falls der `nenner == 0` ist (Division durch 0 verhindern!).
 
 {% capture tipp %}
-**Lösung / Tipp zu V10.1:**
+**Lösung / Tipp zu 10.1:**
 
 Prüfe sowohl die Zahlengültigkeit als auch die Null-Division:
 
@@ -143,7 +143,7 @@ else
 
 ---
 
-### Aufgabe V10.2: Robuster Menüwähler
+### Aufgabe 10.2: Robuster Menüwähler
 Erstelle ein Konsolenmenü:
 ```text
 1. Spiel starten
@@ -154,7 +154,7 @@ Frage den Nutzer nach seiner Wahl.
 Lass den Nutzer bei Fehleingaben (Buchstaben, Zahlen außer 1–3) nicht weiter, sondern zeige eine Fehlermeldung und frage erneut, bis eine gültige Auswahl getroffen wurde.
 
 {% capture tipp %}
-**Lösung / Tipp zu V10.2:**
+**Lösung / Tipp zu 10.2:**
 
 Kombiniere eine `while(true)`-Schleife mit `int.TryParse`:
 
