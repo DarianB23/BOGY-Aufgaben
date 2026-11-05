@@ -88,7 +88,7 @@ class Bankkonto
 
 ## 5. Vertiefungsaufgaben mit Tipps
 
-### Aufgabe V9.1: Klasse `Rechteck`
+### Aufgabe 9.1: Klasse `Rechteck`
 Erstelle eine Klasse `Rechteck` mit:
 - Den Properties `Breite` (`double`) und `Hoehe` (`double`).
 - Einem Konstruktor `Rechteck(double breite, double hoehe)`.
@@ -98,7 +98,7 @@ Erstelle eine Klasse `Rechteck` mit:
 Erstelle im Hauptprogramm zwei Rechtecke und gib Fläche und Umfang aus.
 
 {% capture tipp %}
-**Lösung / Tipp zu V9.1:**
+**Lösung / Tipp zu 9.1:**
 
 Hier ist der Bauplan und die Verwendung der Klasse `Rechteck`:
 
@@ -137,7 +137,7 @@ Console.WriteLine($"Rechteck 2: Fläche = {r2.BerechneFlaeche()}, Umfang = {r2.B
 
 ---
 
-### Aufgabe V9.2: Ein einfacher RPG-Held
+### Aufgabe 9.2: Ein einfacher RPG-Held
 Erstelle eine Klasse `Held` mit:
 - `string Name`
 - `int Lebenspunkte`
@@ -145,7 +145,7 @@ Erstelle eine Klasse `Held` mit:
 - Einer Methode `IstKopflos()` oder `LebtNoch()`, die `true` liefert, wenn `Lebenspunkte > 0` ist.
 
 {% capture tipp %}
-**Lösung / Tipp zu V9.2:**
+**Lösung / Tipp zu 9.2:**
 
 So kannst du sicherstellen, dass die Lebenspunkte nicht ins Minus rutschen:
 
