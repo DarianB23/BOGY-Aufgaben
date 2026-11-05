@@ -148,18 +148,6 @@ Wenn deine Lösung funktioniert: Vergleiche dein Ergebnis mit `zahlen.Sum()`, `z
 {% endcapture %}
 {%include notiz.html typ="note" titel="Zusatz" offen=true inhalt=notiz %}
 
-### Bous-Aufgabe 7.4 – Einkaufsliste
-
-- Der Benutzer gibt nacheinander Artikel ein, bis er `fertig` schreibt.
-- Ein Artikel, der schon auf der Liste steht, wird **nicht** doppelt hinzugefügt (gib dann einen Hinweis aus).
-- Am Ende wird die Liste **sortiert** und **nummeriert** ausgegeben:
-
-```
-1. Brot
-2. Käse
-3. Milch
-```
-
 ---
 
 ## Checkliste
