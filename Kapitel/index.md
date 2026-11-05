@@ -31,6 +31,7 @@ Arbeite die Kapitel der Reihe nach durch, denn jedes baut auf dem vorherigen auf
 1. Lies zuerst die Erklärung und tipp die Beispiele selbst ab, statt sie zu kopieren.
 2. Löse die Pflichtaufgaben, die Bonusaufgaben sind freiwillig.
 3. Wenn du nicht weiterkommst, öffne den Tipp.
-4. Hake am Ende die Checkliste ab und geh erst dann zum nächsten Kapitel.
+4. Wenn du noch mehr Aufgaben zu einem Thema bearbeiten willst oder mehr Erklärungen brauchst, schau dir das zugehörige Vertiefugs-Kaptitel an
+5. Hake am Ende die Checkliste ab und geh erst dann zum nächsten Kapitel.
 
 Fertig mit allen Kapiteln? Dann geht es weiter mit den [Zusatzaufgaben](../Zusatzaufgaben/).
