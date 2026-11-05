@@ -68,7 +68,7 @@ foreach (string name in namen)
 
 ## 5. Vertiefungsaufgaben mit Tipps
 
-### Aufgabe V7.1: Noten-Statistik mit `List<int>`
+### Aufgabe 7.1: Noten-Statistik mit `List<int>`
 Erstelle eine `List<int>` mit Noten (z. B. `1, 2, 3, 2, 1, 4, 2`).
 Berechne mithilfe einer Schleife:
 1. Die Summe aller Noten
@@ -76,7 +76,7 @@ Berechne mithilfe einer Schleife:
 3. Wie oft die Note `1` vorkommt
 
 {% capture tipp %}
-**Lösung / Tipp zu V7.1:**
+**Lösung / Tipp zu 7.1:**
 
 So kannst du die Liste mit einer `foreach`-Schleife analysieren:
 
@@ -107,7 +107,7 @@ Console.WriteLine($"Anzahl Einsen: {anzahlEinsen}");
 
 ---
 
-### Aufgabe V7.2: Einkaufsliste interaktiv
+### Aufgabe 7.2: Einkaufsliste interaktiv
 Schreibe ein Programm mit einer `List<string> einkaufsliste`.
 In einer Schleife kann der Nutzer:
 - Einen Artikel eingeben (wird mit `.Add()` hinzugefügt).
@@ -122,7 +122,7 @@ Deine Einkaufsliste:
 ```
 
 {% capture tipp %}
-**Lösung / Tipp zu V7.2:**
+**Lösung / Tipp zu 7.2:**
 
 Nutze eine `while(true)`-Schleife mit `break;` und gib die Liste danach mit einer `for`-Schleife aus:
 
