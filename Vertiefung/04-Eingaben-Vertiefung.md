@@ -73,7 +73,7 @@ schreiben. Für deine ersten Schritte kannst du die Warnung aber auch einfach ig
 
 ## 5. Vertiefungsaufgaben mit Tipps
 
-### Aufgabe V4.1: Der Rabatt-Rechner
+### Aufgabe 4.1: Der Rabatt-Rechner
 Schreibe ein Konsolenprogramm, das:
 1. Den Originalpreis eines Produkts abfragt (z. B. `50`).
 2. Den Rabatt in Prozent abfragt (z. B. `20`).
@@ -85,7 +85,7 @@ Endpreis:      40.00 €
 ```
 
 {% capture tipp %}
-**Lösung / Tipp zu V4.1:**
+**Lösung / Tipp zu 4.1:**
 
 Denke daran, beide Eingaben in `double` umzuwandeln und die Prozentrechnung durchzuführen:
 
@@ -110,7 +110,7 @@ Console.WriteLine($"Endpreis:      {endpreis:F2} €");
 
 ---
 
-### Aufgabe V4.2: Namens-Kombinierer
+### Aufgabe 4.2: Namens-Kombinierer
 Frage den Nutzer nach:
 1. Vorname
 2. Nachname
@@ -120,7 +120,7 @@ Gib anschließend einen automatisch generierten Benutzernamen aus, der aus dem e
 *Beispiel:* `Max`, `Mustermann`, `1998` -> `mmustermann98`
 
 {% capture tipp %}
-**Lösung / Tipp zu V4.2:**
+**Lösung / Tipp zu 4.2:**
 
 Du kannst mit `ToLower()` alles kleinschreiben und mit Modulo `% 100` die letzten beiden Ziffern des Jahres herausfiltern:
 
