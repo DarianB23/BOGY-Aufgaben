@@ -78,7 +78,7 @@ Das Dollarzeichen `$` vor den Anführungszeichen ist wie ein Schalter:
 
 ## 4. Vertiefungsaufgaben mit Tipps
 
-### Aufgabe V2.1: Der Drei-Gläser-Tausch (Swap)
+### Aufgabe 2.1: Der Drei-Gläser-Tausch (Swap)
 Stell dir vor:
 - Glas A enthält `Apfelsaft`.
 - Glas B enthält `Orangensaft`.
@@ -94,7 +94,7 @@ glasA = glasB; // Jetzt ist in beiden Gläsern Orangensaft! Der Apfelsaft ist we
 Wie kannst du den Tausch mit Hilfe einer **dritten Hilfsvariable** sauber durchführen?
 
 {% capture tipp %}
-**Lösung / Tipp zu V2.1:**
+**Lösung / Tipp zu 2.1:**
 
 Um zwei Variablen zu tauschen, brauchst du eine temporäre Zwischenspeicher-Variable (wie ein leeres drittes Glas):
 
@@ -119,7 +119,7 @@ Console.WriteLine($"Glas A: {glasA}, Glas B: {glasB}");
 
 ---
 
-### Aufgabe V2.2: Typ-Detektiv
+### Aufgabe 2.2: Typ-Detektiv
 Welcher Datentyp ist für folgende Informationen am besten geeignet? Begründe deine Wahl:
 1. Das Geburtsjahr einer Person (z. B. `1998`)
 2. Der Durchschnittspreis einer Kinokarte (z. B. `12.50`)
