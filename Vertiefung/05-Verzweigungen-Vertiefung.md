@@ -90,7 +90,7 @@ Das Semikolon hinter `if (note == 1);` beendet die `if`-Anweisung sofort mit ein
 
 ## 4. Vertiefungsaufgaben mit Tipps
 
-### Aufgabe V5.1: Noten-Bewerter
+### Aufgabe 5.1: Noten-Bewerter
 Schreibe ein Programm, das eine Schulnote (1 bis 6) abfragt und eine passende Rückmeldung gibt:
 - 1: "Sehr gut"
 - 2: "Gut"
@@ -103,7 +103,7 @@ Schreibe ein Programm, das eine Schulnote (1 bis 6) abfragt und eine passende R�
 Löse die Aufgabe einmal mit `switch` und überlege, warum `switch` hier besonders übersichtlich ist.
 
 {% capture tipp %}
-**Lösung / Tipp zu V5.1:**
+**Lösung / Tipp zu 5.1:**
 
 Mit `switch` sieht die Lösung extrem aufgeräumt aus:
 
@@ -142,7 +142,7 @@ switch (note)
 
 ---
 
-### Aufgabe V5.2: Ampel-Schaltung
+### Aufgabe 5.2: Ampel-Schaltung
 Programmiere eine Ampel-Logik:
 Der Nutzer gibt die Farbe der Ampel ein (`"rot"`, `"gelb"`, `"grün"`).
 - Bei `"rot"`: "Stehen bleiben!"
@@ -153,7 +153,7 @@ Der Nutzer gibt die Farbe der Ampel ein (`"rot"`, `"gelb"`, `"grün"`).
 Sorge dafür, dass die Eingabe auch funktioniert, wenn der Nutzer `"ROT"` oder `"Grün"` mit Großbuchstaben schreibt.
 
 {% capture tipp %}
-**Lösung / Tipp zu V5.2:**
+**Lösung / Tipp zu 5.2:**
 
 Nutze `.ToLower()`, um die Eingabe vor der Prüfung in Kleinbuchstaben umzuwandeln:
 
