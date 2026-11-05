@@ -86,14 +86,14 @@ C# ist clever:
 
 ## 5. Vertiefungsaufgaben mit Tipps
 
-### Aufgabe V3.1: Minuten und Sekunden aufteilen
+### Aufgabe 3.1: Minuten und Sekunden aufteilen
 Schreibe ein Programm, das eine vorgegebene Sekundenanzahl (z. B. `325` Sekunden) in Minuten und Restsekunden aufteilt und formatiert ausgibt:
 ```text
 325 Sekunden entsprechen 5 Minute(n) und 25 Sekunde(n).
 ```
 
 {% capture tipp %}
-**Lösung / Tipp zu V3.1:**
+**Lösung / Tipp zu 3.1:**
 
 Nutze die Ganzzahldivision `/` für die vollen Minuten und Modulo `%` für die verbleibenden Sekunden:
 
@@ -110,7 +110,7 @@ Console.WriteLine($"{gesamtSekunden} Sekunden entsprechen {minuten} Minute(n) un
 
 ---
 
-### Aufgabe V3.2: Freizeitpark-Einlassprüfer
+### Aufgabe 3.2: Freizeitpark-Einlassprüfer
 Eine Achterbahn darf nur betreten werden, wenn:
 - Die Person mindestens **140 cm** groß ist **UND**
 - Die Person mindestens **12 Jahre** alt ist **ODER** in Begleitung eines Erwachsenen ist.
@@ -124,7 +124,7 @@ bool hatBegleitung = true;
 Formuliere einen einzigen logischen Ausdruck, der in einem `bool darfMitfahren` speichert, ob die Person mitfahren darf.
 
 {% capture tipp %}
-**Lösung / Tipp zu V3.2:**
+**Lösung / Tipp zu 3.2:**
 
 Achte auf die Klammern, damit `UND` und `ODER` in der richtigen Reihenfolge ausgewertet werden:
 
