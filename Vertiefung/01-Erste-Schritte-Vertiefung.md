@@ -82,7 +82,7 @@ Program.cs(5,21): error CS1002: ; erwartet.
 
 ## 4. Vertiefungsaufgaben mit Tipps
 
-### Aufgabe V1.1: Visitenkarte im Terminal
+### Aufgabe 1.1: Visitenkarte im Terminal
 Schreibe ein Konsolenprogramm, das eine kleine Visitenkarte formatiert ausgibt:
 ```text
 ==============================
@@ -111,7 +111,7 @@ Console.WriteLine("==============================");
 
 ---
 
-### Aufgabe V1.2: Satzpuzzle mit `Write`
+### Aufgabe 1.2: Satzpuzzle mit `Write`
 Setze folgenden Satz mit genau drei `Console.Write` und einem abschließenden `Console.WriteLine` zusammen, sodass er in **einer einzigen Zeile** steht:
 - Wort 1: "C#"
 - Wort 2: "macht"
