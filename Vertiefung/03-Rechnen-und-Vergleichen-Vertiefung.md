@@ -38,9 +38,9 @@ Modulo berechnet den **Rest** einer Ganzzahldivision.
 
 **Anschauliches Beispiel:**
 Du hast 14 Äpfel und packst sie in 4er-Tüten:
-- $14 / 4 = 3$ volle Tüten (das sind 12 Äpfel).
+- 14 / 4 = 3 volle Tüten (das sind 12 Äpfel).
 - Es bleiben **2 Äpfel übrig**.
-- $14 % 4 = 2$.
+- 14 % 4 = 2.
 
 ### Wichtigste Anwendungsfälle in der Praxis:
 1. **Gerade oder ungerade Zahl prüfen:**
