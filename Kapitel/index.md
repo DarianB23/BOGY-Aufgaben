@@ -10,7 +10,6 @@ has_toc: false
 Hier lernst du C# Schritt für Schritt, von deinem ersten Programm bis zu eigenen Klassen.
 Arbeite die Kapitel der Reihe nach durch, denn jedes baut auf dem vorherigen auf.
 
-{% include feedback_gesamt.html %}
 
 ## Überblick
 
