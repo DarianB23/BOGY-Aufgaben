@@ -87,7 +87,7 @@ zahl = Erhoehe(zahl); // Jetzt ist zahl = 15!
 
 ## 4. Vertiefungsaufgaben mit Tipps
 
-### Aufgabe V8.1: Temperatur-Umrechner
+### Aufgabe 8.1: Temperatur-Umrechner
 Schreibe zwei Methoden:
 1. `double CelsiusZuFahrenheit(double celsius)`: Formel: $(celsius \times 1.8) + 32$
 2. `double FahrenheitZuCelsius(double fahrenheit)`: Formel: $(fahrenheit - 32) / 1.8$
@@ -95,7 +95,7 @@ Schreibe zwei Methoden:
 Teste beide Methoden im Hauptprogramm mit verschiedenen Werten und gib das Ergebnis aus.
 
 {% capture tipp %}
-**Lösung / Tipp zu V8.1:**
+**Lösung / Tipp zu 8.1:**
 
 Hier ist die Implementierung der beiden Rechenmethoden:
 
@@ -123,7 +123,7 @@ Console.WriteLine($"{f} °F sind {zurueck:F1} °C"); // 20.0 °C
 
 ---
 
-### Aufgabe V8.2: Die Schranke (Guard Clause)
+### Aufgabe 8.2: Die Schranke (Guard Clause)
 Schreibe eine Methode `bool IstPasswortSicher(string passwort)`.
 Das Passwort gilt als sicher, wenn:
 - Es mindestens **8 Zeichen** lang ist (`passwort.Length >= 8`)
@@ -132,7 +132,7 @@ Das Passwort gilt als sicher, wenn:
 Nutze sogenannte *Guard Clauses* (frühe `return false;`-Abbrüche), um die Lesbarkeit zu verbessern.
 
 {% capture tipp %}
-**Lösung / Tipp zu V8.2:**
+**Lösung / Tipp zu 8.2:**
 
 Guard Clauses prüfen Fehlerfälle sofort am Anfang der Methode und brechen direkt mit `return false` ab:
 
