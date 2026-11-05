@@ -147,34 +147,7 @@ Spannend für Profis: Ein `int` kann höchstens `2147483647` speichern. Was pass
 2. Gib nur die **geraden** Zahlen von 2 bis 20 aus. Schaffst du es auf **zwei** Arten? (Einmal mit `i += 2`, einmal mit `%`.)
 3. Schreibe einen **Countdown** von 10 bis 1. Danach soll `Start!` erscheinen.
 
-### Aufgabe 6.3 – Einmaleins
-
-Frage den Benutzer nach einer Zahl und gib ihr Einmaleins aus:
-
-```
-Welche Reihe? 7
-1 x 7 = 7
-2 x 7 = 14
-...
-10 x 7 = 70
-```
-
-### Aufgabe 6.4 – Passwortabfrage
-
-Schreibe mit einer `do-while`-Schleife eine Passwortabfrage:
-
-- Das Programm fragt so lange nach dem Passwort, bis es richtig ist.
-- Zähle die Versuche mit und gib sie am Ende aus.
-- Nach **3 falschen Versuchen** soll `Zugang gesperrt!` erscheinen und die Schleife beendet werden.
-
-{% capture tipp %}
-Lege das richtige Passwort und einen Zähler (`int versuche = 0;`) **vor** der Schleife an.
-Zum vorzeitigen Beenden hilft dir `break`.
-{% endcapture %}
-{% include tipp.html inhalt=tipp %}
-
-
-### Bonus-Aufgabe 6.5 – FizzBuzz
+### Bonus-Aufgabe 6.3– FizzBuzz
 
 Ein Klassiker, der auch in echten Bewerbungsgesprächen gestellt wird: Gib die Zahlen von 1 bis 100 aus. Aber:
 
@@ -182,7 +155,7 @@ Ein Klassiker, der auch in echten Bewerbungsgesprächen gestellt wird: Gib die Z
 - Ist sie durch 5 teilbar, gib `Buzz` aus.
 - Ist sie durch 3 **und** 5 teilbar, gib `FizzBuzz` aus.
 
-### Bonus-Aufgabe 6.6 – Sternen-Treppe
+### Bonus-Aufgabe 6.4 – Sternen-Treppe
 
 Frage nach einer Höhe und zeichne eine Treppe aus Sternen:
 
