@@ -222,4 +222,4 @@ Mit `'O'` findest du deinen eigenen Gewinnzug, mit `'X'` den Zug, den du blockie
 - [ ] Mein Programm erkennt alle 8 Gewinnlinien und ein Unentschieden.
 - [ ] Ich kann erklären, wie mein Computer seinen nächsten Zug auswählt.
 
-[← Zusatzaufgabe 2 – Snackautomat](Snackautomat.md) | [Übersicht](../README.md)
+[← Vokabeltrainer](Vokabeltrainer.md) | [Übersicht](../README.md) | [Bankautomat ->](Bankautomat.md)

@@ -219,4 +219,4 @@ Für die Prozentzahl: `gewonnen * 100 / spiele` funktioniert mit `int`. Achte da
 
 ---
 
-[← Tic-Tac-Toe](Tic-Tac-Toe.md) · [Übersicht](index.md) · [Taschenrechner →](Taschenrechner.md)
+[← Galgenraten](Galgenraten.md) · [Übersicht](index.md) · [Taschenrechner →](Taschenrechner.md)

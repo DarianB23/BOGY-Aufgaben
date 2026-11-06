@@ -204,4 +204,4 @@ Such dir aus, was dir gefällt:
 - [ ] Mein Spiel stürzt bei keiner Eingabe ab.
 - [ ] Ich habe mindestens drei eigene Methoden geschrieben.
 
-[← Abschlussprojekt](../Kapitel/11-Abschlussprojekt.md) | [Übersicht](../README.md) | [Weiter: Zusatzaufgabe 2 – Snackautomat →](Snackautomat.md)
+[← Abschlussprojekt](../Kapitel/11-Abschlussprojekt.md) | [Übersicht](../README.md) | [Weiter: Schere-Stein-Papier →](Schere-Stein-Papier.md)

@@ -124,7 +124,6 @@ Mach diese Programme mit deinen neuen Methoden absturzsicher:
 
 1. den **Temperatur-Umrechner** (4.2)
 2. die **Zahlenstatistik** (7.3)
-3. den **Notenrechner** (5.3) – hier soll zusätzlich nur eine Note von **1 bis 6** akzeptiert werden
 
 {% capture tipp %}
 Für Aufgabe 3 kannst du die Bedingung der `while`-Schleife erweitern:

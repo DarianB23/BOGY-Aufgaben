@@ -224,4 +224,4 @@ Aufgefüllt.
 - [ ] Ich kann mit `/` und `%` einen Betrag in Münzen aufteilen.
 - [ ] Mein Automat stürzt bei keiner Eingabe ab.
 
-[← Zusatzaufgabe 1 – Galgenraten](Galgenraten.md) | [Übersicht](../README.md) | [Weiter: Zusatzaufgabe 3 – Tic-Tac-Toe →](TicTacToe.md)
+[← Taschenrechner](Taschenrechner.md) | [Übersicht](../README.md) | [Vokabeltrainer →](Vokabeltrainer.md)

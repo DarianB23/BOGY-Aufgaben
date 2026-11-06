@@ -223,4 +223,4 @@ if (teile.Length != 3)
 
 ---
 
-[← Schere, Stein, Papier](Schere-Stein-Papier.md) · [Übersicht](index.md) · [Vokabeltrainer →](Vokabeltrainer.md)
+[← Schere-Stein-Papier](Schere-Stein-Papier.md) · [Übersicht](index.md) · [Snackautomat →](Snackautomat.md)

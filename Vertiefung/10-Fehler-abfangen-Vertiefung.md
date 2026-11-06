@@ -46,7 +46,7 @@ catch (FormatException)
 Console.Write("Zahl eingeben: ");
 string eingabe = Console.ReadLine()!;
 
-bool klappte = int.Parse(eingabe, out int zahl);
+bool klappte = int.TryParse(eingabe, out int zahl);
 ```
 - **Wann nutzen?** Immer bei **Nutzereingaben in der Konsole**!
 - `TryParse` wirft **niemals** eine Exception und bringt das Programm **niemals** zum Absturz.
