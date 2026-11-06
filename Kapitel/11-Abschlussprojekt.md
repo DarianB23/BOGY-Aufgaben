@@ -15,7 +15,7 @@ Das Projekt ist in **Stufen** aufgeteilt. Bring zuerst eine Stufe zum Laufen, be
 ---
 
 Wenn du dir bei den Aufgaben unsicher bist oder nicht weißt, wo du anfangen sollst, schau dir die Vertiefung für eine detailliertere Erklärung an: \
-[Klicke hier um zur Vertiefung zu gelangen](../Vertiefung/11-Abschlussprojekt-Vertiefung.md)
+[Klicke hier, um zur Vertiefung zu gelangen](../Vertiefung/11-Abschlussprojekt-Vertiefung.md)
 
 ---
 

@@ -142,7 +142,7 @@ Erstelle eine Klasse `Held` mit:
 - `string Name`
 - `int Lebenspunkte`
 - Einer Methode `NimmSchaden(int schaden)`, die die Lebenspunkte verringert. Die Lebenspunkte dürfen aber **nicht unter 0** fallen!
-- Einer Methode `IstKopflos()` oder `LebtNoch()`, die `true` liefert, wenn `Lebenspunkte > 0` ist.
+- Einer Methode `LebtNoch()`, die `true` liefert, wenn `Lebenspunkte > 0` ist.
 
 {% capture tipp %}
 **Lösung / Tipp zu 9.2:**

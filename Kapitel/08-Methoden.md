@@ -166,7 +166,7 @@ Baue deine Zahlenstatistik aus Aufgabe 7.3 um: Schreibe die Methoden `int Summe(
 ---
 
 Hast du noch weitere Fragen, bist bei einzelnen Themen noch unsicher oder möchtest einfach mehr Aufgaben zu diesem Kapitel bearbeiten? Schau dir gerne das Vertiefungskapitel an: \
-[Klicke hier um zur Vertiefung zu gelangen](../Vertiefung/08-Methoden-Vertiefung.md)
+[Klicke hier, um zur Vertiefung zu gelangen](../Vertiefung/08-Methoden-Vertiefung.md)
 
 ---
 

@@ -147,7 +147,7 @@ Spannend für Profis: Ein `int` kann höchstens `2147483647` speichern. Was pass
 2. Gib nur die **geraden** Zahlen von 2 bis 20 aus. Schaffst du es auf **zwei** Arten? (Einmal mit `i += 2`, einmal mit `%`.)
 3. Schreibe einen **Countdown** von 10 bis 1. Danach soll `Start!` erscheinen.
 
-### Bonus-Aufgabe 6.3– FizzBuzz
+### Bonus-Aufgabe 6.3 – FizzBuzz
 
 Ein Klassiker, der auch in echten Bewerbungsgesprächen gestellt wird: Gib die Zahlen von 1 bis 100 aus. Aber:
 
@@ -187,7 +187,7 @@ Du brauchst eine Schleife **in** einer Schleife: Die äußere zählt die Zeilen,
 ---
 
 Hast du noch weitere Fragen, bist bei einzelnen Themen noch unsicher oder möchtest einfach mehr Aufgaben zu diesem Kapitel bearbeiten? Schau dir gerne das Vertiefungskapitel an: \
-[Klicke hier um zur Vertiefung zu gelangen](../Vertiefung/06-Schleifen-Vertiefung.md)
+[Klicke hier, um zur Vertiefung zu gelangen](../Vertiefung/06-Schleifen-Vertiefung.md)
 
 ---
 

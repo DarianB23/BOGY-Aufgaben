@@ -91,7 +91,7 @@ string glasB = "Orangensaft";
 
 glasA = glasB; // Jetzt ist in beiden Gläsern Orangensaft! Der Apfelsaft ist weg!
 ```
-Wie kannst du den Tausch mit Hilfe einer **dritten Hilfsvariable** sauber durchführen?
+Wie kannst du den Tausch mit Hilfe einer **dritten Hilfsvariablen** sauber durchführen?
 
 {% capture tipp %}
 **Lösung / Tipp zu 2.1:**
