@@ -5,7 +5,7 @@ nav_order: 11
 ---
 # Kapitel 11 – Abschlussprojekt: Zahlenraten
 
-[← Fehler abfangen](10-Fehler-abfangen.md) | [Übersicht](../README.md) | [Weiter: Galgenraten →](../Zusatzaufgaben/Z1-Galgenraten.md)
+[← Fehler abfangen](10-Fehler-abfangen.md) | [Übersicht](../README.md) | [Weiter: Galgenraten →](../Zusatzaufgaben/Galgenraten.md)
 
 ## Ziel
 
@@ -111,4 +111,4 @@ Zeig dein Spiel ruhig den anderen Praktikant*innen oder deiner Betreuungsperson.
 **Wie geht es weiter?**
 Wenn du zu Hause weitermachen möchtest: Die offizielle C#-Dokumentation von Microsoft gibt es auch auf Deutsch – mit vielen Tutorials für Einsteiger: [learn.microsoft.com/de-de/dotnet/csharp](https://learn.microsoft.com/de-de/dotnet/csharp)
 
-[← Fehler abfangen](10-Fehler-abfangen.md) | [Übersicht](../README.md) | [Weiter: Galgenraten →](../Zusatzaufgaben/Z1-Galgenraten.md)
+[← Fehler abfangen](10-Fehler-abfangen.md) | [Übersicht](../README.md) | [Weiter: Galgenraten →](../Zusatzaufgaben/Galgenraten.md)
