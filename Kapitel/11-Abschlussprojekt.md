@@ -1,6 +1,8 @@
 ---
 title: 11 - Abschlussprojekt
 parent: Kapitel
+has_children: true
+has_toc: false
 nav_order: 11
 ---
 # Kapitel 11 – Abschlussprojekt: Zahlenraten
