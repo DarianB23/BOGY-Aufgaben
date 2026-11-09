@@ -241,4 +241,4 @@ Für die schwierigsten Vokabeln suchst du dreimal hintereinander die Vokabel mit
 
 ---
 
-[← Taschenrechner](Taschenrechner.md) · [Übersicht](index.md) · [Bankautomat →](Bankautomat.md)
+[← Snackautomat](Snackautomat.md) · [Übersicht](index.md) · [Tic-Tac-Toe →](TicTacToe.md)

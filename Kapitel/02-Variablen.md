@@ -54,8 +54,8 @@ int alter = 25;
 alter = 26;   // Kein "int" mehr davor!
 ```
 
-Jedes mal wenn man nach dem Anlegen einer Variable einen Wert zuweisen will, wird der alte Wert überschrieben.
-Es gibt also immer nur eine alter-Variable mit dem Wert 26, der alte Wert welcher bei der Erstellung zugewiesen wurde ist nach neuer Zuweisung weg.
+Jedes mal, wenn man nach dem Anlegen einer Variable einen Wert zuweisen will, wird der alte Wert überschrieben.
+Es gibt also immer nur eine alter-Variable mit dem Wert 26 und der alte Wert, welcher bei der Erstellung zugewiesen wurde, ist nach neuer Zuweisung weg.
 
 ### Variablen ausgeben
 
@@ -82,8 +82,8 @@ const double Pi = 3.14159;   // const: Dieser Wert kann sich NIE ändern
 - Keine Leerzeichen, nicht mit einer Zahl beginnen: ~~`2tePunkte`~~, ~~`mein alter`~~
 - Umlaute (ä, ö, ü, ß) sind erlaubt, aber unüblich. Schreib lieber `groesse` statt `größe`.
 - Üblich ist **camelCase**: erstes Wort klein, jedes weitere groß → `anzahlSpieler`, `istVerfuegbar`
-- Variablennamen müssen einzigartig sein. Es darf immer nur eine Variable des Typs int mit dem Namen "alter" geben
-- String müssen immer mit "Gänsefüßchen" angegeben werden
+- Variablennamen müssen einzigartig sein. Es darf immer nur eine Variable des Typs int mit dem Namen "alter" geben (auch mit unterschiedlichen Datentypen).
+- Strings müssen immer in doppelten Anführungszeichen ("...") angegeben werden.
 - Wähle **aussagekräftige** Namen: `preis` statt `p`
 - Die Benennung von Variablen ist sehr wichtig! Nur mit aussagekräftigen Namen kann jemand der den Code und Kontext nicht kennt den Code trotzdem verstehen
 
@@ -155,7 +155,7 @@ Gib ihn einmal mit `$"..."` und einmal mit `+` aus.
 
 
 Hast du noch weitere Fragen, bist bei einzelnen Themen noch unsicher oder möchtest einfach mehr Aufgaben zu diesem Kapitel bearbeiten? Schau dir gerne das Vertiefungskapitel an: \
-[Klicke hier um zur Vertiefung zu gelangen](../Vertiefung/02-Variablen-Vertiefung.md)
+[Klicke hier, um zur Vertiefung zu gelangen](../Vertiefung/02-Variablen-Vertiefung.md)
 
 ---
 

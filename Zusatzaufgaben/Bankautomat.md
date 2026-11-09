@@ -244,4 +244,4 @@ foreach (int schein in scheine)
 
 ---
 
-[← Vokabeltrainer](Vokabeltrainer.md) · [Übersicht](index.md)
+[← Tic-Tac-Toe](TicTacToe.md) · [Übersicht](index.md)

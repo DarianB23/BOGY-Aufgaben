@@ -124,7 +124,6 @@ Mach diese Programme mit deinen neuen Methoden absturzsicher:
 
 1. den **Temperatur-Umrechner** (4.2)
 2. die **Zahlenstatistik** (7.3)
-3. den **Notenrechner** (5.3) – hier soll zusätzlich nur eine Note von **1 bis 6** akzeptiert werden
 
 {% capture tipp %}
 Für Aufgabe 3 kannst du die Bedingung der `while`-Schleife erweitern:
@@ -152,7 +151,7 @@ Für Aufgabe 3 kannst du die Bedingung der `while`-Schleife erweitern:
 ---
 
 Hast du noch weitere Fragen, bist bei einzelnen Themen noch unsicher oder möchtest einfach mehr Aufgaben zu diesem Kapitel bearbeiten? Schau dir gerne das Vertiefungskapitel an: \
-[Klicke hier um zur Vertiefung zu gelangen](../Vertiefung/10-Fehler-abfangen-Vertiefung.md)
+[Klicke hier, um zur Vertiefung zu gelangen](../Vertiefung/10-Fehler-abfangen-Vertiefung.md)
 
 ---
 

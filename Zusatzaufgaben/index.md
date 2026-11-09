@@ -14,12 +14,12 @@ Jedes Projekt ist in Stufen aufgeteilt. Fang mit Stufe 1 an, die Extras sind fre
 
 | Level | Projekt | Das übst du | Benötigte Kapitel |
 |---|---|---|---|
-| Leicht | [Galgenraten](Z1-Galgenraten.md) | Schleifen, `List<char>`, Zufall | 2 - 8, 11 |
-| Leicht | [Schere, Stein, Papier](Schere-Stein-Papier.md) | `Random`, Methoden, Statistik | 2 - 8, 10, 11 |
-| Leicht | [Taschenrechner](Taschenrechner.md) | `switch`, `double`, Fehler abfangen | 2 - 8, 10 |
-| Mittel | [Snackautomat](Z2-Snackautomat.md) | Klassen, Geld in Cent, Wechselgeld | 3, 5 - 10 |
+| Leicht | [Galgenraten](Galgenraten.md) | Schleifen, `List<char>`, Zufall | 2; 3; 4; 5; 6; 7; 8 |
+| Leicht | [Schere, Stein, Papier](Schere-Stein-Papier.md) | `Random`, Methoden, Statistik | 2; 3; 4; 5; 6; 7; 8 |
+| Leicht | [Taschenrechner](Taschenrechner.md) | `switch`, `double`, Fehler abfangen | 2; 3; 4; 5; 6; 7; 8 |
+| Mittel | [Snackautomat](Snackautomat.md) | Klassen, Geld in Cent, Wechselgeld | 3; 5; 6; 7; 8; 9; 10 |
 | Mittel | [Vokabeltrainer](Vokabeltrainer.md) | Klassen, Listen, Texte vergleichen | Alle |
-| Schwer | [Tic-Tac-Toe](Z3-TicTacToe.md) | 2D-Denken, Gewinnprüfung, Computergegner | Alle |
+| Schwer | [Tic-Tac-Toe](TicTacToe.md) | 2D-Denken, Gewinnprüfung, Computergegner | Alle |
 | Schwer | [Bankautomat](Bankautomat.md) | `private set`, `decimal`, mehrere Konten | Alle |
 
 ## So arbeitest du

@@ -89,7 +89,7 @@ zahl = Erhoehe(zahl); // Jetzt ist zahl = 15!
 
 ### Aufgabe 8.1: Temperatur-Umrechner
 Schreibe zwei Methoden:
-1. `double CelsiusZuFahrenheit(double celsius)`: Formel: celcius * 1.8 + 32
+1. `double CelsiusZuFahrenheit(double celsius)`: Formel: celsius * 1.8 + 32
 2. `double FahrenheitZuCelsius(double fahrenheit)`: Formel: (fahrenheit - 32) / 1.8
 
 Teste beide Methoden im Hauptprogramm mit verschiedenen Werten und gib das Ergebnis aus.

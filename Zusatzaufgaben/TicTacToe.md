@@ -7,7 +7,7 @@ nav_order: 6
 
 **Schwierigkeit:** Schwer · **Dauer:** ca. 3 Stunden
 
-[← Zusatzaufgabe 2 – Snackautomat](Z2-Snackautomat.md) | [Übersicht](../README.md)
+[← Zusatzaufgabe 2 – Snackautomat](Snackautomat.md) | [Übersicht](../README.md)
 
 ## Ziel
 
@@ -29,7 +29,7 @@ Eigentlich **alles** aus dem Tutorial – besonders:
 | Methoden mit Rückgabewert | [8](../Kapitel/08-Methoden.md) |
 | Klassen | [9](../Kapitel/09-Klassen.md) |
 | Sichere Eingaben | [10](../Kapitel/10-Fehler-abfangen.md) |
-| `char` | [Zusatzaufgabe 1](Z1-Galgenraten.md) |
+| `char` | [Zusatzaufgabe 1](Galgenraten.md) |
 
 ---
 
@@ -222,4 +222,4 @@ Mit `'O'` findest du deinen eigenen Gewinnzug, mit `'X'` den Zug, den du blockie
 - [ ] Mein Programm erkennt alle 8 Gewinnlinien und ein Unentschieden.
 - [ ] Ich kann erklären, wie mein Computer seinen nächsten Zug auswählt.
 
-[← Zusatzaufgabe 2 – Snackautomat](Z2-Snackautomat.md) | [Übersicht](../README.md)
+[← Vokabeltrainer](Vokabeltrainer.md) | [Übersicht](../README.md) | [Bankautomat ->](Bankautomat.md)

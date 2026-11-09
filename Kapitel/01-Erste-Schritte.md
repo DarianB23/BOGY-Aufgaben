@@ -20,7 +20,7 @@ Nach diesem Kapitel kannst du:
 
 ## Erklärung
 
-Falls du nicht weißt wie du ein neues Projekt erstellst, schau dir die Seite [Neues Projekt erstellen](../Tutorials/NewProject.md) an.
+Falls du nicht weißt, wie du ein neues Projekt erstellst, schau dir die Seite [Neues Projekt erstellen](../Tutorials/NewProject.md) an.
 
 {% capture notiz %}
 Lege für jedes Kapitel ein **eigenes Projekt** an (z. B. `01-ErsteSchritte`, `02-VariablenUndDatentypen`, …). So bleibt dein alter Code erhalten und du kannst später nachschauen.
@@ -103,7 +103,7 @@ Mein Lieblingshobby ist Klettern.
 
 Ersetze in deinem Programm `Console.WriteLine` durch `Console.Write` und starte es erneut.
 Erkläre in einem Satz: **Was ist der Unterschied?**
-Schreibe deine Erklärung als Kommentar direkt auch in deinen Code, so kannst du gleich auch deine Kommentar-Kenntnisse beweisen.
+Schreibe deine Erklärung als Kommentar direkt in deinen Code – so wendest du dein Wissen gleich praktisch an.
 
 {% capture tipp %}
 Achte darauf, **wo** der zweite Text erscheint. Was passiert mit dem Zeilenumbruch?
@@ -117,7 +117,7 @@ Fehlermeldungen zu lesen ist eine der wichtigsten Fähigkeiten beim Programmiere
 1. Lösche das Semikolon am Ende einer Zeile und versuche das Programm zu starten.
    - Was steht in der **Fehlerliste** (unten in Visual Studio)?
    - In welcher **Zeile** ist der Fehler?
-2. Mach das Semikolon wieder hin und schreibe stattdessen `console` klein. Welche Meldung bekommst du jetzt?
+2. Füge das Semikolon wieder ein und schreibe stattdessen `console` klein. Welche Meldung bekommst du jetzt?
 
 ### Bonus-Aufgabe 1.4 – Konsolen-Kunst
 
@@ -150,7 +150,7 @@ Der Backslash `\` hat in C#-Texten eine Sonderbedeutung. Um einen echten Backsla
 ---
 
 Hast du noch weitere Fragen, bist bei einzelnen Themen noch unsicher oder möchtest einfach mehr Aufgaben zu diesem Kapitel bearbeiten? Schau dir gerne das Vertiefungskapitel an: \
-[Klicke hier um zur Vertiefung zu gelangen](../Vertiefung/01-Erste-Schritte-Vertiefung.md)
+[Klicke hier, um zur Vertiefung zu gelangen](../Vertiefung/01-Erste-Schritte-Vertiefung.md)
 
 ---
 

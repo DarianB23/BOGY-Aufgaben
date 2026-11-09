@@ -7,7 +7,7 @@ nav_order: 1
 
 **Schwierigkeit:** Leicht (Niveau Abschlussprojekt) · **Dauer:** ca. 1–1,5 Stunden
 
-[← Abschlussprojekt](../Kapitel/11-Abschlussprojekt.md) | [Übersicht](../README.md) | [Weiter: Zusatzaufgabe 2 – Snackautomat →](Z2-Snackautomat.md)
+[← Abschlussprojekt](../Kapitel/11-Abschlussprojekt.md) | [Übersicht](../README.md) | [Weiter: Zusatzaufgabe 2 – Snackautomat →](Snackautomat.md)
 
 ## Ziel
 
@@ -26,7 +26,6 @@ Wie beim Abschlussprojekt arbeitest du in **Stufen**. Bring zuerst eine Stufe zu
 | Variablen, Eingaben, `if`, Schleifen | [2](../Kapitel/02-Variablen.md) – [6](../Kapitel/06-Schleifen.md) |
 | Arrays und Listen | [7](../Kapitel/07-Collections.md) |
 | Methoden | [8](../Kapitel/08-Methoden.md) |
-| Zufallszahlen | [11](../Kapitel/11-Abschlussprojekt.md) |
 
 ---
 
@@ -205,4 +204,4 @@ Such dir aus, was dir gefällt:
 - [ ] Mein Spiel stürzt bei keiner Eingabe ab.
 - [ ] Ich habe mindestens drei eigene Methoden geschrieben.
 
-[← Abschlussprojekt](../Kapitel/11-Abschlussprojekt.md) | [Übersicht](../README.md) | [Weiter: Zusatzaufgabe 2 – Snackautomat →](Z2-Snackautomat.md)
+[← Abschlussprojekt](../Kapitel/11-Abschlussprojekt.md) | [Übersicht](../README.md) | [Weiter: Schere-Stein-Papier →](Schere-Stein-Papier.md)
