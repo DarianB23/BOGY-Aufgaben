@@ -1,7 +1,7 @@
 ---
 title: 05 - Vertiefung Verzweigungen
-parent: Vertiefung
-nav_order: 5
+parent: 05 - Verzweigungen
+nav_order: 1
 ---
 # Kapitel 5 – Verzweigungen (Vertiefung)
 
