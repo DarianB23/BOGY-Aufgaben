@@ -1,6 +1,6 @@
 ---
 title: 01 - Vertiefung Erste Schritte
-parent: Vertiefung
+parent: 01- Erste Schritte
 nav_order: 1
 ---
 # Kapitel 1 – Erste Schritte (Vertiefung)
