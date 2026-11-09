@@ -1,6 +1,8 @@
 ---
 title: 06 - Schleifen
 parent: Kapitel
+has_children: true
+has_toc: false
 nav_order: 6
 ---
 # Kapitel 6 – Schleifen
