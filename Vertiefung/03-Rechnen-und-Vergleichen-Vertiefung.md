@@ -1,7 +1,7 @@
 ---
 title: 03 - Vertiefung Rechnen und Vergleichen
-parent: Vertiefung
-nav_order: 3
+parent: 03 - Rechnen und Vergleichen
+nav_order: 1
 ---
 # Kapitel 3 – Rechnen und Vergleichen (Vertiefung)
 
