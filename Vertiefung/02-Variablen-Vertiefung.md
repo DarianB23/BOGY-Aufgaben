@@ -1,7 +1,7 @@
 ---
 title: 02 - Vertiefung Variablen und Datentypen
 parent: 02 - Variablen und Datentypen
-nav_order: 2
+nav_order: 1
 ---
 # Kapitel 2 – Variablen und Datentypen (Vertiefung)
 
