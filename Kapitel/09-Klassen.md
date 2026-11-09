@@ -1,6 +1,8 @@
 ---
 title: 09 - Klassen und Objekte
 parent: Kapitel
+has_children: true
+has_toc: false
 nav_order: 9
 ---
 # Kapitel 9 – Klassen und Objekte
