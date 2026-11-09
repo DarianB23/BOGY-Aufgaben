@@ -1,6 +1,8 @@
 ---
 title: 04 - Benutzereingaben
 parent: Kapitel
+has_children: true
+has_toc: false
 nav_order: 4
 ---
 # Kapitel 4 – Benutzereingaben
