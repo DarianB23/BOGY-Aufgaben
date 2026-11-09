@@ -1,6 +1,8 @@
 ---
 title: 02 - Variablen und Datentypen
 parent: Kapitel
+has_children: true
+has_toc: false
 nav_order: 2
 ---
 # Kapitel 2 – Variablen und Datentypen
