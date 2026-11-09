@@ -1,7 +1,7 @@
 ---
 title: 04 - Vertiefung Benutzereingaben
-parent: Vertiefung
-nav_order: 4
+parent: 04 - Benutzereingaben
+nav_order: 1
 ---
 # Kapitel 4 – Eingaben (Vertiefung)
 
