@@ -1,6 +1,8 @@
 ---
 title: 01 - Erste Schritte
 parent: Kapitel
+has_children: true
+has_toc: false
 nav_order: 1
 ---
 # Kapitel 1 – Erste Schritte
