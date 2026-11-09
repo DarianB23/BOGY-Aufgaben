@@ -1,6 +1,8 @@
 ---
 title: 05 - Verzweigungen
 parent: Kapitel
+has_children: true
+has_toc: false
 nav_order: 5
 ---
 # Kapitel 5 – Verzweigungen
