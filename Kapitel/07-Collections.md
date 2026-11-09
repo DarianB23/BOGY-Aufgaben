@@ -1,6 +1,8 @@
 ---
 title: 07 - Arrays und Listen
 parent: Kapitel
+has_children: true
+has_toc: false
 nav_order: 7
 ---
 # Kapitel 7 – Arrays und Listen
