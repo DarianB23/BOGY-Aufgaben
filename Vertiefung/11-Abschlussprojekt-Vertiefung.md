@@ -1,7 +1,7 @@
 ---
 title: 11 - Vertiefung Abschlussprojekt
-parent: Vertiefung
-nav_order: 11
+parent: 11 - Abschlussprojekt
+nav_order: 1
 ---
 # Kapitel 11 – Abschlussprojekt (Vertiefung & Architektur)
 
