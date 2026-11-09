@@ -1,7 +1,7 @@
 ---
 title: 07 - Vertiefung Arrays und Listen
-parent: Vertiefung
-nav_order: 7
+parent: 07 - Arrays und Listen
+nav_order: 1
 ---
 # Kapitel 7 – Collections (Vertiefung)
 
