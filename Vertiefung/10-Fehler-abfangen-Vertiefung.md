@@ -1,7 +1,7 @@
 ---
 title: 10 - Vertiefung Fehler abfangen
-parent: Vertiefung
-nav_order: 10
+parent: 10 - Fehler abfangen
+nav_order: 1
 ---
 # Kapitel 10 – Fehler abfangen (Vertiefung)
 
