@@ -1,7 +1,7 @@
 ---
 title: 09 - Vertiefung Klassen und Objekte
-parent: Vertiefung
-nav_order: 9
+parent: 09 - Klassen und Objekte
+nav_order: 1
 ---
 # Kapitel 9 – Klassen und Objekte (Vertiefung)
 
