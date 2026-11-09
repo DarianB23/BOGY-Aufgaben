@@ -1,7 +1,7 @@
 ---
 title: 06 - Vertiefung Schleifen
-parent: Vertiefung
-nav_order: 6
+parent: 06 - Schleifen
+nav_order: 1
 ---
 # Kapitel 6 – Schleifen (Vertiefung)
 
