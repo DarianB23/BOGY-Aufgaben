@@ -1,6 +1,8 @@
 ---
 title: 08 - Methoden
 parent: Kapitel
+has_children: true
+has_toc: false
 nav_order: 8
 ---
 # Kapitel 8 – Methoden
