@@ -14,7 +14,7 @@ nav_order: 7
 
 ## Ziel
 
-Du baust einen Geldautomaten für mehrere Kunden. Man meldet sich mit Kontonummer und PIN an, kann Geld einzahlen, abheben und überweisen und bekommt einen Kontoauszug. Nach drei falschen PINs wird das Konto gesperrt, und das Geld kommt in möglichst wenigen Scheinen heraus.
+Du baust einen Geldautomaten für mehrere Kunden. Man meldet sich mit Kontonummer und PIN an, kann Geld einzahlen, abheben und überweisen und bekommt einen Kontoauszug. Nach drei falschen PINs wird das Konto gesperrt, und das Geld soll immer in möglichst wenigen Scheinen heraus kommen.
 
 Dabei übst du:
 - Klassen mit `private` Feldern und `private set`
