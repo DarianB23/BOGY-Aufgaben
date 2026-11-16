@@ -46,9 +46,7 @@ Wenn du `int.Parse("123")` aufrufst:
 
 In C# gibt es einen wichtigen Kultur-Unterschied:
 - **Im Code** schreibst du immer den englischen Punkt: `double d = 1.5;`
-- **Bei der Konsoleneingabe** über `double.Parse(Console.ReadLine())` hängt es von den Spracheinstellungen deines Windows-Systems ab:
-  - Auf einem **deutschen PC** erwartet `double.Parse` ein **Komma** (`1,5`). Gibst du `1.5` ein, stürzt das Programm ab oder liest fälschlicherweise `15` ein!
-  - Auf einem **englischen PC** erwartet es einen Punkt (`1.5`).
+- **Bei der Konsoleneingabe** über `double.Parse(Console.ReadLine())` musst du ebenfalls einen Punkt `1.5` schreiben
 
 ---
 
