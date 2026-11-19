@@ -59,6 +59,8 @@ callouts:
     color: "red"
 
 exclude:
+  - ".vs"
+  - ".vscode"
   - "Loesungen/"
   - "Gemfile"
   - "Gemfile.lock"
